@@ -14,7 +14,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "npm run clean && gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "@portabletext/react": "^3.2.0",
