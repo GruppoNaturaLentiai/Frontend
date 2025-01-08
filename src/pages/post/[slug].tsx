@@ -12,10 +12,12 @@ const Blog = () => {
 
   // Extract the slug from the URL and remove the trailing "/"
   const slug = location.pathname.slice(0, -1); 
+  console.log("Getting slug ", slug)
 
   useEffect(() => {
     if (!slug) return
-    console.log(slug)
+
+    console.log("Before fetching data")
     const fetchData = async () => {
       setLoading(true)
       setError(null)

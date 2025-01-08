@@ -1,6 +1,7 @@
 import type { GatsbyConfig } from "gatsby"
 
 const config: GatsbyConfig = {
+  pathPrefix: process.env.CUSTOM_DOMAIN ? '' : '/Frontend',
   siteMetadata: {
     title: `site-gruppo-natura-lentiai`,
     siteUrl: `https://www.yourdomain.tld`,
