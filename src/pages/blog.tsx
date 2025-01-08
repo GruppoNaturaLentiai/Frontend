@@ -1,8 +1,35 @@
-// src/pages/blog.tsx
-
 import React, { useEffect, useState } from "react"
 import { HeadFC, Link } from "gatsby"
 import DefaultLayout from "../components/default-layout"
+import { graphqlURL } from "../constants"
+
+const queryParamsLocal = {
+  query: `{
+    allSanityPost {
+      nodes {
+        slug {
+          current
+        }
+        title
+      }
+    }
+  }` , 
+  result: "allSanityPost.nodes"
+} as const
+
+const queryParamsRemote = {
+  query: `query {
+    allPost {
+      slug {
+        current
+      }
+      title
+    }
+  }`,
+  result: "allPost"
+} as const
+
+const queryParams = process.env.LOCAL ? queryParamsLocal : queryParamsRemote
 
 const Blog = () => {
   const [posts, setPosts] = useState<any[]>([])
@@ -14,22 +41,11 @@ const Blog = () => {
       setLoading(true)
       setError(null)
       try {
-        const response = await fetch("/___graphql", {
+        const response = await fetch(graphqlURL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            query: `
-              query {
-                allSanityPost {
-                  nodes {
-                    slug {
-                      current
-                    }
-                    title
-                  }
-                }
-              }
-            `,
+            query: queryParams.query,
           }),
         })
 
@@ -38,7 +54,7 @@ const Blog = () => {
           throw new Error(result.errors[0].message)
         }
 
-        setPosts(result.data.allSanityPost.nodes)
+        setPosts(result.data[queryParams.result])
       } catch (err: any) {
         setError(err.message)
       } finally {
