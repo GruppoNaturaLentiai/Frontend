@@ -1,7 +1,7 @@
 import type { GatsbyConfig } from "gatsby"
 
 const config: GatsbyConfig = {
-  pathPrefix: process.env.CUSTOM_DOMAIN ? '' : '/Frontend',
+  pathPrefix: "/Frontend",
   siteMetadata: {
     title: `site-gruppo-natura-lentiai`,
     siteUrl: `https://www.yourdomain.tld`,
@@ -28,6 +28,8 @@ const config: GatsbyConfig = {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/icon.png",
+        start_url: `/Frontend/`,
+        cache_busting_mode: 'none'
       },
     },
     {
