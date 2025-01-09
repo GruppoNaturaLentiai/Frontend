@@ -39,7 +39,7 @@ const queryParamsRemote = (slug: string) => ({
     }
   }`,
   result: "allPost",
-  filterFn: (data: any[]) => data.filter(x => x.slug.current === `/${slug}`).at(0)
+  filterFn: (data: any[]) => data.filter(x => x.slug.current === `${slug}`).at(0)
 }) as const
 
 const getQueryParams = process.env.LOCAL ? queryParamsLocal : queryParamsRemote
