@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react"
 import { HeadFC, Link } from "gatsby"
 import DefaultLayout from "../components/default-layout"
 import { graphqlURL } from "../constants"
+import * as _ from "lodash"
+
 
 const queryParamsLocal = {
   query: `{
@@ -13,7 +15,7 @@ const queryParamsLocal = {
         title
       }
     }
-  }` , 
+  }` ,
   result: "allSanityPost.nodes"
 } as const
 
@@ -38,7 +40,6 @@ const Blog = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      console.log(graphqlURL)
       setLoading(true)
       setError(null)
       try {
@@ -55,7 +56,7 @@ const Blog = () => {
           throw new Error(result.errors[0].message)
         }
 
-        setPosts(result.data[queryParams.result])
+        setPosts(_.get(result.data, queryParams.result))
       } catch (err: any) {
         setError(err.message)
       } finally {

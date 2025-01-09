@@ -3,10 +3,11 @@ import { useLocation } from "@reach/router"
 import PostComponent from "../../components/post"
 import DefaultLayout from "../../components/default-layout"
 import { graphqlURL } from "../../constants"
+import * as _ from "lodash"
 
 const queryParamsLocal = (slug: string) => ({
   query: `{
-            sanityPost(slug: { current: { eq: \"${slug}\" } }) {
+            sanityPost(slug: { current: { eq: \"${slug}\" } }) { 
               title
               publishedAt
               _rawBody
@@ -41,7 +42,7 @@ const queryParamsRemote = (slug: string) => ({
   filterFn: (data: any[]) => data.filter(x => x.slug.current === `/${slug}`).at(0)
 }) as const
 
-const queryParams = process.env.LOCAL ? queryParamsLocal : queryParamsRemote
+const getQueryParams = process.env.LOCAL ? queryParamsLocal : queryParamsRemote
 
 const Post = () => {
   const location = useLocation()
@@ -49,8 +50,9 @@ const Post = () => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
-  // Extract the slug from the URL and remove the trailing "/" and leading "/"
-  const slug = location.pathname.slice(0, -1).replace(/^\//, "")
+  // Extract the slug from the URL and remove the trailing
+  const slug = location.pathname.slice(0, -1)
+  const queryParams = getQueryParams(slug)
 
   useEffect(() => {
     if (!slug) return
@@ -64,7 +66,7 @@ const Post = () => {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            query: queryParams(slug).query
+            query: queryParams.query
           }
           ),
         })
@@ -74,9 +76,8 @@ const Post = () => {
           throw new Error(result.errors[0].message)
         }
 
-        const resultKey = queryParams(slug).result
-        const res = result.data[resultKey]
-        const newState = queryParams(slug).filterFn(res)
+        const res = _.get(result.data, queryParams.result)
+        const newState = queryParams.filterFn(res)
 
         setPost(newState)
       } catch (err: any) {
