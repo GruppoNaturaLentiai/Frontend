@@ -1,5 +1,9 @@
 import type { GatsbyConfig } from "gatsby"
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 const config: GatsbyConfig = {
   pathPrefix: "/Frontend",
   siteMetadata: {
@@ -17,6 +21,7 @@ const config: GatsbyConfig = {
         projectId: "ze02ljgl",
         dataset: "post-blog",
         useCdn: false,
+        watchMode: true,
       },
     },
     "gatsby-plugin-image",

@@ -3,21 +3,38 @@ import {
   PortableTextMarkComponentProps,
   PortableTextReactComponents,
 } from "@portabletext/react"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import React from "react"
 
 const Components: PortableTextReactComponents = {
   types: {
     image: ({ value }: { value: any }) => {
-      if (!value.asset) return null
+      if (!value.asset) return null;
 
-      return (
-        <GatsbyImage
-          image={value.asset.gatsbyImageData}
-          alt={value.alt || "Content image"}
-          style={{ maxWidth: "100%", height: "auto" }}
-        />
-      )
+      // When build time we are provided with GatsbyImageData
+      if (value.asset.gatsbyImageData) {
+        return (
+          <GatsbyImage
+            image={getImage(value.asset.gatsbyImageData)!}
+            alt={value.alt || "Content image"}
+            style={{ maxWidth: "100%", height: "auto" }}
+          />
+        );
+      }
+
+      // If we are loading something at runtime, we need to use the URL
+      // since sanity does not provide GatsbyImageData at runtime
+      if (value.asset.url) {
+        return (
+          <img
+            src={value.asset.url}
+            alt={value.alt || "Content image"}
+            style={{ maxWidth: "100%", height: "auto" }}
+          />
+        );
+      }
+      
+      return null;
     },
   },
   block: {
