@@ -98,7 +98,7 @@ const Post = () => {
   if (error) return <p>Error: {error}</p>
   if (!post) return <p>No post found.</p>
 
-  const { title, publishedAt, _rawBody, image } = post
+  const { title, publishedAt, _rawBody, bodyRaw, image } = post
 
   // Render the Post component with the fetched data
   return (
@@ -106,7 +106,8 @@ const Post = () => {
       <PostComponent
         title={title}
         publishedAt={publishedAt}
-        _rawBody={_rawBody}
+        // Use _rawBody if present (that is we are in local environment), otherwise use bodyRaw (remote sanity api)
+        _rawBody={_rawBody ?? bodyRaw}
         image={image}
       />
     </DefaultLayout>
