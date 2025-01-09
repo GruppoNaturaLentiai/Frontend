@@ -8,6 +8,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => (
-  <title>Gruppo Natura Lentiai</title>
-)
+export const Head: HeadFC = () => <title>Gruppo Natura Lentiai</title>

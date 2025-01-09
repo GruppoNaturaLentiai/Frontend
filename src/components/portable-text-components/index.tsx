@@ -9,7 +9,7 @@ import React from "react"
 const Components: PortableTextReactComponents = {
   types: {
     image: ({ value }: { value: any }) => {
-      if (!value.asset) return null;
+      if (!value.asset) return null
 
       // When build time we are provided with GatsbyImageData
       if (value.asset.gatsbyImageData) {
@@ -19,7 +19,7 @@ const Components: PortableTextReactComponents = {
             alt={value.alt || "Content image"}
             style={{ maxWidth: "100%", height: "auto" }}
           />
-        );
+        )
       }
 
       // If we are loading something at runtime, we need to use the URL
@@ -31,10 +31,10 @@ const Components: PortableTextReactComponents = {
             alt={value.alt || "Content image"}
             style={{ maxWidth: "100%", height: "auto" }}
           />
-        );
+        )
       }
-      
-      return null;
+
+      return null
     },
   },
   block: {

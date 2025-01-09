@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react"
 import { useLocation } from "@reach/router"
-import PostComponent from "../../components/post"
-import DefaultLayout from "../../components/default-layout"
-import { graphqlURL } from "../../constants"
 import * as _ from "lodash"
+import React, { useEffect, useState } from "react"
+import DefaultLayout from "../../components/default-layout"
+import PostComponent from "../../components/post"
+import { graphqlURL } from "../../constants"
+import { stripTrailingSlash } from "../../helpers"
 
-const queryParamsLocal = (slug: string) => ({
-  query: `{
+const queryParamsLocal = (slug: string) =>
+  ({
+    query: `{
             sanityPost(slug: { current: { eq: \"${slug}\" } }) { 
               title
               publishedAt
@@ -18,12 +20,13 @@ const queryParamsLocal = (slug: string) => ({
               }
             }
           }`,
-  result: "sanityPost",
-  filterFn: (data: any) => data
-}) as const
+    result: "sanityPost",
+    filterFn: (data: any) => data,
+  }) as const
 
-const queryParamsRemote = (slug: string) => ({
-  query: `query {
+const queryParamsRemote = (slug: string) =>
+  ({
+    query: `query {
     allPost {
       title
       slug {
@@ -38,9 +41,10 @@ const queryParamsRemote = (slug: string) => ({
       }
     }
   }`,
-  result: "allPost",
-  filterFn: (data: any[]) => data.filter(x => x.slug.current === `${slug}`).at(0)
-}) as const
+    result: "allPost",
+    filterFn: (data: any[]) =>
+      data.filter(x => x.slug.current === `${slug}`).at(0),
+  }) as const
 
 const getQueryParams = process.env.LOCAL ? queryParamsLocal : queryParamsRemote
 
@@ -50,8 +54,8 @@ const Post = () => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
-  // Extract the slug from the URL and remove the trailing
-  const slug = location.pathname.slice(0, -1)
+  // Extract the slug from the URL and remove the trailing "/"
+  const slug = stripTrailingSlash(location.pathname)
   const queryParams = getQueryParams(slug)
 
   useEffect(() => {
@@ -66,9 +70,8 @@ const Post = () => {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            query: queryParams.query
-          }
-          ),
+            query: queryParams.query,
+          }),
         })
 
         const result = await response.json()
@@ -79,6 +82,7 @@ const Post = () => {
         const res = _.get(result.data, queryParams.result)
         const newState = queryParams.filterFn(res)
 
+        console.log(res, newState, slug)
         setPost(newState)
       } catch (err: any) {
         setError(err.message)

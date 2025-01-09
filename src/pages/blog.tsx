@@ -4,7 +4,6 @@ import DefaultLayout from "../components/default-layout"
 import { graphqlURL } from "../constants"
 import * as _ from "lodash"
 
-
 const queryParamsLocal = {
   query: `{
     allSanityPost {
@@ -15,8 +14,8 @@ const queryParamsLocal = {
         title
       }
     }
-  }` ,
-  result: "allSanityPost.nodes"
+  }`,
+  result: "allSanityPost.nodes",
 } as const
 
 const queryParamsRemote = {
@@ -28,7 +27,7 @@ const queryParamsRemote = {
       title
     }
   }`,
-  result: "allPost"
+  result: "allPost",
 } as const
 
 const queryParams = process.env.LOCAL ? queryParamsLocal : queryParamsRemote
@@ -86,7 +85,4 @@ const Blog = () => {
 
 export default Blog
 
-export const Head: HeadFC = () => (
-  <title>Gruppo Natura Lentiai - Blog</title>
-)
-
+export const Head: HeadFC = () => <title>Gruppo Natura Lentiai - Blog</title>

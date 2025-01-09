@@ -21,7 +21,7 @@ const config: GatsbyConfig = {
         projectId: "ze02ljgl",
         dataset: "post-blog",
         useCdn: false,
-        watchMode: true,
+        watchMode: process.env.LOCAL === "true",
       },
     },
     "gatsby-plugin-image",
@@ -34,7 +34,7 @@ const config: GatsbyConfig = {
       options: {
         icon: "src/images/icon.png",
         start_url: `/Frontend/`,
-        cache_busting_mode: 'none'
+        cache_busting_mode: "none",
       },
     },
     {
