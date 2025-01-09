@@ -38,6 +38,7 @@ const Blog = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
+      console.log(graphqlURL)
       setLoading(true)
       setError(null)
       try {

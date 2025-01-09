@@ -21,6 +21,7 @@ const config: GatsbyConfig = {
         projectId: "ze02ljgl",
         dataset: "post-blog",
         useCdn: false,
+        watchMode: true,
       },
     },
     "gatsby-plugin-image",

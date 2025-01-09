@@ -32,7 +32,7 @@ const queryParamsRemote = (slug: string) => ({
       bodyRaw
       image {
         asset {
-          gatsbyImageData(layout: CONSTRAINED, width: 800)
+          url
         }
       }
     }
@@ -51,7 +51,6 @@ const Post = () => {
 
   // Extract the slug from the URL and remove the trailing "/" and leading "/"
   const slug = location.pathname.slice(0, -1).replace(/^\//, "")
-  console.log("here's the slug", slug, graphqlURL)
 
   useEffect(() => {
     if (!slug) return
