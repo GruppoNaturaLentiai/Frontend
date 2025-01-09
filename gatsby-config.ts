@@ -1,11 +1,12 @@
 import type { GatsbyConfig } from "gatsby"
+import { pathPrefix } from "./src/constants"
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
 const config: GatsbyConfig = {
-  pathPrefix: "/Frontend",
+  pathPrefix: pathPrefix,
   siteMetadata: {
     title: `site-gruppo-natura-lentiai`,
     siteUrl: `https://www.yourdomain.tld`,

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react"
 import DefaultLayout from "../../components/default-layout"
 import PostComponent from "../../components/post"
 import { graphqlURL } from "../../constants"
-import { stripTrailingSlash } from "../../helpers"
+import { cleanSlug } from "../../helpers"
 
 const queryParamsLocal = (slug: string) =>
   ({
@@ -54,8 +54,8 @@ const Post = () => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
-  // Extract the slug from the URL and remove the trailing "/"
-  const slug = stripTrailingSlash(location.pathname)
+  // Extract the slug from the URL and remove the trailing "/" and the prefixPath if present
+  const slug = cleanSlug(location.pathname)
   const queryParams = getQueryParams(slug)
 
   useEffect(() => {
