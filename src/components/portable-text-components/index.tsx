@@ -4,24 +4,23 @@ import {
   PortableTextReactComponents,
 } from "@portabletext/react"
 import React from "react"
-import { getSanityImageUrl } from "../../helpers";
+import { getSanityImageUrl } from "../../helpers"
 
 const Components: PortableTextReactComponents = {
   types: {
     image: ({ value }: { value: any }) => {
-      console.log(value)
-      if (!value.asset || !value.asset._ref) return null;
+      if (!value.asset || !value.asset._ref) return null
 
-      const imageUrl = getSanityImageUrl(value.asset._ref);
-      if (!imageUrl) return null;
+      const imageUrl = getSanityImageUrl(value.asset._ref)
+      if (!imageUrl) return null
 
       return (
         <img
           src={imageUrl}
-          alt={value.alt || 'Content image'}
-          style={{ maxWidth: '100%', height: 'auto' }}
+          alt={value.alt || "Content image"}
+          style={{ maxWidth: "100%", height: "auto" }}
         />
-      );
+      )
     },
   },
   block: {
