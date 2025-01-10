@@ -6,6 +6,7 @@ import DefaultLayout from "../components/default-layout"
 import Components from "../components/portable-text-components"
 import { remoteGraphqlURL } from "../constants"
 import _ from "lodash"
+import * as T from "../components/typography"
 
 // Props injected during build time
 type PostPageContext = {
@@ -116,12 +117,12 @@ const PostTemplate: React.FC<PageProps<{}, PostPageContext>> = ({
   return (
     <DefaultLayout>
       <article>
-        <h1>{renderTitle}</h1>
+        <T.H1>{renderTitle}</T.H1>
         {renderPublishedAt && (
-          <p>
+          <T.P4>
             Articolo pubblicato in data:{" "}
             {new Date(renderPublishedAt).toLocaleDateString()}
-          </p>
+          </T.P4>
         )}
         {gatsbyImage && <GatsbyImage image={gatsbyImage} alt={title ?? ""} />}
         {!gatsbyImage && renderImageUrl && (

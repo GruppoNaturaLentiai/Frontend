@@ -3,7 +3,7 @@ import type { HeadFC, PageProps } from "gatsby"
 import DefaultLayout from "../components/default-layout"
 
 const IndexPage: React.FC<PageProps> = () => {
-  return <DefaultLayout> Questo è un testo </DefaultLayout>
+  return <DefaultLayout> Questo è la pagina principale </DefaultLayout>
 }
 
 export default IndexPage

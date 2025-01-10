@@ -4,6 +4,7 @@ import path from "path"
 export const createPages: GatsbyNode["createPages"] = async ({
   graphql,
   actions,
+  reporter
 }) => {
   const { createPage } = actions
 
@@ -29,6 +30,18 @@ export const createPages: GatsbyNode["createPages"] = async ({
   `)
 
   const posts = allPosts?.data.allSanityPost.nodes
+
+  if (!allPosts?.data?.allSanityPost) {
+    reporter.panicOnBuild("Something went wrong with the query!")
+    console.dir(allPosts, { depth: null })
+    return
+  }
+
+  if (posts.length === 0) {
+    reporter.panicOnBuild("No posts found")
+    return
+  }
+
 
   // Create pages for each post
   posts.forEach((post: any) => {

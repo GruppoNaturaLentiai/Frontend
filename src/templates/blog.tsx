@@ -1,8 +1,9 @@
-import React, { useEffect, useMemo, useState } from "react"
-import { graphql, HeadFC, Link, PageProps } from "gatsby"
-import DefaultLayout from "../components/default-layout"
-import { remoteGraphqlURL } from "../constants"
+import { HeadFC, Link, PageProps } from "gatsby"
 import * as _ from "lodash"
+import React, { useEffect, useMemo, useState } from "react"
+import DefaultLayout from "../components/default-layout"
+import * as T from "../components/typography"
+import { remoteGraphqlURL } from "../constants"
 
 // Props injected during build time
 type PostInfo = {
@@ -75,7 +76,7 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
 
   return (
     <DefaultLayout>
-      <h1>Blog</h1>
+      <T.H1>Blog</T.H1>
       <ul>
         {posts.map((post, idx) => (
           <li key={`post-${idx}`}>

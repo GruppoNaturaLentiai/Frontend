@@ -33,7 +33,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/icons/LogoFavicon.svg",
         start_url: `/Frontend/`,
         cache_busting_mode: "none",
       },
@@ -46,6 +46,20 @@ const config: GatsbyConfig = {
       },
       __key: "images",
     },
+    {
+      resolve: `gatsby-plugin-svgr`,
+      options: {
+        svgo: true,
+        svgoConfig: {
+          plugins: [
+            { name: "removeViewBox", active: false }, // Ensure "name" is explicitly specified
+            { name: "removeDimensions", active: true }, // Example: Enable specific optimizations
+          ],
+        },
+        prettier: true,
+        titleProp: true,
+      },
+    }
   ],
 }
 
