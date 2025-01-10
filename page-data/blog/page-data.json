@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-blog-tsx","path":"/blog/","result":{"pageContext":{}},"staticQueryHashes":[],"slicesMap":{}}
+{"componentChunkName":"component---src-templates-blog-tsx","path":"/blog/","result":{"pageContext":{"postsInfo":[{"slug":"/post/1","title":"Questo è il primo post","publishedAt":"2025-01-07T14:06:09.119Z"},{"slug":"/post/2","title":"Secondo post","publishedAt":"2025-01-07T14:13:40.290Z"}]}},"staticQueryHashes":[],"slicesMap":{}}
