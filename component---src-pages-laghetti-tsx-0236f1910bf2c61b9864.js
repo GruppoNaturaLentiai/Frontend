@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksite_gruppo_natura_lentiai=self.webpackChunksite_gruppo_natura_lentiai||[]).push([[728],{5586:function(e,t,a){a.r(t),a.d(t,{Head:function(){return l}});var n=a(7294),i=a(4210);t.default=()=>n.createElement(i.Z,null,"Pagina per con contenuti per i laghetti della Rimonta");const l=()=>n.createElement("title",null,"Gruppo Natura Lentiai - Laghetti della Rimonta")}}]);
+//# sourceMappingURL=component---src-pages-laghetti-tsx-0236f1910bf2c61b9864.js.map
