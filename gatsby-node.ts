@@ -8,7 +8,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
 }) => {
   const { createPage } = actions
 
-  // Fetch known slugs from Sanity
+  // Fetch all posts from Sanity
   const allPosts = await graphql<any>(`
     query {
       allSanityPost {
@@ -19,9 +19,17 @@ export const createPages: GatsbyNode["createPages"] = async ({
           title
           publishedAt
           _rawBody
+          author
           image {
             asset {
-              gatsbyImageData(width: 1200)
+              description
+              altText
+              title
+              gatsbyImageData(
+                width: 1200
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
             }
           }
         }
@@ -54,7 +62,13 @@ export const createPages: GatsbyNode["createPages"] = async ({
           title: post.title,
           publishedAt: post.publishedAt,
           bodyRaw: post._rawBody,
-          gatsbyImage: post.image ? post.image.asset.gatsbyImageData : null,
+          author: post.author,
+          mainImage: {
+            description: post.image?.asset?.description,
+            altText: post.image?.asset?.altText,
+            title: post.image?.asset?.title,
+            gatsbyImage: post.image ? post.image.asset.gatsbyImageData : null,
+          }
         },
       })
     }

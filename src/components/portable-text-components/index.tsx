@@ -5,6 +5,8 @@ import {
 } from "@portabletext/react"
 import React from "react"
 import { getSanityImageUrl } from "../../helpers"
+import * as S from "./styled"
+import * as T from "../typography"
 
 const Components: PortableTextReactComponents = {
   types: {
@@ -15,11 +17,15 @@ const Components: PortableTextReactComponents = {
       if (!imageUrl) return null
 
       return (
-        <img
-          src={imageUrl}
-          alt={value.alt || "Content image"}
-          style={{ maxWidth: "100%", height: "auto" }}
-        />
+        <S.ImageWrapper position={value.position}>
+          <div>
+            <img
+              src={imageUrl}
+              alt={value.textAlt || "Content image"}
+            />
+            {value.undertext && <S.ImgDescription>{value.undertext}</S.ImgDescription>}
+          </div>
+        </S.ImageWrapper>
       )
     },
   },

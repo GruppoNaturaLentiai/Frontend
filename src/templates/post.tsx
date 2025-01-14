@@ -14,7 +14,13 @@ type PostPageContext = {
   title?: string
   publishedAt?: string
   bodyRaw?: any
-  gatsbyImage?: IGatsbyImageData | null
+  author?: string
+  mainImage: {
+    gatsbyImage?: IGatsbyImageData | null
+    description?: string
+    altText?: string
+    title?: string
+  }
 }
 
 // type for fetching remote data: dynamic fallback
@@ -22,9 +28,13 @@ type RemotePost = {
   title: string
   publishedAt: string
   bodyRaw: any
+  author?: string
   image?: {
     asset?: {
       url?: string
+      description?: string
+      altText?: string
+      title?: string
     }
   }
   slug: {
@@ -40,7 +50,9 @@ const PostTemplate: React.FC<PageProps<{}, PostPageContext>> = ({
   const [error, setError] = useState<string | null>(null)
 
   // Destructure static context
-  const { slug, title, publishedAt, bodyRaw, gatsbyImage } = pageContext
+  const { slug, title, publishedAt, bodyRaw, mainImage } = pageContext
+  const { gatsbyImage, description, altText, title: imgTitle } = mainImage
+
 
   const fetchPostData = async (slug: string) => {
     console.log("Fetching data for!", slug)
@@ -53,8 +65,12 @@ const PostTemplate: React.FC<PageProps<{}, PostPageContext>> = ({
           }
           publishedAt
           bodyRaw
+          author
           image {
             asset {
+              description
+              title
+              altText
               url
             }
           }
@@ -108,7 +124,13 @@ const PostTemplate: React.FC<PageProps<{}, PostPageContext>> = ({
   const renderTitle = title || post?.title || "Loading..."
   const renderPublishedAt = publishedAt || post?.publishedAt || null
   const renderBody = bodyRaw || post?.bodyRaw || null
+  const author = pageContext.author || post?.author || null
+
+  // main image code
+  const mainImgAlt = altText || post?.image?.asset?.altText || ""
   const renderImageUrl = post?.image?.asset?.url || null
+  const mainImageTitle = imgTitle || post?.image?.asset?.title || ""
+  const mainImageDescription = description || post?.image?.asset?.description || ""
 
   // Handle loading and error states
   if (loading) return <p>Loading...</p>
@@ -120,23 +142,26 @@ const PostTemplate: React.FC<PageProps<{}, PostPageContext>> = ({
         <T.H1>{renderTitle}</T.H1>
         {renderPublishedAt && (
           <T.P4>
-            Articolo pubblicato in data:{" "}
-            {new Date(renderPublishedAt).toLocaleDateString()}
+            Articolo pubblicato in data: {new Date(renderPublishedAt).toLocaleDateString()}
           </T.P4>
         )}
-        {gatsbyImage && <GatsbyImage image={gatsbyImage} alt={title ?? ""} />}
+        {gatsbyImage && <GatsbyImage image={gatsbyImage} alt={mainImgAlt} />}
         {!gatsbyImage && renderImageUrl && (
           <img
             src={renderImageUrl}
-            alt={title}
+            alt={mainImgAlt}
             style={{ maxWidth: "100%", height: "auto" }}
           />
         )}
         <PortableText
-          // Use _rawBody if present (that is we are in local environment), otherwise use bodyRaw (remote sanity api)
           value={renderBody}
           components={Components}
         />
+        {author && (
+          <T.P3>
+            Articolo firmato: {author}
+          </T.P3>
+        )}
       </article>
     </DefaultLayout>
   )
