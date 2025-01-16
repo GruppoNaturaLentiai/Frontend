@@ -17,6 +17,13 @@ export const ImageWrapper = styled.div<{ position?: "left" | "right" | "center" 
   text-align: ${({ position }) => (position === 'center' ? 'center' : 'inherit')};
 `;
 
+export const ResponsiveImg = styled.img`
+  max-width: '100%';
+  height: 'auto';
+  display: 'block';
+  margin: '1em 0';
+`
+
 export const ImgDescription = styled(T.P4)`
   font-style: italic;
   text-align: center;

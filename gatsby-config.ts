@@ -47,6 +47,15 @@ const config: GatsbyConfig = {
       __key: "images",
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `imageMetadata`,
+        path: `${__dirname}/src/data/`, // For JSON or Markdown metadata
+      },
+    },
+    `gatsby-transformer-json`,
+    `gatsby-transformer-remark`,
+    {
       resolve: `gatsby-plugin-svgr`,
       options: {
         svgo: true,
@@ -59,7 +68,7 @@ const config: GatsbyConfig = {
         prettier: true,
         titleProp: true,
       },
-    }
+    },
   ],
 }
 

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { breakpoint } from "../../styles"
+import { breakpoint, colors } from "../../styles"
 
 export const fontSizes = {
   h1: 42,
@@ -20,15 +20,17 @@ export const fontSizes = {
 
 export const globalStylesTypography = `
   margin-bottom: 0;
+  color: ${colors.green.green900};
 `
 export const globalHeaderStylesTypography = `
   ${globalStylesTypography}
-  font-family: Lato-Bold;
+  font-family: 'Funnel Sans';
+  font-weight: bold;
 `
 
 export const globalParagraphStylesTypography = `
   ${globalStylesTypography}
-  font-family: Lato-Regular;
+  font-family: 'Funnel Sans';
 `
 
 export const H1 = styled.h1`
