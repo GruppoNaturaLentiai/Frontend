@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Mappa dei laghetti della Rimonta",
+    "description": "Mappa dei laghetti della Rimonta",
+    "alt": "Mappa dei laghetti della Rimonta",
+    "tags": ["laghetti", "laghetti-mappe", "mappe"],
+    "fileName": "laghetti-mappa.png",
+    "copyright": ""
+  },
+  {
+    "title": "Bardies - Catasto asburgico (1818-1829)",
+    "description": "Una mappa del catasto austriaco risalente al 1830 ci riporta l’immagine di un paese sulla sponda di un ragguardevole corso d’acqua, a difesa del quale appaiono una serie di strutture costiere. ",
+    "alt": "Foto tratta dal catasto asburgico in cui compare Bardies (Borgo Valbelluna)",
+    "tags": ["laghetti", "laghetti-storia"],
+    "fileName": "CatastoAsburgo1818-1829.jpg",
+    "copyright": ""
+  },
+  {
+    "title": "Bardies",
+    "description": "Bardies (Borgo Valbelluna) e la sua piazza",
+    "alt": "Foto storica di Bardies (Borgo Valbelluna) con la piazza",
+    "tags": ["laghetti", "laghetti-storia"],
+    "fileName": "Bardies00.jpg",
+    "copyright": ""
+  },
+  {
+    "title": "Bardies",
+    "description": "Il ponte sul torrente Rimonta e l'attuale albergo 'Cavallino Rosso'",
+    "alt": "Foto storica di Bardies (Borgo Valbelluna) con un ponte l'albergo 'Cavallino Rosso'",
+    "tags": ["laghetti", "laghetti-storia"],
+    "fileName": "Bardies01.jpg",
+    "copyright": ""
+  }
+]

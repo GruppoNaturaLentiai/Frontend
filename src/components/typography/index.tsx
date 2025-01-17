@@ -33,9 +33,12 @@ export const globalParagraphStylesTypography = `
   font-family: 'Funnel Sans';
 `
 
-export const H1 = styled.h1`
+export type FontFamilies = "Condiment" | "Funnel-Sans" | "Caveat"
+
+export const H1 = styled.h1<{ font?: FontFamilies }>`
   ${globalHeaderStylesTypography}
   font-size: ${fontSizes.h1}px;
+  ${({ font }) => font && `font-family: ${font};`}
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.h2}px;
   }
@@ -44,9 +47,10 @@ export const H1 = styled.h1`
   }
 `
 
-export const H2 = styled.h2`
+export const H2 = styled.h2<{ font?: FontFamilies }>`
   ${globalHeaderStylesTypography}
   font-size: ${fontSizes.h2}px;
+  ${({ font }) => font && `font-family: ${font};`}
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.h3}px;
   }
@@ -55,9 +59,10 @@ export const H2 = styled.h2`
   }
 `
 
-export const H3 = styled.h3`
+export const H3 = styled.h3<{ font?: FontFamilies }>`
   ${globalHeaderStylesTypography}
   font-size: ${fontSizes.h3}px;
+  ${({ font }) => font && `font-family: ${font};`}
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.h4}px;
   }
@@ -66,9 +71,10 @@ export const H3 = styled.h3`
   }
 `
 
-export const H4 = styled.h4`
+export const H4 = styled.h4<{ font?: FontFamilies }>`
   ${globalHeaderStylesTypography}
   font-size: ${fontSizes.h4}px;
+  ${({ font }) => font && `font-family: ${font};`}
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.h5}px;
   }
@@ -76,9 +82,10 @@ export const H4 = styled.h4`
     font-size: ${fontSizes.h6}px;
   }
 `
-export const H5 = styled.h5`
+export const H5 = styled.h5<{ font?: FontFamilies }>`
   ${globalHeaderStylesTypography}
   font-size: ${fontSizes.h5}px;
+  ${({ font }) => font && `font-family: ${font};`}
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.h6}px;
   }
@@ -87,25 +94,28 @@ export const H5 = styled.h5`
   }
 `
 
-export const H6 = styled.h6`
+export const H6 = styled.h6<{ font?: FontFamilies }>`
   ${globalHeaderStylesTypography}
   font-size: ${fontSizes.h6}px;
+  ${({ font }) => font && `font-family: ${font};`}
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.h7}px;
   }
 `
 
-export const H7 = styled.h6`
+export const H7 = styled.h6<{ font?: FontFamilies }>`
   ${globalHeaderStylesTypography}
   font-size: ${fontSizes.h7}px;
+  ${({ font }) => font && `font-family: ${font};`}
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.h8}px;
   }
 `
 
-export const P1 = styled.p`
+export const P1 = styled.p<{ font?: FontFamilies }>`
   ${globalParagraphStylesTypography}
   font-size: ${fontSizes.p1}px;
+  ${({ font }) => font && `font-family: ${font};`}
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.p2}px;
   }
@@ -114,9 +124,10 @@ export const P1 = styled.p`
   }
 `
 
-export const P2 = styled.p`
+export const P2 = styled.p<{ font?: FontFamilies }>`
   ${globalParagraphStylesTypography}
   font-size: ${fontSizes.p2}px;
+  ${({ font }) => font && `font-family: ${font};`}
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.p3}px;
   }
@@ -124,9 +135,10 @@ export const P2 = styled.p`
     font-size: ${fontSizes.p4}px;
   }
 `
-export const P3 = styled.p`
+export const P3 = styled.p<{ font?: FontFamilies }>`
   ${globalParagraphStylesTypography}
   font-size: ${fontSizes.p3}px;
+  ${({ font }) => font && `font-family: ${font};`}
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.p4}px;
   }
@@ -135,23 +147,26 @@ export const P3 = styled.p`
   }
 `
 
-export const P4 = styled.p`
+export const P4 = styled.p<{ font?: FontFamilies }>`
   ${globalParagraphStylesTypography}
   font-size: ${fontSizes.p4}px;
+  ${({ font }) => font && `font-family: ${font};`}
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.p5}px;
   }
 `
 
-export const P5 = styled.p`
+export const P5 = styled.p<{ font?: FontFamilies }>`
   ${globalParagraphStylesTypography}
   font-size: ${fontSizes.p5}px;
+  ${({ font }) => font && `font-family: ${font};`}
   @media (max-width: ${breakpoint.tablet}) {
     font-size: 12px;
   }
 `
 
-export const Notes = styled.p`
+export const Notes = styled.p<{ font?: FontFamilies }>`
   ${globalParagraphStylesTypography}
   font-size: ${fontSizes.notes}px;
+  ${({ font }) => font && `font-family: ${font};`}
 `

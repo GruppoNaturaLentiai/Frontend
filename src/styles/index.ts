@@ -20,20 +20,19 @@ export const breakpointNum = {
   mobile: 480,
 } as const
 
-
 export const colors = {
   green: {
-    "green50": "#f2f9ec",
-    "green100": "#e1f1d6",
-    "green200": "#c6e5b1",
-    "green300": "#a2d383",
-    "green400": "#80c05b",
-    "green500": "#62a43e",
-    "green550": "#329e31",
-    "green600": "#4a822e",
-    "green700": "#3a6427",
-    "green800": "#315123",
-    "green900": "#2c4522",
-    "green950": "#1e3815",
-  }
+    green50: "#f2f9ec",
+    green100: "#e1f1d6",
+    green200: "#c6e5b1",
+    green300: "#a2d383",
+    green400: "#80c05b",
+    green500: "#62a43e",
+    green550: "#329e31",
+    green600: "#4a822e",
+    green700: "#3a6427",
+    green800: "#315123",
+    green900: "#2c4522",
+    green950: "#1e3815",
+  },
 }

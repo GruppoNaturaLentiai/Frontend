@@ -5,7 +5,7 @@ import DefaultLayout from "../../components/default-layout"
 const LaghettiPage: React.FC<PageProps> = () => {
   return (
     <DefaultLayout>
-      Pagina per con contenuti per i laghetti della Rimonta
+      Pagina con contenuti inerenti ai laghetti della Rimonta
     </DefaultLayout>
   )
 }

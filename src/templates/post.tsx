@@ -53,7 +53,6 @@ const PostTemplate: React.FC<PageProps<{}, PostPageContext>> = ({
   const { slug, title, publishedAt, bodyRaw, mainImage } = pageContext
   const { gatsbyImage, description, altText, title: imgTitle } = mainImage
 
-
   const fetchPostData = async (slug: string) => {
     console.log("Fetching data for!", slug)
     try {
@@ -130,7 +129,8 @@ const PostTemplate: React.FC<PageProps<{}, PostPageContext>> = ({
   const mainImgAlt = altText || post?.image?.asset?.altText || ""
   const renderImageUrl = post?.image?.asset?.url || null
   const mainImageTitle = imgTitle || post?.image?.asset?.title || ""
-  const mainImageDescription = description || post?.image?.asset?.description || ""
+  const mainImageDescription =
+    description || post?.image?.asset?.description || ""
 
   // Handle loading and error states
   if (loading) return <p>Loading...</p>
@@ -142,7 +142,8 @@ const PostTemplate: React.FC<PageProps<{}, PostPageContext>> = ({
         <T.H1>{renderTitle}</T.H1>
         {renderPublishedAt && (
           <T.P4>
-            Articolo pubblicato in data: {new Date(renderPublishedAt).toLocaleDateString()}
+            Articolo pubblicato in data:{" "}
+            {new Date(renderPublishedAt).toLocaleDateString()}
           </T.P4>
         )}
         {gatsbyImage && <GatsbyImage image={gatsbyImage} alt={mainImgAlt} />}
@@ -153,15 +154,8 @@ const PostTemplate: React.FC<PageProps<{}, PostPageContext>> = ({
             style={{ maxWidth: "100%", height: "auto" }}
           />
         )}
-        <PortableText
-          value={renderBody}
-          components={Components}
-        />
-        {author && (
-          <T.P3>
-            Articolo firmato: {author}
-          </T.P3>
-        )}
+        <PortableText value={renderBody} components={Components} />
+        {author && <T.P3>Articolo firmato: {author}</T.P3>}
       </article>
     </DefaultLayout>
   )

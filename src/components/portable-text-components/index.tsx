@@ -22,13 +22,15 @@ const Components: PortableTextReactComponents = {
               src={imageUrl}
               alt={value.textAlt || "Content image"}
               style={{
-                maxWidth: '100%',
-                height: 'auto',
-                display: 'block',
-                margin: '1em 0',
+                maxWidth: "100%",
+                height: "auto",
+                display: "block",
+                margin: "1em 0",
               }}
             />
-            {value.undertext && <S.ImgDescription>{value.undertext}</S.ImgDescription>}
+            {value.undertext && (
+              <S.ImgDescription>{value.undertext}</S.ImgDescription>
+            )}
           </div>
         </S.ImageWrapper>
       )

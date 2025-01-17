@@ -4,7 +4,7 @@ import path from "path"
 export const createPages: GatsbyNode["createPages"] = async ({
   graphql,
   actions,
-  reporter
+  reporter,
 }) => {
   const { createPage } = actions
 
@@ -50,7 +50,6 @@ export const createPages: GatsbyNode["createPages"] = async ({
     return
   }
 
-
   // Create pages for each post
   posts.forEach((post: any) => {
     if (post.slug?.current) {
@@ -68,7 +67,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
             altText: post.image?.asset?.altText,
             title: post.image?.asset?.title,
             gatsbyImage: post.image ? post.image.asset.gatsbyImageData : null,
-          }
+          },
         },
       })
     }

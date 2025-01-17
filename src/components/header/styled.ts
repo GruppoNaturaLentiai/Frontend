@@ -36,7 +36,7 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
   z-index: 2;
   > a {
     text-decoration: none;
-    ${({ $isActive }) => $isActive && `color: ${colors.green.green550}`}; 
+    ${({ $isActive }) => $isActive && `color: ${colors.green.green550}`};
     font-weight: bold;
     &:hover {
       text-decoration: underline;
@@ -47,10 +47,10 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
     }
 
     > h4 {
-      ${({ $isActive }) => $isActive && `color: ${colors.green.green550}`}; 
+      ${({ $isActive }) => $isActive && `color: ${colors.green.green550}`};
       &:active {
         color: ${colors.green.green600};
-      }     
+      }
     }
   }
 `
@@ -71,13 +71,14 @@ export const SubsectionList = styled.ul<{ $isOpen: boolean }>`
   transform: translateY(-10px);
   transition: all 0.3s ease-in-out;
 
-  ${({ $isOpen }) => $isOpen && `
+  ${({ $isOpen }) =>
+    $isOpen &&
+    `
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   `}
-
-`;
+`
 
 export const SubsectionItem = styled.div`
   > a {
@@ -91,7 +92,7 @@ export const SubsectionItem = styled.div`
       }
       &:active {
         color: ${colors.green.green200};
-      } 
+      }
     }
   }
 `

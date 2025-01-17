@@ -39,18 +39,17 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: `data`, // General name for JSON data
+        path: `${__dirname}/src/data/`, // Path to folder containing JSON files
       },
-      __key: "images",
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `imageMetadata`,
-        path: `${__dirname}/src/data/`, // For JSON or Markdown metadata
+        name: `images`, // For image files
+        path: `${__dirname}/src/images/`, // Path to folder containing images
       },
     },
     `gatsby-transformer-json`,
@@ -61,8 +60,8 @@ const config: GatsbyConfig = {
         svgo: true,
         svgoConfig: {
           plugins: [
-            { name: "removeViewBox", active: false }, // Ensure "name" is explicitly specified
-            { name: "removeDimensions", active: true }, // Example: Enable specific optimizations
+            { name: "removeViewBox", active: false },
+            { name: "removeDimensions", active: true },
           ],
         },
         prettier: true,

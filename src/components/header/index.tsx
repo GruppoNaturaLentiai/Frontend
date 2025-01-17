@@ -4,8 +4,7 @@ import Icon from "../icons"
 import * as T from "../typography"
 import { navItems } from "./data"
 import * as S from "./styled"
-import { useLocation } from "@reach/router";
-
+import { useLocation } from "@reach/router"
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<string>("")
@@ -30,20 +29,20 @@ const Header: React.FC = () => {
               <Link to={el.url}>
                 <T.H4>{el.label}</T.H4>
               </Link>
-              {el.subsections &&
+              {el.subsections && (
                 <S.SubsectionList
                   onMouseLeave={() => setMenuOpen("")}
                   $isOpen={el.label === menuOpen}
                 >
-                  {el.subsections.map(subSection =>
+                  {el.subsections.map(subSection => (
                     <S.SubsectionItem key={subSection.url}>
                       <Link to={subSection.url}>
                         <T.H4>{subSection.label}</T.H4>
                       </Link>
                     </S.SubsectionItem>
-                  )}
+                  ))}
                 </S.SubsectionList>
-              }
+              )}
             </S.NavBarItem>
           ))}
         </S.NavBarList>
