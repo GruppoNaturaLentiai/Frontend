@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksite_gruppo_natura_lentiai=self.webpackChunksite_gruppo_natura_lentiai||[]).push([[61],{6190:function(e,t,n){n.r(t),n.d(t,{Head:function(){return u}});var a=n(7294),i=n(9757);t.default=()=>a.createElement(i.Z,null," ","Pagina per con contenuti per il sociale: giornate ecologiche, FIAB, ecc"," ");const u=()=>a.createElement("title",null,"Gruppo Natura Lentiai - Sociale")}}]);
+//# sourceMappingURL=component---src-pages-sociale-index-tsx-2031bbee2fc09e8a66e9.js.map

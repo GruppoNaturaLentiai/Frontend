@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksite_gruppo_natura_lentiai=self.webpackChunksite_gruppo_natura_lentiai||[]).push([[419],{4531:function(e,a,t){t.r(a),t.d(a,{Head:function(){return u}});var i=t(7294),n=t(9757);a.default=()=>i.createElement(n.Z,null,"Pagina che spiega chi siamo");const u=()=>i.createElement("title",null,"Gruppo Natura Lentiai - Chi siamo")}}]);
+//# sourceMappingURL=component---src-pages-chi-siamo-tsx-af823b3155527d0ef750.js.map

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksite_gruppo_natura_lentiai=self.webpackChunksite_gruppo_natura_lentiai||[]).push([[169],{6326:function(e,t,a){a.r(t),a.d(t,{Head:function(){return i}});var n=a(7294),r=a(9757);t.default=()=>n.createElement(r.Z,null,"Pagina per con i gadget, IBAN e wallet per donare online");const i=()=>n.createElement("title",null,"Gruppo Natura Lentiai - Partecipa!")}}]);
+//# sourceMappingURL=component---src-pages-partecipa-tsx-2765363f9ef34b07be02.js.map
