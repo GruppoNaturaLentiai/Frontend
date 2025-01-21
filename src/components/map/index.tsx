@@ -1,11 +1,9 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
 import "leaflet-css";
 import * as S from "./styled"
 import { Location } from "../../types";
 import L from "leaflet";
-
 
 type LocationMarker = [
   lat: number,
@@ -16,17 +14,20 @@ const piazzaCenter = [
   46.04523644005277, 12.023334355216095
 ] as LocationMarker
 
-
-const DefaultIcon = L.icon({
-  iconUrl: "/leaflet/marker-icon.png",
-  iconRetinaUrl: "/leaflet/marker-icon-2x.png",
-  shadowUrl: "/leaflet/marker-shadow.png",
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-});
-L.Marker.prototype.options.icon = DefaultIcon;
-
 const MapComponent: React.FC<{ markers: Location[] }> = ({ markers }) => {
+  if (typeof window === "undefined") {
+    return <p>Loading map...</p>; // Render fallback during SSR
+  }
+
+  const DefaultIcon = L.icon({
+    iconUrl: "/leaflet/marker-icon.png",
+    iconRetinaUrl: "/leaflet/marker-icon-2x.png",
+    shadowUrl: "/leaflet/marker-shadow.png",
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+  });
+  L.Marker.prototype.options.icon = DefaultIcon;
+
   return (
     <S.Wrapper>
       <MapContainer
