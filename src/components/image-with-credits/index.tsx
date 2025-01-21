@@ -9,15 +9,23 @@ const ImageWithCredits = ({
   alt,
   image,
   copyright,
+  minHeight,
+  minWidth,
+  maxHeight,
+  maxWidth
 }: {
   title: string
   description: string
   alt: string
   image: IGatsbyImageData
   copyright: string | undefined
+  minWidth?: number
+  minHeight?: number
+  maxWidth?: number,
+  maxHeight?: number
 }) => (
-  <S.ImgWrapper>
-    <T.H3>{title}</T.H3>
+  <S.ImgWrapper $maxHeight={maxHeight} $maxWidth={maxWidth} $minHeight={minHeight} $minWidth={minWidth}>
+    <T.H3 dangerouslySetInnerHTML={{ __html: title }} />
     <GatsbyImage
       image={image}
       alt={alt}
@@ -28,7 +36,10 @@ const ImageWithCredits = ({
     ) : (
       <T.P4>Autore sconosciuto</T.P4>
     )}
-    <T.P2>{description}</T.P2>
+    <S.ImageDescription style={{
+      maxWidth: image.width
+    }}
+      dangerouslySetInnerHTML={{ __html: description }} />
   </S.ImgWrapper>
 )
 

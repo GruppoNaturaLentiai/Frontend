@@ -6,6 +6,7 @@ import {
 import React from "react"
 import { getSanityImageUrl } from "../../helpers"
 import * as S from "./styled"
+import * as T from "../typography"
 
 const Components: PortableTextReactComponents = {
   types: {
@@ -38,7 +39,7 @@ const Components: PortableTextReactComponents = {
   },
   block: {
     normal: ({ children }) => (
-      <p style={{ lineHeight: "1.6", margin: "1em 0" }}>{children}</p>
+      <T.P1 style={{ lineHeight: "1.6", margin: "1em 0" }}>{children}</T.P1>
     ),
   },
   marks: {

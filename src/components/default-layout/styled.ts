@@ -6,4 +6,7 @@ export const Wrapper = styled.div`
   margin: 32px;
   min-height: 500px;
   background-color: ${colors.green.green50};
+  max-width: 1400px;
+  justify-self: center;
+  min-width: 800px;
 `

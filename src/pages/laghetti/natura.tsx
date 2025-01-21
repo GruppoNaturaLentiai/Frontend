@@ -1,15 +1,16 @@
 import { graphql, useStaticQuery, type HeadFC, type PageProps } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import * as React from "react"
+import dataJSON from "../../../content/laghetti/natura.json"
 import DefaultLayout from "../../components/default-layout"
 import ContentToComponent from "../../components/pagedata-text-components"
-import { ImageData } from "../../types"
+import { DataJSONType, ImageData } from "../../types"
 import * as T from "./../../components/typography"
 
 const LaghettiNaturaPage: React.FC<PageProps> = () => {
   const data = useStaticQuery(graphql`
     query {
-      allImageMetadataJson(filter: { tags: { in: ["laghetti-storia"] } }) {
+      allImageMetadataJson(filter: { tags: { in: ["laghetti-natura"] } }) {
         nodes {
           title
           description
@@ -17,18 +18,6 @@ const LaghettiNaturaPage: React.FC<PageProps> = () => {
           tags
           copyright
           alt
-        }
-      }
-      allDataJson {
-        nodes {
-          laghetti {
-            natura {
-              type
-              size
-              font
-              content
-            }
-          }
         }
       }
       allFile(filter: { sourceInstanceName: { eq: "images" } }) {
@@ -46,8 +35,11 @@ const LaghettiNaturaPage: React.FC<PageProps> = () => {
     }
   `)
 
-  const content = data.allDataJson.nodes[0].laghetti.natura
-  if (!content) return <T.H1>Contenuto non trovato!</T.H1>
+  const content = dataJSON.natura as DataJSONType
+  if (!content) return (<DefaultLayout>
+    <T.H1>Contenuto non trovato!</T.H1>
+  </DefaultLayout>
+  )
 
   // Map metadata and image nodes
   const metadata = data.allImageMetadataJson.nodes

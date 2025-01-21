@@ -1,9 +1,10 @@
 import { graphql, useStaticQuery, type HeadFC, type PageProps } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import * as React from "react"
+import dataJSON from "../../../content/laghetti/storia.json"
 import DefaultLayout from "../../components/default-layout"
 import ContentToComponent from "../../components/pagedata-text-components"
-import { ImageData } from "../../types"
+import { DataJSONType, ImageData } from "../../types"
 import * as T from "./../../components/typography"
 
 const LaghettiStoriaPage: React.FC<PageProps> = () => {
@@ -17,18 +18,6 @@ const LaghettiStoriaPage: React.FC<PageProps> = () => {
           tags
           copyright
           alt
-        }
-      }
-      allDataJson {
-        nodes {
-          laghetti {
-            storia {
-              type
-              size
-              font
-              content
-            }
-          }
         }
       }
       allFile(filter: { sourceInstanceName: { eq: "images" } }) {
@@ -46,8 +35,11 @@ const LaghettiStoriaPage: React.FC<PageProps> = () => {
     }
   `)
 
-  const content = data.allDataJson.nodes[0].laghetti.storia
-  if (!content) return <T.H1>Contenuto non trovato!</T.H1>
+  const content = dataJSON.storia as DataJSONType
+  if (!content) return (<DefaultLayout>
+    <T.H1>Contenuto non trovato!</T.H1>
+  </DefaultLayout>
+  )
 
   // Map metadata and image nodes
   const metadata = data.allImageMetadataJson.nodes

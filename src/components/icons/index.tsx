@@ -1,5 +1,5 @@
 import React from "react"
-import { ReactComponent as LogoSVG } from "./../../images/icons/LogoFull.svg"
+import { ReactComponent as LogoSVG } from "./../../icons/LogoFull.svg"
 
 interface IconsProps {
   type: string

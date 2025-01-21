@@ -6,7 +6,7 @@ const SocialePage: React.FC<PageProps> = () => {
   return (
     <DefaultLayout>
       {" "}
-      Pagina per con contenuti per il sociale: giornate ecologice, FIAB, ecc{" "}
+      Pagina per con contenuti per il sociale: giornate ecologiche, FIAB, ecc{" "}
     </DefaultLayout>
   )
 }

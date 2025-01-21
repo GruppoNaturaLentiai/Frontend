@@ -138,7 +138,7 @@ const PostTemplate: React.FC<PageProps<{}, PostPageContext>> = ({
 
   return (
     <DefaultLayout>
-      <article>
+      <article style={{ padding: 32 }}>
         <T.H1>{renderTitle}</T.H1>
         {renderPublishedAt && (
           <T.P4>
@@ -157,7 +157,7 @@ const PostTemplate: React.FC<PageProps<{}, PostPageContext>> = ({
         <PortableText value={renderBody} components={Components} />
         {author && <T.P3>Articolo firmato: {author}</T.P3>}
       </article>
-    </DefaultLayout>
+    </DefaultLayout >
   )
 }
 

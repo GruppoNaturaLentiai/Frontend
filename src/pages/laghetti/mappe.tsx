@@ -1,10 +1,19 @@
-import * as React from "react"
 import { graphql, useStaticQuery, type HeadFC, type PageProps } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
+import * as React from "react"
+import dataJSON from "../../../content/laghetti/mappe.json"
 import DefaultLayout from "../../components/default-layout"
 import ContentToComponent from "../../components/pagedata-text-components"
-import { getImage } from "gatsby-plugin-image"
+import { DataJSONType, ImageData } from "../../types"
 import * as T from "./../../components/typography"
-import { ImageData } from "../../types"
+import MapComponent from "../../components/map"
+
+const markersMap = [{
+  name: "Inizio del percorso",
+  lat: 46.04923742844764,
+  lon: 12.02636613390803
+}]
+
 
 const LaghettiMappePage: React.FC<PageProps> = () => {
   const data = useStaticQuery(graphql`
@@ -17,18 +26,6 @@ const LaghettiMappePage: React.FC<PageProps> = () => {
           tags
           copyright
           alt
-        }
-      }
-      allDataJson {
-        nodes {
-          laghetti {
-            mappe {
-              type
-              size
-              font
-              content
-            }
-          }
         }
       }
       allFile(filter: { sourceInstanceName: { eq: "images" } }) {
@@ -46,10 +43,10 @@ const LaghettiMappePage: React.FC<PageProps> = () => {
     }
   `)
 
-  const content = data.allDataJson.nodes[0].laghetti.mappe
+  const content = dataJSON.mappe as DataJSONType
   if (!content) return (<DefaultLayout>
     <T.H1>Contenuto non trovato!</T.H1>
-    </DefaultLayout>
+  </DefaultLayout>
   )
 
   // Map metadata and image nodes
@@ -68,6 +65,7 @@ const LaghettiMappePage: React.FC<PageProps> = () => {
   return (
     <DefaultLayout>
       <ContentToComponent pageData={content} images={filteredImages} />
+      <MapComponent markers={markersMap}/>
     </DefaultLayout>
   )
 }

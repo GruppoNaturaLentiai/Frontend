@@ -14,3 +14,22 @@ export const ImageWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 `
+
+export const TwoColsWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+export const LeftTwoColsWrapper = styled.div`
+  flex: 1;
+  padding: 16px;
+  align-content: center;
+  justify-items: center;
+`
+
+export const RightTwoColsWrapper = styled.div`
+  flex: 1;
+  padding: 16px;
+  align-content: center;
+  justify-items: center;
+`

@@ -33,7 +33,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icons/LogoFavicon.svg",
+        icon: "src/icons/LogoFavicon.svg",
         start_url: `/Frontend/`,
         cache_busting_mode: "none",
       },
