@@ -1,7 +1,8 @@
 import styled from "styled-components"
+import { colors } from "../../styles"
 
 export const Footer = styled.footer`
-  background-color: red;
+  background-color: ${colors.green.green400};
   padding: 16px;
   min-height: 32px;
   display: flex;

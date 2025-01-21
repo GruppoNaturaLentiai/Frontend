@@ -1,0 +1,39 @@
+{
+  "storia": [
+    {
+      "type": "text",
+      "content": [
+        "Un po' di storia..."
+      ],
+      "size": "h1",
+      "font": "Caveat"
+    },
+    {
+      "type": "text",
+      "content": [
+        "La frazione di Bardies, attualmente, conta circa 200 abitanti e difficilmente attira l’attenzione di chi percorre la provinciale della Sinistra Piave. In realtà, nel passato, il borgo in questione costituiva una realtà economica di tutto rispetto: la sua posizione rappresentava, infatti, una cerniera naturale fra il torrente Rimonta e l’asta del Piave. Per secoli l'affluente in questione ha costituito uno scivolo naturale per far defluire il legname tagliato sulle sue rive, come ben ricordato dal toponimo “stua”: località posta nella Valle dei Boschi che indicava gli invasi artificiali che venivano realizzati per facilitare la fluitazione dei tronchi nei corsi d'acqua di montagna."
+      ],
+      "size": "p1"
+    },
+    {
+      "type": "image",
+      "content": [
+        "CatastoAsburgo1818-1829.jpg"
+      ]
+    },
+    {
+      "type": "text",
+      "content": [
+        "A sottolineare la vitalità e l’importanza del borgo in questione appaiono anche gli edifici che segnalano la presenza di due chiese. A questo proposito non possiamo far passare sotto silenzio l’esistenza di un piccolo gioiello artistico, l’unico dei due luoghi di culto arrivato sino a noi: la chiesetta dedicata a Sant’Antonio Abate, completamente ricoperta di affreschi. Se la nostra attenzione si concentra poi sul territorio circostante troviamo che, sulla strada che prosegue verso Mel e a poche centinaia di metri sopra l’abitato di Bardies, vi sono i resti di un ponte di ottima fattura che attraversa il torrente Forada. Difficile è risultato finora dargli un’attribuzione cronologica precisa: chi lo vuole romano, chi bizantino e chi medioevale."
+      ],
+      "size": "p1"
+    },
+    {
+      "type": "image",
+      "content": [
+        "Bardies00.jpg",
+        "Bardies01.jpg"
+      ]
+    }
+  ]
+}

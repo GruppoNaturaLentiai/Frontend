@@ -19,11 +19,19 @@ const Components: PortableTextReactComponents = {
       return (
         <S.ImageWrapper position={value.position}>
           <div>
-            <img
+            <S.ResponsiveImg
               src={imageUrl}
               alt={value.textAlt || "Content image"}
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+                display: "block",
+                margin: "1em 0",
+              }}
             />
-            {value.undertext && <S.ImgDescription>{value.undertext}</S.ImgDescription>}
+            {value.undertext && (
+              <S.ImgDescription>{value.undertext}</S.ImgDescription>
+            )}
           </div>
         </S.ImageWrapper>
       )
@@ -31,7 +39,7 @@ const Components: PortableTextReactComponents = {
   },
   block: {
     normal: ({ children }) => (
-      <p style={{ lineHeight: "1.6", margin: "1em 0" }}>{children}</p>
+      <T.P1 style={{ lineHeight: "1.6", margin: "1em 0" }}>{children}</T.P1>
     ),
   },
   marks: {

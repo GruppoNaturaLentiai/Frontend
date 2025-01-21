@@ -33,33 +33,41 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icons/LogoFavicon.svg",
+        icon: "src/icons/LogoFavicon.svg",
         start_url: `/Frontend/`,
         cache_busting_mode: "none",
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: `data`, // General name for JSON data
+        path: `${__dirname}/src/data/`, // Path to folder containing JSON files
       },
-      __key: "images",
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`, // For image files
+        path: `${__dirname}/src/images/`, // Path to folder containing images
+      },
+    },
+    `gatsby-transformer-json`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-svgr`,
       options: {
         svgo: true,
         svgoConfig: {
           plugins: [
-            { name: "removeViewBox", active: false }, // Ensure "name" is explicitly specified
-            { name: "removeDimensions", active: true }, // Example: Enable specific optimizations
+            { name: "removeViewBox", active: false },
+            { name: "removeDimensions", active: true },
           ],
         },
         prettier: true,
         titleProp: true,
       },
-    }
+    },
   ],
 }
 
