@@ -56,93 +56,120 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
   switch (content.size) {
     case "h1":
       return (
-        <div onClick={onClickFn} key={key}>
-          <T.H1
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: theText }}
-          />
-        </div>
+        <S.TextWrapper $isExpanded={isExpanded}>
+          <S.TextContainer onClick={onClickFn} key={key}>
+            <T.H1
+              $textAlign={position}
+              $font={font}
+              dangerouslySetInnerHTML={{ __html: theText }}
+            />
+          </S.TextContainer>
+          <S.FadeOut $isExpanded={isExpanded} />
+        </S.TextWrapper>
       )
     case "h2":
       return (
-        <div onClick={onClickFn} key={key}>
-          <T.H2
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: theText }}
-          />
-        </div>
+        <S.TextWrapper $isExpanded={isExpanded}>
+          <S.TextContainer onClick={onClickFn} key={key}>
+            <T.H2
+              $textAlign={position}
+              $font={font}
+              dangerouslySetInnerHTML={{ __html: theText }}
+            />
+          </S.TextContainer>
+          <S.FadeOut $isExpanded={isExpanded} />
+        </S.TextWrapper>
       )
     case "h3":
       return (
-        <div onClick={onClickFn} key={key}>
-          <T.H3
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: theText }}
-          />
-        </div>
+        <S.TextWrapper $isExpanded={isExpanded}>
+          <S.TextContainer onClick={onClickFn} key={key}>
+            <T.H3
+              $textAlign={position}
+              $font={font}
+              dangerouslySetInnerHTML={{ __html: theText }}
+            />
+          </S.TextContainer>
+          <S.FadeOut $isExpanded={isExpanded} />
+        </S.TextWrapper>
       )
     case "h4":
       return (
-        <div onClick={onClickFn} key={key}>
-          <T.H4
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: theText }}
-          />
-        </div>
+        <S.TextWrapper $isExpanded={isExpanded}>
+          <S.TextContainer onClick={onClickFn} key={key}>
+            <T.H4
+              $textAlign={position}
+              $font={font}
+              dangerouslySetInnerHTML={{ __html: theText }}
+            />
+          </S.TextContainer>
+          <S.FadeOut $isExpanded={isExpanded} />
+        </S.TextWrapper>
       )
     case "h5":
       return (
-        <div onClick={onClickFn} key={key}>
-          <T.H5
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: theText }}
-          />
-        </div>
+        <S.TextWrapper $isExpanded={isExpanded}>
+          <S.TextContainer onClick={onClickFn} key={key}>
+            <T.H5
+              $textAlign={position}
+              $font={font}
+              dangerouslySetInnerHTML={{ __html: theText }}
+            />
+          </S.TextContainer>
+          <S.FadeOut $isExpanded={isExpanded} />
+        </S.TextWrapper>
       )
     case "h6":
       return (
-        <div onClick={onClickFn} key={key}>
-          <T.H6
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: theText }}
-          />
-        </div>
+        <S.TextWrapper $isExpanded={isExpanded}>
+          <S.TextContainer onClick={onClickFn} key={key}>
+            <T.H6
+              $textAlign={position}
+              $font={font}
+              dangerouslySetInnerHTML={{ __html: theText }}
+            />
+          </S.TextContainer>
+          <S.FadeOut $isExpanded={isExpanded} />
+        </S.TextWrapper>
       )
     case "h7":
       return (
-        <div onClick={onClickFn} key={key}>
-          <T.H7
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: theText }}
-          />
-        </div>
+        <S.TextWrapper $isExpanded={isExpanded}>
+          <S.TextContainer onClick={onClickFn} key={key}>
+            <T.H7
+              $textAlign={position}
+              $font={font}
+              dangerouslySetInnerHTML={{ __html: theText }}
+            />
+          </S.TextContainer>
+          <S.FadeOut $isExpanded={isExpanded} />
+        </S.TextWrapper>
       )
     case "p1":
       return (
-        <div onClick={onClickFn} key={key}>
-          <T.P1
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: theText }}
-          />
-        </div>
+        <S.TextWrapper $isExpanded={isExpanded}>
+          <S.TextContainer onClick={onClickFn} key={key}>
+            <T.P1
+              $textAlign={position}
+              $font={font}
+              dangerouslySetInnerHTML={{ __html: theText }}
+            />
+          </S.TextContainer>
+          <S.FadeOut $isExpanded={isExpanded} />
+        </S.TextWrapper>
       )
     case "p2":
       return (
-        <div onClick={onClickFn} key={key}>
-          <T.P2
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: theText }}
-          />
-        </div>
+        <S.TextWrapper $isExpanded={isExpanded}>
+          <S.TextContainer onClick={onClickFn} key={key}>
+            <T.P2
+              $textAlign={position}
+              $font={font}
+              dangerouslySetInnerHTML={{ __html: theText }}
+            />
+          </S.TextContainer>
+          <S.FadeOut $isExpanded={isExpanded} />
+        </S.TextWrapper>
       )
     case "p3":
       return (
@@ -159,33 +186,42 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
       )
     case "p4":
       return (
-        <div onClick={onClickFn} key={key}>
-          <T.P4
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: theText }}
-          />
-        </div>
+        <S.TextWrapper $isExpanded={isExpanded}>
+          <S.TextContainer onClick={onClickFn} key={key}>
+            <T.P4
+              $textAlign={position}
+              $font={font}
+              dangerouslySetInnerHTML={{ __html: theText }}
+            />
+          </S.TextContainer>
+          <S.FadeOut $isExpanded={isExpanded} />
+        </S.TextWrapper>
       )
     case "p5":
       return (
-        <div onClick={onClickFn} key={key}>
-          <T.P5
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: theText }}
-          />
-        </div>
+        <S.TextWrapper $isExpanded={isExpanded}>
+          <S.TextContainer onClick={onClickFn} key={key}>
+            <T.P5
+              $textAlign={position}
+              $font={font}
+              dangerouslySetInnerHTML={{ __html: theText }}
+            />
+          </S.TextContainer>
+          <S.FadeOut $isExpanded={isExpanded} />
+        </S.TextWrapper>
       )
     case "note":
       return (
-        <div onClick={onClickFn} key={key}>
-          <T.Notes
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: theText }}
-          />
-        </div>
+        <S.TextWrapper $isExpanded={isExpanded}>
+          <S.TextContainer onClick={onClickFn} key={key}>
+            <T.Notes
+              $textAlign={position}
+              $font={font}
+              dangerouslySetInnerHTML={{ __html: theText }}
+            />
+          </S.TextContainer>
+          <S.FadeOut $isExpanded={isExpanded} />
+        </S.TextWrapper>
       )
     default:
       return <T.H2 key={key}>Text size not found</T.H2>
