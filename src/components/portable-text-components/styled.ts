@@ -2,12 +2,12 @@ import styled from "styled-components"
 import * as T from "../typography"
 
 export const ImageWrapper = styled.div<{
-  position?: "left" | "right" | "center"
+  $position?: "left" | "right" | "center"
 }>`
   display: flex;
   flex-direction: column;
-  align-items: ${({ position }) => {
-    switch (position) {
+  align-items: ${({ $position }) => {
+    switch ($position) {
       case "left":
         return "flex-start"
       case "right":
@@ -16,8 +16,8 @@ export const ImageWrapper = styled.div<{
         return "center"
     }
   }};
-  text-align: ${({ position }) =>
-    position === "center" ? "center" : "inherit"};
+  text-align: ${({ $position }) =>
+    $position === "center" ? "center" : "inherit"};
 `
 
 export const ResponsiveImg = styled.img`

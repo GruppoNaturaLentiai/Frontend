@@ -2,9 +2,7 @@
   "storia": [
     {
       "type": "text",
-      "content": [
-        "Un po' di storia..."
-      ],
+      "content": ["Un po' di storia..."],
       "size": "h1",
       "font": "Caveat"
     },
@@ -17,9 +15,7 @@
     },
     {
       "type": "image",
-      "content": [
-        "CatastoAsburgo1818-1829.jpg"
-      ]
+      "content": ["CatastoAsburgo1818-1829.jpg"]
     },
     {
       "type": "text",
@@ -30,10 +26,7 @@
     },
     {
       "type": "image",
-      "content": [
-        "Bardies00.jpg",
-        "Bardies01.jpg"
-      ]
+      "content": ["Bardies00.jpg", "Bardies01.jpg"]
     }
   ]
 }

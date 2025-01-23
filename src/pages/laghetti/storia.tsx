@@ -36,10 +36,12 @@ const LaghettiStoriaPage: React.FC<PageProps> = () => {
   `)
 
   const content = dataJSON.storia as DataJSONType
-  if (!content) return (<DefaultLayout>
-    <T.H1>Contenuto non trovato!</T.H1>
-  </DefaultLayout>
-  )
+  if (!content)
+    return (
+      <DefaultLayout>
+        <T.H1>Contenuto non trovato!</T.H1>
+      </DefaultLayout>
+    )
 
   // Map metadata and image nodes
   const metadata = data.allImageMetadataJson.nodes

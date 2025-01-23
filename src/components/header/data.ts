@@ -1,6 +1,6 @@
 export const navItems = [
   {
-    label: "Laghetti",
+    label: "Laghetti della Rimonta",
     url: "/laghetti",
     subsections: [
       {
@@ -26,7 +26,7 @@ export const navItems = [
     ],
   },
   {
-    label: "Narcisi",
+    label: "Progetto Narcisi",
     url: "/narcisi",
     subsections: [
       {

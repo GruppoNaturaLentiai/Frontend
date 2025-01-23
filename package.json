@@ -20,6 +20,7 @@
     "@portabletext/react": "^3.2.0",
     "axios": "^1.7.9",
     "babel-plugin-styled-components": "^2.1.4",
+    "file-loader": "^6.2.0",
     "gatsby": "^5.14.1",
     "gatsby-plugin-image": "^3.14.0",
     "gatsby-plugin-manifest": "^5.14.0",

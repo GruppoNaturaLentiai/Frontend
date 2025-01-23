@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { colors } from "../../styles"
+import { breakpointNum, colors } from "../../styles"
 
 export const Wrapper = styled.div`
   border-radius: 8px;
@@ -9,4 +9,10 @@ export const Wrapper = styled.div`
   max-width: 1400px;
   justify-self: center;
   min-width: 800px;
+  @media (max-width: ${breakpointNum.bigtablet}px) {
+    min-width: 500px;
+  }
+  @media (max-width: ${breakpointNum.mobile}px) {
+    min-width: 280px;
+  }
 `

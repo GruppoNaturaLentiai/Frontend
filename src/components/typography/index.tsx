@@ -33,9 +33,16 @@ export const globalParagraphStylesTypography = `
   font-family: 'Funnel Sans';
 `
 
-export type FontFamilies = "Condiment" | "Funnel-Sans" | "Caveat" | "Cedarville Cursive"
+export type FontFamilies =
+  | "Condiment"
+  | "Funnel-Sans"
+  | "Caveat"
+  | "Cedarville Cursive"
 
-export const H1 = styled.h1<{  $font?: FontFamilies, $textAlign?: "left" | "right" | "center" }>`
+export const H1 = styled.h1<{
+  $font?: FontFamilies
+  $textAlign?: "left" | "right" | "center"
+}>`
   ${globalHeaderStylesTypography}
   font-size: ${fontSizes.h1}px;
   ${({ $font }) => $font && `font-family: ${$font};`}
@@ -48,7 +55,10 @@ export const H1 = styled.h1<{  $font?: FontFamilies, $textAlign?: "left" | "righ
   }
 `
 
-export const H2 = styled.h2<{  $font?: FontFamilies, $textAlign?: "left" | "right" | "center" }>`
+export const H2 = styled.h2<{
+  $font?: FontFamilies
+  $textAlign?: "left" | "right" | "center"
+}>`
   ${globalHeaderStylesTypography}
   font-size: ${fontSizes.h2}px;
   ${({ $font }) => $font && `font-family: ${$font};`}
@@ -61,7 +71,10 @@ export const H2 = styled.h2<{  $font?: FontFamilies, $textAlign?: "left" | "righ
   }
 `
 
-export const H3 = styled.h3<{  $font?: FontFamilies, $textAlign?: "left" | "right" | "center" }>`
+export const H3 = styled.h3<{
+  $font?: FontFamilies
+  $textAlign?: "left" | "right" | "center"
+}>`
   ${globalHeaderStylesTypography}
   font-size: ${fontSizes.h3}px;
   ${({ $font }) => $font && `font-family: ${$font};`}
@@ -74,7 +87,10 @@ export const H3 = styled.h3<{  $font?: FontFamilies, $textAlign?: "left" | "righ
   }
 `
 
-export const H4 = styled.h4<{  $font?: FontFamilies, $textAlign?: "left" | "right" | "center" }>`
+export const H4 = styled.h4<{
+  $font?: FontFamilies
+  $textAlign?: "left" | "right" | "center"
+}>`
   ${globalHeaderStylesTypography}
   font-size: ${fontSizes.h4}px;
   ${({ $font }) => $font && `font-family: ${$font};`}
@@ -86,7 +102,10 @@ export const H4 = styled.h4<{  $font?: FontFamilies, $textAlign?: "left" | "righ
     font-size: ${fontSizes.h6}px;
   }
 `
-export const H5 = styled.h5<{  $font?: FontFamilies, $textAlign?: "left" | "right" | "center" }>`
+export const H5 = styled.h5<{
+  $font?: FontFamilies
+  $textAlign?: "left" | "right" | "center"
+}>`
   ${globalHeaderStylesTypography}
   font-size: ${fontSizes.h5}px;
   ${({ $font }) => $font && `font-family: ${$font};`}
@@ -99,7 +118,10 @@ export const H5 = styled.h5<{  $font?: FontFamilies, $textAlign?: "left" | "righ
   }
 `
 
-export const H6 = styled.h6<{  $font?: FontFamilies, $textAlign?: "left" | "right" | "center" }>`
+export const H6 = styled.h6<{
+  $font?: FontFamilies
+  $textAlign?: "left" | "right" | "center"
+}>`
   ${globalHeaderStylesTypography}
   font-size: ${fontSizes.h6}px;
   ${({ $font }) => $font && `font-family: ${$font};`}
@@ -109,7 +131,10 @@ export const H6 = styled.h6<{  $font?: FontFamilies, $textAlign?: "left" | "righ
   }
 `
 
-export const H7 = styled.h6<{  $font?: FontFamilies, $textAlign?: "left" | "right" | "center" }>`
+export const H7 = styled.h6<{
+  $font?: FontFamilies
+  $textAlign?: "left" | "right" | "center"
+}>`
   ${globalHeaderStylesTypography}
   font-size: ${fontSizes.h7}px;
   ${({ $font }) => $font && `font-family: ${$font};`}
@@ -119,7 +144,10 @@ export const H7 = styled.h6<{  $font?: FontFamilies, $textAlign?: "left" | "righ
   }
 `
 
-export const P1 = styled.p<{  $font?: FontFamilies, $textAlign?: "left" | "right" | "center" }>`
+export const P1 = styled.p<{
+  $font?: FontFamilies
+  $textAlign?: "left" | "right" | "center"
+}>`
   ${globalParagraphStylesTypography}
   font-size: ${fontSizes.p1}px;
   ${({ $font }) => $font && `font-family: ${$font};`}
@@ -132,7 +160,10 @@ export const P1 = styled.p<{  $font?: FontFamilies, $textAlign?: "left" | "right
   }
 `
 
-export const P2 = styled.p<{  $font?: FontFamilies, $textAlign?: "left" | "right" | "center" }>`
+export const P2 = styled.p<{
+  $font?: FontFamilies
+  $textAlign?: "left" | "right" | "center"
+}>`
   ${globalParagraphStylesTypography}
   font-size: ${fontSizes.p2}px;
   ${({ $font }) => $font && `font-family: ${$font};`}
@@ -144,7 +175,10 @@ export const P2 = styled.p<{  $font?: FontFamilies, $textAlign?: "left" | "right
     font-size: ${fontSizes.p4}px;
   }
 `
-export const P3 = styled.p<{  $font?: FontFamilies, $textAlign?: "left" | "right" | "center" }>`
+export const P3 = styled.p<{
+  $font?: FontFamilies
+  $textAlign?: "left" | "right" | "center"
+}>`
   ${globalParagraphStylesTypography}
   font-size: ${fontSizes.p3}px;
   ${({ $font }) => $font && `font-family: ${$font};`}
@@ -157,7 +191,10 @@ export const P3 = styled.p<{  $font?: FontFamilies, $textAlign?: "left" | "right
   }
 `
 
-export const P4 = styled.p<{  $font?: FontFamilies, $textAlign?: "left" | "right" | "center" }>`
+export const P4 = styled.p<{
+  $font?: FontFamilies
+  $textAlign?: "left" | "right" | "center"
+}>`
   ${globalParagraphStylesTypography}
   font-size: ${fontSizes.p4}px;
   ${({ $font }) => $font && `font-family: ${$font};`}
@@ -167,7 +204,10 @@ export const P4 = styled.p<{  $font?: FontFamilies, $textAlign?: "left" | "right
   }
 `
 
-export const P5 = styled.p<{  $font?: FontFamilies, $textAlign?: "left" | "right" | "center" }>`
+export const P5 = styled.p<{
+  $font?: FontFamilies
+  $textAlign?: "left" | "right" | "center"
+}>`
   ${globalParagraphStylesTypography}
   font-size: ${fontSizes.p5}px;
   ${({ $font }) => $font && `font-family: ${$font};`}
@@ -177,7 +217,10 @@ export const P5 = styled.p<{  $font?: FontFamilies, $textAlign?: "left" | "right
   }
 `
 
-export const Notes = styled.p<{  $font?: FontFamilies, $textAlign?: "left" | "right" | "center" }>`
+export const Notes = styled.p<{
+  $font?: FontFamilies
+  $textAlign?: "left" | "right" | "center"
+}>`
   ${globalParagraphStylesTypography}
   font-size: ${fontSizes.notes}px;
   ${({ $font }) => $font && `font-family: ${$font};`}

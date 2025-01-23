@@ -157,7 +157,7 @@ const PostTemplate: React.FC<PageProps<{}, PostPageContext>> = ({
         <PortableText value={renderBody} components={Components} />
         {author && <T.P3>Articolo firmato: {author}</T.P3>}
       </article>
-    </DefaultLayout >
+    </DefaultLayout>
   )
 }
 

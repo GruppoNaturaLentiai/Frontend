@@ -7,9 +7,7 @@ const ContentToComponent: React.FC<{
   pageData: DataJSONType
   images: ImageData[]
 }> = ({ pageData, images }) => (
-  <S.MainWrapper>
-    {pageData.map(renderComponents(images))}
-  </S.MainWrapper>
+  <S.MainWrapper>{pageData.map(renderComponents(images))}</S.MainWrapper>
 )
 
 export default ContentToComponent

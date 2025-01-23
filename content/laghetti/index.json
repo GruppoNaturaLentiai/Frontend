@@ -2,9 +2,7 @@
   "index": [
     {
       "type": "text",
-      "content": [
-        "Una storia di fedeltà, amore, impegno..."
-      ],
+      "content": ["Una storia di fedeltà, amore, impegno..."],
       "size": "h1",
       "font": "Caveat"
     },

@@ -8,12 +8,13 @@ import { DataJSONType, ImageData } from "../../types"
 import * as T from "./../../components/typography"
 import MapComponent from "../../components/map"
 
-const markersMap = [{
-  name: "Inizio del percorso",
-  lat: 46.04923742844764,
-  lon: 12.02636613390803
-}]
-
+const markersMap = [
+  {
+    name: "Inizio del percorso",
+    lat: 46.04923742844764,
+    lon: 12.02636613390803,
+  },
+]
 
 const LaghettiMappePage: React.FC<PageProps> = () => {
   const data = useStaticQuery(graphql`
@@ -44,10 +45,12 @@ const LaghettiMappePage: React.FC<PageProps> = () => {
   `)
 
   const content = dataJSON.mappe as DataJSONType
-  if (!content) return (<DefaultLayout>
-    <T.H1>Contenuto non trovato!</T.H1>
-  </DefaultLayout>
-  )
+  if (!content)
+    return (
+      <DefaultLayout>
+        <T.H1>Contenuto non trovato!</T.H1>
+      </DefaultLayout>
+    )
 
   // Map metadata and image nodes
   const metadata = data.allImageMetadataJson.nodes
@@ -65,7 +68,7 @@ const LaghettiMappePage: React.FC<PageProps> = () => {
   return (
     <DefaultLayout>
       <ContentToComponent pageData={content} images={filteredImages} />
-      <MapComponent markers={markersMap}/>
+      <MapComponent markers={markersMap} />
     </DefaultLayout>
   )
 }
