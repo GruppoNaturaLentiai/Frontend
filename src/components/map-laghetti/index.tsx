@@ -75,12 +75,7 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
 
   return (
     <S.Wrapper>
-      <S.Legend>{paths.map((path, idx) =>
-        <S.LegendElement key={idx}>
-          <S.Dot $color={path.color} />
-          <T.H4>{path.legend}</T.H4>
-        </S.LegendElement>)}
-      </S.Legend>
+      
       <MapContainer
         style={{ height: "500px", width: "100%" }}
         center={piazzaCenter}
@@ -117,6 +112,12 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
           />
         )} */}
       </MapContainer>
+      <S.Legend>{paths.map((path, idx) =>
+        <S.LegendElement key={idx}>
+          <S.Dot $color={path.color} />
+          <T.H4>{path.legend}</T.H4>
+        </S.LegendElement>)}
+      </S.Legend>
     </S.Wrapper>
   )
 }

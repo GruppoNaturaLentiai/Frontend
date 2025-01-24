@@ -10,7 +10,7 @@ export const Legend = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding-bottom: 20px;
+  padding: 24px;
 `
 
 export const LegendElement = styled.div`
