@@ -1,8 +1,12 @@
 import "leaflet-css"
 import React, { useEffect, useState } from "react"
-import { MapContainer, Marker, TileLayer, Tooltip } from "react-leaflet"
+import { MapContainer, Marker, TileLayer, Tooltip, useMap } from "react-leaflet"
 import { Location } from "../../types"
 import * as S from "./styled"
+
+// Route Control Component for Road Path
+import L from "leaflet";
+import "leaflet-routing-machine";
 
 import { Marker as MarkerLeaflet, icon } from "leaflet"
 
@@ -56,6 +60,9 @@ const MapComponent: React.FC<{ markers: Location[] }> = ({ markers }) => {
     }
   }
   //////////////////////////////////////
+  // Extract coordinates for the polyline
+  const pathCoordinates = markers.map((marker) => [marker.lat, marker.lon] as [number, number]);
+
 
   return (
     <S.Wrapper>
@@ -78,9 +85,56 @@ const MapComponent: React.FC<{ markers: Location[] }> = ({ markers }) => {
             <Tooltip>{marker.name}</Tooltip >
           </Marker>
         ))}
+        {/* Optional: Routing Control for Road Path */}
+        {pathCoordinates.length >= 2 && (
+          <RouteControl
+            waypoints={pathCoordinates}
+          />
+        )}
       </MapContainer>
     </S.Wrapper>
   )
 }
+
+// Extend RoutingControlOptions to include createMarker
+interface ExtendedRoutingControlOptions extends L.Routing.RoutingControlOptions {
+  createMarker?: (i: number, waypoint: L.Routing.Waypoint, n: number) => L.Marker | null;
+}
+
+const RouteControl: React.FC<{ waypoints: [number, number][] }> = ({ waypoints }) => {
+  const map = useMap();
+  const routingControlRef = React.useRef<L.Routing.Control | null>(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || waypoints.length < 2) return;
+
+    const routingControl = L.Routing.control({
+      waypoints: waypoints.map((coords) => L.latLng(coords[0], coords[1])),
+      routeWhileDragging: false,
+      show: false,
+      addWaypoints: false,
+      createMarker: () => null, // Prevent default markers from being added
+      router: new L.Routing.OSRMv1({
+        serviceUrl: 'https://router.project-osrm.org/route/v1', // OSRM service URL
+        profile: 'foot', // Use the 'foot' profile for pedestrian routes
+      }),
+    } as ExtendedRoutingControlOptions).addTo(map);
+
+    routingControlRef.current = routingControl;
+
+    // Hide the summary box after the control is added
+    const controlContainer = routingControl.getContainer();
+    if (controlContainer) {
+      controlContainer.style.display = "none";
+    }
+
+    return () => {
+      map.removeControl(routingControl);
+      routingControlRef.current = null;
+    };
+  }, [map, waypoints]);
+
+  return null;
+};
 
 export default MapComponent
