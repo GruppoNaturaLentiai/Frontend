@@ -6,6 +6,7 @@ import ContentToComponent from "../../components/pagedata-text-components"
 import dataJSON from "../../../content/laghetti/index.json"
 import * as T from "./../../components/typography"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import MobileContentToComponent from "../../components/mobile-pagedata-text-components"
 
 const LaghettiPage: React.FC<PageProps> = () => {
   const data = useStaticQuery(graphql`
@@ -78,6 +79,7 @@ const LaghettiPage: React.FC<PageProps> = () => {
           <T.P4 $textAlign="center">Foto di Walter Argenta</T.P4>
         </div>
         <ContentToComponent pageData={content} images={filteredImages} />
+        <MobileContentToComponent pageData={content} images={filteredImages} />
         <div style={{ justifySelf: "center" }}>
           {coverDown && (
             <GatsbyImage

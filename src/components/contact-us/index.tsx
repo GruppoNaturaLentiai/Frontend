@@ -6,7 +6,7 @@ import * as T from "./../typography"
 const contactData = [
   {
     icon: <Icon type="facebook" width={20} />,
-    text: "Laghetti Della Rimonta",
+    text: "Laghetti della Rimonta",
     linkURL: "https://www.facebook.com/profile.php?id=100064320537208"
   },
   {

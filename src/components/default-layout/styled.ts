@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { breakpointNum, colors } from "../../styles"
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.main`
   border-radius: 8px;
   margin: 32px;
   min-height: 500px;
@@ -9,6 +9,11 @@ export const Wrapper = styled.div`
   max-width: 1400px;
   justify-self: center;
   min-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
   @media (max-width: ${breakpointNum.bigtablet}px) {
     min-width: 500px;
   }

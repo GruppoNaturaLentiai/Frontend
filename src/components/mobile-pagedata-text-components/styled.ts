@@ -8,10 +8,10 @@ export const MainWrapper = styled.div`
   gap: 20px;
   padding: 32px;
   justify-content: center;
-  @media (min-width: ${breakpointNum.tablet + 1}px) {
+  @media (min-width: ${breakpointNum.bigtablet + 1}px) {
     display: none;
   }
-  @media (max-width: ${breakpointNum.bigtablet}px) {
+  @media (max-width: ${breakpointNum.tablet}px) {
     padding: 24px;
   }
   @media (max-width: ${breakpointNum.mobile}px) {
@@ -26,16 +26,8 @@ export const ImageWrapper = styled.div`
   justify-content: center;
 `
 
-export const TwoColsWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  @media (max-width: ${breakpoint.tablet}) {
-    display: none;
-  }
-`
-
 export const TwoWrapperMobile = styled.div`
-  @media (min-width: ${breakpointNum.tablet + 1}px) {
+  @media (min-width: ${breakpointNum.bigtablet + 1}px) {
     display: none;
   }
   min-height: 100px;
@@ -56,7 +48,8 @@ export const TextContainer = styled.div`
   position: relative;
 `;
 
-export const FadeOut = styled.div<{ $isExpanded: boolean }>`
+export const FadeOut = styled.div<{ $isExpanded: boolean, $isShort: boolean }>`
+  ${({ $isShort }) => ($isShort && "display:none;")}
   position: absolute;
   bottom: 0;
   left: 0;

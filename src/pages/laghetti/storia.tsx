@@ -6,6 +6,7 @@ import DefaultLayout from "../../components/default-layout"
 import ContentToComponent from "../../components/pagedata-text-components"
 import { DataJSONType, ImageData } from "../../types"
 import * as T from "./../../components/typography"
+import MobileContentToComponent from "../../components/mobile-pagedata-text-components"
 
 const LaghettiStoriaPage: React.FC<PageProps> = () => {
   const data = useStaticQuery(graphql`
@@ -59,6 +60,7 @@ const LaghettiStoriaPage: React.FC<PageProps> = () => {
   return (
     <DefaultLayout>
       <ContentToComponent pageData={content} images={filteredImages} />
+      <MobileContentToComponent pageData={content} images={filteredImages} />
     </DefaultLayout>
   )
 }

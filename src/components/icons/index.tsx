@@ -7,6 +7,8 @@ import { ReactComponent as Email } from "./../../icons/email.svg"
 import { ReactComponent as Facebook } from "./../../icons/facebook.svg"
 import { ReactComponent as Whatsapp } from "./../../icons/whatsapp.svg"
 import { ReactComponent as Youtube } from "./../../icons/youtube.svg"
+import { ReactComponent as WIP } from "./../../icons/wip.svg"
+import { ReactComponent as SadFace } from "./../../icons/sad-face.svg"
 
 
 interface IconsProps {
@@ -33,6 +35,10 @@ const Icon: React.FC<IconsProps> = ({ type, ...props }) => {
       return <Facebook viewBox="0 0 960 960" {...props} />
     case "youtube":
       return <Youtube viewBox="0 0 310 310" {...props} />
+    case "wip":
+      return <WIP viewBox="0 0 312 246" {...props} />
+    case "sad-face":
+      return <SadFace viewBox="0 0 369.946 369.946" {...props} />
     default:
 
       return null

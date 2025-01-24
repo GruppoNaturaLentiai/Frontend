@@ -136,7 +136,7 @@ export const RightSidebar = styled.div<{ $isOpen: boolean }>`
   padding: 2rem;
 
   @media (min-width: 768px) {
-    display: none; /* Hide sidebar on desktop */
+    display: none;
   }
 `
 
@@ -213,7 +213,7 @@ export const IconWrapper = styled.div<{ $isActive: boolean; $isOpen: boolean }>`
       fill: ${({ $isActive }) =>
     $isActive ? colors.green.green600 : colors.green.green500};
     }
-    transform: ${({ $isOpen }) => ($isOpen ? "rotate(180deg)" : "rotate(0deg)")};
+    transform: ${({ $isOpen }) => ($isOpen ? "rotate(0deg)" : "rotate(-90deg)")};
     transition: all 0.7s;
   }
 `

@@ -42,7 +42,7 @@ export const renderImage = (content: ImageContentData, images: ImageData[], key:
 
 
 export const renderText = (content: TextContentData, key: string, setExpandText: React.Dispatch<React.SetStateAction<string>>, expandText: string) => {
-  let theText = content.content.join(" <br /> ")
+  const theText = content.content.join(" <br /> ")
   if (!theText) return <T.H2 key={key}>Text not found</T.H2>
 
   const isExpanded = key === expandText
@@ -51,6 +51,7 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
     else setExpandText(key)
   }
 
+  const isShortText = theText.length < 200
 
   const { font, position } = content
   switch (content.size) {
@@ -64,7 +65,7 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
               dangerouslySetInnerHTML={{ __html: theText }}
             />
           </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} />
+          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
         </S.TextWrapper>
       )
     case "h2":
@@ -77,7 +78,7 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
               dangerouslySetInnerHTML={{ __html: theText }}
             />
           </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} />
+          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
         </S.TextWrapper>
       )
     case "h3":
@@ -90,7 +91,7 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
               dangerouslySetInnerHTML={{ __html: theText }}
             />
           </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} />
+          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
         </S.TextWrapper>
       )
     case "h4":
@@ -103,7 +104,7 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
               dangerouslySetInnerHTML={{ __html: theText }}
             />
           </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} />
+          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
         </S.TextWrapper>
       )
     case "h5":
@@ -116,7 +117,7 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
               dangerouslySetInnerHTML={{ __html: theText }}
             />
           </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} />
+          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
         </S.TextWrapper>
       )
     case "h6":
@@ -129,7 +130,7 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
               dangerouslySetInnerHTML={{ __html: theText }}
             />
           </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} />
+          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
         </S.TextWrapper>
       )
     case "h7":
@@ -142,7 +143,7 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
               dangerouslySetInnerHTML={{ __html: theText }}
             />
           </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} />
+          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
         </S.TextWrapper>
       )
     case "p1":
@@ -155,7 +156,7 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
               dangerouslySetInnerHTML={{ __html: theText }}
             />
           </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} />
+          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
         </S.TextWrapper>
       )
     case "p2":
@@ -168,7 +169,7 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
               dangerouslySetInnerHTML={{ __html: theText }}
             />
           </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} />
+          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
         </S.TextWrapper>
       )
     case "p3":
@@ -181,7 +182,7 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
               dangerouslySetInnerHTML={{ __html: theText }}
             />
           </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} />
+          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
         </S.TextWrapper>
       )
     case "p4":
@@ -194,7 +195,7 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
               dangerouslySetInnerHTML={{ __html: theText }}
             />
           </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} />
+          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
         </S.TextWrapper>
       )
     case "p5":
@@ -207,7 +208,7 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
               dangerouslySetInnerHTML={{ __html: theText }}
             />
           </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} />
+          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
         </S.TextWrapper>
       )
     case "note":
@@ -220,7 +221,7 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
               dangerouslySetInnerHTML={{ __html: theText }}
             />
           </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} />
+          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
         </S.TextWrapper>
       )
     default:
