@@ -4,16 +4,24 @@ import * as React from "react"
 import dataJSON from "../../../content/laghetti/mappe.json"
 import DefaultLayout from "../../components/default-layout"
 import ContentToComponent from "../../components/pagedata-text-components"
-import { DataJSONType, ImageData } from "../../types"
+import { DataJSONType, ImageData, Location } from "../../types"
 import * as T from "./../../components/typography"
 import MapComponent from "../../components/map"
 import MobileContentToComponent from "../../components/mobile-pagedata-text-components"
 
-const markersMap = [
+const markersMap: Location[] = [
   {
+    type: "start",
     name: "Inizio del percorso",
     lat: 46.04923742844764,
     lon: 12.02636613390803,
+  },
+  {
+    type: "park",
+    iconType: "park",
+    name: "Parcheggio",
+    lat: 46.046873575356855,
+    lon: 12.024898230581327,
   },
 ]
 

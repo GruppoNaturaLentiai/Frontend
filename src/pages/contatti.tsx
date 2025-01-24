@@ -4,9 +4,11 @@ import DefaultLayout from "../components/default-layout"
 import ContactUs from "../components/contact-us"
 
 const ContactPage: React.FC<PageProps> = () => {
-  return (<DefaultLayout>
-    <ContactUs />
-  </DefaultLayout>)
+  return (
+    <DefaultLayout>
+      <ContactUs />
+    </DefaultLayout>
+  )
 }
 
 export default ContactPage

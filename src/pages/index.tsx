@@ -4,9 +4,11 @@ import DefaultLayout from "../components/default-layout"
 import WorkInProgress from "../components/work-in-progress"
 
 const IndexPage: React.FC<PageProps> = () => {
-  return <DefaultLayout>
-    <WorkInProgress />
-  </DefaultLayout>
+  return (
+    <DefaultLayout>
+      <WorkInProgress />
+    </DefaultLayout>
+  )
 }
 
 export default IndexPage

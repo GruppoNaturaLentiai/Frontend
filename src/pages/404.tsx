@@ -4,9 +4,11 @@ import DefaultLayout from "../components/default-layout"
 import Component404 from "../components/404"
 
 const IndexPage: React.FC<PageProps> = () => {
-  return <DefaultLayout>
-    <Component404 />
-  </DefaultLayout>
+  return (
+    <DefaultLayout>
+      <Component404 />
+    </DefaultLayout>
+  )
 }
 
 export default IndexPage

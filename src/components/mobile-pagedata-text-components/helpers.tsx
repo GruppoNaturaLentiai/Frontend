@@ -1,16 +1,18 @@
 import React from "react"
-import {
-  ImageContentData,
-  ImageData,
-  TextContentData
-} from "../../types"
+import { ImageContentData, ImageData, TextContentData } from "../../types"
 import ImageWithCredits from "../image-with-credits"
 import * as T from "../typography"
 import * as S from "./styled"
 
-const ContinueReading = <S.ContinueReading>Continua a leggere</S.ContinueReading>
+const ContinueReading = (
+  <S.ContinueReading>Continua a leggere</S.ContinueReading>
+)
 
-export const renderImage = (content: ImageContentData, images: ImageData[], key: string) => {
+export const renderImage = (
+  content: ImageContentData,
+  images: ImageData[],
+  key: string,
+) => {
   const filteredImages = content.content.map(imgFilename =>
     images.find(img => img.fileName === imgFilename),
   )
@@ -34,14 +36,18 @@ export const renderImage = (content: ImageContentData, images: ImageData[], key:
           )
         ) : (
           <T.H2 key={`img-${index}`}>Image not found</T.H2>
-        )
+        ),
       )}
     </S.ImageWrapper>
   )
 }
 
-
-export const renderText = (content: TextContentData, key: string, setExpandText: React.Dispatch<React.SetStateAction<string>>, expandText: string) => {
+export const renderText = (
+  content: TextContentData,
+  key: string,
+  setExpandText: React.Dispatch<React.SetStateAction<string>>,
+  expandText: string,
+) => {
   const theText = content.content.join(" <br /> ")
   if (!theText) return <T.H2 key={key}>Text not found</T.H2>
 
@@ -57,8 +63,8 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
   switch (content.size) {
     case "h1":
       return (
-        <S.TextWrapper $isExpanded={isExpanded}>
-          <S.TextContainer onClick={onClickFn} key={key}>
+        <S.TextWrapper $isExpanded={isExpanded} key={key}>
+          <S.TextContainer onClick={onClickFn}>
             <T.H1
               $textAlign={position}
               $font={font}
@@ -70,8 +76,8 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
       )
     case "h2":
       return (
-        <S.TextWrapper $isExpanded={isExpanded}>
-          <S.TextContainer onClick={onClickFn} key={key}>
+        <S.TextWrapper $isExpanded={isExpanded} key={key}>
+          <S.TextContainer onClick={onClickFn}>
             <T.H2
               $textAlign={position}
               $font={font}
@@ -83,8 +89,8 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
       )
     case "h3":
       return (
-        <S.TextWrapper $isExpanded={isExpanded}>
-          <S.TextContainer onClick={onClickFn} key={key}>
+        <S.TextWrapper $isExpanded={isExpanded} key={key}>
+          <S.TextContainer onClick={onClickFn}>
             <T.H3
               $textAlign={position}
               $font={font}
@@ -96,8 +102,8 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
       )
     case "h4":
       return (
-        <S.TextWrapper $isExpanded={isExpanded}>
-          <S.TextContainer onClick={onClickFn} key={key}>
+        <S.TextWrapper $isExpanded={isExpanded} key={key}>
+          <S.TextContainer onClick={onClickFn}>
             <T.H4
               $textAlign={position}
               $font={font}
@@ -109,8 +115,8 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
       )
     case "h5":
       return (
-        <S.TextWrapper $isExpanded={isExpanded}>
-          <S.TextContainer onClick={onClickFn} key={key}>
+        <S.TextWrapper $isExpanded={isExpanded} key={key}>
+          <S.TextContainer onClick={onClickFn}>
             <T.H5
               $textAlign={position}
               $font={font}
@@ -122,8 +128,8 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
       )
     case "h6":
       return (
-        <S.TextWrapper $isExpanded={isExpanded}>
-          <S.TextContainer onClick={onClickFn} key={key}>
+        <S.TextWrapper $isExpanded={isExpanded} key={key}>
+          <S.TextContainer onClick={onClickFn}>
             <T.H6
               $textAlign={position}
               $font={font}
@@ -135,8 +141,8 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
       )
     case "h7":
       return (
-        <S.TextWrapper $isExpanded={isExpanded}>
-          <S.TextContainer onClick={onClickFn} key={key}>
+        <S.TextWrapper $isExpanded={isExpanded} key={key}>
+          <S.TextContainer onClick={onClickFn}>
             <T.H7
               $textAlign={position}
               $font={font}
@@ -148,8 +154,8 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
       )
     case "p1":
       return (
-        <S.TextWrapper $isExpanded={isExpanded}>
-          <S.TextContainer onClick={onClickFn} key={key}>
+        <S.TextWrapper $isExpanded={isExpanded} key={key}>
+          <S.TextContainer onClick={onClickFn}>
             <T.P1
               $textAlign={position}
               $font={font}
@@ -161,8 +167,8 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
       )
     case "p2":
       return (
-        <S.TextWrapper $isExpanded={isExpanded}>
-          <S.TextContainer onClick={onClickFn} key={key}>
+        <S.TextWrapper $isExpanded={isExpanded} key={key}>
+          <S.TextContainer onClick={onClickFn}>
             <T.P2
               $textAlign={position}
               $font={font}
@@ -174,8 +180,8 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
       )
     case "p3":
       return (
-        <S.TextWrapper $isExpanded={isExpanded}>
-          <S.TextContainer onClick={onClickFn} key={key}>
+        <S.TextWrapper $isExpanded={isExpanded} key={key}>
+          <S.TextContainer onClick={onClickFn}>
             <T.P3
               $textAlign={position}
               $font={font}
@@ -187,8 +193,8 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
       )
     case "p4":
       return (
-        <S.TextWrapper $isExpanded={isExpanded}>
-          <S.TextContainer onClick={onClickFn} key={key}>
+        <S.TextWrapper $isExpanded={isExpanded} key={key}>
+          <S.TextContainer onClick={onClickFn}>
             <T.P4
               $textAlign={position}
               $font={font}
@@ -200,8 +206,8 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
       )
     case "p5":
       return (
-        <S.TextWrapper $isExpanded={isExpanded}>
-          <S.TextContainer onClick={onClickFn} key={key}>
+        <S.TextWrapper $isExpanded={isExpanded} key={key}>
+          <S.TextContainer onClick={onClickFn}>
             <T.P5
               $textAlign={position}
               $font={font}
@@ -213,8 +219,8 @@ export const renderText = (content: TextContentData, key: string, setExpandText:
       )
     case "note":
       return (
-        <S.TextWrapper $isExpanded={isExpanded}>
-          <S.TextContainer onClick={onClickFn} key={key}>
+        <S.TextWrapper $isExpanded={isExpanded} key={key}>
+          <S.TextContainer onClick={onClickFn}>
             <T.Notes
               $textAlign={position}
               $font={font}

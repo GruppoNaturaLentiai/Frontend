@@ -128,7 +128,8 @@ export const RightSidebar = styled.div<{ $isOpen: boolean }>`
   height: 100%;
   background-color: ${colors.green.green900};
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-  transform: ${({ $isOpen }) => ($isOpen ? "translateX(0)" : "translateX(100%)")};
+  transform: ${({ $isOpen }) =>
+    $isOpen ? "translateX(0)" : "translateX(100%)"};
   transition: transform 0.3s ease-in-out;
   z-index: 1000;
   display: flex;
@@ -169,11 +170,11 @@ export const MobileNavBarItem = styled.li<{ $isActive: boolean }>`
     text-decoration: none;
     > h4 {
       color: ${({ $isActive }) =>
-    $isActive ? colors.green.green500 : colors.green.green300};
+        $isActive ? colors.green.green500 : colors.green.green300};
       &:active {
         transition: all 0.5s;
         color: ${({ $isActive }) =>
-    $isActive ? colors.green.green600 : colors.green.green500};
+          $isActive ? colors.green.green600 : colors.green.green500};
       }
       font-weight: bold;
     }
@@ -190,11 +191,11 @@ export const LinkIcon = styled.div<{ $isActive: boolean }>`
     > h4 {
       margin-top: 0px;
       color: ${({ $isActive }) =>
-    $isActive ? colors.green.green500 : colors.green.green300};
+        $isActive ? colors.green.green500 : colors.green.green300};
       &:active {
         transition: all 0.5s;
         color: ${({ $isActive }) =>
-    $isActive ? colors.green.green600 : colors.green.green500};
+          $isActive ? colors.green.green600 : colors.green.green500};
       }
       font-weight: bold;
     }
@@ -206,14 +207,15 @@ export const IconWrapper = styled.div<{ $isActive: boolean; $isOpen: boolean }>`
   cursor: pointer;
   > svg {
     fill: ${({ $isActive }) =>
-    $isActive ? colors.green.green500 : colors.green.green300};
+      $isActive ? colors.green.green500 : colors.green.green300};
 
     &:active {
       transition: all 0.5s;
       fill: ${({ $isActive }) =>
-    $isActive ? colors.green.green600 : colors.green.green500};
+        $isActive ? colors.green.green600 : colors.green.green500};
     }
-    transform: ${({ $isOpen }) => ($isOpen ? "rotate(0deg)" : "rotate(-90deg)")};
+    transform: ${({ $isOpen }) =>
+      $isOpen ? "rotate(0deg)" : "rotate(-90deg)"};
     transition: all 0.7s;
   }
 `

@@ -1,14 +1,18 @@
-import React from "react"
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
 import "leaflet-css"
-import * as S from "./styled"
+import React from "react"
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
 import { Location } from "../../types"
+import * as S from "./styled"
+
 import L from "leaflet"
 
-// default markers
-import markerIcon from "./../../markers/default/marker-icon.png"
+//// MARKERS RELATED CODE
 import markerIcon2x from "./../../markers/default/marker-icon-2x.png"
+import markerIcon from "./../../markers/default/marker-icon.png"
 import markerShadow from "./../../markers/default/marker-shadow.png"
+
+import parkMarker from "./../../markers/parking/park-marker-32x32.png"
+import parkMarker2x from "./../../markers/parking/park-marker-64x64.png"
 
 type LocationMarker = [lat: number, lon: number]
 
@@ -19,6 +23,7 @@ const MapComponent: React.FC<{ markers: Location[] }> = ({ markers }) => {
     return <p>Loading map...</p>
   }
 
+  ///////// MARKERS RELATED STUFF
   const DefaultIcon = L.icon({
     iconUrl: markerIcon,
     iconRetinaUrl: markerIcon2x,
@@ -27,6 +32,23 @@ const MapComponent: React.FC<{ markers: Location[] }> = ({ markers }) => {
     iconAnchor: [12, 41],
   })
   L.Marker.prototype.options.icon = DefaultIcon
+  const ParkIcon = L.icon({
+    iconUrl: parkMarker,
+    iconRetinaUrl: parkMarker2x,
+    shadowUrl: markerShadow,
+    iconSize: [33, 41],
+    iconAnchor: [12, 41],
+  })
+
+  const mapToMarker = (IconType?: string) => {
+    switch (IconType) {
+      case "park":
+        return ParkIcon
+      default:
+        return DefaultIcon
+    }
+  }
+  //////////////////////////////////////
 
   return (
     <S.Wrapper>
@@ -41,7 +63,11 @@ const MapComponent: React.FC<{ markers: Location[] }> = ({ markers }) => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {markers.map((marker, idx) => (
-          <Marker key={`marker-${idx}`} position={[marker.lat, marker.lon]}>
+          <Marker
+            key={`marker-${idx}`}
+            position={[marker.lat, marker.lon]}
+            icon={mapToMarker(marker.iconType)}
+          >
             <Popup>{marker.name}</Popup>
           </Marker>
         ))}

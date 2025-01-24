@@ -7,9 +7,7 @@ const DefaultLayout: React.FC<{ children: any }> = ({ children }) => {
   return (
     <>
       <Header />
-      <S.Wrapper>
-        {children}
-      </S.Wrapper>
+      <S.Wrapper>{children}</S.Wrapper>
       <Footer />
     </>
   )

@@ -10,7 +10,6 @@ import { ReactComponent as Youtube } from "./../../icons/youtube.svg"
 import { ReactComponent as WIP } from "./../../icons/wip.svg"
 import { ReactComponent as SadFace } from "./../../icons/sad-face.svg"
 
-
 interface IconsProps {
   type: string
   width?: number
@@ -40,7 +39,6 @@ const Icon: React.FC<IconsProps> = ({ type, ...props }) => {
     case "sad-face":
       return <SadFace viewBox="0 0 369.946 369.946" {...props} />
     default:
-
       return null
   }
 }

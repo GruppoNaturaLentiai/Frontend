@@ -70,7 +70,10 @@ const Header: React.FC = () => {
           </S.CloseButton>
           <S.MobileNavBarList>
             {navItems.map(el => (
-              <S.MobileNavBarItem key={el.label} $isActive={rootPath === el.url}>
+              <S.MobileNavBarItem
+                key={el.label}
+                $isActive={rootPath === el.url}
+              >
                 {el.subsections ? (
                   <S.LinkIcon $isActive={rootPath === el.url}>
                     <S.IconWrapper

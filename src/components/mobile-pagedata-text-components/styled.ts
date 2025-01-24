@@ -42,14 +42,14 @@ export const TextWrapper = styled.div<{ $isExpanded: boolean }>`
   overflow: hidden;
   max-height: ${({ $isExpanded }) => ($isExpanded ? "1000px" : "4.5em")};
   transition: max-height 0.5s ease-in-out;
-`;
+`
 
 export const TextContainer = styled.div`
   position: relative;
-`;
+`
 
-export const FadeOut = styled.div<{ $isExpanded: boolean, $isShort: boolean }>`
-  ${({ $isShort }) => ($isShort && "display:none;")}
+export const FadeOut = styled.div<{ $isExpanded: boolean; $isShort: boolean }>`
+  ${({ $isShort }) => $isShort && "display:none;"}
   position: absolute;
   bottom: 0;
   left: 0;
