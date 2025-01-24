@@ -4,10 +4,6 @@ import ImageWithCredits from "../image-with-credits"
 import * as T from "../typography"
 import * as S from "./styled"
 
-const ContinueReading = (
-  <S.ContinueReading>Continua a leggere</S.ContinueReading>
-)
-
 export const renderImage = (
   content: ImageContentData,
   images: ImageData[],

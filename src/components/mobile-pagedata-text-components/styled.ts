@@ -41,7 +41,7 @@ export const TextWrapper = styled.div<{ $isExpanded: boolean }>`
   position: relative;
   overflow: hidden;
   max-height: ${({ $isExpanded }) => ($isExpanded ? "1000px" : "4.5em")};
-  transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.8s ease-in-out;
 `
 
 export const TextContainer = styled.div`
@@ -59,5 +59,5 @@ export const FadeOut = styled.div<{ $isExpanded: boolean; $isShort: boolean }>`
   pointer-events: none;
 
   opacity: ${({ $isExpanded }) => ($isExpanded ? 0 : 1)};
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
 `
