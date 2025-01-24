@@ -1,10 +1,10 @@
 import "leaflet-css"
-import React from "react"
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
+import React, { useEffect, useState } from "react"
+import { MapContainer, Marker, TileLayer, Tooltip } from "react-leaflet"
 import { Location } from "../../types"
 import * as S from "./styled"
 
-import L from "leaflet"
+import { Marker as MarkerLeaflet, icon } from "leaflet"
 
 //// MARKERS RELATED CODE
 import markerIcon2x from "./../../markers/default/marker-icon-2x.png"
@@ -19,20 +19,27 @@ type LocationMarker = [lat: number, lon: number]
 const piazzaCenter = [46.04523644005277, 12.023334355216095] as LocationMarker
 
 const MapComponent: React.FC<{ markers: Location[] }> = ({ markers }) => {
-  if (typeof window === "undefined") {
-    return <p>Loading map...</p>
+  const [isClient, setIsClient] = useState(false);
+
+  // Enable rendering on the client side
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return <p>Loading map...</p>;
   }
 
   ///////// MARKERS RELATED STUFF
-  const DefaultIcon = L.icon({
+  const DefaultIcon = icon({
     iconUrl: markerIcon,
     iconRetinaUrl: markerIcon2x,
     shadowUrl: markerShadow,
     iconSize: [25, 41],
     iconAnchor: [12, 41],
   })
-  L.Marker.prototype.options.icon = DefaultIcon
-  const ParkIcon = L.icon({
+  MarkerLeaflet.prototype.options.icon = DefaultIcon
+  const ParkIcon = icon({
     iconUrl: parkMarker,
     iconRetinaUrl: parkMarker2x,
     shadowUrl: markerShadow,
@@ -55,7 +62,7 @@ const MapComponent: React.FC<{ markers: Location[] }> = ({ markers }) => {
       <MapContainer
         style={{ height: "500px", width: "100%" }}
         center={piazzaCenter}
-        zoom={15}
+        zoom={14}
         scrollWheelZoom={true}
       >
         <TileLayer
@@ -68,7 +75,7 @@ const MapComponent: React.FC<{ markers: Location[] }> = ({ markers }) => {
             position={[marker.lat, marker.lon]}
             icon={mapToMarker(marker.iconType)}
           >
-            <Popup>{marker.name}</Popup>
+            <Tooltip>{marker.name}</Tooltip >
           </Marker>
         ))}
       </MapContainer>
