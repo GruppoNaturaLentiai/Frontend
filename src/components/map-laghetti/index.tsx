@@ -1,12 +1,14 @@
 import "leaflet-css"
 import React, { useEffect, useState } from "react"
-import { MapContainer, Marker, TileLayer, Tooltip, useMap } from "react-leaflet"
+import { MapContainer, Marker, Polyline, TileLayer, Tooltip, useMap } from "react-leaflet"
 import { Location } from "../../types"
 import * as S from "./styled"
+import * as T from "./../typography"
+
 
 // Route Control Component for Road Path
-import L from "leaflet";
-import "leaflet-routing-machine";
+import L from "leaflet"
+import "leaflet-routing-machine"
 
 import { Marker as MarkerLeaflet, icon } from "leaflet"
 
@@ -18,11 +20,21 @@ import markerShadow from "./../../markers/default/marker-shadow.png"
 import parkMarker from "./../../markers/parking/park-marker-32x32.png"
 import parkMarker2x from "./../../markers/parking/park-marker-64x64.png"
 
-type LocationMarker = [lat: number, lon: number]
 
 const piazzaCenter = [46.04523644005277, 12.023334355216095] as LocationMarker
 
-const MapComponent: React.FC<{ markers: Location[] }> = ({ markers }) => {
+type LocationMarker = [lat: number, lon: number]
+interface ComponentProps {
+  markers: Location[]
+  paths: {
+    legend: string,
+    key: string;
+    path: [number, number][];
+    color: string;
+  }[]
+}
+
+const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
   const [isClient, setIsClient] = useState(false);
 
   // Enable rendering on the client side
@@ -60,12 +72,15 @@ const MapComponent: React.FC<{ markers: Location[] }> = ({ markers }) => {
     }
   }
   //////////////////////////////////////
-  // Extract coordinates for the polyline
-  const pathCoordinates = markers.map((marker) => [marker.lat, marker.lon] as [number, number]);
-
 
   return (
     <S.Wrapper>
+      <S.Legend>{paths.map((path, idx) =>
+        <S.LegendElement key={idx}>
+          <S.Dot $color={path.color} />
+          <T.H4>{path.legend}</T.H4>
+        </S.LegendElement>)}
+      </S.Legend>
       <MapContainer
         style={{ height: "500px", width: "100%" }}
         center={piazzaCenter}
@@ -85,16 +100,28 @@ const MapComponent: React.FC<{ markers: Location[] }> = ({ markers }) => {
             <Tooltip>{marker.name}</Tooltip >
           </Marker>
         ))}
-        {/* Optional: Routing Control for Road Path */}
-        {pathCoordinates.length >= 2 && (
+
+        {/* Static paths */}
+        {paths.map(path => <Polyline
+          key={path.key}
+          positions={path.path as [number, number][]}
+          color={path.color}
+          weight={4}
+          opacity={0.8}
+        />)}
+
+        {/* Dynamic paths */}
+        {/* {pathCoordinates.length >= 2 && (
           <RouteControl
             waypoints={pathCoordinates}
           />
-        )}
+        )} */}
       </MapContainer>
     </S.Wrapper>
   )
 }
+
+/////// CODE TO RENDER DYNAMIC COMPONENTS
 
 // Extend RoutingControlOptions to include createMarker
 interface ExtendedRoutingControlOptions extends L.Routing.RoutingControlOptions {

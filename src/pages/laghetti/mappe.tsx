@@ -6,8 +6,9 @@ import DefaultLayout from "../../components/default-layout"
 import ContentToComponent from "../../components/pagedata-text-components"
 import { DataJSONType, ImageData, Location } from "../../types"
 import * as T from "./../../components/typography"
-import MapComponent from "../../components/map"
+import MapComponent from "../../components/map-laghetti"
 import MobileContentToComponent from "../../components/mobile-pagedata-text-components"
+import paths from "./../../data/paths/laghetti"
 
 const markersMap: Location[] = [
   {
@@ -78,7 +79,7 @@ const LaghettiMappePage: React.FC<PageProps> = () => {
     <DefaultLayout>
       <ContentToComponent pageData={content} images={filteredImages} />
       <MobileContentToComponent pageData={content} images={filteredImages} />
-      <MapComponent markers={markersMap} />
+      <MapComponent markers={markersMap} paths={paths}/>
     </DefaultLayout>
   )
 }
