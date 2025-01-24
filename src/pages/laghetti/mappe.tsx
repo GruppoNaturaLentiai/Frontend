@@ -79,7 +79,7 @@ const LaghettiMappePage: React.FC<PageProps> = () => {
     <DefaultLayout>
       <ContentToComponent pageData={content} images={filteredImages} />
       <MobileContentToComponent pageData={content} images={filteredImages} />
-      <MapComponent markers={markersMap} paths={paths}/>
+      <MapComponent markers={markersMap} paths={paths} />
     </DefaultLayout>
   )
 }

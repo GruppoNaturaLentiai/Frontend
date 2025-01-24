@@ -40,6 +40,6 @@ export const colors = {
     mustard: "#FED766",
     moonstone: "#009FB7",
     indigo: "#3A1772",
-    liver: "#654236"
-  }
+    liver: "#654236",
+  },
 }

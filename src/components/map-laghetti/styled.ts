@@ -26,7 +26,7 @@ export const LegendElement = styled.div`
 export const Dot = styled.div<{ $color: string }>`
   width: 12px;
   height: 12px;
-  ${({ $color }) => `background-color: ${$color};`} 
+  ${({ $color }) => `background-color: ${$color};`}
   border-radius: 50%;
   display: "inline-block";
 `
