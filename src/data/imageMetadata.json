@@ -206,5 +206,22 @@
     "tags": ["laghetti", "laghetti-main"],
     "fileName": "rimonta-cover-02.png",
     "copyright": "Walter Argenta"
+  },{
+    "title": "",
+    "description": "Panoramica dell'interno della chiesa di Bardies in cui sono visibili pareti affrescate.",
+    "alt": "Panoramica dell'interno della chiesa di Bardies",
+    "tags": ["laghetti", "laghetti-storia"],
+    "fileName": "bardies-chiesa-00.png",
+    "copyright": "Walter Argenta"
+  },
+  {
+    "title": "",
+    "description": "Particolare di un affresco raffigurante Sant'Antonio Abate.",
+    "alt": "Particolare di un affresco raffigurante Sant'Antonio Abate",
+    "tags": ["laghetti", "laghetti-storia"],
+    "fileName": "bardies-chiesa-01.png",
+    "copyright": "Walter Argenta"
   }
 ]
+
+

@@ -5,16 +5,11 @@ import {
   Marker,
   Polyline,
   TileLayer,
-  Tooltip,
-  useMap,
+  Tooltip
 } from "react-leaflet"
 import { Location } from "../../types"
-import * as S from "./styled"
 import * as T from "./../typography"
-
-// Route Control Component for Road Path
-import L from "leaflet"
-import "leaflet-routing-machine"
+import * as S from "./styled"
 
 import { Marker as MarkerLeaflet, icon } from "leaflet"
 
@@ -41,6 +36,7 @@ interface ComponentProps {
 
 const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
   const [isClient, setIsClient] = useState(false)
+  const [hoveredPath, setHoveredPath] = useState("")
 
   // Enable rendering on the client side
   useEffect(() => {
@@ -80,6 +76,14 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
 
   return (
     <S.Wrapper>
+      <S.Legend>
+        {paths.map((path) => (
+          <S.LegendElement key={path.key} $isHovered={!hoveredPath || hoveredPath === path.key}>
+            <S.Dot $color={path.color} />
+            <T.H3>{path.legend}</T.H3>
+          </S.LegendElement>
+        ))}
+      </S.Legend>
       <MapContainer
         style={{ height: "500px", width: "100%" }}
         center={piazzaCenter}
@@ -103,10 +107,20 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
         {/* Static paths */}
         {paths.map(path => (
           <Polyline
+            eventHandlers={{
+              mouseover: (_) => {
+                setHoveredPath(path.key)
+              },
+              mouseout: (_) => {
+                setHoveredPath("")
+              },
+            }}
+            pathOptions={{
+              weight: path.key === hoveredPath ? 6 : 3
+            }}
             key={path.key}
             positions={path.path as [number, number][]}
             color={path.color}
-            weight={4}
             opacity={0.8}
           />
         ))}
@@ -118,66 +132,60 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
           />
         )} */}
       </MapContainer>
-      <S.Legend>
-        {paths.map((path, idx) => (
-          <S.LegendElement key={idx}>
-            <S.Dot $color={path.color} />
-            <T.H4>{path.legend}</T.H4>
-          </S.LegendElement>
-        ))}
-      </S.Legend>
     </S.Wrapper>
   )
 }
 
 /////// CODE TO RENDER DYNAMIC COMPONENTS
+// Route Control Component for Road Path
+// import "leaflet-routing-machine"
 
 // Extend RoutingControlOptions to include createMarker
-interface ExtendedRoutingControlOptions
-  extends L.Routing.RoutingControlOptions {
-  createMarker?: (
-    i: number,
-    waypoint: L.Routing.Waypoint,
-    n: number,
-  ) => L.Marker | null
-}
+// interface ExtendedRoutingControlOptions
+//   extends L.Routing.RoutingControlOptions {
+//   createMarker?: (
+//     i: number,
+//     waypoint: L.Routing.Waypoint,
+//     n: number,
+//   ) => L.Marker | null
+// }
 
-const RouteControl: React.FC<{ waypoints: [number, number][] }> = ({
-  waypoints,
-}) => {
-  const map = useMap()
-  const routingControlRef = React.useRef<L.Routing.Control | null>(null)
+// const RouteControl: React.FC<{ waypoints: [number, number][] }> = ({
+//   waypoints,
+// }) => {
+//   const map = useMap()
+//   const routingControlRef = React.useRef<L.Routing.Control | null>(null)
 
-  useEffect(() => {
-    if (typeof window === "undefined" || waypoints.length < 2) return
+//   useEffect(() => {
+//     if (typeof window === "undefined" || waypoints.length < 2) return
 
-    const routingControl = L.Routing.control({
-      waypoints: waypoints.map(coords => L.latLng(coords[0], coords[1])),
-      routeWhileDragging: false,
-      show: false,
-      addWaypoints: false,
-      createMarker: () => null, // Prevent default markers from being added
-      router: new L.Routing.OSRMv1({
-        serviceUrl: "https://router.project-osrm.org/route/v1", // OSRM service URL
-        profile: "foot", // Use the 'foot' profile for pedestrian routes
-      }),
-    } as ExtendedRoutingControlOptions).addTo(map)
+//     const routingControl = L.Routing.control({
+//       waypoints: waypoints.map(coords => L.latLng(coords[0], coords[1])),
+//       routeWhileDragging: false,
+//       show: false,
+//       addWaypoints: false,
+//       createMarker: () => null, // Prevent default markers from being added
+//       router: new L.Routing.OSRMv1({
+//         serviceUrl: "https://router.project-osrm.org/route/v1", // OSRM service URL
+//         profile: "foot", // Use the 'foot' profile for pedestrian routes
+//       }),
+//     } as ExtendedRoutingControlOptions).addTo(map)
 
-    routingControlRef.current = routingControl
+//     routingControlRef.current = routingControl
 
-    // Hide the summary box after the control is added
-    const controlContainer = routingControl.getContainer()
-    if (controlContainer) {
-      controlContainer.style.display = "none"
-    }
+//     // Hide the summary box after the control is added
+//     const controlContainer = routingControl.getContainer()
+//     if (controlContainer) {
+//       controlContainer.style.display = "none"
+//     }
 
-    return () => {
-      map.removeControl(routingControl)
-      routingControlRef.current = null
-    }
-  }, [map, waypoints])
+//     return () => {
+//       map.removeControl(routingControl)
+//       routingControlRef.current = null
+//     }
+//   }, [map, waypoints])
 
-  return null
-}
+//   return null
+// }
 
 export default MapComponent

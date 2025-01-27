@@ -2,7 +2,9 @@
   "storia": [
     {
       "type": "text",
-      "content": ["Un po' di storia..."],
+      "content": [
+        "Un po' di storia..."
+      ],
       "size": "h1",
       "font": "Caveat"
     },
@@ -15,7 +17,9 @@
     },
     {
       "type": "image",
-      "content": ["CatastoAsburgo1818-1829.jpg"]
+      "content": [
+        "CatastoAsburgo1818-1829.jpg"
+      ]
     },
     {
       "type": "text",
@@ -26,7 +30,27 @@
     },
     {
       "type": "image",
-      "content": ["Bardies00.jpg", "Bardies01.jpg"]
+      "content": [
+        "Bardies00.jpg",
+        "Bardies01.jpg"
+      ]
+    },
+    {
+      "type": "text",
+      "content": [
+        "La Chiesa di Sant’Antonio Abate si trova nella frazione di Bardies, nel comune di Borgo Valbelluna, in provincia di Belluno. Questo luogo di culto, documentato sin dal 1515, è situato in una posizione suggestiva, all’ingresso del percorso naturalistico dei Laghetti della Rimonta, integrandosi perfettamente nel contesto paesaggistico circostante.",
+        "L’edificio è particolarmente noto per il suo ciclo di affreschi, che costituisce uno degli esempi più significativi di arte sacra del XVI secolo nel territorio bellunese. Gli affreschi narrano episodi della vita di Sant’Antonio Abate e sono suddivisi in diciotto riquadri. Questo straordinario lavoro è stato realizzato dai fratelli Giovanni e Marco da Mel tra il 1520 e il 1530, con possibili contributi di Cesare Vecellio, come indicato dalla sigla \"C.V.P.\" presente su uno dei riquadri.",
+        "La chiesa rappresenta un patrimonio artistico e storico di grande valore, testimoniando la ricchezza culturale della zona e il ruolo centrale che l’arte sacra ha avuto nello sviluppo del territorio.",
+        "Nel caso in cui si voglia visitare, invitiamo a spingere la porta che molte volte è lasciata socchiusa per proteggere dalle intemperie l'ambiente interno e le opere d'arte ivi contenute."
+      ],
+      "size": "p1"
+    },
+    {
+      "type": "image",
+      "content": [
+        "bardies-chiesa-00.png",
+        "bardies-chiesa-01.png"
+      ]
     }
   ]
 }
