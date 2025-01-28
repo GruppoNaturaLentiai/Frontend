@@ -78,7 +78,11 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
     <S.Wrapper>
       <S.Legend>
         {paths.map((path) => (
-          <S.LegendElement key={path.key} $isHovered={!hoveredPath || hoveredPath === path.key}>
+          <S.LegendElement key={path.key} 
+            $isHovered={!hoveredPath || hoveredPath === path.key} 
+            onMouseOver={() => setHoveredPath(path.key)}
+            onMouseOut={() => setHoveredPath("")}
+            >
             <S.Dot $color={path.color} />
             <T.H3>{path.legend}</T.H3>
           </S.LegendElement>

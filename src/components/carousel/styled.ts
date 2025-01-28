@@ -41,6 +41,7 @@ export const ButtonWrapper = styled.div<{ $position: "left" | "right" }>`
   height: 36px;
   cursor: pointer;
   transition: all 0.5s;
+  margin: 0 1em;
   > svg {
     ${({ $position }) => $position === "left" ? "transform: rotate(90deg);" : "transform: rotate(-90deg);"}
     fill: ${colors.green.green200};
