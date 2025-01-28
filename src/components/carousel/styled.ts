@@ -63,8 +63,8 @@ export const ButtonWrapper = styled.div<{ $position: "left" | "right" }>`
 `
 
 export const Shadow = styled.div`
-  left: 50%;
-  width: 80%;
+  padding: 5px;
+  width: 50%;
   height: 10px; 
   background: radial-gradient(ellipse at center, ${colors.green.green900}, transparent);
   filter: blur(8px); 
