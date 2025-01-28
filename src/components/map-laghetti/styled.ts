@@ -1,9 +1,13 @@
 import styled from "styled-components"
+import { colors } from "../../styles"
 
 export const Wrapper = styled.div`
   width: 80%;
   padding: 16px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `
 
 export const Legend = styled.div`
@@ -11,6 +15,8 @@ export const Legend = styled.div`
   flex-direction: row;
   justify-content: space-around;
   padding: 24px;
+  background-color: ${colors.green.green200};
+  border-radius: 8px;
 `
 
 export const LegendElement = styled.div<{ $isHovered: boolean }>`
