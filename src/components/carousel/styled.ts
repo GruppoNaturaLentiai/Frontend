@@ -33,24 +33,6 @@ export const Wrapper = styled.div`
   justify-content: center;
 `
 
-export const Button = styled.button`
-  background: none;
-  border: none;
-  color: black;
-  font-size: 2rem;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 5;
-  color: ${colors.green.green200};
-  transition: all 0.5s;
-  &:hover {
-    color: ${colors.green.green300};
-  }
-  &:active {
-    color: ${colors.green.green400};
-}
-`
-
 export const ButtonWrapper = styled.div<{ $position: "left" | "right" }>`
   background-color: ${colors.green.green700};
   border-radius: 50%;
@@ -58,11 +40,13 @@ export const ButtonWrapper = styled.div<{ $position: "left" | "right" }>`
   width: 36px;
   height: 36px;
   cursor: pointer;
+  transition: all 0.5s;
   > svg {
     ${({ $position }) => $position === "left" ? "transform: rotate(90deg);" : "transform: rotate(-90deg);"}
     fill: ${colors.green.green200};
     margin-top: 5px;
-    ${({ $position }) => $position === "left" ? "margin-left: 3px;" : "margin-left: 5px;"}    
+    ${({ $position }) => $position === "left" ? "margin-left: 3px;" : "margin-left: 5px;"} 
+    transition: all 0.5s;   
   }
   &:hover {
     color: ${colors.green.green800};
@@ -113,15 +97,12 @@ export const CarouselItem = styled(motion.div)`
 
 export const StyledGatsbyImage = styled(GatsbyImage)`
   img {
-    object-fit: contain !important;
-    object-position: center;
     max-height: 600px;
-    
-  @media (max-width: ${breakpointNum.tablet}px) {
-    max-height: 400px;
-  }
-  @media (max-width: ${breakpointNum.mobile}px) {
-    max-height: 200px;
-  }
+    @media (max-width: ${breakpointNum.tablet}px) {
+      max-height: 400px;
+    }
+    @media (max-width: ${breakpointNum.mobile}px) {
+      max-height: 200px;
+    }
   }
 `;
