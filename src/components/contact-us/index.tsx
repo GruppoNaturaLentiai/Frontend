@@ -2,26 +2,29 @@ import React from "react"
 import * as S from "./styled"
 import Icon from "../icons"
 import * as T from "./../typography"
+import contacts from "./../../data/contacts.json"
 
 const contactData = [
   {
     icon: <Icon type="facebook" width={20} />,
     text: "Laghetti della Rimonta",
-    linkURL: "https://www.facebook.com/profile.php?id=100064320537208",
+    linkURL: contacts["facebook-laghetti"],
   },
   {
     icon: <Icon type="facebook" width={20} />,
     text: "Progetto Narcisi",
-    linkURL: "https://www.facebook.com/profile.php?id=100069990139319",
+    linkURL: contacts["facebook-narcisi"],
   },
   {
     icon: <Icon type="youtube" width={20} />,
     text: "Gruppo Natura Lentiai",
-    linkURL: "https://www.youtube.com/channel/UCbP1HqPAvI5Ofoatb9MzZmQ",
+    linkURL: contacts["youtube"],
   },
 ]
-const phoneNumber = "+393470511865"
-const email = "grupponaturalentiai@libero.it"
+
+const phoneNumber = contacts["phone"]
+const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\D/g, "")}`
+const email = contacts["email"]
 
 const ContactUs = () => {
   const handleCall = () => {
@@ -29,7 +32,6 @@ const ContactUs = () => {
   }
 
   const handleWhatsApp = () => {
-    const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\D/g, "")}`
     window.open(whatsappUrl, "_blank")
   }
 
@@ -61,7 +63,7 @@ const ContactUs = () => {
             <Icon type="whatsapp" width={20} />
           </S.IconWrapper>
           <S.LinkText onClick={handleCall}>
-            <T.H2>+39 347 051 1865</T.H2>
+            <T.H2>{contacts["phone-spaced"]}</T.H2>
           </S.LinkText>
         </S.Row>
         <S.Row>
@@ -69,7 +71,7 @@ const ContactUs = () => {
             <Icon type="email" width={20} />
           </S.IconWrapper>
           <S.LinkText onClick={handleEmail}>
-            <T.H2>grupponaturalentiai@libero.it</T.H2>
+            <T.H2>{contacts["email"]}</T.H2>
           </S.LinkText>
         </S.Row>
       </S.ContactsWrapper>

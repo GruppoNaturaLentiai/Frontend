@@ -13,7 +13,9 @@ export const Title = styled(T.H1)`
 export const IconWrapper = styled.div`
   cursor: pointer;
   margin-top: 8px;
+  transition: all 0.5s;
   > * {
+    transition: all 0.5s;
     fill: ${colors.green.green800};
     &:hover {
       fill: ${colors.green.green900};
@@ -22,6 +24,7 @@ export const IconWrapper = styled.div`
       fill: ${colors.green.green950};
     }
     > * {
+      transition: all 0.5s;
       fill: ${colors.green.green800};
       &:hover {
         fill: ${colors.green.green900};
@@ -30,6 +33,7 @@ export const IconWrapper = styled.div`
         fill: ${colors.green.green950};
       }
       > * {
+        transition: all 0.5s;
         fill: ${colors.green.green800};
         &:hover {
           fill: ${colors.green.green900};

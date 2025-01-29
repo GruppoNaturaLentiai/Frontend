@@ -2,9 +2,7 @@
   "storia": [
     {
       "type": "text",
-      "content": [
-        "Un po' di storia..."
-      ],
+      "content": ["Un po' di storia..."],
       "size": "h1",
       "font": "Caveat"
     },
@@ -17,9 +15,7 @@
     },
     {
       "type": "image",
-      "content": [
-        "CatastoAsburgo1818-1829.jpg"
-      ]
+      "content": ["CatastoAsburgo1818-1829.jpg"]
     },
     {
       "type": "text",
@@ -29,11 +25,16 @@
       "size": "p1"
     },
     {
-      "type": "image",
+      "type": "text",
       "content": [
-        "Bardies00.jpg",
-        "Bardies01.jpg"
-      ]
+        "Si ringrazia Angelo Zampol D'Ortia per le informazioni e per il testo."
+      ],
+      "font": "Caveat",
+      "size": "p2"
+    },
+    {
+      "type": "image",
+      "content": ["Bardies00.jpg", "Bardies01.jpg"]
     },
     {
       "type": "text",
@@ -47,10 +48,28 @@
     },
     {
       "type": "image",
+      "content": ["bardies-chiesa-00.png", "bardies-chiesa-01.png"]
+    },
+    {
+      "type": "text",
       "content": [
-        "bardies-chiesa-00.png",
-        "bardies-chiesa-01.png"
-      ]
+        "L’Antico Ponte Romano sul Torrente Forada, situato a Borgo Valbelluna (BL), è considerato di epoca romana, sebbene alcuni studiosi lo ritengano tardoantico o addirittura “bizantino”. Questo ponte, dalla struttura eccezionale, sembra collegarsi al vicino Castello di Zumelle e alla viabilità verso il valico del Praderadego, un percorso che alcuni identificano con la via Claudia Augusta, ma che più probabilmente era una scorciatoia utilizzata dagli antichi zattieri del Piave. In epoca tardoantica, tale percorso sarebbe stato trasformato in una semplice mulattiera, forse riutilizzata dai Bizantini nel VI secolo d.C. per garantire un collegamento sicuro tra Treviso e le fortificazioni di Mel, Feltre e Arten. A supporto di questa ipotesi vi sono ritrovamenti di monete e oggetti d’argento bizantini in queste aree, attribuibili all’epoca di Giustiniano I.",
+        "L’elevata qualità costruttiva del ponte e le somiglianze con altre opere del VI secolo suggeriscono un’origine bizantina, sebbene siano necessarie ulteriori verifiche archeologiche. Il ponte potrebbe far parte di un sistema infrastrutturale più ampio, destinato a consolidare la presenza bizantina nella regione. Il contesto storico e i ritrovamenti suggeriscono che la sua funzione fosse sia strategica che viaria, testimoniando l’importanza del controllo dei percorsi alpini e delle comunicazioni tra le diverse roccaforti.",
+        "Questo ponte si inserisce nella più ampia rete di attraversamenti lungo la via Claudia Augusta, che collegava Altino al Danubio attraverso ponti, guadi e traghetti. Tali infrastrutture non solo permettevano di superare le asperità delle Alpi, ma rispondevano anche alla necessità di collegare territori locali e interregionali. Inoltre, il ponte rappresentava un segno tangibile della magnificenza di Roma e della sua capacità di integrare i territori conquistati, conferendo utilità, decoro e prestigio alla viabilità imperiale."
+      ],
+      "size": "p1"
+    },
+    {
+      "type": "text",
+      "content": [
+        "Informazioni tratte dagli Atti del Convegno Via Claudia Augusta \"Un’arteria alle origini dell’Europa: ipotesi, problemi, prospettive\" - Feltre, 24–25 settembre 1999 (Vittorio Galliazzo)"
+      ],
+      "font": "Caveat",
+      "size": "p2"
+    },
+    {
+      "type": "image",
+      "content": ["ponte_00.jpg", "ponte_01.jpeg"]
     }
   ]
 }

@@ -5,7 +5,7 @@ import {
   Marker,
   Polyline,
   TileLayer,
-  Tooltip
+  Tooltip,
 } from "react-leaflet"
 import { Location } from "../../types"
 import * as T from "./../typography"
@@ -77,12 +77,13 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
   return (
     <S.Wrapper>
       <S.Legend>
-        {paths.map((path) => (
-          <S.LegendElement key={path.key} 
-            $isHovered={!hoveredPath || hoveredPath === path.key} 
+        {paths.map(path => (
+          <S.LegendElement
+            key={path.key}
+            $isHovered={!hoveredPath || hoveredPath === path.key}
             onMouseOver={() => setHoveredPath(path.key)}
             onMouseOut={() => setHoveredPath("")}
-            >
+          >
             <S.Dot $color={path.color} />
             <T.H3>{path.legend}</T.H3>
           </S.LegendElement>
@@ -112,15 +113,15 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
         {paths.map(path => (
           <Polyline
             eventHandlers={{
-              mouseover: (_) => {
+              mouseover: _ => {
                 setHoveredPath(path.key)
               },
-              mouseout: (_) => {
+              mouseout: _ => {
                 setHoveredPath("")
               },
             }}
             pathOptions={{
-              weight: path.key === hoveredPath ? 6 : 3
+              weight: path.key === hoveredPath ? 6 : 3,
             }}
             key={path.key}
             positions={path.path as [number, number][]}

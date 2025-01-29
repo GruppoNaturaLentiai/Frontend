@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
-import { GatsbyImage } from "gatsby-plugin-image";
-import styled from "styled-components";
-import { breakpointNum, colors } from "../../styles";
+import { motion } from "framer-motion"
+import { GatsbyImage } from "gatsby-plugin-image"
+import styled from "styled-components"
+import { breakpointNum, colors } from "../../styles"
 
 export const OuterWrapper = styled.div`
   overflow: hidden;
@@ -43,18 +43,22 @@ export const ButtonWrapper = styled.div<{ $position: "left" | "right" }>`
   transition: all 0.5s;
   margin: 0 1em;
   > svg {
-    ${({ $position }) => $position === "left" ? "transform: rotate(90deg);" : "transform: rotate(-90deg);"}
+    ${({ $position }) =>
+      $position === "left"
+        ? "transform: rotate(90deg);"
+        : "transform: rotate(-90deg);"}
     fill: ${colors.green.green200};
     margin-top: 5px;
-    ${({ $position }) => $position === "left" ? "margin-left: 3px;" : "margin-left: 5px;"} 
-    transition: all 0.5s;   
+    ${({ $position }) =>
+      $position === "left" ? "margin-left: 3px;" : "margin-left: 5px;"}
+    transition: all 0.5s;
   }
   &:hover {
     color: ${colors.green.green800};
     > svg {
       fill: ${colors.green.green300};
-      }
     }
+  }
   &:active {
     color: ${colors.green.green900};
     > svg {
@@ -66,12 +70,15 @@ export const ButtonWrapper = styled.div<{ $position: "left" | "right" }>`
 export const Shadow = styled.div`
   padding: 5px;
   width: 50%;
-  height: 10px; 
-  background: radial-gradient(ellipse at center, ${colors.green.green900}, transparent);
-  filter: blur(8px); 
+  height: 10px;
+  background: radial-gradient(
+    ellipse at center,
+    ${colors.green.green900},
+    transparent
+  );
+  filter: blur(8px);
   opacity: 0.8;
 `
-
 
 export const CarouselItem = styled(motion.div)`
   position: absolute;
@@ -106,4 +113,4 @@ export const StyledGatsbyImage = styled(GatsbyImage)`
       max-height: 200px;
     }
   }
-`;
+`

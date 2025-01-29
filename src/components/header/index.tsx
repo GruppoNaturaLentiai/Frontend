@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React, { useState } from "react"
 import Icon from "../icons"
 import * as T from "../typography"
-import { navItems } from "./data"
+import { navItems } from "./../../data/sections"
 import * as S from "./styled"
 import { useLocation } from "@reach/router"
 

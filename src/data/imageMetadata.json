@@ -206,7 +206,8 @@
     "tags": ["laghetti", "laghetti-main"],
     "fileName": "rimonta-cover-02.png",
     "copyright": "Walter Argenta"
-  },{
+  },
+  {
     "title": "",
     "description": "Panoramica dell'interno della chiesa di Bardies in cui sono visibili pareti affrescate.",
     "alt": "Panoramica dell'interno della chiesa di Bardies",
@@ -221,7 +222,21 @@
     "tags": ["laghetti", "laghetti-storia"],
     "fileName": "bardies-chiesa-01.png",
     "copyright": "Walter Argenta"
+  },
+  {
+    "title": "",
+    "description": "Sottostante al ponte si trovano le acque del torrente Forada.",
+    "alt": "L'arcata inferiore del ponte romano in cui si intravedono le acque del torrente Forata",
+    "tags": ["laghetti", "laghetti-storia"],
+    "fileName": "ponte_00.jpg",
+    "copyright": "Alida Cavalet"
+  },
+  {
+    "title": "",
+    "description": "L'ultima azione di restauro del ponte risale al 2016, da parte dell'allora Comune di Mel.",
+    "alt": "Un ponte romano con un telo che ne protegge la parte superiore",
+    "tags": ["laghetti", "laghetti-storia"],
+    "fileName": "ponte_01.jpeg",
+    "copyright": ""
   }
 ]
-
-

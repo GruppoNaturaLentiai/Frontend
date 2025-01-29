@@ -24,7 +24,7 @@ export const LegendElement = styled.div<{ $isHovered: boolean }>`
   flex-direction: row;
   align-items: center;
   gap: 8px;
-  ${({ $isHovered }) => $isHovered ? "opacity: 1;" : "opacity: 0.4;"}
+  ${({ $isHovered }) => ($isHovered ? "opacity: 1;" : "opacity: 0.4;")}
   transition: all 0.5s;
   > h3 {
     margin-top: 0px;
