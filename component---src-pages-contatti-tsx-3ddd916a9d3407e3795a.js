@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunksite_gruppo_natura_lentiai=self.webpackChunksite_gruppo_natura_lentiai||[]).push([[884],{3931:function(t,e,a){a.r(e),a.d(e,{Head:function(){return i}});var n=a(7294),u=a(9757);e.default=()=>n.createElement(u.Z,null," Pagina per contattarci ");const i=()=>n.createElement("title",null,"Gruppo Natura Lentiai - Contattaci")}}]);
-//# sourceMappingURL=component---src-pages-contatti-tsx-3ddd916a9d3407e3795a.js.map

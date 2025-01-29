@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunksite_gruppo_natura_lentiai=self.webpackChunksite_gruppo_natura_lentiai||[]).push([[773],{5376:function(e,t,n){n.r(t),n.d(t,{Head:function(){return r}});var a=n(7294),i=n(9757);t.default=()=>a.createElement(i.Z,null," ","GALLERIA + Pagina per con contenuti per i Narcisi"," ");const r=()=>a.createElement("title",null,"Gruppo Natura Lentiai - Narcisi")}}]);
-//# sourceMappingURL=component---src-pages-narcisi-galleria-tsx-2eb7b4240b8fcd0b3a56.js.map
