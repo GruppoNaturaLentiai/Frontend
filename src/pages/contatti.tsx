@@ -1,9 +1,14 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import DefaultLayout from "../components/default-layout"
+import ContactUs from "../components/contact-us"
 
 const ContactPage: React.FC<PageProps> = () => {
-  return <DefaultLayout> Pagina per contattarci </DefaultLayout>
+  return (
+    <DefaultLayout>
+      <ContactUs />
+    </DefaultLayout>
+  )
 }
 
 export default ContactPage

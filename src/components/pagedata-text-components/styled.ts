@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { breakpoint, breakpointNum } from "../../styles"
 
 export const MainWrapper = styled.div`
   display: flex;
@@ -6,6 +7,9 @@ export const MainWrapper = styled.div`
   gap: 20px;
   padding: 32px;
   justify-content: center;
+  @media (max-width: ${breakpointNum.bigtablet}px) {
+    display: none;
+  }
 `
 
 export const ImageWrapper = styled.div`
@@ -18,6 +22,9 @@ export const ImageWrapper = styled.div`
 export const TwoColsWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  @media (max-width: ${breakpoint.bigtablet}) {
+    display: none;
+  }
 `
 
 export const LeftTwoColsWrapper = styled.div`

@@ -12,7 +12,7 @@ const ImageWithCredits = ({
   minHeight,
   minWidth,
   maxHeight,
-  maxWidth
+  maxWidth,
 }: {
   title: string
   description: string
@@ -21,10 +21,15 @@ const ImageWithCredits = ({
   copyright: string | undefined
   minWidth?: number
   minHeight?: number
-  maxWidth?: number,
+  maxWidth?: number
   maxHeight?: number
 }) => (
-  <S.ImgWrapper $maxHeight={maxHeight} $maxWidth={maxWidth} $minHeight={minHeight} $minWidth={minWidth}>
+  <S.ImgWrapper
+    $maxHeight={maxHeight}
+    $maxWidth={maxWidth}
+    $minHeight={minHeight}
+    $minWidth={minWidth}
+  >
     <T.H3 dangerouslySetInnerHTML={{ __html: title }} />
     <GatsbyImage
       image={image}
@@ -36,10 +41,12 @@ const ImageWithCredits = ({
     ) : (
       <T.P4>Autore sconosciuto</T.P4>
     )}
-    <S.ImageDescription style={{
-      maxWidth: image.width
-    }}
-      dangerouslySetInnerHTML={{ __html: description }} />
+    <S.ImageDescription
+      style={{
+        maxWidth: image.width,
+      }}
+      dangerouslySetInnerHTML={{ __html: description }}
+    />
   </S.ImgWrapper>
 )
 

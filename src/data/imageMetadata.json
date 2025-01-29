@@ -3,11 +3,7 @@
     "title": "Mappa dei laghetti della Rimonta",
     "description": "Mappa dei laghetti della Rimonta",
     "alt": "Mappa dei laghetti della Rimonta",
-    "tags": [
-      "laghetti",
-      "laghetti-mappe",
-      "mappe"
-    ],
+    "tags": ["laghetti", "laghetti-mappe", "mappe"],
     "fileName": "laghetti-mappa.png",
     "copyright": ""
   },
@@ -15,10 +11,7 @@
     "title": "Bardies - Catasto asburgico (1818-1829)",
     "description": "Una mappa del catasto austriaco risalente al 1830 ci riporta l’immagine di un paese sulla sponda di un ragguardevole corso d’acqua, a difesa del quale appaiono una serie di strutture costiere. ",
     "alt": "Foto tratta dal catasto asburgico in cui compare Bardies (Borgo Valbelluna)",
-    "tags": [
-      "laghetti",
-      "laghetti-storia"
-    ],
+    "tags": ["laghetti", "laghetti-storia"],
     "fileName": "CatastoAsburgo1818-1829.jpg",
     "copyright": ""
   },
@@ -26,21 +19,15 @@
     "title": "Bardies",
     "description": "Bardies (Borgo Valbelluna) e la sua piazza",
     "alt": "Foto storica di Bardies (Borgo Valbelluna) con la piazza",
-    "tags": [
-      "laghetti",
-      "laghetti-storia"
-    ],
+    "tags": ["laghetti", "laghetti-storia"],
     "fileName": "Bardies00.jpg",
     "copyright": ""
   },
   {
     "title": "Bardies",
-    "description": "Il ponte sul torrente Rimonta. Sulla sinistra si nota la chiesa di Bardies, mentre sulla destra l'attuale albergo 'Cavallino Rosso'",
+    "description": "Il ponte sul torrente Rimonta. Sulla sinistra si nota la chiesa Sant'Antonio Abate di Bardies, mentre sulla destra l'attuale albergo 'Cavallino Rosso'",
     "alt": "Foto storica di Bardies (Borgo Valbelluna) con un ponte l'albergo 'Cavallino Rosso'",
-    "tags": [
-      "laghetti",
-      "laghetti-storia"
-    ],
+    "tags": ["laghetti", "laghetti-storia"],
     "fileName": "Bardies01.jpg",
     "copyright": ""
   },
@@ -48,9 +35,7 @@
     "title": "Rimontarte",
     "description": "Logo di Rimontarte",
     "alt": "Rimontarte Logo",
-    "tags": [
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti-rimontarte"],
     "fileName": "rimontarte-logo.png",
     "copyright": ""
   },
@@ -58,10 +43,7 @@
     "title": "",
     "description": "Un pettirosso",
     "alt": "Foto di un pettirosso",
-    "tags": [
-      "laghetti",
-      "laghetti-natura"
-    ],
+    "tags": ["laghetti", "laghetti-natura"],
     "fileName": "rimonta-pettirosso.png",
     "copyright": "Riccardo Deon"
   },
@@ -69,10 +51,7 @@
     "title": "",
     "description": "Un cervo",
     "alt": "Foto di un cervo",
-    "tags": [
-      "laghetti",
-      "laghetti-natura"
-    ],
+    "tags": ["laghetti", "laghetti-natura"],
     "fileName": "rimonta-cervo.png",
     "copyright": "Riccardo Deon"
   },
@@ -80,10 +59,7 @@
     "title": "",
     "description": "Una forra",
     "alt": "Foto di una forra",
-    "tags": [
-      "laghetti",
-      "laghetti-natura"
-    ],
+    "tags": ["laghetti", "laghetti-natura"],
     "fileName": "rimonta-canyon.png",
     "copyright": "Walter Argenta"
   },
@@ -91,10 +67,7 @@
     "title": "",
     "description": "Panorama delle prealpi di Lentiai",
     "alt": "Foto di un panorama collinare di Lentiai",
-    "tags": [
-      "laghetti",
-      "laghetti-natura"
-    ],
+    "tags": ["laghetti", "laghetti-natura"],
     "fileName": "rimonta-bacino.png",
     "copyright": "Walter Argenta"
   },
@@ -102,10 +75,7 @@
     "title": "",
     "description": "Panorama dei laghetti della Rimonta",
     "alt": "Panorama con un lago e un cigno",
-    "tags": [
-      "laghetti",
-      "laghetti-natura"
-    ],
+    "tags": ["laghetti", "laghetti-natura"],
     "fileName": "rimonta-panorama.png",
     "copyright": "Walter Argenta"
   },
@@ -113,10 +83,7 @@
     "title": "",
     "description": "La vegetazione subacquea",
     "alt": "Foto subacquea con alcune piante",
-    "tags": [
-      "laghetti",
-      "laghetti-natura"
-    ],
+    "tags": ["laghetti", "laghetti-natura"],
     "fileName": "rimonta-underwater.png",
     "copyright": "Walter Argenta"
   },
@@ -124,10 +91,7 @@
     "title": "<b>Walter Bernardi</b> - La via dell'acqua",
     "description": "",
     "alt": "Murales di Walter Bernardi",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-01-la-via-dell-acqua.png",
     "copyright": "Walter Argenta"
   },
@@ -135,10 +99,7 @@
     "title": "<b>Bruno Corriani</b> - La libellula",
     "description": "",
     "alt": "Scultura in ferro di una libellula fatta da Bruno Corriani",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-02-la-libellula.png",
     "copyright": "Walter Argenta"
   },
@@ -146,10 +107,7 @@
     "title": "<b>Mauro Ricci</b> - Il cervo volante",
     "description": "",
     "alt": "Scultura in ferro di un cervo volante eseguita da Mauro Ricci",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-03-il-cervo-volante.png",
     "copyright": "Walter Argenta"
   },
@@ -157,10 +115,7 @@
     "title": "<b>Andrea Gaspari</b> - Rufus il drago",
     "description": "",
     "alt": "Scultura in legno eseguita da Andrea Gaspari di un drago immerso in un laghetto e nascosto da un canneto",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-04-rufus-il-drago.png",
     "copyright": "Walter Argenta"
   },
@@ -168,10 +123,7 @@
     "title": "<b>Ezio Giordano</b> - Lo gnomo",
     "description": "",
     "alt": "Scultura in legno eseguita da Ezio Giordano di uno gnomo con una chiocciola sopra.",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-05-lo-gnomo.png",
     "copyright": "Walter Argenta"
   },
@@ -179,10 +131,7 @@
     "title": "<b>Franco Vergerio</b> - La ragnatela",
     "description": "",
     "alt": "Scultura in legno e corda di Franco Vergerio, raffigurante una ragnatela sospesa fra due alberi ed un ragno.",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-06-la-ragnatela.png",
     "copyright": "Walter Argenta"
   },
@@ -190,10 +139,7 @@
     "title": "<b>Artisti vari</b> - La rinascita",
     "description": "",
     "alt": "Una scultura su un ceppo di legno raffigurante un fiore",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-07-la-rinascita.png",
     "copyright": "Walter Argenta"
   },
@@ -201,10 +147,7 @@
     "title": "<b>Artisti vari</b> - La rinascita",
     "description": "",
     "alt": "Alcune opere d'arte su base di ceppi di legno",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-07-la-rinascita-bis.png",
     "copyright": "Walter Argenta"
   },
@@ -212,10 +155,7 @@
     "title": "<b>Beppino Lorenzet</b> - Il folletto",
     "description": "",
     "alt": "Una scultura di legno eseguita da Beppino lorenzet di uno gnomo che si arrampica su una corda ed un gufo sulla spalla.",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-08-il-folletto.png",
     "copyright": "Walter Argenta"
   },
@@ -223,10 +163,7 @@
     "title": "<b>Sara Andrich</b> - Il nido",
     "description": "",
     "alt": "Una scultura eseguita da Sara Andrich di un nido con degli uccellini col il becco aperto arancione.",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-09-il-nido.png",
     "copyright": "Walter Argenta"
   },
@@ -234,10 +171,7 @@
     "title": "<b>Beppino Lorenzet</b> - Il nido",
     "description": "",
     "alt": "Una scultura eseguita da Beppino Lorenzed di un fungo.",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-10-il-fungo.png",
     "copyright": "Walter Argenta"
   },
@@ -245,10 +179,7 @@
     "title": "<b>Gianni Stiletto e Franco Vergerio</b> - Concerto con coro di farfalle",
     "description": "",
     "alt": "Un'installazione di ideata e creata da Franco Vergerio raffigurante un contrabbasso, sopra il quale sono posizionate delle farfalle create da Gianni Stiletto.",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-11-concerto-con-coro-di-farfalle.png",
     "copyright": "Walter Argenta"
   },
@@ -256,10 +187,7 @@
     "title": "<b>Luca Lisot</b> - La rana",
     "description": "",
     "alt": "Una scultura di legno raffigurante una rana creata da Luca Lisot.",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-12-la-rana.png",
     "copyright": "Walter Argenta"
   },
@@ -267,10 +195,7 @@
     "title": "",
     "description": "",
     "alt": "Una passerella in legno con dietro il torrente Rimonta",
-    "tags": [
-      "laghetti",
-      "laghetti-main"
-    ],
+    "tags": ["laghetti", "laghetti-main"],
     "fileName": "rimonta-cover-01.png",
     "copyright": "Walter Argenta"
   },
@@ -278,11 +203,40 @@
     "title": "",
     "description": "",
     "alt": "Un panorama invernale dei laghetti della Rimonta",
-    "tags": [
-      "laghetti",
-      "laghetti-main"
-    ],
+    "tags": ["laghetti", "laghetti-main"],
     "fileName": "rimonta-cover-02.png",
     "copyright": "Walter Argenta"
+  },
+  {
+    "title": "",
+    "description": "Panoramica dell'interno della chiesa di Bardies in cui sono visibili pareti affrescate.",
+    "alt": "Panoramica dell'interno della chiesa di Bardies",
+    "tags": ["laghetti", "laghetti-storia"],
+    "fileName": "bardies-chiesa-00.png",
+    "copyright": "Walter Argenta"
+  },
+  {
+    "title": "",
+    "description": "Particolare di un affresco raffigurante Sant'Antonio Abate.",
+    "alt": "Particolare di un affresco raffigurante Sant'Antonio Abate",
+    "tags": ["laghetti", "laghetti-storia"],
+    "fileName": "bardies-chiesa-01.png",
+    "copyright": "Walter Argenta"
+  },
+  {
+    "title": "",
+    "description": "Sottostante al ponte si trovano le acque del torrente Forada.",
+    "alt": "L'arcata inferiore del ponte romano in cui si intravedono le acque del torrente Forata",
+    "tags": ["laghetti", "laghetti-storia"],
+    "fileName": "ponte_00.jpg",
+    "copyright": "Alida Cavalet"
+  },
+  {
+    "title": "",
+    "description": "L'ultima azione di restauro del ponte risale al 2016, da parte dell'allora Comune di Mel.",
+    "alt": "Un ponte romano con un telo che ne protegge la parte superiore",
+    "tags": ["laghetti", "laghetti-storia"],
+    "fileName": "ponte_01.jpeg",
+    "copyright": ""
   }
 ]

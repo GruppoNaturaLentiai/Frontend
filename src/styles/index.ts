@@ -35,4 +35,11 @@ export const colors = {
     green900: "#2c4522",
     green950: "#1e3815",
   },
+  paths: {
+    tomato: "#FE4A49",
+    mustard: "#FED766",
+    moonstone: "#009FB7",
+    indigo: "#3A1772",
+    liver: "#654236",
+  },
 }

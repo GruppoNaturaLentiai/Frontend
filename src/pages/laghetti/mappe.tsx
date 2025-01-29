@@ -4,16 +4,27 @@ import * as React from "react"
 import dataJSON from "../../../content/laghetti/mappe.json"
 import DefaultLayout from "../../components/default-layout"
 import ContentToComponent from "../../components/pagedata-text-components"
-import { DataJSONType, ImageData } from "../../types"
+import { DataJSONType, ImageData, Location } from "../../types"
 import * as T from "./../../components/typography"
-import MapComponent from "../../components/map"
+import MapComponent from "../../components/map-laghetti"
+import MobileContentToComponent from "../../components/mobile-pagedata-text-components"
+import paths from "./../../data/paths/laghetti"
 
-const markersMap = [{
-  name: "Inizio del percorso",
-  lat: 46.04923742844764,
-  lon: 12.02636613390803
-}]
-
+const markersMap: Location[] = [
+  {
+    type: "start",
+    name: "Inizio del percorso",
+    lat: 46.04923742844764,
+    lon: 12.02636613390803,
+  },
+  {
+    type: "park",
+    iconType: "park",
+    name: "Parcheggio",
+    lat: 46.046873575356855,
+    lon: 12.024898230581327,
+  },
+]
 
 const LaghettiMappePage: React.FC<PageProps> = () => {
   const data = useStaticQuery(graphql`
@@ -44,10 +55,12 @@ const LaghettiMappePage: React.FC<PageProps> = () => {
   `)
 
   const content = dataJSON.mappe as DataJSONType
-  if (!content) return (<DefaultLayout>
-    <T.H1>Contenuto non trovato!</T.H1>
-  </DefaultLayout>
-  )
+  if (!content)
+    return (
+      <DefaultLayout>
+        <T.H1>Contenuto non trovato!</T.H1>
+      </DefaultLayout>
+    )
 
   // Map metadata and image nodes
   const metadata = data.allImageMetadataJson.nodes
@@ -65,7 +78,8 @@ const LaghettiMappePage: React.FC<PageProps> = () => {
   return (
     <DefaultLayout>
       <ContentToComponent pageData={content} images={filteredImages} />
-      <MapComponent markers={markersMap}/>
+      <MobileContentToComponent pageData={content} images={filteredImages} />
+      <MapComponent markers={markersMap} paths={paths} />
     </DefaultLayout>
   )
 }

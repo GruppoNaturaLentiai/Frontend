@@ -6,6 +6,7 @@ import ContentToComponent from "../../components/pagedata-text-components"
 import dataJSON from "../../../content/laghetti/index.json"
 import * as T from "./../../components/typography"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import MobileContentToComponent from "../../components/mobile-pagedata-text-components"
 
 const LaghettiPage: React.FC<PageProps> = () => {
   const data = useStaticQuery(graphql`
@@ -36,10 +37,12 @@ const LaghettiPage: React.FC<PageProps> = () => {
   `)
 
   const content = dataJSON.index as DataJSONType
-  if (!content) return (<DefaultLayout>
-    <T.H1>Contenuto non trovato!</T.H1>
-  </DefaultLayout>
-  )
+  if (!content)
+    return (
+      <DefaultLayout>
+        <T.H1>Contenuto non trovato!</T.H1>
+      </DefaultLayout>
+    )
 
   // Map metadata and image nodes
   const metadata = data.allImageMetadataJson.nodes
@@ -53,27 +56,38 @@ const LaghettiPage: React.FC<PageProps> = () => {
       image: image ? getImage(image.childImageSharp) : null,
     }
   }) as ImageData[]
-  const coverUp = getImage(images.find((img: any) => img.base === 'rimonta-cover-01.png').childImageSharp)
-  const coverDown = getImage(images.find((img: any) => img.base === 'rimonta-cover-02.png').childImageSharp)
+  const coverUp = getImage(
+    images.find((img: any) => img.base === "rimonta-cover-01.png")
+      .childImageSharp,
+  )
+  const coverDown = getImage(
+    images.find((img: any) => img.base === "rimonta-cover-02.png")
+      .childImageSharp,
+  )
 
   return (
     <DefaultLayout>
       <div style={{ padding: 16 }}>
         <div style={{ justifySelf: "center", padding: 32 }}>
-          {coverUp && <GatsbyImage
-            image={coverUp}
-            alt={"Una passerella in legno con dietro il torrente Rimonta"}
-            style={{ borderRadius: "8px", marginTop: 4, maxWidth: 800 }}
-          />}
+          {coverUp && (
+            <GatsbyImage
+              image={coverUp}
+              alt={"Una passerella in legno con dietro il torrente Rimonta"}
+              style={{ borderRadius: "8px", marginTop: 4, maxWidth: 800 }}
+            />
+          )}
           <T.P4 $textAlign="center">Foto di Walter Argenta</T.P4>
         </div>
         <ContentToComponent pageData={content} images={filteredImages} />
+        <MobileContentToComponent pageData={content} images={filteredImages} />
         <div style={{ justifySelf: "center" }}>
-          {coverDown && <GatsbyImage
-            image={coverDown}
-            alt={"Un panorama invernale dei laghetti della Rimonta"}
-            style={{ borderRadius: "8px", marginTop: 4, maxWidth: 800 }}
-          />}
+          {coverDown && (
+            <GatsbyImage
+              image={coverDown}
+              alt={"Un panorama invernale dei laghetti della Rimonta"}
+              style={{ borderRadius: "8px", marginTop: 4, maxWidth: 800 }}
+            />
+          )}
           <T.P4 $textAlign="center">Foto di Walter Argenta</T.P4>
         </div>
       </div>

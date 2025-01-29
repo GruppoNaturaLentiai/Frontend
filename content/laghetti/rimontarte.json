@@ -16,9 +16,7 @@
     },
     {
       "type": "text",
-      "content": [
-        "Franco Vergerio"
-      ],
+      "content": ["Franco Vergerio"],
       "size": "h2",
       "font": "Cedarville Cursive",
       "position": "right"
@@ -42,9 +40,7 @@
         [
           {
             "type": "image",
-            "content": [
-              "rimontarte-01-la-via-dell-acqua.png"
-            ]
+            "content": ["rimontarte-01-la-via-dell-acqua.png"]
           }
         ]
       ]
@@ -55,9 +51,7 @@
         [
           {
             "type": "image",
-            "content": [
-              "rimontarte-02-la-libellula.png"
-            ]
+            "content": ["rimontarte-02-la-libellula.png"]
           }
         ],
         [
@@ -95,9 +89,7 @@
         [
           {
             "type": "image",
-            "content": [
-              "rimontarte-03-il-cervo-volante.png"
-            ]
+            "content": ["rimontarte-03-il-cervo-volante.png"]
           }
         ]
       ]
@@ -108,9 +100,7 @@
         [
           {
             "type": "image",
-            "content": [
-              "rimontarte-04-rufus-il-drago.png"
-            ]
+            "content": ["rimontarte-04-rufus-il-drago.png"]
           }
         ],
         [
@@ -150,9 +140,7 @@
         [
           {
             "type": "image",
-            "content": [
-              "rimontarte-05-lo-gnomo.png"
-            ],
+            "content": ["rimontarte-05-lo-gnomo.png"],
             "maxHeight": 350
           }
         ]
@@ -164,9 +152,7 @@
         [
           {
             "type": "image",
-            "content": [
-              "rimontarte-06-la-ragnatela.png"
-            ]
+            "content": ["rimontarte-06-la-ragnatela.png"]
           }
         ],
         [
@@ -193,17 +179,13 @@
         [
           {
             "type": "image",
-            "content": [
-              "rimontarte-07-la-rinascita.png"
-            ]
+            "content": ["rimontarte-07-la-rinascita.png"]
           }
         ],
         [
           {
             "type": "image",
-            "content": [
-              "rimontarte-07-la-rinascita-bis.png"
-            ]
+            "content": ["rimontarte-07-la-rinascita-bis.png"]
           }
         ]
       ]
@@ -214,9 +196,7 @@
         [
           {
             "type": "image",
-            "content": [
-              "rimontarte-08-il-folletto.png"
-            ],
+            "content": ["rimontarte-08-il-folletto.png"],
             "maxHeight": 350
           }
         ],
@@ -258,18 +238,14 @@
         [
           {
             "type": "image",
-            "content": [
-              "rimontarte-09-il-nido.png"
-            ]
+            "content": ["rimontarte-09-il-nido.png"]
           }
         ]
       ]
     },
     {
       "type": "image",
-      "content": [
-        "rimontarte-10-il-fungo.png"
-      ],
+      "content": ["rimontarte-10-il-fungo.png"],
       "maxWidth": 700
     },
     {
@@ -293,9 +269,7 @@
         [
           {
             "type": "image",
-            "content": [
-              "rimontarte-11-concerto-con-coro-di-farfalle.png"
-            ]
+            "content": ["rimontarte-11-concerto-con-coro-di-farfalle.png"]
           }
         ]
       ]
@@ -306,9 +280,7 @@
         [
           {
             "type": "image",
-            "content": [
-              "rimontarte-12-la-rana.png"
-            ]
+            "content": ["rimontarte-12-la-rana.png"]
           }
         ],
         [

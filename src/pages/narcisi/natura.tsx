@@ -1,12 +1,12 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import DefaultLayout from "../../components/default-layout"
+import WorkInProgress from "../../components/work-in-progress"
 
 const NarcisiNaturaPage: React.FC<PageProps> = () => {
   return (
     <DefaultLayout>
-      {" "}
-      NATURA + Pagina per con contenuti per i Narcisi{" "}
+      <WorkInProgress />
     </DefaultLayout>
   )
 }

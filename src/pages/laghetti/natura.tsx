@@ -6,6 +6,7 @@ import DefaultLayout from "../../components/default-layout"
 import ContentToComponent from "../../components/pagedata-text-components"
 import { DataJSONType, ImageData } from "../../types"
 import * as T from "./../../components/typography"
+import MobileContentToComponent from "../../components/mobile-pagedata-text-components"
 
 const LaghettiNaturaPage: React.FC<PageProps> = () => {
   const data = useStaticQuery(graphql`
@@ -36,10 +37,12 @@ const LaghettiNaturaPage: React.FC<PageProps> = () => {
   `)
 
   const content = dataJSON.natura as DataJSONType
-  if (!content) return (<DefaultLayout>
-    <T.H1>Contenuto non trovato!</T.H1>
-  </DefaultLayout>
-  )
+  if (!content)
+    return (
+      <DefaultLayout>
+        <T.H1>Contenuto non trovato!</T.H1>
+      </DefaultLayout>
+    )
 
   // Map metadata and image nodes
   const metadata = data.allImageMetadataJson.nodes
@@ -57,6 +60,7 @@ const LaghettiNaturaPage: React.FC<PageProps> = () => {
   return (
     <DefaultLayout>
       <ContentToComponent pageData={content} images={filteredImages} />
+      <MobileContentToComponent pageData={content} images={filteredImages} />
     </DefaultLayout>
   )
 }

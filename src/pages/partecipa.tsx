@@ -1,11 +1,12 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import DefaultLayout from "../components/default-layout"
+import WorkInProgress from "../components/work-in-progress"
 
 const PartecipaPage: React.FC<PageProps> = () => {
   return (
     <DefaultLayout>
-      Pagina per con i gadget, IBAN e wallet per donare online
+      <WorkInProgress />
     </DefaultLayout>
   )
 }

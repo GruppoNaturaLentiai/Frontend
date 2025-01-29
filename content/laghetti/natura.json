@@ -2,17 +2,13 @@
   "natura": [
     {
       "type": "text",
-      "content": [
-        "La valle del torrente Rimonta – Aspetti naturalistici"
-      ],
+      "content": ["La valle del torrente Rimonta – Aspetti naturalistici"],
       "size": "h1",
       "font": "Caveat"
     },
     {
       "type": "text",
-      "content": [
-        "PREMESSA"
-      ],
+      "content": ["PREMESSA"],
       "size": "h2",
       "font": "Caveat"
     },
@@ -28,15 +24,11 @@
     },
     {
       "type": "image",
-      "content": [
-        "rimonta-bacino.png"
-      ]
+      "content": ["rimonta-bacino.png"]
     },
     {
       "type": "text",
-      "content": [
-        "I BOSCHI"
-      ],
+      "content": ["I BOSCHI"],
       "size": "h2",
       "font": "Caveat"
     },
@@ -52,9 +44,7 @@
     },
     {
       "type": "text",
-      "content": [
-        "GLI AMBIENTI AGRARI"
-      ],
+      "content": ["GLI AMBIENTI AGRARI"],
       "size": "h2",
       "font": "Caveat"
     },
@@ -74,26 +64,20 @@
         [
           {
             "type": "image",
-            "content": [
-              "rimonta-pettirosso.png"
-            ]
+            "content": ["rimonta-pettirosso.png"]
           }
         ],
         [
           {
             "type": "image",
-            "content": [
-              "rimonta-cervo.png"
-            ]
+            "content": ["rimonta-cervo.png"]
           }
         ]
       ]
     },
     {
       "type": "text",
-      "content": [
-        "IL TORRENTE"
-      ],
+      "content": ["IL TORRENTE"],
       "size": "h2",
       "font": "Caveat"
     },
@@ -103,9 +87,7 @@
         [
           {
             "type": "image",
-            "content": [
-              "rimonta-canyon.png"
-            ],
+            "content": ["rimonta-canyon.png"],
             "maxHeight": 350
           }
         ],
@@ -127,9 +109,7 @@
     },
     {
       "type": "text",
-      "content": [
-        "IL BIOTOPO DEI LAGHETTI DELLA RIMONTA"
-      ],
+      "content": ["IL BIOTOPO DEI LAGHETTI DELLA RIMONTA"],
       "size": "h2",
       "font": "Caveat"
     },
@@ -145,9 +125,7 @@
     },
     {
       "type": "text",
-      "content": [
-        "Michele Cassol"
-      ],
+      "content": ["Michele Cassol"],
       "size": "h2",
       "font": "Cedarville Cursive",
       "position": "right"
@@ -161,9 +139,7 @@
     },
     {
       "type": "image",
-      "content": [
-        "rimonta-panorama.png"
-      ]
+      "content": ["rimonta-panorama.png"]
     }
   ]
 }
