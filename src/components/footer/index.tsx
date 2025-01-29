@@ -62,52 +62,55 @@ const Footer: React.FC = () => {
             <S.ContactsLong>
               <S.ContactsLongText>
                 <T.H3>Email: </T.H3>
-                <T.H4 onClick={() => {
-                  window.location.href = `mailto:${contacts["email"]}`
-                }}
-                >{contacts["email"]}</T.H4>
+                <T.H4
+                  onClick={() => {
+                    window.location.href = `mailto:${contacts["email"]}`
+                  }}
+                >
+                  {contacts["email"]}
+                </T.H4>
               </S.ContactsLongText>
               <S.ContactsLongText>
                 <T.H3>Telefono: </T.H3>
-                <T.H4 onClick={() => {
-                  window.location.href = `tel:${contacts["phone"]}`
-                }}>{contacts["phone-spaced"]}</T.H4>
+                <T.H4
+                  onClick={() => {
+                    window.location.href = `tel:${contacts["phone"]}`
+                  }}
+                >
+                  {contacts["phone-spaced"]}
+                </T.H4>
               </S.ContactsLongText>
             </S.ContactsLong>
           </S.LogoWrapper>
           <S.SitemapWrapper>
-            {footerSections.map(main =>
+            {footerSections.map(main => (
               <S.LinksColumn>
-                {main.url
-                  ? <Link to={main.url}>
-                    <T.H3 $font="Caveat">
-                      {main.label}
-                    </T.H3>
+                {main.url ? (
+                  <Link to={main.url}>
+                    <T.H3 $font="Caveat">{main.label}</T.H3>
                   </Link>
-                  : <T.H3 $font="Caveat">
-                    {main.label}
-                  </T.H3>
-                }
-                {main.subsections.map(subsec =>
+                ) : (
+                  <T.H3 $font="Caveat">{main.label}</T.H3>
+                )}
+                {main.subsections.map(subsec => (
                   <Link to={subsec.url}>
-                    <T.H4>
-                      {subsec.label}
-                    </T.H4>
-                  </Link>)}
+                    <T.H4>{subsec.label}</T.H4>
+                  </Link>
+                ))}
               </S.LinksColumn>
-            )}
+            ))}
           </S.SitemapWrapper>
           <S.SponsorsWrapper>
-            <T.H3 $font="Caveat">
-              I nostri sponsor
-            </T.H3>
+            <T.H3 $font="Caveat">I nostri sponsor</T.H3>
             <S.SponsorPlaceholder />
             <S.SponsorPlaceholder />
           </S.SponsorsWrapper>
         </S.UpperContent>
         <S.HorizontalSeparator />
         <S.LowerContent>
-          <T.P2>© Copyright GNL Lentiai 2025 - Tutti i diritti riservati.</T.P2>
+          <T.P2>
+            © Copyright GNL Lentiai 2025 - Tutti i diritti riservati.
+          </T.P2>
         </S.LowerContent>
       </S.Footer>
       <S.MobileFooter>
@@ -136,52 +139,55 @@ const Footer: React.FC = () => {
             <S.ContactsLong>
               <S.ContactsLongText>
                 <T.H3>Email: </T.H3>
-                <T.H4 onClick={() => {
-                  window.location.href = `mailto:${contacts["email"]}`
-                }}
-                >{contacts["email"]}</T.H4>
+                <T.H4
+                  onClick={() => {
+                    window.location.href = `mailto:${contacts["email"]}`
+                  }}
+                >
+                  {contacts["email"]}
+                </T.H4>
               </S.ContactsLongText>
               <S.ContactsLongText>
                 <T.H3>Telefono: </T.H3>
-                <T.H4 onClick={() => {
-                  window.location.href = `tel:${contacts["phone"]}`
-                }}>{contacts["phone-spaced"]}</T.H4>
+                <T.H4
+                  onClick={() => {
+                    window.location.href = `tel:${contacts["phone"]}`
+                  }}
+                >
+                  {contacts["phone-spaced"]}
+                </T.H4>
               </S.ContactsLongText>
             </S.ContactsLong>
           </S.LogoWrapper>
           <S.SponsorsWrapper>
-            <T.H3 $font="Caveat">
-              I nostri sponsor
-            </T.H3>
+            <T.H3 $font="Caveat">I nostri sponsor</T.H3>
             <S.SponsorPlaceholder />
             <S.SponsorPlaceholder />
           </S.SponsorsWrapper>
           <S.SitemapWrapper>
-            {footerSections.map(main =>
+            {footerSections.map(main => (
               <S.LinksColumn>
-                {main.url
-                  ? <Link to={main.url}>
-                    <T.H3 $font="Caveat">
-                      {main.label}
-                    </T.H3>
+                {main.url ? (
+                  <Link to={main.url}>
+                    <T.H3 $font="Caveat">{main.label}</T.H3>
                   </Link>
-                  : <T.H3 $font="Caveat">
-                    {main.label}
-                  </T.H3>
-                }
-                {main.subsections.map(subsec =>
+                ) : (
+                  <T.H3 $font="Caveat">{main.label}</T.H3>
+                )}
+                {main.subsections.map(subsec => (
                   <Link to={subsec.url}>
-                    <T.H4>
-                      {subsec.label}
-                    </T.H4>
-                  </Link>)}
+                    <T.H4>{subsec.label}</T.H4>
+                  </Link>
+                ))}
               </S.LinksColumn>
-            )}
+            ))}
           </S.SitemapWrapper>
         </S.UpperContent>
         <S.HorizontalSeparator />
         <S.LowerContent>
-          <T.P2>© Copyright GNL Lentiai 2025 - Tutti i diritti riservati.</T.P2>
+          <T.P2>
+            © Copyright GNL Lentiai 2025 - Tutti i diritti riservati.
+          </T.P2>
         </S.LowerContent>
       </S.MobileFooter>
     </>

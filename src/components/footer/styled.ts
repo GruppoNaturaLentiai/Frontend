@@ -34,9 +34,9 @@ export const UpperContent = styled.div`
   row-gap: 20px;
   @media (max-width: ${breakpointNum.mobile}px) {
     & > *:nth-child(3) {
-    flex-basis: 100%;
-    display: flex;
-    justify-content: center;
+      flex-basis: 100%;
+      display: flex;
+      justify-content: center;
     }
   }
 `
