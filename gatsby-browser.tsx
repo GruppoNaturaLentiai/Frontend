@@ -1,6 +1,5 @@
 import "leaflet/dist/leaflet.css"
 import "normalize.css"
-import "./src/styles/global.css"
 
 import * as React from "react"
 

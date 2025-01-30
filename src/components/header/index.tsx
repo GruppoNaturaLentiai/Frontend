@@ -15,7 +15,7 @@ const Header: React.FC = () => {
     <>
       <S.Header>
         <S.LeftWrapper>
-          <Link to="/">
+          <Link to="/" aria-label="Vai alla home">
             <Icon type="logo" />
           </Link>
         </S.LeftWrapper>

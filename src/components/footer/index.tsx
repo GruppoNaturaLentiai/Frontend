@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
       <S.Footer>
         <S.UpperContent>
           <S.LogoWrapper>
-            <Link to="/">
+            <Link to="/" aria-label="Vai alla home">
               <Icon type="logo" width={200} />
             </Link>
             <S.ContactsIcons>
@@ -50,6 +50,7 @@ const Footer: React.FC = () => {
                       href={contact.linkURL}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={contact.text}
                     >
                       {contact.icon}
                     </a>
@@ -121,7 +122,7 @@ const Footer: React.FC = () => {
       <S.MobileFooter>
         <S.UpperContent>
           <S.LogoWrapper>
-            <Link to="/">
+            <Link to="/" aria-label="Vai alla home">
               <Icon type="logo" width={200} />
             </Link>
             <S.ContactsIcons>
@@ -132,6 +133,7 @@ const Footer: React.FC = () => {
                       href={contact.linkURL}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={contact.text}
                     >
                       {contact.icon}
                     </a>

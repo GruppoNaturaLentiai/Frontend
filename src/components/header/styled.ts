@@ -64,7 +64,7 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
 `
 
 export const SubsectionList = styled.ul<{ $isOpen: boolean }>`
-  min-width: 100%;
+  width: 100%;
   padding-inline-start: 0;
   list-style: none;
   min-width: 110px;
