@@ -113,7 +113,7 @@ export const HeaderMobile = styled.div`
   display: flex;
   flex-direction: row;
   gap: 16px;
-  padding: 24px;
+  padding: 32px 18px;
   justify-content: space-between;
   @media (min-width: ${breakpointNum.tablet + 1}px) {
     display: none;

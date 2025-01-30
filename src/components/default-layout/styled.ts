@@ -16,9 +16,10 @@ export const Wrapper = styled.main`
   flex-direction: column;
   @media (max-width: ${breakpointNum.bigtablet}px) {
     min-width: 480px;
+    max-width: calc(100vw - 48px);
   }
   @media (max-width: ${breakpointNum.mobile}px) {
     min-width: 280px;
-    margin: 24;
+    margin: 18px;
   }
 `

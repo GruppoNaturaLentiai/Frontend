@@ -6,17 +6,17 @@ import contacts from "./../../data/contacts.json"
 
 const contactData = [
   {
-    icon: <Icon type="facebook" width={20} />,
-    text: "Laghetti della Rimonta",
+    icon: <Icon type="facebook" width={32} />,
+    text: "I Laghetti della Rimonta - Bardies ",
     linkURL: contacts["facebook-laghetti"],
   },
   {
-    icon: <Icon type="facebook" width={20} />,
-    text: "Progetto Narcisi",
+    icon: <Icon type="facebook" width={32} />,
+    text: "Borgo Valbelluna-montagna-narcisi ",
     linkURL: contacts["facebook-narcisi"],
   },
   {
-    icon: <Icon type="youtube" width={20} />,
+    icon: <Icon type="youtube" width={32} />,
     text: "Gruppo Natura Lentiai",
     linkURL: contacts["youtube"],
   },
@@ -57,10 +57,10 @@ const ContactUs = () => {
         ))}
         <S.Row>
           <S.IconWrapper onClick={handleCall}>
-            <Icon type="phone" width={20} />
+            <Icon type="phone" width={32} />
           </S.IconWrapper>
           <S.IconWrapper onClick={handleWhatsApp}>
-            <Icon type="whatsapp" width={20} />
+            <Icon type="whatsapp" width={32} />
           </S.IconWrapper>
           <S.LinkText onClick={handleCall}>
             <T.H2>{contacts["phone-spaced"]}</T.H2>
@@ -68,7 +68,7 @@ const ContactUs = () => {
         </S.Row>
         <S.Row>
           <S.IconWrapper onClick={handleEmail}>
-            <Icon type="email" width={20} />
+            <Icon type="email" width={32} />
           </S.IconWrapper>
           <S.LinkText onClick={handleEmail}>
             <T.H2>{contacts["email"]}</T.H2>
