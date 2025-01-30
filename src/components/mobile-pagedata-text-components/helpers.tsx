@@ -68,6 +68,9 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
+          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
+            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
     case "h2":
@@ -81,6 +84,9 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
+          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
+            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
     case "h3":
@@ -94,6 +100,9 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
+          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
+            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
     case "h4":
@@ -107,6 +116,9 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
+          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
+            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
     case "h5":
@@ -120,6 +132,9 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
+          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
+            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
     case "h6":
@@ -133,6 +148,9 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
+          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
+            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
     case "h7":
@@ -146,6 +164,9 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
+          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
+            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
     case "p1":
@@ -159,6 +180,9 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
+          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
+            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
     case "p2":
@@ -172,20 +196,28 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
+          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
+            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
     case "p3":
       return (
-        <S.TextWrapper $isExpanded={isExpanded} key={key}>
-          <S.TextContainer onClick={onClickFn}>
-            <T.P3
-              $textAlign={position}
-              $font={font}
-              dangerouslySetInnerHTML={{ __html: theText }}
-            />
-          </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-        </S.TextWrapper>
+        <>
+          <S.TextWrapper $isExpanded={isExpanded} key={key}>
+            <S.TextContainer onClick={onClickFn}>
+              <T.P3
+                $textAlign={position}
+                $font={font}
+                dangerouslySetInnerHTML={{ __html: theText }}
+              />
+            </S.TextContainer>
+            <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
+            <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
+              {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+            </S.ReadMoreWrapper>
+          </S.TextWrapper >
+        </>
       )
     case "p4":
       return (
@@ -198,6 +230,9 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
+          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
+            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
     case "p5":
@@ -211,6 +246,9 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
+          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
+            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
     case "note":
@@ -224,6 +262,9 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
+          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
+            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
     default:

@@ -4,6 +4,7 @@ import {
   MapContainer,
   Marker,
   Polyline,
+  Popup,
   TileLayer,
   Tooltip,
 } from "react-leaflet"
@@ -12,6 +13,7 @@ import * as T from "./../typography"
 import * as S from "./styled"
 
 import { Marker as MarkerLeaflet, icon } from "leaflet"
+import ExtendedPolyline from "../custom-polyline"
 
 //// MARKERS RELATED CODE
 import markerIcon2x from "./../../markers/default/marker-icon-2x.png"
@@ -105,13 +107,23 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
             position={[marker.lat, marker.lon]}
             icon={mapToMarker(marker.iconType)}
           >
-            <Tooltip>{marker.name}</Tooltip>
+            <S.LeafletPopupStyled offset={[-15, 20]}>
+              {marker.name}
+              <a
+                href={`https://www.google.com/maps?q=${marker.lat},${marker.lon}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "blue", textDecoration: "underline" }}
+              >
+                <br />Apri Google Maps
+              </a>
+            </S.LeafletPopupStyled>
           </Marker>
         ))}
 
         {/* Static paths */}
         {paths.map(path => (
-          <Polyline
+          <ExtendedPolyline
             eventHandlers={{
               mouseover: _ => {
                 setHoveredPath(path.key)
@@ -119,14 +131,19 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
               mouseout: _ => {
                 setHoveredPath("")
               },
+              click: _ => {
+                setHoveredPath(path.key)
+              },
             }}
             pathOptions={{
-              weight: path.key === hoveredPath ? 6 : 3,
+              weight: path.key === hoveredPath ? 8 : 4,
+              dashArray: path.key === hoveredPath ? "1, 0" : "1, 5"
             }}
             key={path.key}
             positions={path.path as [number, number][]}
             color={path.color}
             opacity={0.8}
+            hitTolerance={1000} // Expands the tap/click area
           />
         ))}
 

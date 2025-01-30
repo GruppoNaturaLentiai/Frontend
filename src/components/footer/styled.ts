@@ -15,7 +15,7 @@ export const Footer = styled.footer`
 
 export const MobileFooter = styled.footer`
   background-color: ${colors.green.green400};
-  padding: 32px;
+  padding: 24px;
   min-height: 32px;
   display: flex;
   flex-direction: column;
@@ -32,12 +32,17 @@ export const UpperContent = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 20px;
-  @media (max-width: ${breakpointNum.mobile}px) {
+  column-gap: 30px;
+  @media (max-width: ${breakpointNum.medium}px) {
     & > *:nth-child(3) {
-      flex-basis: 100%;
       display: flex;
       justify-content: center;
+      flex-basis: 100%;
     }
+  }
+
+  @media (max-width: ${breakpointNum.tablet}px) {
+    justify-content: center;
   }
 `
 
@@ -138,15 +143,29 @@ export const LinksColumn = styled.div`
 `
 
 export const SponsorsWrapper = styled.div`
-  min-width: 100px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  text-align: center;
+  align-items: center;
+  > h3 {
+    margin-top: 0;
+  }
+`
+
+export const SponsorsLogosWrapper = styled.div`
+  max-width: 250px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 `
 
 export const SponsorPlaceholder = styled.div`
   background-color: ${colors.green.green800};
   min-height: 40px;
+  min-width: 100px;
 `
 
 export const HorizontalSeparator = styled.div`

@@ -68,7 +68,7 @@ const LaghettiPage: React.FC<PageProps> = () => {
   return (
     <DefaultLayout>
       <div style={{ padding: 16 }}>
-        <div style={{ justifySelf: "center", padding: 32 }}>
+        <div style={{ justifySelf: "center" }}>
           {coverUp && (
             <GatsbyImage
               image={coverUp}

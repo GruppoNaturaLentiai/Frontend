@@ -54,7 +54,7 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
       color: ${colors.green.green600};
     }
 
-    > h4 {
+    > * {
       ${({ $isActive }) => $isActive && `color: ${colors.green.green550}`};
       &:active {
         color: ${colors.green.green600};
@@ -64,6 +64,7 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
 `
 
 export const SubsectionList = styled.ul<{ $isOpen: boolean }>`
+  min-width: 100%;
   padding-inline-start: 0;
   list-style: none;
   min-width: 110px;
@@ -91,7 +92,7 @@ export const SubsectionList = styled.ul<{ $isOpen: boolean }>`
 export const SubsectionItem = styled.div`
   > a {
     text-decoration: none;
-    > h4 {
+    > * {
       margin: 1em;
       color: ${colors.green.green700};
       &:hover {
@@ -112,7 +113,7 @@ export const HeaderMobile = styled.div`
   display: flex;
   flex-direction: row;
   gap: 16px;
-  padding: 32px;
+  padding: 24px;
   justify-content: space-between;
   @media (min-width: ${breakpointNum.tablet + 1}px) {
     display: none;
@@ -144,7 +145,6 @@ export const RightSidebar = styled.div<{ $isOpen: boolean }>`
 export const CloseButton = styled.button`
   background: none;
   border: none;
-  color: ${colors.green.green50};
   font-size: 2rem;
   align-self: flex-end;
   cursor: pointer;
@@ -155,6 +155,9 @@ export const CloseButton = styled.button`
   &:active {
     transition: all 0.5s;
     color: ${colors.green.green400};
+  }
+  > * {
+    color: ${colors.green.green50};
   }
 `
 
@@ -168,7 +171,7 @@ export const MobileNavBarItem = styled.li<{ $isActive: boolean }>`
   margin: 1rem 0;
   > a {
     text-decoration: none;
-    > h4 {
+    > * {
       color: ${({ $isActive }) =>
         $isActive ? colors.green.green500 : colors.green.green300};
       &:active {
@@ -188,7 +191,7 @@ export const LinkIcon = styled.div<{ $isActive: boolean }>`
   gap: 15px;
   > a {
     text-decoration: none;
-    > h4 {
+    > * {
       margin-top: 0px;
       color: ${({ $isActive }) =>
         $isActive ? colors.green.green500 : colors.green.green300};
@@ -232,7 +235,7 @@ export const MobileSubsectionList = styled.ul<{ $show: boolean }>`
 
     > a {
       text-decoration: none;
-      > h4 {
+      > * {
         color: ${colors.green.green200};
         &:hover {
           color: ${colors.green.green300};
