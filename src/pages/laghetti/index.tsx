@@ -57,23 +57,23 @@ const LaghettiPage: React.FC<PageProps> = () => {
     }
   }) as ImageData[]
   const coverUp = getImage(
-    images.find((img: any) => img.base === "rimonta-cover-01.png")
+    images.find((img: any) => img.base === "rimonta-cover-01.jpg")
       .childImageSharp,
   )
   const coverDown = getImage(
-    images.find((img: any) => img.base === "rimonta-cover-02.png")
+    images.find((img: any) => img.base === "rimonta-cover-02.jpg")
       .childImageSharp,
   )
 
   return (
     <DefaultLayout>
       <div style={{ padding: 16 }}>
-        <div style={{ justifySelf: "center", padding: 32 }}>
+        <div style={{ justifySelf: "center" }}>
           {coverUp && (
             <GatsbyImage
               image={coverUp}
               alt={"Una passerella in legno con dietro il torrente Rimonta"}
-              style={{ borderRadius: "8px", marginTop: 4, maxWidth: 800 }}
+              style={{ borderRadius: "8px", marginTop: 4, maxWidth: 1200 }}
             />
           )}
           <T.P4 $textAlign="center">Foto di Walter Argenta</T.P4>
@@ -85,7 +85,7 @@ const LaghettiPage: React.FC<PageProps> = () => {
             <GatsbyImage
               image={coverDown}
               alt={"Un panorama invernale dei laghetti della Rimonta"}
-              style={{ borderRadius: "8px", marginTop: 4, maxWidth: 800 }}
+              style={{ borderRadius: "8px", marginTop: 4, maxWidth: 1200 }}
             />
           )}
           <T.P4 $textAlign="center">Foto di Walter Argenta</T.P4>

@@ -4,29 +4,28 @@ import styled from "styled-components"
 import { breakpointNum, colors } from "../../styles"
 
 export const OuterWrapper = styled.div`
+  justify-content: space-between;
   overflow: hidden;
   align-items: center;
-  justify-content: center;
   display: flex;
   flex-direction: row;
-  min-width: calc(100vw - 64px);
+  min-width: calc(100vw - 82px);
   min-height: 900px;
   @media (max-width: ${breakpointNum.bigtablet + 1}px) {
     min-height: 900px;
   }
   @media (max-width: ${breakpointNum.tablet}px) {
-    min-width: calc(100vw - 50px);
+    min-width: calc(100vw - 60px);
     min-height: 700px;
   }
   @media (max-width: ${breakpointNum.mobile}px) {
-    min-width: calc(100vw - 50px);
     min-height: 500px;
   }
 `
 
 export const Wrapper = styled.div`
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -42,16 +41,32 @@ export const ButtonWrapper = styled.div<{ $position: "left" | "right" }>`
   cursor: pointer;
   transition: all 0.5s;
   margin: 0 1em;
+  @media (max-width: ${breakpointNum.mobile}px) {
+    width: 24px;
+    height: 24px;
+  }
+
+  ${({ $position }) =>
+    $position === "left"
+      ? `box-shadow: -2px 1px 4px ${colors.green.green950};`
+      : `box-shadow: 2px 1px 4px ${colors.green.green950};`}
+
   > svg {
     ${({ $position }) =>
       $position === "left"
         ? "transform: rotate(90deg);"
         : "transform: rotate(-90deg);"}
     fill: ${colors.green.green200};
-    margin-top: 5px;
+    margin-top: 6px;
     ${({ $position }) =>
-      $position === "left" ? "margin-left: 3px;" : "margin-left: 5px;"}
+      $position === "left" ? "margin-left: 3px;" : "margin-left: 8px;"}
     transition: all 0.5s;
+
+    @media (max-width: ${breakpointNum.mobile}px) {
+      ${({ $position }) =>
+        $position === "left" ? "margin-left: -2px;" : "margin-left: 1px;"}
+      height: 12px;
+    }
   }
   &:hover {
     color: ${colors.green.green800};

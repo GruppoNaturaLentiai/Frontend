@@ -15,7 +15,7 @@ const Header: React.FC = () => {
     <>
       <S.Header>
         <S.LeftWrapper>
-          <Link to="/">
+          <Link to="/" aria-label="Vai alla home">
             <Icon type="logo" />
           </Link>
         </S.LeftWrapper>
@@ -66,7 +66,7 @@ const Header: React.FC = () => {
         </S.RightWrapper>
         <S.RightSidebar $isOpen={mobileMenuOpen}>
           <S.CloseButton onClick={() => setMobileMenuOpen(false)}>
-            ×
+            <T.P1>X</T.P1>
           </S.CloseButton>
           <S.MobileNavBarList>
             {navItems.map(el => (
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
                         setMenuOpen("")
                       }}
                     >
-                      <T.H4>{el.label}</T.H4>
+                      <T.H2>{el.label}</T.H2>
                     </Link>
                   </S.LinkIcon>
                 ) : (
@@ -103,7 +103,7 @@ const Header: React.FC = () => {
                       setMenuOpen("")
                     }}
                   >
-                    <T.H4>{el.label}</T.H4>
+                    <T.H2>{el.label}</T.H2>
                   </Link>
                 )}
                 {el.subsections && (
@@ -114,7 +114,7 @@ const Header: React.FC = () => {
                           to={subSection.url}
                           onClick={() => setMobileMenuOpen(false)}
                         >
-                          <T.H4>{subSection.label}</T.H4>
+                          <T.H2>{subSection.label}</T.H2>
                         </Link>
                       </li>
                     ))}

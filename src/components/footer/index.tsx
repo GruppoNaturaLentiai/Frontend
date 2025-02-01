@@ -39,17 +39,22 @@ const Footer: React.FC = () => {
       <S.Footer>
         <S.UpperContent>
           <S.LogoWrapper>
-            <Link to="/">
+            <Link to="/" aria-label="Vai alla home">
               <Icon type="logo" width={200} />
             </Link>
             <S.ContactsIcons>
-              {contactData.map(contact => (
-                <S.IconWrapper title={contact.text} onClick={contact.onClick}>
+              {contactData.map((contact, idx) => (
+                <S.IconWrapper
+                  title={contact.text}
+                  onClick={contact.onClick}
+                  key={`contact-${idx}`}
+                >
                   {contact.linkURL ? (
                     <a
                       href={contact.linkURL}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={contact.text}
                     >
                       {contact.icon}
                     </a>
@@ -83,17 +88,19 @@ const Footer: React.FC = () => {
             </S.ContactsLong>
           </S.LogoWrapper>
           <S.SitemapWrapper>
-            {footerSections.map(main => (
-              <S.LinksColumn>
+            {footerSections.map((main, idx) => (
+              <S.LinksColumn key={`footer-sec-${idx}`}>
                 {main.url ? (
                   <Link to={main.url}>
                     <T.H3 $font="Caveat">{main.label}</T.H3>
                   </Link>
                 ) : (
-                  <T.H3 $font="Caveat">{main.label}</T.H3>
+                  <T.H3 $font="Caveat" key={`footer-sec-${idx}`}>
+                    {main.label}
+                  </T.H3>
                 )}
-                {main.subsections.map(subsec => (
-                  <Link to={subsec.url}>
+                {main.subsections.map((subsec, idx) => (
+                  <Link to={subsec.url} key={`footer-subsec-${idx}`}>
                     <T.H4>{subsec.label}</T.H4>
                   </Link>
                 ))}
@@ -102,8 +109,13 @@ const Footer: React.FC = () => {
           </S.SitemapWrapper>
           <S.SponsorsWrapper>
             <T.H3 $font="Caveat">I nostri sponsor</T.H3>
-            <S.SponsorPlaceholder />
-            <S.SponsorPlaceholder />
+            <S.SponsorsLogosWrapper>
+              <S.SponsorPlaceholder />
+              <S.SponsorPlaceholder />
+              <S.SponsorPlaceholder />
+              <S.SponsorPlaceholder />
+              <S.SponsorPlaceholder />
+            </S.SponsorsLogosWrapper>
           </S.SponsorsWrapper>
         </S.UpperContent>
         <S.HorizontalSeparator />
@@ -116,17 +128,22 @@ const Footer: React.FC = () => {
       <S.MobileFooter>
         <S.UpperContent>
           <S.LogoWrapper>
-            <Link to="/">
+            <Link to="/" aria-label="Vai alla home">
               <Icon type="logo" width={200} />
             </Link>
             <S.ContactsIcons>
-              {contactData.map(contact => (
-                <S.IconWrapper title={contact.text} onClick={contact.onClick}>
+              {contactData.map((contact, idx) => (
+                <S.IconWrapper
+                  title={contact.text}
+                  onClick={contact.onClick}
+                  key={`contact-${idx}`}
+                >
                   {contact.linkURL ? (
                     <a
                       href={contact.linkURL}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={contact.text}
                     >
                       {contact.icon}
                     </a>
@@ -161,21 +178,28 @@ const Footer: React.FC = () => {
           </S.LogoWrapper>
           <S.SponsorsWrapper>
             <T.H3 $font="Caveat">I nostri sponsor</T.H3>
-            <S.SponsorPlaceholder />
-            <S.SponsorPlaceholder />
+            <S.SponsorsLogosWrapper>
+              <S.SponsorPlaceholder />
+              <S.SponsorPlaceholder />
+              <S.SponsorPlaceholder />
+              <S.SponsorPlaceholder />
+              <S.SponsorPlaceholder />
+            </S.SponsorsLogosWrapper>
           </S.SponsorsWrapper>
           <S.SitemapWrapper>
-            {footerSections.map(main => (
-              <S.LinksColumn>
+            {footerSections.map((main, idx) => (
+              <S.LinksColumn key={`sec-mob-${idx}`}>
                 {main.url ? (
                   <Link to={main.url}>
                     <T.H3 $font="Caveat">{main.label}</T.H3>
                   </Link>
                 ) : (
-                  <T.H3 $font="Caveat">{main.label}</T.H3>
+                  <T.H3 $font="Caveat" key={`sec-mob-${idx}`}>
+                    {main.label}
+                  </T.H3>
                 )}
-                {main.subsections.map(subsec => (
-                  <Link to={subsec.url}>
+                {main.subsections.map((subsec, idx) => (
+                  <Link to={subsec.url} key={`subsec-mob-${idx}`}>
                     <T.H4>{subsec.label}</T.H4>
                   </Link>
                 ))}

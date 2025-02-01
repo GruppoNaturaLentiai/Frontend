@@ -3,8 +3,8 @@ import { breakpoint, colors } from "../../styles"
 
 export const fontSizes = {
   h1: 42,
-  h2: 23,
-  h3: 17,
+  h2: 28,
+  h3: 18,
   h4: 15,
   h5: 13,
   h6: 11,

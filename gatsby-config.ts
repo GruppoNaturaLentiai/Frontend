@@ -74,6 +74,18 @@ const config: GatsbyConfig = {
         linkStyles: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Funnel Sans:ital,wght@0,300..800;1,300..800`, // Funnel Sans
+          `Condiment`, // Condiment
+          `Caveat:wght@400..700`, // Caveat
+          `Cedarville Cursive`, // Cedarville Cursive
+        ],
+        display: "swap", // improves loading performance
+      },
+    },
   ],
 }
 

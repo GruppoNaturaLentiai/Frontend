@@ -13,6 +13,8 @@ const ImageWithCredits = ({
   minWidth,
   maxHeight,
   maxWidth,
+  noDescription,
+  noCopyright
 }: {
   title: string
   description: string
@@ -23,6 +25,8 @@ const ImageWithCredits = ({
   minHeight?: number
   maxWidth?: number
   maxHeight?: number
+  noDescription?: boolean
+  noCopyright?: boolean
 }) => (
   <S.ImgWrapper
     $maxHeight={maxHeight}
@@ -36,17 +40,17 @@ const ImageWithCredits = ({
       alt={alt}
       style={{ borderRadius: "8px", marginTop: 4 }}
     />
-    {copyright ? (
+    {noCopyright ? null : copyright ? (
       <T.P4>Foto di {copyright}</T.P4>
     ) : (
       <T.P4>Autore sconosciuto</T.P4>
     )}
-    <S.ImageDescription
+    {!noDescription && <S.ImageDescription
       style={{
         maxWidth: image.width,
       }}
       dangerouslySetInnerHTML={{ __html: description }}
-    />
+    />}
   </S.ImgWrapper>
 )
 

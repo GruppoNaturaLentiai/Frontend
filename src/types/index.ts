@@ -17,6 +17,8 @@ export type ImageContentData = {
   maxHeight?: number
   minWidth?: number
   minHeight?: number
+  noDescription?: boolean,
+  noCopyright?: boolean,
 }
 
 export type TextContentData = {

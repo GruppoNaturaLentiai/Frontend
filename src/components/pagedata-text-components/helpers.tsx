@@ -37,6 +37,8 @@ export const renderComponents =
                     minWidth={content.minWidth}
                     maxHeight={content.maxHeight}
                     maxWidth={content.maxWidth}
+                    noDescription={content.noDescription}
+                    noCopyright={content.noCopyright}
                   />
                 )
               ) : (

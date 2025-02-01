@@ -1,6 +1,7 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { breakpoint, breakpointNum, colors } from "../../styles"
 import * as T from "./../typography"
+import { color } from "framer-motion"
 
 export const MainWrapper = styled.div`
   display: flex;
@@ -40,7 +41,7 @@ export const ContinueReading = styled(T.P2)`
 export const TextWrapper = styled.div<{ $isExpanded: boolean }>`
   position: relative;
   overflow: hidden;
-  max-height: ${({ $isExpanded }) => ($isExpanded ? "1000px" : "4.5em")};
+  max-height: ${({ $isExpanded }) => ($isExpanded ? "2000px" : "4.5em")};
   transition: max-height 0.8s ease-in-out;
 `
 
@@ -60,4 +61,30 @@ export const FadeOut = styled.div<{ $isExpanded: boolean; $isShort: boolean }>`
 
   opacity: ${({ $isExpanded }) => ($isExpanded ? 0 : 1)};
   transition: opacity 0.8s ease-in-out;
+`
+
+export const ReadMoreWrapper = styled.div<{ $isExpanded: boolean, $isShort: boolean  }>`
+  ${({ $isShort }) => $isShort && "display:none;"}
+  cursor: pointer;
+  position: absolute;
+  top: 2.3em;
+  z-index: 10;
+  justify-self: anchor-center;
+  ${({ $isExpanded }) => $isExpanded && "position: unset;"}
+
+  h3 {
+    color: ${colors.green.green950};
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `
