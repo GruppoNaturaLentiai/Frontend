@@ -44,7 +44,11 @@ const Footer: React.FC = () => {
             </Link>
             <S.ContactsIcons>
               {contactData.map((contact, idx) => (
-                <S.IconWrapper title={contact.text} onClick={contact.onClick} key={`contact-${idx}`}>
+                <S.IconWrapper
+                  title={contact.text}
+                  onClick={contact.onClick}
+                  key={`contact-${idx}`}
+                >
                   {contact.linkURL ? (
                     <a
                       href={contact.linkURL}
@@ -91,7 +95,9 @@ const Footer: React.FC = () => {
                     <T.H3 $font="Caveat">{main.label}</T.H3>
                   </Link>
                 ) : (
-                  <T.H3 $font="Caveat" key={`footer-sec-${idx}`}>{main.label}</T.H3>
+                  <T.H3 $font="Caveat" key={`footer-sec-${idx}`}>
+                    {main.label}
+                  </T.H3>
                 )}
                 {main.subsections.map((subsec, idx) => (
                   <Link to={subsec.url} key={`footer-subsec-${idx}`}>
@@ -127,7 +133,11 @@ const Footer: React.FC = () => {
             </Link>
             <S.ContactsIcons>
               {contactData.map((contact, idx) => (
-                <S.IconWrapper title={contact.text} onClick={contact.onClick} key={`contact-${idx}`}>
+                <S.IconWrapper
+                  title={contact.text}
+                  onClick={contact.onClick}
+                  key={`contact-${idx}`}
+                >
                   {contact.linkURL ? (
                     <a
                       href={contact.linkURL}
@@ -184,7 +194,9 @@ const Footer: React.FC = () => {
                     <T.H3 $font="Caveat">{main.label}</T.H3>
                   </Link>
                 ) : (
-                  <T.H3 $font="Caveat" key={`sec-mob-${idx}`}>{main.label}</T.H3>
+                  <T.H3 $font="Caveat" key={`sec-mob-${idx}`}>
+                    {main.label}
+                  </T.H3>
                 )}
                 {main.subsections.map((subsec, idx) => (
                   <Link to={subsec.url} key={`subsec-mob-${idx}`}>

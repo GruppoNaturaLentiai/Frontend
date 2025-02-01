@@ -28,6 +28,8 @@ export const renderImage = (
               minWidth={content.minWidth}
               maxHeight={content.maxHeight}
               maxWidth={content.maxWidth}
+              noDescription={content.noDescription}
+              noCopyright={content.noCopyright}
             />
           )
         ) : (
@@ -53,7 +55,7 @@ export const renderText = (
     else setExpandText(key)
   }
 
-  const isShortText = theText.length < 200
+  const isShortText = theText.length < 320
 
   const { font, position } = content
   switch (content.size) {
@@ -68,8 +70,12 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
-            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          <S.ReadMoreWrapper $isExpanded={isExpanded} $isShort={isShortText} onClick={onClickFn}>
+            {
+              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
+                {isExpanded ? "Chiudi" : "Leggi di più"}
+              </T.H3>
+            }
           </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
@@ -84,8 +90,12 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
-            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          <S.ReadMoreWrapper $isExpanded={isExpanded} $isShort={isShortText} onClick={onClickFn}>
+            {
+              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
+                {isExpanded ? "Chiudi" : "Leggi di più"}
+              </T.H3>
+            }
           </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
@@ -100,8 +110,12 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
-            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          <S.ReadMoreWrapper $isExpanded={isExpanded} $isShort={isShortText} onClick={onClickFn}>
+            {
+              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
+                {isExpanded ? "Chiudi" : "Leggi di più"}
+              </T.H3>
+            }
           </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
@@ -116,8 +130,12 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
-            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          <S.ReadMoreWrapper $isExpanded={isExpanded} $isShort={isShortText} onClick={onClickFn}>
+            {
+              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
+                {isExpanded ? "Chiudi" : "Leggi di più"}
+              </T.H3>
+            }
           </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
@@ -132,8 +150,12 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
-            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          <S.ReadMoreWrapper $isExpanded={isExpanded} $isShort={isShortText} onClick={onClickFn}>
+            {
+              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
+                {isExpanded ? "Chiudi" : "Leggi di più"}
+              </T.H3>
+            }
           </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
@@ -148,8 +170,12 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
-            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          <S.ReadMoreWrapper $isExpanded={isExpanded} $isShort={isShortText} onClick={onClickFn}>
+            {
+              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
+                {isExpanded ? "Chiudi" : "Leggi di più"}
+              </T.H3>
+            }
           </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
@@ -164,8 +190,12 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
-            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          <S.ReadMoreWrapper $isExpanded={isExpanded} $isShort={isShortText} onClick={onClickFn}>
+            {
+              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
+                {isExpanded ? "Chiudi" : "Leggi di più"}
+              </T.H3>
+            }
           </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
@@ -180,8 +210,12 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
-            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          <S.ReadMoreWrapper $isExpanded={isExpanded} $isShort={isShortText} onClick={onClickFn}>
+            {
+              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
+                {isExpanded ? "Chiudi" : "Leggi di più"}
+              </T.H3>
+            }
           </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
@@ -196,8 +230,12 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
-            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          <S.ReadMoreWrapper $isExpanded={isExpanded} $isShort={isShortText} onClick={onClickFn}>
+            {
+              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
+                {isExpanded ? "Chiudi" : "Leggi di più"}
+              </T.H3>
+            }
           </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
@@ -213,10 +251,14 @@ export const renderText = (
               />
             </S.TextContainer>
             <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-            <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
-              {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+            <S.ReadMoreWrapper $isExpanded={isExpanded} $isShort={isShortText} onClick={onClickFn}>
+              {
+                <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
+                  {isExpanded ? "Chiudi" : "Leggi di più"}
+                </T.H3>
+              }
             </S.ReadMoreWrapper>
-          </S.TextWrapper >
+          </S.TextWrapper>
         </>
       )
     case "p4":
@@ -230,8 +272,12 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
-            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          <S.ReadMoreWrapper $isExpanded={isExpanded} $isShort={isShortText} onClick={onClickFn}>
+            {
+              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
+                {isExpanded ? "Chiudi" : "Leggi di più"}
+              </T.H3>
+            }
           </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
@@ -246,8 +292,12 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
-            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          <S.ReadMoreWrapper $isExpanded={isExpanded} $isShort={isShortText} onClick={onClickFn}>
+            {
+              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
+                {isExpanded ? "Chiudi" : "Leggi di più"}
+              </T.H3>
+            }
           </S.ReadMoreWrapper>
         </S.TextWrapper>
       )
@@ -262,8 +312,12 @@ export const renderText = (
             />
           </S.TextContainer>
           <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper $isExpanded={isExpanded} onClick={onClickFn}>
-            {isExpanded ? <T.H3>Leggi di meno</T.H3> : <T.H3>Leggi di più</T.H3>}
+          <S.ReadMoreWrapper $isExpanded={isExpanded} $isShort={isShortText} onClick={onClickFn}>
+            {
+              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
+                {isExpanded ? "Chiudi" : "Leggi di più"}
+              </T.H3>
+            }
           </S.ReadMoreWrapper>
         </S.TextWrapper>
       )

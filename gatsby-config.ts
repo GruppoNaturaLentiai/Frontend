@@ -85,7 +85,7 @@ const config: GatsbyConfig = {
         ],
         display: "swap", // improves loading performance
       },
-    }
+    },
   ],
 }
 

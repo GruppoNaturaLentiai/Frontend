@@ -21,5 +21,6 @@ export const Wrapper = styled.main`
   @media (max-width: ${breakpointNum.mobile}px) {
     min-width: 280px;
     margin: 18px;
+    min-height: 380px;
   }
 `

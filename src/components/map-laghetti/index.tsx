@@ -115,7 +115,8 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
                 rel="noopener noreferrer"
                 style={{ color: "blue", textDecoration: "underline" }}
               >
-                <br />Apri Google Maps
+                <br />
+                Apri Google Maps
               </a>
             </S.LeafletPopupStyled>
           </Marker>
@@ -137,7 +138,7 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
             }}
             pathOptions={{
               weight: path.key === hoveredPath ? 8 : 4,
-              dashArray: path.key === hoveredPath ? "1, 0" : "1, 5"
+              dashArray: path.key === hoveredPath ? "1, 0" : "1, 5",
             }}
             key={path.key}
             positions={path.path as [number, number][]}

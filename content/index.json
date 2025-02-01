@@ -1,0 +1,29 @@
+{
+  "index": [
+    {
+      "type": "text",
+      "content": [
+      ],
+      "size": "p1",
+      "font": "Caveat"
+    },
+    {
+      "type": "text",
+      "content": [
+        
+      ],
+      "size": "h2",
+      "font": "Cedarville Cursive",
+      "position": "right"
+    },
+    {
+      "type": "image",
+      "content": [
+        "Fioritura02.jpg"
+      ],
+      "maxWidth": 900,
+      "noDescription": true,
+      "noCopyright": true
+    }
+  ]
+}

@@ -45,16 +45,21 @@ export const ButtonWrapper = styled.div<{ $position: "left" | "right" }>`
     width: 24px;
     height: 24px;
   }
-  
+
+  ${({ $position }) =>
+    $position === "left"
+      ? `box-shadow: -2px 1px 4px ${colors.green.green950};`
+      : `box-shadow: 2px 1px 4px ${colors.green.green950};`}
+
   > svg {
     ${({ $position }) =>
       $position === "left"
         ? "transform: rotate(90deg);"
         : "transform: rotate(-90deg);"}
     fill: ${colors.green.green200};
-    margin-top: 5px;
+    margin-top: 6px;
     ${({ $position }) =>
-      $position === "left" ? "margin-left: 3px;" : "margin-left: 5px;"}
+      $position === "left" ? "margin-left: 3px;" : "margin-left: 8px;"}
     transition: all 0.5s;
 
     @media (max-width: ${breakpointNum.mobile}px) {

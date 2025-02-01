@@ -76,7 +76,7 @@
     "description": "Panorama dei laghetti della Rimonta",
     "alt": "Panorama con un lago e un cigno",
     "tags": ["laghetti", "laghetti-natura"],
-    "fileName": "rimonta-panorama.png",
+    "fileName": "rimonta-panorama.jpg",
     "copyright": "Walter Argenta"
   },
   {
@@ -116,7 +116,7 @@
     "description": "",
     "alt": "Scultura in legno eseguita da Andrea Gaspari di un drago immerso in un laghetto e nascosto da un canneto",
     "tags": ["laghetti", "laghetti-rimontarte"],
-    "fileName": "rimontarte-04-rufus-il-drago.png",
+    "fileName": "rimontarte-04-rufus-il-drago.jpg",
     "copyright": "Walter Argenta"
   },
   {
@@ -196,7 +196,7 @@
     "description": "",
     "alt": "Una passerella in legno con dietro il torrente Rimonta",
     "tags": ["laghetti", "laghetti-main"],
-    "fileName": "rimonta-cover-01.png",
+    "fileName": "rimonta-cover-01-old.png",
     "copyright": "Walter Argenta"
   },
   {
@@ -204,7 +204,7 @@
     "description": "",
     "alt": "Un panorama invernale dei laghetti della Rimonta",
     "tags": ["laghetti", "laghetti-main"],
-    "fileName": "rimonta-cover-02.png",
+    "fileName": "rimonta-cover-02-old.png",
     "copyright": "Walter Argenta"
   },
   {
@@ -238,5 +238,109 @@
     "tags": ["laghetti", "laghetti-storia"],
     "fileName": "ponte_01.jpeg",
     "copyright": ""
+  },
+  {
+    "title": "",
+    "description": "",
+    "alt": "Una foto artistica di uno scorcio su un lago",
+    "tags": ["laghetti", "laghetti-main"],
+    "fileName": "rimonta-cover-01.jpg",
+    "copyright": "Walter Argenta"
+  },
+  {
+    "title": "",
+    "description": "",
+    "alt": "Un panorama invernale dei laghetti della Rimonta con alberi innevati",
+    "tags": ["laghetti", "laghetti-main"],
+    "fileName": "rimonta-cover-02.jpg",
+    "copyright": "Walter Argenta"
+  },
+  {
+    "title": "",
+    "description": "Laghetti d'inverno. Si intravede Rufus il Drago",
+    "alt": "Panorama invernale dei laghetti. Si intravede l'opera di legno \"Rufus il Drago\"",
+    "tags": ["laghetti"],
+    "fileName": "Laghetti02.jpg",
+    "copyright": "Walter Argenta"
+  },
+  {
+    "title": "",
+    "description": "Il sentiero dei Laghetti attraversa una radura. Sullo sfondo le Dolomiti.",
+    "alt": "Panoramica del sentiero che attraversa una radura. Si vede una persona in piedi e le Dolomiti sullo sfondo.",
+    "tags": ["laghetti"],
+    "fileName": "Laghetti06.jpg",
+    "copyright": "Walter Argenta"
+  },
+  {
+    "title": "",
+    "description": "Laghetti d'inverno. Si intravede Rufus il Drago",
+    "alt": "",
+    "tags": ["laghetti"],
+    "fileName": "Laghetti07.jpg",
+    "copyright": "Walter Argenta"
+  },
+  {
+    "title": "",
+    "description": "Sul percorso dei laghetti della Rimonta si sfruttano passerelle di legno.",
+    "alt": "Una passerella di legno",
+    "tags": ["laghetti"],
+    "fileName": "Laghetti08.jpg",
+    "copyright": "Walter Argenta"
+  },
+  {
+    "title": "",
+    "description": "Prato costellato di narcisi durante il periodo della fioritura.",
+    "alt": "Un prato di narcisi bianchi al tramonto. Sullo sfondo a destra degli alberi e un recinto.",
+    "tags": ["narcisi"],
+    "fileName": "Fioritura01.jpg",
+    "copyright": "Walter Argenta"
+  },
+  {
+    "title": "",
+    "description": "Durante la fioritura dei narcisi i prati si tingono di bianco. Sullo sfondo la Valbelluna coperta dalle nuvole e le cime delle dolomiti innevate.",
+    "alt": "Un panorama con un prato di narcisi bianchi. Sullo sfondo la Valbelluna coperta dalle nuvole e le cime delle dolomiti innevate.",
+    "tags": ["narcisi", "main"],
+    "fileName": "Fioritura02.jpg",
+    "copyright": "Walter Argenta"
+  },
+  {
+    "title": "",
+    "description": "Alcuni narcisi in primo piano. Sullo sfondo la Valbelluna e le Dolomiti bellunesi.",
+    "alt": "Alcuni narcisi in primo piano. Sullo sfondo la Valbelluna e le Dolomiti bellunesi.",
+    "tags": ["narcisi"],
+    "fileName": "Fioritura03.jpg",
+    "copyright": "Walter Argenta"
+  },
+  {
+    "title": "",
+    "description": "I prati sembrano innevati durante la fioritura dei Narcisi. Sullo sfondo il monte Avena.",
+    "alt": "Un prato con molti narcisi bianchi. Sullo sfondo alcune montagne",
+    "tags": ["narcisi"],
+    "fileName": "Fioritura04.jpg",
+    "copyright": "Walter Argenta"
+  },
+  {
+    "title": "",
+    "description": "Panorama di prati con narcisi in fiore. Sullo sfondo Col Moscher e Malga Garda. Continuando si può scendere fino a Malga Mariech, Milies e infine Valdobbiadene.",
+    "alt": "Un prato con alcuni narcisi e sullo sfondo le Prealpi Bellunesi.",
+    "tags": ["narcisi"],
+    "fileName": "Fioritura05.jpg",
+    "copyright": "Walter Argenta"
+  },
+  {
+    "title": "",
+    "description": "Il Principe Bianco.",
+    "alt": "Un primo piano di una coppia di Narcisi incorniciati da fiori volgarmente detti \"Botton d'oro\".",
+    "tags": ["narcisi"],
+    "fileName": "Fioritura06.jpg",
+    "copyright": "Walter Argenta"
+  },
+  {
+    "title": "",
+    "description": "",
+    "alt": "Un prato con molti narcisi e le Prealpi bellunesi sullo sfondo.",
+    "tags": ["narcisi"],
+    "fileName": "Fioritura07.jpg",
+    "copyright": "Walter Argenta"
   }
 ]

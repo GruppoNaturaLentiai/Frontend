@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { breakpoint, breakpointNum, colors } from "../../styles"
 import * as T from "./../typography"
 import { color } from "framer-motion"
@@ -63,15 +63,28 @@ export const FadeOut = styled.div<{ $isExpanded: boolean; $isShort: boolean }>`
   transition: opacity 0.8s ease-in-out;
 `
 
-export const ReadMoreWrapper = styled.div<{ $isExpanded: boolean }>`
+export const ReadMoreWrapper = styled.div<{ $isExpanded: boolean, $isShort: boolean  }>`
+  ${({ $isShort }) => $isShort && "display:none;"}
   cursor: pointer;
   position: absolute;
   top: 2.3em;
   z-index: 10;
   justify-self: anchor-center;
-  ${({ $isExpanded }) => $isExpanded && "position: unset;;"}
-  transition: all 1s;
-  > * {
-    color: ${colors.green.green950}
+  ${({ $isExpanded }) => $isExpanded && "position: unset;"}
+
+  h3 {
+    color: ${colors.green.green950};
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 `

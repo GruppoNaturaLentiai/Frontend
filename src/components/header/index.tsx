@@ -35,7 +35,6 @@ const Header: React.FC = () => {
                   <S.SubsectionList
                     onMouseLeave={() => setMenuOpen("")}
                     $isOpen={el.label === menuOpen}
-
                   >
                     {el.subsections.map(subSection => (
                       <S.SubsectionItem key={subSection.url}>

@@ -73,7 +73,7 @@ export const SubsectionList = styled.ul<{ $isOpen: boolean }>`
   top: 100%;
   left: 0px;
   background-color: ${colors.green.green400};
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px ${colors.green.green950}60;
   border-radius: 4px;
   opacity: 0;
   visibility: hidden;
@@ -128,7 +128,7 @@ export const RightSidebar = styled.div<{ $isOpen: boolean }>`
   max-width: 300px;
   height: 100%;
   background-color: ${colors.green.green900};
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: -2px 0 5px ${colors.green.green950}03;
   transform: ${({ $isOpen }) =>
     $isOpen ? "translateX(0)" : "translateX(100%)"};
   transition: transform 0.3s ease-in-out;
