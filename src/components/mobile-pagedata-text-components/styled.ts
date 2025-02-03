@@ -87,4 +87,8 @@ export const ReadMoreWrapper = styled.div<{ $isExpanded: boolean, $isShort: bool
       opacity: 1;
     }
   }
+
+  @media (min-width: ${breakpointNum.tablet + 1}px) {
+    top: 2em;
+  }
 `

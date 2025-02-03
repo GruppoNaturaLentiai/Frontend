@@ -1,10 +1,6 @@
 {
   "index": [
     {
-      "type": "image",
-      "content": ["Fioritura02.jpg"]
-    },
-    {
       "type": "text",
       "content": ["Una storia di fedeltà, amore, impegno..."],
       "size": "h1",
