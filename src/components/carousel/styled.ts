@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { color, motion } from "framer-motion"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { breakpointNum, colors } from "../../styles"
@@ -137,7 +137,7 @@ export const StyledGatsbyImage = styled(GatsbyImage)`
 export const ImageOverlay = styled.div`
   position: fixed;
   top: 0;
-  left: 0;
+  left: -8px;
   width: 100vw;
   height: 100vh;
   background-color: ${colors.green.green950};
@@ -160,8 +160,6 @@ export const ImageOverlay = styled.div`
 `;
 
 export const LargeImageWrapper = styled.div`
-  max-width: 90vw;
-  max-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -173,15 +171,29 @@ export const LargeImageWrapper = styled.div`
 `;
 
 export const StyledGatsbyImageLarge = styled(GatsbyImage)`
-  img {
-    max-width: 100%;
-    max-height: 550px;
-    transition: transform 0.3s ease-in-out;     
-    @media (max-width: ${breakpointNum.tablet}px) {
-      max-height: 450px;
+  border: solid 2px ${colors.green.green50};
+  max-height: 80vh;
+  max-width: 95vw;
+  @media (max-width: ${breakpointNum.tablet}px) {
+      max-height: 75vh;
+      max-width: 90vw;
     }
     @media (max-width: ${breakpointNum.mobile}px) {
-      max-height: 300px;
+      max-height: 70vh;
+      max-width: 90vw;
+    }
+
+  img {
+    max-width: 100%;
+    max-height: 80vh;
+    transition: transform 0.3s ease-in-out;     
+    @media (max-width: ${breakpointNum.tablet}px) {
+      max-height: 75vh;
+      max-width: 90vw;
+    }
+    @media (max-width: ${breakpointNum.mobile}px) {
+      max-height: 70vh;
+      max-width: 90vw;
     }
   }
 `;
