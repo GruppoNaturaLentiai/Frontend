@@ -9,6 +9,7 @@ import * as T from "./../../components/typography"
 import MapComponent from "../../components/map-laghetti"
 import MobileContentToComponent from "../../components/mobile-pagedata-text-components"
 import paths from "./../../data/paths/laghetti"
+import AccessWarnings from "../../components/access-warnings"
 
 const markersMap: Location[] = [
   {
@@ -79,6 +80,7 @@ const LaghettiMappePage: React.FC<PageProps> = () => {
     <DefaultLayout>
       <ContentToComponent pageData={content} images={filteredImages} />
       <MobileContentToComponent pageData={content} images={filteredImages} />
+      <AccessWarnings type="laghetti" />
       <MapComponent markers={markersMap} paths={paths} />
     </DefaultLayout>
   )

@@ -55,7 +55,7 @@ export const renderText = (
     else setExpandText(key)
   }
 
-  const isShortText = theText.length < 320
+  const isShortText = theText.length <= 135
 
   const { font, position } = content
   switch (content.size) {

@@ -42,6 +42,9 @@ export const TextWrapper = styled.div<{ $isExpanded: boolean }>`
   position: relative;
   overflow: hidden;
   max-height: ${({ $isExpanded }) => ($isExpanded ? "2000px" : "4.5em")};
+  @media (max-width: ${breakpointNum.mobile}px) {
+    max-height: ${({ $isExpanded }) => ($isExpanded ? "2000px" : "6em")};
+  }
   transition: max-height 0.8s ease-in-out;
 `
 
@@ -90,5 +93,8 @@ export const ReadMoreWrapper = styled.div<{ $isExpanded: boolean, $isShort: bool
 
   @media (min-width: ${breakpointNum.tablet + 1}px) {
     top: 2em;
+  }
+  @media (max-width: ${breakpointNum.mobile}px) {
+    top: 4.2em;
   }
 `

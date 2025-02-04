@@ -1,12 +1,12 @@
-import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
+import * as React from "react"
 import DefaultLayout from "../components/default-layout"
-import WorkInProgress from "../components/work-in-progress"
+import SustainUs from "../components/sustain-us"
 
 const PartecipaPage: React.FC<PageProps> = () => {
   return (
     <DefaultLayout>
-      <WorkInProgress />
+      <SustainUs />
     </DefaultLayout>
   )
 }

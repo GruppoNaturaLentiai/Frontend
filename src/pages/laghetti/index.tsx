@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql, useStaticQuery, type HeadFC, type PageProps } from "gatsby"
+import { graphql, Link, useStaticQuery, type HeadFC, type PageProps } from "gatsby"
 import DefaultLayout from "../../components/default-layout"
 import { DataJSONType, ImageData } from "../../types"
 import ContentToComponent from "../../components/pagedata-text-components"
@@ -7,6 +7,7 @@ import dataJSON from "../../../content/laghetti/index.json"
 import * as T from "./../../components/typography"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import MobileContentToComponent from "../../components/mobile-pagedata-text-components"
+import ButtonLink from "../../components/button-link"
 
 const LaghettiPage: React.FC<PageProps> = () => {
   const data = useStaticQuery(graphql`
@@ -80,6 +81,7 @@ const LaghettiPage: React.FC<PageProps> = () => {
         </div>
         <ContentToComponent pageData={content} images={filteredImages} />
         <MobileContentToComponent pageData={content} images={filteredImages} />
+        <ButtonLink to="mappe" label="Vai a mappe!"/>
         <div style={{ justifySelf: "center" }}>
           {coverDown && (
             <GatsbyImage
