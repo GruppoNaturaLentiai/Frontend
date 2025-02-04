@@ -10,10 +10,12 @@ export const Wrapper = styled.div`
   margin: 32px;
   padding: 32px;
   @media (max-width: ${breakpointNum.tablet}px) {
+    margin: 24px;
     padding: 24px;    
     flex-direction: column;
   }
   @media (max-width: ${breakpointNum.mobile}px) {
+    margin: 16px;
     padding: 16px;    
   }
 `
