@@ -56,7 +56,7 @@ const Icon: React.FC<IconsProps> = ({ type, ...props }) => {
     case "crop":
         return <Crop viewBox="0 0 365 367" {...props} />
     case "electric-fence":
-        return <ElectricDanger viewBox="0 0 199 308" {...props} />
+        return <ElectricDanger viewBox="0 0 592 879" {...props} />
     default:
       return null
   }

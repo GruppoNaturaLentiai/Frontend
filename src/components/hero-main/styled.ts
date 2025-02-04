@@ -17,6 +17,7 @@ export const TextWrapper = styled.div`
   z-index: 4;
   max-width: calc(100% - 140px); 
   text-align: center;
+  user-select: none;
   > p {
     margin-top: 0;
   }
