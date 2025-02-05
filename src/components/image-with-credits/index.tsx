@@ -14,7 +14,7 @@ const ImageWithCredits = ({
   maxHeight,
   maxWidth,
   noDescription,
-  noCopyright
+  noCopyright,
 }: {
   title: string
   description: string
@@ -45,12 +45,14 @@ const ImageWithCredits = ({
     ) : (
       <T.P4>Autore sconosciuto</T.P4>
     )}
-    {!noDescription && <S.ImageDescription
-      style={{
-        maxWidth: image.width,
-      }}
-      dangerouslySetInnerHTML={{ __html: description }}
-    />}
+    {!noDescription && (
+      <S.ImageDescription
+        style={{
+          maxWidth: image.width,
+        }}
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
+    )}
   </S.ImgWrapper>
 )
 

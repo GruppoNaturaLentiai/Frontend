@@ -1,0 +1,17 @@
+{
+  "index": [
+    {
+      "type": "text",
+      "content": ["Regole per l'accesso."],
+      "size": "h2",
+      "font": "Caveat"
+    },
+    {
+      "type": "text",
+      "content": [
+        "Se vuoi visitare l'area, ti chiediamo cortesemente di prestare attenzione alle avvertenze di accesso contenute nella sezione mappe."
+      ],
+      "size": "p1"
+    }
+  ]
+}

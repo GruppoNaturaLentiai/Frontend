@@ -13,4 +13,4 @@ const NarcisiProgettoPage: React.FC<PageProps> = () => {
 
 export default NarcisiProgettoPage
 
-export const Head: HeadFC = () => <title>Gruppo Natura Lentiai - Narcisi</title>
+export const Head: HeadFC = () => <title>Progetto Narcisi - Progetto</title>

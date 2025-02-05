@@ -38,7 +38,7 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
   position: relative;
   margin: 0 1rem;
   cursor: pointer;
-  z-index: 2;
+  z-index: 10;
   text-align: center;
   align-items: center;
   align-self: center;

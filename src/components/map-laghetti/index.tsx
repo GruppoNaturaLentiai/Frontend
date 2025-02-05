@@ -1,13 +1,6 @@
 import "leaflet-css"
 import React, { useEffect, useState } from "react"
-import {
-  MapContainer,
-  Marker,
-  Polyline,
-  Popup,
-  TileLayer,
-  Tooltip,
-} from "react-leaflet"
+import { MapContainer, Marker, TileLayer } from "react-leaflet"
 import { Location } from "../../types"
 import * as T from "./../typography"
 import * as S from "./styled"
@@ -144,7 +137,7 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
             positions={path.path as [number, number][]}
             color={path.color}
             opacity={0.8}
-            hitTolerance={1000} // Expands the tap/click area
+            hitTolerance={1000} // Expands the tap/click area // NOT WORKING
           />
         ))}
 

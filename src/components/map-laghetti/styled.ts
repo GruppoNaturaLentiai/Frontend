@@ -23,7 +23,7 @@ export const Legend = styled.div`
   padding: 24px;
   background-color: ${colors.green.green200};
   border-radius: 8px;
-  column-gap: 10px;
+  column-gap: 1em;
   justify-content: center;
   @media (max-width: ${breakpointNum.tablet}px) {
     justify-content: space-between;

@@ -1,10 +1,6 @@
 {
   "index": [
     {
-      "type": "image",
-      "content": ["Fioritura02.jpg"]
-    },
-    {
       "type": "text",
       "content": ["Una storia di fedeltà, amore, impegno..."],
       "size": "h1",
@@ -20,6 +16,19 @@
         "Con queste premesse si è concretizzato l’intervento, a cura dell’Unione Montana Valbelluna, che ha consentito, grazie a un cofinanziamento Europeo, di realizzare nel 2014 un percorso di visita in sicurezza (che si ispirava a quanto già proposto da tempo dal Gruppo Natura), dotandolo di strutture per l’osservazione della fauna, covatoi artificiali, targhette con indicazionie delle specie vegetali e altri strumenti per la didattica.",
         "Dal 2015 al 2020, la zona è stata arricchita con la posa, lungo il percorso, di opere di artisti locali, direttamente collegate allo spirito del sito. La tempesta Vaia, nell’ottobre 2018, ha fortemente intaccato il biotopo, distruggendo parte delle opere e delle strutture.",
         "Grazie ai volontari e all’aiuto dell’Unione Montana Valbelluna il sentiero e in generale tutto il complesso, una volta risistemato, ha ripreso vita ed accoglie  in ogni stagione i suoi numerosi visitatori."
+      ],
+      "size": "p1"
+    },
+    {
+      "type": "text",
+      "content": ["Regole per l'accesso."],
+      "size": "h2",
+      "font": "Caveat"
+    },
+    {
+      "type": "text",
+      "content": [
+        "Se vuoi visitare l'area, ti chiediamo cortesemente di prestare attenzione alle avvertenze di accesso contenute nella sezione mappe."
       ],
       "size": "p1"
     }

@@ -21,6 +21,9 @@ export const breakpointNum = {
 } as const
 
 export const colors = {
+  red: {
+    warning: "#f60000",
+  },
   green: {
     green50: "#f2f9ec",
     green100: "#e1f1d6",

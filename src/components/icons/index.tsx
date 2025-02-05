@@ -9,6 +9,12 @@ import { ReactComponent as Whatsapp } from "./../../icons/whatsapp.svg"
 import { ReactComponent as Youtube } from "./../../icons/youtube.svg"
 import { ReactComponent as WIP } from "./../../icons/wip.svg"
 import { ReactComponent as SadFace } from "./../../icons/sad-face.svg"
+import { ReactComponent as PiggyBank } from "./../../icons/piggy-bank.svg"
+import { ReactComponent as DogPoo } from "./../../icons/dog-poo.svg"
+import { ReactComponent as DogLeash } from "./../../icons/dog-leash.svg"
+import { ReactComponent as Litter } from "./../../icons/litter.svg"
+import { ReactComponent as Crop } from "./../../icons/crop.svg"
+import { ReactComponent as ElectricDanger } from "./../../icons/electric-fence.svg"
 
 interface IconsProps {
   type: string
@@ -38,6 +44,18 @@ const Icon: React.FC<IconsProps> = ({ type, ...props }) => {
       return <WIP viewBox="0 0 312 246" {...props} />
     case "sad-face":
       return <SadFace viewBox="0 0 369.946 369.946" {...props} />
+    case "bank":
+      return <PiggyBank viewBox="0 0 1024 1024" {...props} />
+    case "dog-poo":
+      return <DogPoo viewBox="0 0 417 417" {...props} />
+    case "dog-leash":
+      return <DogLeash viewBox="0 0 238 238" {...props} />
+    case "litter":
+      return <Litter viewBox="0 0 322 322" {...props} />
+    case "crop":
+      return <Crop viewBox="0 0 365 367" {...props} />
+    case "electric-fence":
+      return <ElectricDanger viewBox="0 0 592 879" {...props} />
     default:
       return null
   }
