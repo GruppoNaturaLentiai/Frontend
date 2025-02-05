@@ -16,7 +16,6 @@ import { ReactComponent as Litter } from "./../../icons/litter.svg"
 import { ReactComponent as Crop } from "./../../icons/crop.svg"
 import { ReactComponent as ElectricDanger } from "./../../icons/electric-fence.svg"
 
-
 interface IconsProps {
   type: string
   width?: number
@@ -54,9 +53,9 @@ const Icon: React.FC<IconsProps> = ({ type, ...props }) => {
     case "litter":
       return <Litter viewBox="0 0 322 322" {...props} />
     case "crop":
-        return <Crop viewBox="0 0 365 367" {...props} />
+      return <Crop viewBox="0 0 365 367" {...props} />
     case "electric-fence":
-        return <ElectricDanger viewBox="0 0 592 879" {...props} />
+      return <ElectricDanger viewBox="0 0 592 879" {...props} />
     default:
       return null
   }

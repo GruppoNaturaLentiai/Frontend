@@ -41,21 +41,20 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
     }
   }
 
-  // If we are seeing an image, prevent the 
+  // If we are seeing an image, prevent the
   // the user to scroll up/down
   const handleWheel = (event: WheelEvent) => {
     if (showLargeImage) {
-      event.preventDefault();
+      event.preventDefault()
     }
-  };
+  }
   useEffect(() => {
-    window.addEventListener('wheel', handleWheel, { passive: false });
+    window.addEventListener("wheel", handleWheel, { passive: false })
 
     return () => {
-      window.removeEventListener('wheel', handleWheel);
-    };
+      window.removeEventListener("wheel", handleWheel)
+    }
   }, [showLargeImage])
-
 
   return (
     <>
@@ -76,7 +75,8 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
               />
               <S.ImgWrapper
                 $showZoom={index === currentIndex}
-                onClick={currentIndex === index ? onClickImage : undefined}>
+                onClick={currentIndex === index ? onClickImage : undefined}
+              >
                 {image.image && (
                   <S.StyledGatsbyImage
                     key={`img-${index}`}
@@ -103,27 +103,36 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         </S.ButtonWrapper>
       </S.OuterWrapper>
       {showLargeImage && images[currentIndex].image && (
-        <S.ImageOverlay onWheel={(e) => {e.preventDefault()}}
-        onClick={closeImage} className={showLargeImage ? "visible" : ""}>
+        <S.ImageOverlay
+          onWheel={e => {
+            e.preventDefault()
+          }}
+          onClick={closeImage}
+          className={showLargeImage ? "visible" : ""}
+        >
           <S.LargeImageWrapper>
             <T.H2
               className="title"
               dangerouslySetInnerHTML={{ __html: images[currentIndex].title }}
-              style={{ marginBottom: 4}}
+              style={{ marginBottom: 4 }}
             />
             <S.StyledGatsbyImageLarge
               image={images[currentIndex].image}
               alt={images[currentIndex].alt || "Enlarged Image"}
-              style={{ overflow: "visible", maxHeight: "80vh"}}
+              style={{ overflow: "visible", maxHeight: "80vh" }}
             />
             {images[currentIndex].copyright ? (
-              <T.P4 className="copyright">Foto di {images[currentIndex].copyright}</T.P4>
+              <T.P4 className="copyright">
+                Foto di {images[currentIndex].copyright}
+              </T.P4>
             ) : (
               <T.P4 className="copyright">Autore sconosciuto</T.P4>
             )}
             <T.P2
               className="caption"
-              dangerouslySetInnerHTML={{ __html: images[currentIndex].description }}
+              dangerouslySetInnerHTML={{
+                __html: images[currentIndex].description,
+              }}
             />
           </S.LargeImageWrapper>
         </S.ImageOverlay>

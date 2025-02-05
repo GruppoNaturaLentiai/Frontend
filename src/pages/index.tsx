@@ -5,10 +5,10 @@ import DefaultLayout from "../components/default-layout"
 import HeroMain from "../components/hero-main"
 import { ImageData } from "../types"
 
-
 const content = {
-  quote: "“Il Creato non è una proprietà di cui possiamo spadroneggiare a nostro piacimento; né, tanto meno, è una proprietà solo di alcuni, di pochi: il Creato è un dono, un dono meraviglioso che Dio ci ha dato perché ne abbiamo cura e lo utilizziamo a beneficio di tutti, sempre con grande rispetto e gratitudine.”",
-  signature: "Papa Francesco <span style=\"font-family: Caveat\"> XVI </span>"
+  quote:
+    "“Il Creato non è una proprietà di cui possiamo spadroneggiare a nostro piacimento; né, tanto meno, è una proprietà solo di alcuni, di pochi: il Creato è un dono, un dono meraviglioso che Dio ci ha dato perché ne abbiamo cura e lo utilizziamo a beneficio di tutti, sempre con grande rispetto e gratitudine.”",
+  signature: 'Papa Francesco <span style="font-family: Caveat"> XVI </span>',
 }
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -51,14 +51,13 @@ const IndexPage: React.FC<PageProps> = () => {
       image: image ? getImage(image.childImageSharp) : null,
     }
   }) as ImageData[]
-  const coverImage = filteredImages.find(img => img.fileName === "Fioritura02.jpg")
+  const coverImage = filteredImages.find(
+    img => img.fileName === "Fioritura02.jpg",
+  )
 
   return (
     <DefaultLayout>
-      {coverImage && <HeroMain
-        content={content}
-        img={coverImage}
-      />}
+      {coverImage && <HeroMain content={content} img={coverImage} />}
     </DefaultLayout>
   )
 }

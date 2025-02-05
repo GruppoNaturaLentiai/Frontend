@@ -67,6 +67,4 @@ const LaghettiNaturaPage: React.FC<PageProps> = () => {
 
 export default LaghettiNaturaPage
 
-export const Head: HeadFC = () => (
-  <title>Laghetti della Rimonta - Natura</title>
-)
+export const Head: HeadFC = () => <title>Laghetti della Rimonta - Natura</title>

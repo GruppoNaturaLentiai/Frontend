@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { breakpointNum, colors } from "../../styles";
+import styled from "styled-components"
+import { breakpointNum, colors } from "../../styles"
 
 export const Wrapper = styled.div`
   display: flex;
@@ -12,12 +12,12 @@ export const Wrapper = styled.div`
   user-select: none;
   @media (max-width: ${breakpointNum.bigtablet}px) {
     margin: 24px;
-    padding: 24px;    
+    padding: 24px;
     flex-direction: column;
   }
   @media (max-width: ${breakpointNum.mobile}px) {
     margin: 16px;
-    padding: 16px;    
+    padding: 16px;
   }
 `
 
@@ -36,10 +36,9 @@ export const ContentWrapper = styled.div`
   justify-content: space-around;
 `
 
-
 export const LeftWrapper = styled.div`
-  flex-grow: 5;  
-  flex-shrink: 1; 
+  flex-grow: 5;
+  flex-shrink: 1;
   flex-basis: 0;
 `
 
@@ -56,7 +55,7 @@ export const IconsWrapper = styled.div`
   align-items: center;
   gap: 0.5em;
   padding: 16px;
-  flex-grow: 1; 
+  flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
   @media (max-width: ${breakpointNum.bigtablet}px) {
@@ -69,11 +68,10 @@ export const IconsWrapper = styled.div`
     min-height: 100px;
   }
   @media (max-width: ${breakpointNum.mobile}px) {
-    padding: 8px; 
-    min-height: 80px;   
+    padding: 8px;
+    min-height: 80px;
   }
 `
-
 
 export const IconWrapper = styled.div`
   display: flex;

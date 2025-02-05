@@ -66,7 +66,10 @@ export const FadeOut = styled.div<{ $isExpanded: boolean; $isShort: boolean }>`
   transition: opacity 0.8s ease-in-out;
 `
 
-export const ReadMoreWrapper = styled.div<{ $isExpanded: boolean, $isShort: boolean  }>`
+export const ReadMoreWrapper = styled.div<{
+  $isExpanded: boolean
+  $isShort: boolean
+}>`
   ${({ $isShort }) => $isShort && "display:none;"}
   cursor: pointer;
   position: absolute;

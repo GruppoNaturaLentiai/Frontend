@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { breakpointNum } from "../../styles";
+import styled from "styled-components"
+import { breakpointNum } from "../../styles"
 
 export const Wrapper = styled.div`
   padding: 32px;
@@ -48,4 +48,3 @@ export const IBANWrapper = styled.div`
     align-self: start;
   }
 `
-

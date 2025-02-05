@@ -67,6 +67,4 @@ const LaghettiStoriaPage: React.FC<PageProps> = () => {
 
 export default LaghettiStoriaPage
 
-export const Head: HeadFC = () => (
-  <title>Laghetti della Rimonta - Storia</title>
-)
+export const Head: HeadFC = () => <title>Laghetti della Rimonta - Storia</title>

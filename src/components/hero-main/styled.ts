@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { breakpointNum, colors } from "../../styles";
+import styled from "styled-components"
+import { breakpointNum, colors } from "../../styles"
 
 export const Wrapper = styled.div`
   padding: 32px;
@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   @media (max-width: ${breakpointNum.mobile}px) {
     padding: 16px;
   }
-  animation: fadeIn 1.0s ease-in-out forwards;
+  animation: fadeIn 1s ease-in-out forwards;
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -24,11 +24,11 @@ export const TextWrapper = styled.div`
   margin-top: 10px;
   position: absolute;
   z-index: 4;
-  max-width: calc(100% - 140px); 
+  max-width: calc(100% - 140px);
   text-align: center;
   user-select: none;
 
-  animation: fadeIn 3.0s ease-in-out forwards;
+  animation: fadeIn 3s ease-in-out forwards;
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -43,7 +43,7 @@ export const TextWrapper = styled.div`
   }
   > * {
     color: ${colors.green.green100};
-    position:relative;
+    position: relative;
     max-width: 1150px;
   }
 
@@ -51,7 +51,6 @@ export const TextWrapper = styled.div`
     .signature {
       margin-top: 4px;
     }
-    
   }
 
   @media (max-width: ${breakpointNum.bigtablet + 10}px) {
@@ -69,5 +68,4 @@ export const TextWrapper = styled.div`
   @media (max-width: ${breakpointNum.mobile}px) {
     padding: 8px;
   }
-
 `

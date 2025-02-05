@@ -8,7 +8,7 @@ interface ButtonLinkProps {
   label: string
 }
 
-const ButtonLink = ({ to, label }: ButtonLinkProps) =>
+const ButtonLink = ({ to, label }: ButtonLinkProps) => (
   <S.Wrapper>
     <Link style={{ textDecoration: "none" }} to={to}>
       <S.ButtonWrapper>
@@ -16,5 +16,6 @@ const ButtonLink = ({ to, label }: ButtonLinkProps) =>
       </S.ButtonWrapper>
     </Link>
   </S.Wrapper>
+)
 
 export default ButtonLink

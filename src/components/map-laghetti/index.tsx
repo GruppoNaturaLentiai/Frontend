@@ -1,10 +1,6 @@
 import "leaflet-css"
 import React, { useEffect, useState } from "react"
-import {
-  MapContainer,
-  Marker,
-  TileLayer
-} from "react-leaflet"
+import { MapContainer, Marker, TileLayer } from "react-leaflet"
 import { Location } from "../../types"
 import * as T from "./../typography"
 import * as S from "./styled"

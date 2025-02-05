@@ -54,18 +54,18 @@ export const ButtonWrapper = styled.div<{ $position: "left" | "right" }>`
 
   > svg {
     ${({ $position }) =>
-    $position === "left"
-      ? "transform: rotate(90deg);"
-      : "transform: rotate(-90deg);"}
+      $position === "left"
+        ? "transform: rotate(90deg);"
+        : "transform: rotate(-90deg);"}
     fill: ${colors.green.green700};
     margin-top: 6px;
     ${({ $position }) =>
-    $position === "left" ? "margin-left: 3px;" : "margin-left: 8px;"}
+      $position === "left" ? "margin-left: 3px;" : "margin-left: 8px;"}
     transition: all 0.5s;
 
     @media (max-width: ${breakpointNum.mobile}px) {
       ${({ $position }) =>
-    $position === "left" ? "margin-left: -2px;" : "margin-left: 1px;"}
+        $position === "left" ? "margin-left: -2px;" : "margin-left: 1px;"}
       height: 12px;
     }
   }
@@ -147,7 +147,7 @@ export const ImageOverlay = styled.div`
   align-items: center;
   z-index: 1000;
   cursor: zoom-out;
-  
+
   animation: fadeIn 0.5s ease-in-out forwards;
   @keyframes fadeIn {
     from {
@@ -157,8 +157,7 @@ export const ImageOverlay = styled.div`
       opacity: 1;
     }
   }
-  
-`;
+`
 
 export const LargeImageWrapper = styled.div`
   display: flex;
@@ -169,25 +168,25 @@ export const LargeImageWrapper = styled.div`
     color: ${colors.green.green100};
     text-align: center;
   }
-`;
+`
 
 export const StyledGatsbyImageLarge = styled(GatsbyImage)`
   border: solid 2px ${colors.green.green50};
   max-height: 80vh;
   max-width: 95vw;
   @media (max-width: ${breakpointNum.tablet}px) {
-      max-height: 75vh;
-      max-width: 90vw;
-    }
-    @media (max-width: ${breakpointNum.mobile}px) {
-      max-height: 70vh;
-      max-width: 90vw;
-    }
+    max-height: 75vh;
+    max-width: 90vw;
+  }
+  @media (max-width: ${breakpointNum.mobile}px) {
+    max-height: 70vh;
+    max-width: 90vw;
+  }
 
   img {
     max-width: 100%;
     max-height: 80vh;
-    transition: transform 0.3s ease-in-out;     
+    transition: transform 0.3s ease-in-out;
     @media (max-width: ${breakpointNum.tablet}px) {
       max-height: 75vh;
       max-width: 90vw;
@@ -197,4 +196,4 @@ export const StyledGatsbyImageLarge = styled(GatsbyImage)`
       max-width: 90vw;
     }
   }
-`;
+`

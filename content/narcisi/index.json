@@ -2,9 +2,7 @@
   "index": [
     {
       "type": "text",
-      "content": [
-        "Regole per l'accesso."
-      ],
+      "content": ["Regole per l'accesso."],
       "size": "h2",
       "font": "Caveat"
     },
