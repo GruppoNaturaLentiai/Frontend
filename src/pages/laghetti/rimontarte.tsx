@@ -81,5 +81,5 @@ const LaghettiRimontartePage: React.FC<PageProps> = () => {
 export default LaghettiRimontartePage
 
 export const Head: HeadFC = () => (
-  <title>Gruppo Natura Lentiai - Laghetti della Rimonta</title>
+  <title>Laghetti della Rimonta - Rimontarte</title>
 )

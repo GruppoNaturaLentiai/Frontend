@@ -33,8 +33,9 @@ export const Wrapper = styled.div`
 `
 
 export const ButtonWrapper = styled.div<{ $position: "left" | "right" }>`
-  background-color: ${colors.green.green700};
+  background-color: ${colors.green.green400};
   border-radius: 50%;
+  border: 1px solid ${colors.green.green800};
   z-index: 13;
   width: 36px;
   height: 36px;
@@ -48,15 +49,15 @@ export const ButtonWrapper = styled.div<{ $position: "left" | "right" }>`
 
   ${({ $position }) =>
     $position === "left"
-      ? `box-shadow: -2px 1px 4px ${colors.green.green950};`
-      : `box-shadow: 2px 1px 4px ${colors.green.green950};`}
+      ? `box-shadow: -2px 2px 4px ${colors.green.green950};`
+      : `box-shadow: 2px 2px 4px ${colors.green.green950};`}
 
   > svg {
     ${({ $position }) =>
     $position === "left"
       ? "transform: rotate(90deg);"
       : "transform: rotate(-90deg);"}
-    fill: ${colors.green.green200};
+    fill: ${colors.green.green700};
     margin-top: 6px;
     ${({ $position }) =>
     $position === "left" ? "margin-left: 3px;" : "margin-left: 8px;"}
@@ -69,15 +70,15 @@ export const ButtonWrapper = styled.div<{ $position: "left" | "right" }>`
     }
   }
   &:hover {
-    color: ${colors.green.green800};
+    background-color: ${colors.green.green500};
     > svg {
-      fill: ${colors.green.green300};
+      fill: ${colors.green.green800};
     }
   }
   &:active {
-    color: ${colors.green.green900};
+    background-color: ${colors.green.green550};
     > svg {
-      fill: ${colors.green.green400};
+      fill: ${colors.green.green900};
     }
   }
 `

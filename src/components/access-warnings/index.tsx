@@ -1,8 +1,7 @@
 import React from "react"
-import * as S from "./styled"
-import * as T from "./../typography"
 import Icon from "../icons"
-import { icon } from "leaflet"
+import * as T from "./../typography"
+import * as S from "./styled"
 
 
 const content = {

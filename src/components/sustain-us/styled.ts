@@ -3,6 +3,12 @@ import { breakpointNum } from "../../styles";
 
 export const Wrapper = styled.div`
   padding: 32px;
+  @media (max-width: ${breakpointNum.tablet}px) {
+    padding: 24px;
+  }
+  @media (max-width: ${breakpointNum.mobile}px) {
+    padding: 16px;
+  }
 `
 
 export const HeaderWrapper = styled.div`

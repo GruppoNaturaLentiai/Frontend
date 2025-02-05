@@ -9,7 +9,8 @@ export const Wrapper = styled.div`
   justify-items: center;
   margin: 32px;
   padding: 32px;
-  @media (max-width: ${breakpointNum.tablet}px) {
+  user-select: none;
+  @media (max-width: ${breakpointNum.bigtablet}px) {
     margin: 24px;
     padding: 24px;    
     flex-direction: column;
@@ -58,9 +59,13 @@ export const IconsWrapper = styled.div`
   flex-grow: 1; 
   flex-shrink: 1;
   flex-basis: auto;
-  @media (max-width: ${breakpointNum.tablet}px) {
+  @media (max-width: ${breakpointNum.bigtablet}px) {
     flex-direction: row;
     flex-wrap: wrap;
+    min-height: 120px;
+    min-width: 120px;
+  }
+  @media (max-width: ${breakpointNum.tablet}px) {
     min-height: 100px;
   }
   @media (max-width: ${breakpointNum.mobile}px) {
@@ -76,9 +81,13 @@ export const IconWrapper = styled.div`
   width: 100%;
   height: 100%;
 
+  @media (max-width: ${breakpointNum.bigtablet}px) {
+    max-width: 120px;
+    max-height: 120px;
+  }
   @media (max-width: ${breakpointNum.tablet}px) {
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 100px;
+    max-height: 100px;
   }
   @media (max-width: ${breakpointNum.mobile}px) {
     max-width: 50px;

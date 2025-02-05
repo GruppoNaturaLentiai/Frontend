@@ -89,5 +89,5 @@ const LaghettiMappePage: React.FC<PageProps> = () => {
 export default LaghettiMappePage
 
 export const Head: HeadFC = () => (
-  <title>Gruppo Natura Lentiai - Laghetti della Rimonta</title>
+  <title>Laghetti della Rimonta - Mappe</title>
 )
