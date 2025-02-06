@@ -3,6 +3,7 @@ import { ImageData } from "../../types"
 import * as T from "./../typography"
 import * as S from "./styled"
 import Icon from "../icons"
+import useSwipe from "../../hooks/useSwipe"
 
 interface CarouselProps {
   images: ImageData[]
@@ -11,6 +12,10 @@ interface CarouselProps {
 const Carousel: React.FC<CarouselProps> = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [showLargeImage, setShowLargeImage] = useState(false)
+  const swipeHandlers = useSwipe({
+    onSwipedLeft: () => { setCurrentIndex(prev => (prev === images.length - 1 ? 0 : prev + 1)) },
+    onSwipedRight: () => { setCurrentIndex(prev => (prev === 0 ? images.length - 1 : prev - 1)) }
+  })
 
   const handlePrev = () => {
     setCurrentIndex(prev => (prev === 0 ? images.length - 1 : prev - 1))
@@ -65,6 +70,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         <S.Wrapper>
           {images.map((image, index) => (
             <S.CarouselItem
+              $isCurrentImage={currentIndex === index}
               key={index}
               animate={getStyles(index)}
               transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -74,8 +80,9 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
                 dangerouslySetInnerHTML={{ __html: image.title }}
               />
               <S.ImgWrapper
-                $showZoom={index === currentIndex}
+                $showZoom={currentIndex === index}
                 onClick={currentIndex === index ? onClickImage : undefined}
+                {...currentIndex === index ? swipeHandlers : {}}
               >
                 {image.image && (
                   <S.StyledGatsbyImage
@@ -86,12 +93,14 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
                 )}
               </S.ImgWrapper>
               <S.Shadow />
-              {image.copyright ? (
-                <T.P4 className="copyright">Foto di {image.copyright}</T.P4>
-              ) : (
-                <T.P4 className="copyright">Autore sconosciuto</T.P4>
-              )}
-              <T.P2
+              {
+                image.copyright ? (
+                  <T.P4 className="copyright">Foto di {image.copyright}</T.P4>
+                ) : (
+                  <T.P4 className="copyright">Autore sconosciuto</T.P4>
+                )
+              }
+              < T.P2
                 className="caption"
                 dangerouslySetInnerHTML={{ __html: image.description }}
               />
@@ -101,7 +110,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         <S.ButtonWrapper $position="right" onClick={handleNext}>
           <Icon type="chevron" width={24} />
         </S.ButtonWrapper>
-      </S.OuterWrapper>
+      </S.OuterWrapper >
       {showLargeImage && images[currentIndex].image && (
         <S.ImageOverlay
           onWheel={e => {
@@ -136,7 +145,8 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
             />
           </S.LargeImageWrapper>
         </S.ImageOverlay>
-      )}
+      )
+      }
     </>
   )
 }

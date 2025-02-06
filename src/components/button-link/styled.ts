@@ -6,10 +6,10 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 2em 0 2em 0;
 `
 
 export const ButtonWrapper = styled.div`
-  margin: 0 2em 2em 2em;
   text-align: center;
   background-color: ${colors.green.green400};
   padding: 0.8em;
