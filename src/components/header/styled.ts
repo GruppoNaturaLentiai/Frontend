@@ -16,6 +16,7 @@ export const Header = styled.header`
   top: 0;
   left: 0;
   z-index: 1000;
+  box-shadow: 0px 1px 6px ${colors.green.green700};
 `
 
 export const LeftWrapper = styled.div`
@@ -126,6 +127,7 @@ export const HeaderMobile = styled.div`
   top: 0;
   left: 0;
   z-index: 1000;
+  box-shadow: 0px 1px 6px ${colors.green.green700};
 `
 
 export const RightSidebar = styled.div<{ $isOpen: boolean }>`
