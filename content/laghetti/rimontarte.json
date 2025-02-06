@@ -306,7 +306,8 @@
         "Testi tratti liberamente dal libro \"<i>RimontArte</i>\" edito dal Gruppo Natura Lentiai e Comitato Frazionale di Bardies."
       ],
       "font": "Caveat",
-      "size": "p1"
+      "size": "p1",
+      "collapsible": false
     }
   ]
 }

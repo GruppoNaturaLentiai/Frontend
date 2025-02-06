@@ -40,6 +40,123 @@ export const renderImage = (
   )
 }
 
+const renderTextInner =
+  (
+    size: string,
+    font: T.FontFamilies | undefined,
+    position: "center" | "left" | "right" | undefined,
+  ) =>
+  (text: string) => {
+    switch (size) {
+      case "h1":
+        return (
+          <T.H1
+            $textAlign={position}
+            $font={font}
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
+        )
+      case "h2":
+        return (
+          <T.H2
+            $textAlign={position}
+            $font={font}
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
+        )
+      case "h3":
+        return (
+          <T.H3
+            $textAlign={position}
+            $font={font}
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
+        )
+      case "h4":
+        return (
+          <T.H4
+            $textAlign={position}
+            $font={font}
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
+        )
+      case "h5":
+        return (
+          <T.H5
+            $textAlign={position}
+            $font={font}
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
+        )
+      case "h6":
+        return (
+          <T.H6
+            $textAlign={position}
+            $font={font}
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
+        )
+      case "h7":
+        return (
+          <T.H7
+            $textAlign={position}
+            $font={font}
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
+        )
+      case "p1":
+        return (
+          <T.P1
+            $textAlign={position}
+            $font={font}
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
+        )
+      case "p2":
+        return (
+          <T.P2
+            $textAlign={position}
+            $font={font}
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
+        )
+      case "p3":
+        return (
+          <T.P3
+            $textAlign={position}
+            $font={font}
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
+        )
+      case "p4":
+        return (
+          <T.P1
+            $textAlign={position}
+            $font={font}
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
+        )
+      case "p5":
+        return (
+          <T.P1
+            $textAlign={position}
+            $font={font}
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
+        )
+      case "note":
+        return (
+          <T.Notes
+            $textAlign={position}
+            $font={font}
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
+        )
+      default:
+        return <T.H2>Text size not found</T.H2>
+    }
+  }
+
 export const renderText = (
   content: TextContentData,
   key: string,
@@ -57,323 +174,27 @@ export const renderText = (
 
   const isShortText = theText.length <= 135
 
-  const { font, position } = content
-  switch (content.size) {
-    case "h1":
-      return (
-        <S.TextWrapper $isExpanded={isExpanded} key={key}>
-          <S.TextContainer onClick={onClickFn}>
-            <T.H1
-              $textAlign={position}
-              $font={font}
-              dangerouslySetInnerHTML={{ __html: theText }}
-            />
-          </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper
-            $isExpanded={isExpanded}
-            $isShort={isShortText}
-            onClick={onClickFn}
-          >
-            {
-              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
-                {isExpanded ? "Chiudi" : "Leggi di più"}
-              </T.H3>
-            }
-          </S.ReadMoreWrapper>
-        </S.TextWrapper>
-      )
-    case "h2":
-      return (
-        <S.TextWrapper $isExpanded={isExpanded} key={key}>
-          <S.TextContainer onClick={onClickFn}>
-            <T.H2
-              $textAlign={position}
-              $font={font}
-              dangerouslySetInnerHTML={{ __html: theText }}
-            />
-          </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper
-            $isExpanded={isExpanded}
-            $isShort={isShortText}
-            onClick={onClickFn}
-          >
-            {
-              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
-                {isExpanded ? "Chiudi" : "Leggi di più"}
-              </T.H3>
-            }
-          </S.ReadMoreWrapper>
-        </S.TextWrapper>
-      )
-    case "h3":
-      return (
-        <S.TextWrapper $isExpanded={isExpanded} key={key}>
-          <S.TextContainer onClick={onClickFn}>
-            <T.H3
-              $textAlign={position}
-              $font={font}
-              dangerouslySetInnerHTML={{ __html: theText }}
-            />
-          </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper
-            $isExpanded={isExpanded}
-            $isShort={isShortText}
-            onClick={onClickFn}
-          >
-            {
-              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
-                {isExpanded ? "Chiudi" : "Leggi di più"}
-              </T.H3>
-            }
-          </S.ReadMoreWrapper>
-        </S.TextWrapper>
-      )
-    case "h4":
-      return (
-        <S.TextWrapper $isExpanded={isExpanded} key={key}>
-          <S.TextContainer onClick={onClickFn}>
-            <T.H4
-              $textAlign={position}
-              $font={font}
-              dangerouslySetInnerHTML={{ __html: theText }}
-            />
-          </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper
-            $isExpanded={isExpanded}
-            $isShort={isShortText}
-            onClick={onClickFn}
-          >
-            {
-              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
-                {isExpanded ? "Chiudi" : "Leggi di più"}
-              </T.H3>
-            }
-          </S.ReadMoreWrapper>
-        </S.TextWrapper>
-      )
-    case "h5":
-      return (
-        <S.TextWrapper $isExpanded={isExpanded} key={key}>
-          <S.TextContainer onClick={onClickFn}>
-            <T.H5
-              $textAlign={position}
-              $font={font}
-              dangerouslySetInnerHTML={{ __html: theText }}
-            />
-          </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper
-            $isExpanded={isExpanded}
-            $isShort={isShortText}
-            onClick={onClickFn}
-          >
-            {
-              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
-                {isExpanded ? "Chiudi" : "Leggi di più"}
-              </T.H3>
-            }
-          </S.ReadMoreWrapper>
-        </S.TextWrapper>
-      )
-    case "h6":
-      return (
-        <S.TextWrapper $isExpanded={isExpanded} key={key}>
-          <S.TextContainer onClick={onClickFn}>
-            <T.H6
-              $textAlign={position}
-              $font={font}
-              dangerouslySetInnerHTML={{ __html: theText }}
-            />
-          </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper
-            $isExpanded={isExpanded}
-            $isShort={isShortText}
-            onClick={onClickFn}
-          >
-            {
-              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
-                {isExpanded ? "Chiudi" : "Leggi di più"}
-              </T.H3>
-            }
-          </S.ReadMoreWrapper>
-        </S.TextWrapper>
-      )
-    case "h7":
-      return (
-        <S.TextWrapper $isExpanded={isExpanded} key={key}>
-          <S.TextContainer onClick={onClickFn}>
-            <T.H7
-              $textAlign={position}
-              $font={font}
-              dangerouslySetInnerHTML={{ __html: theText }}
-            />
-          </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper
-            $isExpanded={isExpanded}
-            $isShort={isShortText}
-            onClick={onClickFn}
-          >
-            {
-              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
-                {isExpanded ? "Chiudi" : "Leggi di più"}
-              </T.H3>
-            }
-          </S.ReadMoreWrapper>
-        </S.TextWrapper>
-      )
-    case "p1":
-      return (
-        <S.TextWrapper $isExpanded={isExpanded} key={key}>
-          <S.TextContainer onClick={onClickFn}>
-            <T.P1
-              $textAlign={position}
-              $font={font}
-              dangerouslySetInnerHTML={{ __html: theText }}
-            />
-          </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper
-            $isExpanded={isExpanded}
-            $isShort={isShortText}
-            onClick={onClickFn}
-          >
-            {
-              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
-                {isExpanded ? "Chiudi" : "Leggi di più"}
-              </T.H3>
-            }
-          </S.ReadMoreWrapper>
-        </S.TextWrapper>
-      )
-    case "p2":
-      return (
-        <S.TextWrapper $isExpanded={isExpanded} key={key}>
-          <S.TextContainer onClick={onClickFn}>
-            <T.P2
-              $textAlign={position}
-              $font={font}
-              dangerouslySetInnerHTML={{ __html: theText }}
-            />
-          </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper
-            $isExpanded={isExpanded}
-            $isShort={isShortText}
-            onClick={onClickFn}
-          >
-            {
-              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
-                {isExpanded ? "Chiudi" : "Leggi di più"}
-              </T.H3>
-            }
-          </S.ReadMoreWrapper>
-        </S.TextWrapper>
-      )
-    case "p3":
-      return (
-        <>
-          <S.TextWrapper $isExpanded={isExpanded} key={key}>
-            <S.TextContainer onClick={onClickFn}>
-              <T.P3
-                $textAlign={position}
-                $font={font}
-                dangerouslySetInnerHTML={{ __html: theText }}
-              />
-            </S.TextContainer>
-            <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-            <S.ReadMoreWrapper
-              $isExpanded={isExpanded}
-              $isShort={isShortText}
-              onClick={onClickFn}
-            >
-              {
-                <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
-                  {isExpanded ? "Chiudi" : "Leggi di più"}
-                </T.H3>
-              }
-            </S.ReadMoreWrapper>
-          </S.TextWrapper>
-        </>
-      )
-    case "p4":
-      return (
-        <S.TextWrapper $isExpanded={isExpanded} key={key}>
-          <S.TextContainer onClick={onClickFn}>
-            <T.P4
-              $textAlign={position}
-              $font={font}
-              dangerouslySetInnerHTML={{ __html: theText }}
-            />
-          </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper
-            $isExpanded={isExpanded}
-            $isShort={isShortText}
-            onClick={onClickFn}
-          >
-            {
-              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
-                {isExpanded ? "Chiudi" : "Leggi di più"}
-              </T.H3>
-            }
-          </S.ReadMoreWrapper>
-        </S.TextWrapper>
-      )
-    case "p5":
-      return (
-        <S.TextWrapper $isExpanded={isExpanded} key={key}>
-          <S.TextContainer onClick={onClickFn}>
-            <T.P5
-              $textAlign={position}
-              $font={font}
-              dangerouslySetInnerHTML={{ __html: theText }}
-            />
-          </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper
-            $isExpanded={isExpanded}
-            $isShort={isShortText}
-            onClick={onClickFn}
-          >
-            {
-              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
-                {isExpanded ? "Chiudi" : "Leggi di più"}
-              </T.H3>
-            }
-          </S.ReadMoreWrapper>
-        </S.TextWrapper>
-      )
-    case "note":
-      return (
-        <S.TextWrapper $isExpanded={isExpanded} key={key}>
-          <S.TextContainer onClick={onClickFn}>
-            <T.Notes
-              $textAlign={position}
-              $font={font}
-              dangerouslySetInnerHTML={{ __html: theText }}
-            />
-          </S.TextContainer>
-          <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
-          <S.ReadMoreWrapper
-            $isExpanded={isExpanded}
-            $isShort={isShortText}
-            onClick={onClickFn}
-          >
-            {
-              <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
-                {isExpanded ? "Chiudi" : "Leggi di più"}
-              </T.H3>
-            }
-          </S.ReadMoreWrapper>
-        </S.TextWrapper>
-      )
-    default:
-      return <T.H2 key={key}>Text size not found</T.H2>
-  }
+  const { font, position, collapsible } = content
+  const textRenderer = renderTextInner(content.size, font, position)
+
+  if (collapsible === false)
+    return <React.Fragment key={key}>{textRenderer(theText)}</React.Fragment>
+
+  return (
+    <S.TextWrapper $isExpanded={isExpanded} key={key}>
+      <S.TextContainer onClick={onClickFn}>
+        {textRenderer(theText)}
+      </S.TextContainer>
+      <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
+      <S.ReadMoreWrapper
+        $isExpanded={isExpanded}
+        $isShort={isShortText}
+        onClick={onClickFn}
+      >
+        <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
+          {isExpanded ? "Chiudi" : "Leggi di più"}
+        </T.H3>
+      </S.ReadMoreWrapper>
+    </S.TextWrapper>
+  )
 }

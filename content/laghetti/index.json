@@ -28,8 +28,9 @@
     {
       "type": "text",
       "content": [
-        "Se vuoi visitare l'area, ti chiediamo cortesemente di prestare attenzione alle avvertenze di accesso contenute nella sezione mappe."
+        "Se vuoi visitare l'area, ti chiediamo cortesemente di prendere visione delle avvertenze di accesso contenute nella sezione mappe."
       ],
+      "collapsible": false,
       "size": "p1"
     }
   ]

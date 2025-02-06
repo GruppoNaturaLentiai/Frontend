@@ -96,7 +96,7 @@ export const Shadow = styled.div`
   opacity: 0.8;
 `
 
-export const CarouselItem = styled(motion.div)<{$isCurrentImage: boolean}>`
+export const CarouselItem = styled(motion.div)<{ $isCurrentImage: boolean }>`
   position: absolute;
   transform: translate(-50%, -50%);
   max-height: 700px;
@@ -108,17 +108,17 @@ export const CarouselItem = styled(motion.div)<{$isCurrentImage: boolean}>`
     padding-bottom: 5px;
     width: 100%;
     text-align: center;
-    ${({$isCurrentImage}) => !$isCurrentImage && "opacity: 0.6;"}
+    ${({ $isCurrentImage }) => !$isCurrentImage && "opacity: 0.6;"}
   }
   .caption {
     margin-top: 1.5em;
     text-align: center;
-    ${({$isCurrentImage}) => !$isCurrentImage && "opacity: 0.6;"}
+    ${({ $isCurrentImage }) => !$isCurrentImage && "opacity: 0.6;"}
   }
   .copyright {
     margin-top: 1em;
     text-align: center;
-    ${({$isCurrentImage}) => !$isCurrentImage && "opacity: 0.6;"}
+    ${({ $isCurrentImage }) => !$isCurrentImage && "opacity: 0.6;"}
   }
 `
 

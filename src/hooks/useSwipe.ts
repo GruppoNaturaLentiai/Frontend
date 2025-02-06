@@ -1,4 +1,4 @@
-import { TouchEvent, useRef } from "react";
+import { TouchEvent, useRef } from "react"
 
 interface SwipeInput {
   onSwipedLeft: () => void
@@ -12,26 +12,26 @@ interface SwipeOutput {
 }
 
 export default (input: SwipeInput): SwipeOutput => {
-  const touchStart = useRef<number | null>(null);
-  const touchEnd = useRef<number | null>(null);
+  const touchStart = useRef<number | null>(null)
+  const touchEnd = useRef<number | null>(null)
 
   // the required distance between touchStart and touchEnd to be detected as a swipe
-  const minSwipeDistance = 50;
+  const minSwipeDistance = 50
 
   const onTouchStart = (e: React.TouchEvent) => {
-    touchEnd.current = null;
-    touchStart.current = e.targetTouches[0].clientX;
-  };
+    touchEnd.current = null
+    touchStart.current = e.targetTouches[0].clientX
+  }
 
   const onTouchMove = (e: React.TouchEvent) => {
-    touchEnd.current = e.targetTouches[0].clientX;
-  };
+    touchEnd.current = e.targetTouches[0].clientX
+  }
 
   const onTouchEnd = () => {
-    if (!touchStart.current || !touchEnd.current) return;
-    const distance = touchStart.current - touchEnd.current;
-    const isLeftSwipe = distance > minSwipeDistance;
-    const isRightSwipe = distance < -minSwipeDistance;
+    if (!touchStart.current || !touchEnd.current) return
+    const distance = touchStart.current - touchEnd.current
+    const isLeftSwipe = distance > minSwipeDistance
+    const isRightSwipe = distance < -minSwipeDistance
     if (isLeftSwipe) input.onSwipedLeft()
     if (isRightSwipe) input.onSwipedRight()
   }
@@ -39,6 +39,6 @@ export default (input: SwipeInput): SwipeOutput => {
   return {
     onTouchStart,
     onTouchMove,
-    onTouchEnd
+    onTouchEnd,
   }
 }
