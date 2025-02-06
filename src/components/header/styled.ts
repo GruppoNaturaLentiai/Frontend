@@ -12,6 +12,10 @@ export const Header = styled.header`
   @media (max-width: ${breakpoint.tablet}) {
     display: none;
   }
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 `
 
 export const LeftWrapper = styled.div`
@@ -118,6 +122,10 @@ export const HeaderMobile = styled.div`
   @media (min-width: ${breakpointNum.tablet + 1}px) {
     display: none;
   }
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 `
 
 export const RightSidebar = styled.div<{ $isOpen: boolean }>`
