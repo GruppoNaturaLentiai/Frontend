@@ -47,111 +47,38 @@ const renderTextInner =
     position: "center" | "left" | "right" | undefined,
   ) =>
   (text: string) => {
+    const addProps = {
+      $textAlign: position,
+      $font: font,
+      dangerouslySetInnerHTML: { __html: text },
+    }
     switch (size) {
       case "h1":
-        return (
-          <T.H1
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-        )
+        return <T.H1 {...addProps} />
       case "h2":
-        return (
-          <T.H2
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-        )
+        return <T.H2 {...addProps} />
       case "h3":
-        return (
-          <T.H3
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-        )
+        return <T.H3 {...addProps} />
       case "h4":
-        return (
-          <T.H4
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-        )
+        return <T.H4 {...addProps} />
       case "h5":
-        return (
-          <T.H5
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-        )
+        return <T.H5 {...addProps} />
       case "h6":
-        return (
-          <T.H6
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-        )
+        return <T.H6 {...addProps} />
       case "h7":
-        return (
-          <T.H7
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-        )
+        return <T.H7 {...addProps} />
       case "p1":
-        return (
-          <T.P1
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-        )
+        return <T.P1 {...addProps} />
       case "p2":
-        return (
-          <T.P2
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-        )
+        return <T.P2 {...addProps} />
       case "p3":
-        return (
-          <T.P3
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-        )
+        return <T.P3 {...addProps} />
       case "p4":
-        return (
-          <T.P1
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-        )
+        return <T.P1 {...addProps} />
       case "p5":
-        return (
-          <T.P1
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-        )
+        return <T.P1 {...addProps} />
       case "note":
-        return (
-          <T.Notes
-            $textAlign={position}
-            $font={font}
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-        )
+        return <T.Notes {...addProps} />
       default:
         return <T.H2>Text size not found</T.H2>
     }
