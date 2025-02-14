@@ -40,6 +40,7 @@ export type TextContentData = {
     | "p5"
     | "note"
   font?: T.FontFamilies
+  collapsible?: boolean
 }
 
 export type TemplateTwoColumnsData = {

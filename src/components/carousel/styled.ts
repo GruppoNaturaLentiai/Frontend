@@ -1,7 +1,8 @@
-import { color, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { breakpointNum, colors } from "../../styles"
+import * as T from "./../typography"
 
 export const OuterWrapper = styled.div`
   justify-content: space-between;
@@ -54,18 +55,18 @@ export const ButtonWrapper = styled.div<{ $position: "left" | "right" }>`
 
   > svg {
     ${({ $position }) =>
-      $position === "left"
-        ? "transform: rotate(90deg);"
-        : "transform: rotate(-90deg);"}
+    $position === "left"
+      ? "transform: rotate(90deg);"
+      : "transform: rotate(-90deg);"}
     fill: ${colors.green.green700};
     margin-top: 6px;
     ${({ $position }) =>
-      $position === "left" ? "margin-left: 3px;" : "margin-left: 8px;"}
+    $position === "left" ? "margin-left: 3px;" : "margin-left: 8px;"}
     transition: all 0.5s;
 
     @media (max-width: ${breakpointNum.mobile}px) {
       ${({ $position }) =>
-        $position === "left" ? "margin-left: -2px;" : "margin-left: 1px;"}
+    $position === "left" ? "margin-left: -2px;" : "margin-left: 1px;"}
       height: 12px;
     }
   }
@@ -96,7 +97,7 @@ export const Shadow = styled.div`
   opacity: 0.8;
 `
 
-export const CarouselItem = styled(motion.div)<{$isCurrentImage: boolean}>`
+export const CarouselItem = styled(motion.div) <{ $isCurrentImage: boolean }>`
   position: absolute;
   transform: translate(-50%, -50%);
   max-height: 700px;
@@ -108,17 +109,17 @@ export const CarouselItem = styled(motion.div)<{$isCurrentImage: boolean}>`
     padding-bottom: 5px;
     width: 100%;
     text-align: center;
-    ${({$isCurrentImage}) => !$isCurrentImage && "opacity: 0.6;"}
+    ${({ $isCurrentImage }) => !$isCurrentImage && "opacity: 0.6;"}
   }
   .caption {
     margin-top: 1.5em;
     text-align: center;
-    ${({$isCurrentImage}) => !$isCurrentImage && "opacity: 0.6;"}
+    ${({ $isCurrentImage }) => !$isCurrentImage && "opacity: 0.6;"}
   }
   .copyright {
     margin-top: 1em;
     text-align: center;
-    ${({$isCurrentImage}) => !$isCurrentImage && "opacity: 0.6;"}
+    ${({ $isCurrentImage }) => !$isCurrentImage && "opacity: 0.6;"}
   }
 `
 
@@ -149,7 +150,7 @@ export const ImageOverlay = styled.div`
   align-items: center;
   z-index: 1000;
   cursor: zoom-out;
-
+  flex-direction: column;
   animation: fadeIn 0.5s ease-in-out forwards;
   @keyframes fadeIn {
     from {
@@ -158,6 +159,19 @@ export const ImageOverlay = styled.div`
     to {
       opacity: 1;
     }
+  }
+`
+
+export const CloseImageCaption = styled(T.H2)`
+  position: absolute;
+  top: 0px;
+  right: 1.8em;
+  color: ${colors.green.green50};
+  @media (min-width: ${breakpointNum.tablet + 1}px) {
+    display: none;
+  }
+  @media (max-width: ${breakpointNum.mobile}px) {
+    right: 1em;
   }
 `
 

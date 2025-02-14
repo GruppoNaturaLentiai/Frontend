@@ -135,7 +135,8 @@
       "content": [
         "<i>Si ringraziano Orfeo Dal Piva, Riccardo Deon e Stefano Vendrami per le informazioni fornite</i>"
       ],
-      "size": "p2"
+      "size": "p2",
+      "collapsible": false
     },
     {
       "type": "image",

@@ -30,7 +30,8 @@
         "Si ringrazia Angelo Zampol D'Ortia per le informazioni e per il testo."
       ],
       "font": "Caveat",
-      "size": "p2"
+      "size": "p2",
+      "collapsible": false
     },
     {
       "type": "image",
@@ -65,7 +66,8 @@
         "Informazioni tratte dagli Atti del Convegno Via Claudia Augusta \"Un’arteria alle origini dell’Europa: ipotesi, problemi, prospettive\" - Feltre, 24–25 settembre 1999 (Vittorio Galliazzo)"
       ],
       "font": "Caveat",
-      "size": "p2"
+      "size": "p2",
+      "collapsible": false
     },
     {
       "type": "image",

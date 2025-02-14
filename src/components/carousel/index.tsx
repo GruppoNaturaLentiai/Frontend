@@ -4,6 +4,9 @@ import * as T from "./../typography"
 import * as S from "./styled"
 import Icon from "../icons"
 import useSwipe from "../../hooks/useSwipe"
+import useResponsiveClickHandler from "../../hooks/useResponsiveClickHandler"
+import { breakpointNum } from "../../styles"
+import usePreventScrollOnImageView from "../../hooks/usePreventDragAndWheel"
 
 interface CarouselProps {
   images: ImageData[]
@@ -13,8 +16,12 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [showLargeImage, setShowLargeImage] = useState(false)
   const swipeHandlers = useSwipe({
-    onSwipedLeft: () => { setCurrentIndex(prev => (prev === images.length - 1 ? 0 : prev + 1)) },
-    onSwipedRight: () => { setCurrentIndex(prev => (prev === 0 ? images.length - 1 : prev - 1)) }
+    onSwipedLeft: () => {
+      setCurrentIndex(prev => (prev === images.length - 1 ? 0 : prev + 1))
+    },
+    onSwipedRight: () => {
+      setCurrentIndex(prev => (prev === 0 ? images.length - 1 : prev - 1))
+    },
   })
 
   const handlePrev = () => {
@@ -32,6 +39,10 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
   const closeImage = () => {
     setShowLargeImage(false)
   }
+  const closeImageResponsive = useResponsiveClickHandler(breakpointNum.tablet, closeImage)
+  // If we are seeing an image, prevent the
+  // the user to scroll and drag up/down
+  usePreventScrollOnImageView(showLargeImage)
 
   const getStyles = (index: number) => {
     const distance = Math.abs(index - currentIndex)
@@ -46,20 +57,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
     }
   }
 
-  // If we are seeing an image, prevent the
-  // the user to scroll up/down
-  const handleWheel = (event: WheelEvent) => {
-    if (showLargeImage) {
-      event.preventDefault()
-    }
-  }
-  useEffect(() => {
-    window.addEventListener("wheel", handleWheel, { passive: false })
 
-    return () => {
-      window.removeEventListener("wheel", handleWheel)
-    }
-  }, [showLargeImage])
 
   return (
     <>
@@ -74,6 +72,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
               key={index}
               animate={getStyles(index)}
               transition={{ duration: 0.5, ease: "easeInOut" }}
+              {...(currentIndex === index ? swipeHandlers : {})}
             >
               <T.H2
                 className="title"
@@ -82,7 +81,6 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
               <S.ImgWrapper
                 $showZoom={currentIndex === index}
                 onClick={currentIndex === index ? onClickImage : undefined}
-                {...currentIndex === index ? swipeHandlers : {}}
               >
                 {image.image && (
                   <S.StyledGatsbyImage
@@ -93,14 +91,12 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
                 )}
               </S.ImgWrapper>
               <S.Shadow />
-              {
-                image.copyright ? (
-                  <T.P4 className="copyright">Foto di {image.copyright}</T.P4>
-                ) : (
-                  <T.P4 className="copyright">Autore sconosciuto</T.P4>
-                )
-              }
-              < T.P2
+              {image.copyright ? (
+                <T.P4 className="copyright">Foto di {image.copyright}</T.P4>
+              ) : (
+                <T.P4 className="copyright">Autore sconosciuto</T.P4>
+              )}
+              <T.P2
                 className="caption"
                 dangerouslySetInnerHTML={{ __html: image.description }}
               />
@@ -110,15 +106,13 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         <S.ButtonWrapper $position="right" onClick={handleNext}>
           <Icon type="chevron" width={24} />
         </S.ButtonWrapper>
-      </S.OuterWrapper >
+      </S.OuterWrapper>
       {showLargeImage && images[currentIndex].image && (
         <S.ImageOverlay
-          onWheel={e => {
-            e.preventDefault()
-          }}
-          onClick={closeImage}
+          onClick={closeImageResponsive}
           className={showLargeImage ? "visible" : ""}
         >
+          <S.CloseImageCaption onClick={closeImage}>Chiudi X</S.CloseImageCaption>
           <S.LargeImageWrapper>
             <T.H2
               className="title"
@@ -145,8 +139,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
             />
           </S.LargeImageWrapper>
         </S.ImageOverlay>
-      )
-      }
+      )}
     </>
   )
 }
