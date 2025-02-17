@@ -140,6 +140,12 @@ export const HeaderMobile = styled.div`
   left: 0;
   z-index: 9998;
   box-shadow: 0px 1px 6px ${colors.green.green700};
+  @media (max-height: ${horizBreakpointsHeight.thin}px) {
+    padding: 12px 8px;
+    height: 40px;
+    gap: 8px;
+    position: unset;
+  }
 `
 
 export const RightSidebar = styled.div<{ $isOpen: boolean }>`

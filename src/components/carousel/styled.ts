@@ -221,5 +221,9 @@ export const StyledGatsbyImageLarge = styled(GatsbyImage)`
       max-height: 70vh;
       max-width: 90vw;
     }
+    @media (max-height: ${horizBreakpointsHeight.thin}px) {
+      max-height: 60vh;
+      max-width: 80vw;
+    }
   }
 `
