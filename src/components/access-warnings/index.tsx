@@ -69,6 +69,7 @@ const AccessWarnings = ({ type }: AccessWarningsProps) => {
           </S.IconWrapper>
         ))}
       </S.IconsWrapper>
+      
     </S.Wrapper>
   )
 }

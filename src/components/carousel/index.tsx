@@ -114,11 +114,11 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         >
           <S.CloseImageCaption onClick={closeImage}>Chiudi X</S.CloseImageCaption>
           <S.LargeImageWrapper>
-            <T.H2
+            {images[currentIndex].title && <T.H2
               className="title"
               dangerouslySetInnerHTML={{ __html: images[currentIndex].title }}
               style={{ marginBottom: 4 }}
-            />
+            />}
             <S.StyledGatsbyImageLarge
               image={images[currentIndex].image}
               alt={images[currentIndex].alt || "Enlarged Image"}
@@ -131,12 +131,12 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
             ) : (
               <T.P4 className="copyright">Autore sconosciuto</T.P4>
             )}
-            <T.P2
+            {images[currentIndex].description && <T.P2
               className="caption"
               dangerouslySetInnerHTML={{
                 __html: images[currentIndex].description,
               }}
-            />
+            />}
           </S.LargeImageWrapper>
         </S.ImageOverlay>
       )}

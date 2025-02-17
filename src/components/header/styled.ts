@@ -15,7 +15,7 @@ export const Header = styled.header`
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 9998;
   box-shadow: 0px 1px 6px ${colors.green.green700};
 `
 
@@ -126,7 +126,7 @@ export const HeaderMobile = styled.div`
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 9998;
   box-shadow: 0px 1px 6px ${colors.green.green700};
 `
 
