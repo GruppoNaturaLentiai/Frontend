@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { breakpointNum, colors } from "../../styles"
+import { breakpointNum, colors, horizBreakpointsHeight } from "../../styles"
 
 export const Wrapper = styled.main`
   border-radius: 8px;
@@ -22,5 +22,8 @@ export const Wrapper = styled.main`
     min-width: 280px;
     margin: 18px;
     min-height: 380px;
+  }
+  @media (max-height: ${horizBreakpointsHeight.medium}px) {
+    min-height: 300px;
   }
 `

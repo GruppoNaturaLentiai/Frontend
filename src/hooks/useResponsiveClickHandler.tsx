@@ -1,14 +1,14 @@
-import { useState, useEffect, useRef, useCallback } from "react"
+import { useEffect, useRef, useState } from "react"
 
 const useResponsiveClickHandler = (
-  breakpoint: number,
+  mediaQuery: string,
   handler: () => void
 ): (() => void) | undefined => {
   const [clickHandler, setClickHandler] = useState<(() => void) | undefined>(undefined)
   const mediaQueryRef = useRef<MediaQueryList | null>(null)
 
   useEffect(() => {
-    mediaQueryRef.current = window.matchMedia(`(min-width: ${breakpoint}px)`)
+    mediaQueryRef.current = window.matchMedia(mediaQuery)
 
     const updateClickHandler = (event: MediaQueryListEvent | MediaQueryList) => {
       const shouldSetHandler = event.matches
@@ -24,7 +24,7 @@ const useResponsiveClickHandler = (
     return () => {
       mediaQueryRef.current?.removeEventListener("change", updateClickHandler)
     }
-  }, [breakpoint, handler])
+  }, [mediaQuery, handler])
 
   return clickHandler
 }

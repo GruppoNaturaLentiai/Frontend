@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
-import { breakpointNum, colors } from "../../styles"
+import { breakpointNum, colors, horizBreakpointsHeight } from "../../styles"
 import * as T from "./../typography"
 
 export const OuterWrapper = styled.div`
@@ -17,10 +17,13 @@ export const OuterWrapper = styled.div`
   }
   @media (max-width: ${breakpointNum.tablet}px) {
     min-width: calc(100vw - 60px);
-    min-height: 700px;
+    min-height: 60vh;
   }
   @media (max-width: ${breakpointNum.mobile}px) {
     min-height: 500px;
+  }
+  @media (max-height: ${horizBreakpointsHeight.medium}px) {
+    min-height: 350px;
   }
 `
 
@@ -136,6 +139,9 @@ export const StyledGatsbyImage = styled(GatsbyImage)`
     @media (max-width: ${breakpointNum.mobile}px) {
       max-height: 200px;
     }
+    @media (max-height: ${horizBreakpointsHeight.medium}px) {
+      max-height: 50vh;
+    }
   }
 `
 
@@ -149,7 +155,6 @@ export const ImageOverlay = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  cursor: zoom-out;
   flex-direction: column;
   animation: fadeIn 0.5s ease-in-out forwards;
   @keyframes fadeIn {
@@ -167,11 +172,16 @@ export const CloseImageCaption = styled(T.H2)`
   top: 0px;
   right: 1.8em;
   color: ${colors.green.green50};
-  @media (min-width: ${breakpointNum.tablet + 1}px) {
-    display: none;
-  }
+  cursor: pointer;
+  transition: all 0.5s ease-in;
   @media (max-width: ${breakpointNum.mobile}px) {
     right: 1em;
+  }
+  &:hover {
+    color: ${colors.green.green200};
+  }
+  &:active {
+    color: ${colors.green.green300};
   }
 `
 
@@ -188,7 +198,7 @@ export const LargeImageWrapper = styled.div`
 
 export const StyledGatsbyImageLarge = styled(GatsbyImage)`
   border: solid 2px ${colors.green.green50};
-  max-height: 80vh;
+  max-height: 70vh;
   max-width: 95vw;
   @media (max-width: ${breakpointNum.tablet}px) {
     max-height: 75vh;

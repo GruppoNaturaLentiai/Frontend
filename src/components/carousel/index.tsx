@@ -5,7 +5,7 @@ import * as S from "./styled"
 import Icon from "../icons"
 import useSwipe from "../../hooks/useSwipe"
 import useResponsiveClickHandler from "../../hooks/useResponsiveClickHandler"
-import { breakpointNum } from "../../styles"
+import { breakpoint, breakpointNum, horizBreakpointsHeight } from "../../styles"
 import usePreventScrollOnImageView from "../../hooks/usePreventDragAndWheel"
 
 interface CarouselProps {
@@ -39,7 +39,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
   const closeImage = () => {
     setShowLargeImage(false)
   }
-  const closeImageResponsive = useResponsiveClickHandler(breakpointNum.tablet, closeImage)
+
   // If we are seeing an image, prevent the
   // the user to scroll and drag up/down
   usePreventScrollOnImageView(showLargeImage)
@@ -56,8 +56,6 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
       x: `${(index - currentIndex) * 33}%`,
     }
   }
-
-
 
   return (
     <>
@@ -109,7 +107,6 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
       </S.OuterWrapper>
       {showLargeImage && images[currentIndex].image && (
         <S.ImageOverlay
-          onClick={closeImageResponsive}
           className={showLargeImage ? "visible" : ""}
         >
           <S.CloseImageCaption onClick={closeImage}>Chiudi X</S.CloseImageCaption>

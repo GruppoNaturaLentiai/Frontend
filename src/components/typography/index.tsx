@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { breakpoint, colors } from "../../styles"
+import { breakpoint, colors, horizBreakpointsHeight } from "../../styles"
 
 export const fontSizes = {
   h1: 42,
@@ -50,7 +50,7 @@ export const H1 = styled.h1<{
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.h2}px;
   }
-  @media (max-width: ${breakpoint.mobile}) {
+  @media (max-width: ${breakpoint.mobile}), (max-height: ${horizBreakpointsHeight.medium}px) {
     font-size: ${fontSizes.h3}px;
   }
 `
@@ -66,7 +66,7 @@ export const H2 = styled.h2<{
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.h3}px;
   }
-  @media (max-width: ${breakpoint.mobile}) {
+  @media (max-width: ${breakpoint.mobile}), (max-height: ${horizBreakpointsHeight.medium}px) {
     font-size: ${fontSizes.h4}px;
   }
 `
@@ -82,7 +82,7 @@ export const H3 = styled.h3<{
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.h4}px;
   }
-  @media (max-width: ${breakpoint.mobile}) {
+  @media (max-width: ${breakpoint.mobile}), (max-height: ${horizBreakpointsHeight.medium}px) {
     font-size: ${fontSizes.h5}px;
   }
 `
@@ -98,7 +98,7 @@ export const H4 = styled.h4<{
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.h5}px;
   }
-  @media (max-width: ${breakpoint.mobile}) {
+  @media (max-width: ${breakpoint.mobile}), (max-height: ${horizBreakpointsHeight.medium}px) {
     font-size: ${fontSizes.h6}px;
   }
 `
@@ -113,7 +113,7 @@ export const H5 = styled.h5<{
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.h6}px;
   }
-  @media (max-width: ${breakpoint.mobile}) {
+  @media (max-width: ${breakpoint.mobile}), (max-height: ${horizBreakpointsHeight.medium}px) {
     font-size: ${fontSizes.h7}px;
   }
 `
@@ -155,7 +155,7 @@ export const P1 = styled.p<{
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.p2}px;
   }
-  @media (max-width: ${breakpoint.tablet}) {
+  @media (max-width: ${breakpoint.mobile}), (max-height: ${horizBreakpointsHeight.medium}px) {
     font-size: ${fontSizes.p3}px;
   }
 `
@@ -171,7 +171,7 @@ export const P2 = styled.p<{
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.p3}px;
   }
-  @media (max-width: ${breakpoint.tablet}) {
+  @media (max-width: ${breakpoint.mobile}), (max-height: ${horizBreakpointsHeight.medium}px) {
     font-size: ${fontSizes.p4}px;
   }
 `
@@ -186,7 +186,7 @@ export const P3 = styled.p<{
   @media (max-width: ${breakpoint.tablet}) {
     font-size: ${fontSizes.p4}px;
   }
-  @media (max-width: ${breakpoint.tablet}) {
+  @media (max-width: ${breakpoint.mobile}), (max-height: ${horizBreakpointsHeight.medium}px) {
     font-size: ${fontSizes.p5}px;
   }
 `
