@@ -5,7 +5,7 @@ import * as S from "./styled"
 import Icon from "../icons"
 import useSwipe from "../../hooks/useSwipe"
 import useResponsiveClickHandler from "../../hooks/useResponsiveClickHandler"
-import { breakpointNum } from "../../styles"
+import { breakpoint, breakpointNum, horizBreakpointsHeight } from "../../styles"
 import usePreventScrollOnImageView from "../../hooks/usePreventDragAndWheel"
 
 interface CarouselProps {
@@ -39,7 +39,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
   const closeImage = () => {
     setShowLargeImage(false)
   }
-  const closeImageResponsive = useResponsiveClickHandler(breakpointNum.tablet, closeImage)
+
   // If we are seeing an image, prevent the
   // the user to scroll and drag up/down
   usePreventScrollOnImageView(showLargeImage)
@@ -56,8 +56,6 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
       x: `${(index - currentIndex) * 33}%`,
     }
   }
-
-
 
   return (
     <>
@@ -108,17 +106,18 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         </S.ButtonWrapper>
       </S.OuterWrapper>
       {showLargeImage && images[currentIndex].image && (
-        <S.ImageOverlay
-          onClick={closeImageResponsive}
-          className={showLargeImage ? "visible" : ""}
-        >
-          <S.CloseImageCaption onClick={closeImage}>Chiudi X</S.CloseImageCaption>
+        <S.ImageOverlay className={showLargeImage ? "visible" : ""}>
+          <S.CloseImageCaption onClick={closeImage}>
+            Chiudi X
+          </S.CloseImageCaption>
           <S.LargeImageWrapper>
-            <T.H2
-              className="title"
-              dangerouslySetInnerHTML={{ __html: images[currentIndex].title }}
-              style={{ marginBottom: 4 }}
-            />
+            {images[currentIndex].title && (
+              <T.H2
+                className="title"
+                dangerouslySetInnerHTML={{ __html: images[currentIndex].title }}
+                style={{ marginBottom: 4 }}
+              />
+            )}
             <S.StyledGatsbyImageLarge
               image={images[currentIndex].image}
               alt={images[currentIndex].alt || "Enlarged Image"}
@@ -131,12 +130,14 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
             ) : (
               <T.P4 className="copyright">Autore sconosciuto</T.P4>
             )}
-            <T.P2
-              className="caption"
-              dangerouslySetInnerHTML={{
-                __html: images[currentIndex].description,
-              }}
-            />
+            {images[currentIndex].description && (
+              <T.P2
+                className="caption"
+                dangerouslySetInnerHTML={{
+                  __html: images[currentIndex].description,
+                }}
+              />
+            )}
           </S.LargeImageWrapper>
         </S.ImageOverlay>
       )}

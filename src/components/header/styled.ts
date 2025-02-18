@@ -1,5 +1,10 @@
 import styled from "styled-components"
-import { breakpoint, breakpointNum, colors } from "../../styles"
+import {
+  breakpoint,
+  breakpointNum,
+  colors,
+  horizBreakpointsHeight,
+} from "../../styles"
 
 export const Header = styled.header`
   height: 60px;
@@ -15,12 +20,21 @@ export const Header = styled.header`
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 9998;
   box-shadow: 0px 1px 6px ${colors.green.green700};
+  @media (max-height: ${horizBreakpointsHeight.medium}px) {
+    padding: 16px;
+    height: 40px;
+    gap: 8px;
+    position: unset;
+  }
 `
 
 export const LeftWrapper = styled.div`
   min-width: 120px;
+  @media (max-height: ${horizBreakpointsHeight.medium}px) {
+    min-width: 80px;
+  }
 `
 
 export const RightWrapper = styled.nav`
@@ -63,6 +77,9 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
       ${({ $isActive }) => $isActive && `color: ${colors.green.green550}`};
       &:active {
         color: ${colors.green.green600};
+      }
+      @media (max-height: ${horizBreakpointsHeight.medium}px) {
+        margin-top: 0px;
       }
     }
   }
@@ -126,8 +143,14 @@ export const HeaderMobile = styled.div`
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 9998;
   box-shadow: 0px 1px 6px ${colors.green.green700};
+  @media (max-height: ${horizBreakpointsHeight.thin}px) {
+    padding: 12px 8px;
+    height: 40px;
+    gap: 8px;
+    position: unset;
+  }
 `
 
 export const RightSidebar = styled.div<{ $isOpen: boolean }>`

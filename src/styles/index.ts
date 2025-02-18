@@ -20,6 +20,11 @@ export const breakpointNum = {
   mobile: 480,
 } as const
 
+export const horizBreakpointsHeight = {
+  medium: 600,
+  thin: 400,
+} as const
+
 export const colors = {
   red: {
     warning: "#f60000",

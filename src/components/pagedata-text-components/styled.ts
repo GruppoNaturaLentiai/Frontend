@@ -21,9 +21,14 @@ export const ImageWrapper = styled.div`
 
 export const TwoColsWrapper = styled.div`
   display: flex;
-  flex-direction: row;
   @media (max-width: ${breakpoint.bigtablet}) {
     display: none;
+  }
+  &:nth-child(odd) {
+    flex-direction: row;
+  }
+  &:nth-child(even) {
+    flex-direction: row-reverse;
   }
 `
 

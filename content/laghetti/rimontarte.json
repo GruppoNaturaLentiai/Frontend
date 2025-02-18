@@ -50,12 +50,6 @@
       "content": [
         [
           {
-            "type": "image",
-            "content": ["rimontarte-02-la-libellula.png"]
-          }
-        ],
-        [
-          {
             "type": "text",
             "content": [
               "La famiglia Corriani opera nel settore del ferro battuto dal 1929 a partire dal fondatore Candido Corriani, detto “Bepi” già allievo dell’Istituto superiore d’ arte e grafica di Monza nonché di insigni maestri come Carlo Rizzarda ed Alessandro Mazzucotelli.",
@@ -66,6 +60,12 @@
               "La ditta Corriani ha partecipato a varie manifestazioni e mostre e, nel 1997, a Feltre ha vinto il primo premio <i>QUALITA’ ROTARY INTERNATIONAL</i>."
             ],
             "size": "p3"
+          }
+        ],
+        [
+          {
+            "type": "image",
+            "content": ["rimontarte-02-la-libellula.png"]
           }
         ]
       ]
@@ -99,12 +99,6 @@
       "content": [
         [
           {
-            "type": "image",
-            "content": ["rimontarte-04-rufus-il-drago.jpg"]
-          }
-        ],
-        [
-          {
             "type": "text",
             "content": [
               "E’ nato a Cortina d’Ampezzo il 9 Giugno 1961 e si è laureato in Scienze Forestali all’Universita’ di Padova.",
@@ -116,6 +110,12 @@
               "Da 10 anni insegna intaglio del legno in corsi da lui organizzati, diffondendo l’amore per quest’arte, tramandatagli da suo padre, scultore in Cortina d’Ampezzo. "
             ],
             "size": "p3"
+          }
+        ],
+        [
+          {
+            "type": "image",
+            "content": ["rimontarte-04-rufus-il-drago.jpg"]
           }
         ]
       ]
@@ -151,12 +151,6 @@
       "content": [
         [
           {
-            "type": "image",
-            "content": ["rimontarte-06-la-ragnatela.png"]
-          }
-        ],
-        [
-          {
             "type": "text",
             "content": [
               "Nasce a Lentiai il 31 marzo 1945, vive nel paese natìo fino all’età di sette anni, per poi abbandonarlo ed emigrare con la sua famiglia a Genova.",
@@ -169,6 +163,12 @@
               "Le sculture di Vergerio sono forse cosi pulite anche perché la loro matrice risulta priva del superfluo. Sono sculture legate ad una cultura, perciò intimistiche, ma appartengono ormai al mondo, quindi apolidi, cosmopolite."
             ],
             "size": "p3"
+          }
+        ],
+        [
+          {
+            "type": "image",
+            "content": ["rimontarte-06-la-ragnatela.png"]
           }
         ]
       ]
@@ -195,13 +195,6 @@
       "content": [
         [
           {
-            "type": "image",
-            "content": ["rimontarte-08-il-folletto.png"],
-            "maxHeight": 350
-          }
-        ],
-        [
-          {
             "type": "text",
             "content": [
               "Beppino Lorenzet è nato e vive a Carve di Mel, nel comune di Borgo Valbelluna, e ha iniziato la sua carriera di scultore nel 1980.",
@@ -214,6 +207,13 @@
               "Nel corso della sua attività egli ha partecipato a oltre 40 concorsi nazionali ed internazionali di scultura su legno e neve"
             ],
             "size": "p3"
+          }
+        ],
+        [
+          {
+            "type": "image",
+            "content": ["rimontarte-08-il-folletto.png"],
+            "maxHeight": 350
           }
         ]
       ]
@@ -279,12 +279,6 @@
       "content": [
         [
           {
-            "type": "image",
-            "content": ["rimontarte-12-la-rana.png"]
-          }
-        ],
-        [
-          {
             "type": "text",
             "content": [
               "Nato ad Aarau, in Svizzera, nel 1973, dopo aver praticato nuoto agonistico e pallanuoto, scopre l’arte in tutte le sue forme. Questa passione, assieme all’arrampicata, lo travolgerà e gli farà scoprire e liberare una parte di sé che da troppi anni ignorava.",
@@ -296,6 +290,12 @@
               "<i>VIAGGIARE...L’AVVENTURA DI CONOSCERE SE STESSI, <br />IN PUNTA DI PIEDI.<br />LA VITA...BUON VIAGGIO</i>"
             ],
             "size": "p3"
+          }
+        ],
+        [
+          {
+            "type": "image",
+            "content": ["rimontarte-12-la-rana.png"]
           }
         ]
       ]

@@ -34,7 +34,7 @@ const ImageWithCredits = ({
     $minHeight={minHeight}
     $minWidth={minWidth}
   >
-    <T.H3 dangerouslySetInnerHTML={{ __html: title }} />
+    {title && <T.H3 dangerouslySetInnerHTML={{ __html: title }} />}
     <GatsbyImage
       image={image}
       alt={alt}

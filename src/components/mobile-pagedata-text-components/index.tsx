@@ -35,17 +35,9 @@ const renderComponents =
       case "two-columns": {
         const castedTwoColsComponent = content as TemplateTwoColumnsData
         const [leftComponents, rightComponents] = castedTwoColsComponent.content
-
-        const mobileTexts = [...leftComponents, ...rightComponents].filter(
-          ({ type }) => type === "text",
-        )
-
-        const mobileImages = [...leftComponents, ...rightComponents].filter(
-          ({ type }) => type === "image",
-        )
         return (
           <S.TwoWrapperMobile key={keyString}>
-            {[...mobileImages, ...mobileTexts].map((lc, idx) =>
+            {[...leftComponents, ...rightComponents].map((lc, idx) =>
               renderComponents(
                 images,
                 setExpandText,

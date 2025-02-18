@@ -47,20 +47,9 @@ const AccessWarnings = ({ type }: AccessWarningsProps) => {
 
   return (
     <S.Wrapper>
-      <S.LeftWrapper>
-        <S.HeaderWrapper>
-          <T.H1>{data.text.header}</T.H1>
-          <T.H2 className="subheader">{data.text.subheader}</T.H2>
-        </S.HeaderWrapper>
-        <S.ContentWrapper>
-          {data.text.rules.map((t, idx) => (
-            <S.SingleRuleWrapper key={`rule-${idx}`}>
-              <T.P1>{`${idx + 1})`}</T.P1>
-              <T.P1>{t}</T.P1>
-            </S.SingleRuleWrapper>
-          ))}
-        </S.ContentWrapper>
-      </S.LeftWrapper>
+      <S.HeaderWrapper>
+        <T.H1>{data.text.header}</T.H1>
+      </S.HeaderWrapper>
 
       <S.IconsWrapper>
         {data.icons.map((icon, idx) => (
@@ -69,6 +58,19 @@ const AccessWarnings = ({ type }: AccessWarningsProps) => {
           </S.IconWrapper>
         ))}
       </S.IconsWrapper>
+
+      <S.HeaderWrapper>
+        <T.H2 className="subheader">{data.text.subheader}</T.H2>
+      </S.HeaderWrapper>
+
+      <S.ContentWrapper>
+        {data.text.rules.map((t, idx) => (
+          <S.SingleRuleWrapper key={`rule-${idx}`}>
+            <T.P1>{`${idx + 1})`}</T.P1>
+            <T.P1>{t}</T.P1>
+          </S.SingleRuleWrapper>
+        ))}
+      </S.ContentWrapper>
     </S.Wrapper>
   )
 }
