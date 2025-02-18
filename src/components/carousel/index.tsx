@@ -106,16 +106,18 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         </S.ButtonWrapper>
       </S.OuterWrapper>
       {showLargeImage && images[currentIndex].image && (
-        <S.ImageOverlay
-          className={showLargeImage ? "visible" : ""}
-        >
-          <S.CloseImageCaption onClick={closeImage}>Chiudi X</S.CloseImageCaption>
+        <S.ImageOverlay className={showLargeImage ? "visible" : ""}>
+          <S.CloseImageCaption onClick={closeImage}>
+            Chiudi X
+          </S.CloseImageCaption>
           <S.LargeImageWrapper>
-            {images[currentIndex].title && <T.H2
-              className="title"
-              dangerouslySetInnerHTML={{ __html: images[currentIndex].title }}
-              style={{ marginBottom: 4 }}
-            />}
+            {images[currentIndex].title && (
+              <T.H2
+                className="title"
+                dangerouslySetInnerHTML={{ __html: images[currentIndex].title }}
+                style={{ marginBottom: 4 }}
+              />
+            )}
             <S.StyledGatsbyImageLarge
               image={images[currentIndex].image}
               alt={images[currentIndex].alt || "Enlarged Image"}
@@ -128,12 +130,14 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
             ) : (
               <T.P4 className="copyright">Autore sconosciuto</T.P4>
             )}
-            {images[currentIndex].description && <T.P2
-              className="caption"
-              dangerouslySetInnerHTML={{
-                __html: images[currentIndex].description,
-              }}
-            />}
+            {images[currentIndex].description && (
+              <T.P2
+                className="caption"
+                dangerouslySetInnerHTML={{
+                  __html: images[currentIndex].description,
+                }}
+              />
+            )}
           </S.LargeImageWrapper>
         </S.ImageOverlay>
       )}

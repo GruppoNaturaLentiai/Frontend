@@ -58,18 +58,18 @@ export const ButtonWrapper = styled.div<{ $position: "left" | "right" }>`
 
   > svg {
     ${({ $position }) =>
-    $position === "left"
-      ? "transform: rotate(90deg);"
-      : "transform: rotate(-90deg);"}
+      $position === "left"
+        ? "transform: rotate(90deg);"
+        : "transform: rotate(-90deg);"}
     fill: ${colors.green.green700};
     margin-top: 6px;
     ${({ $position }) =>
-    $position === "left" ? "margin-left: 3px;" : "margin-left: 8px;"}
+      $position === "left" ? "margin-left: 3px;" : "margin-left: 8px;"}
     transition: all 0.5s;
 
     @media (max-width: ${breakpointNum.mobile}px) {
       ${({ $position }) =>
-    $position === "left" ? "margin-left: -2px;" : "margin-left: 1px;"}
+        $position === "left" ? "margin-left: -2px;" : "margin-left: 1px;"}
       height: 12px;
     }
   }
@@ -100,7 +100,7 @@ export const Shadow = styled.div`
   opacity: 0.8;
 `
 
-export const CarouselItem = styled(motion.div) <{ $isCurrentImage: boolean }>`
+export const CarouselItem = styled(motion.div)<{ $isCurrentImage: boolean }>`
   position: absolute;
   transform: translate(-50%, -50%);
   max-height: 700px;

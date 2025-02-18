@@ -2,21 +2,25 @@ import { useEffect, useRef, useState } from "react"
 
 const useResponsiveClickHandler = (
   mediaQuery: string,
-  handler: () => void
+  handler: () => void,
 ): (() => void) | undefined => {
-  const [clickHandler, setClickHandler] = useState<(() => void) | undefined>(undefined)
+  const [clickHandler, setClickHandler] = useState<(() => void) | undefined>(
+    undefined,
+  )
   const mediaQueryRef = useRef<MediaQueryList | null>(null)
 
   useEffect(() => {
     mediaQueryRef.current = window.matchMedia(mediaQuery)
 
-    const updateClickHandler = (event: MediaQueryListEvent | MediaQueryList) => {
+    const updateClickHandler = (
+      event: MediaQueryListEvent | MediaQueryList,
+    ) => {
       const shouldSetHandler = event.matches
       const shouldUnsetHandler = !event.matches && clickHandler
       const alreadyUnsetHandler = !event.matches && !clickHandler
       if (alreadyUnsetHandler) return
       if (shouldUnsetHandler) setClickHandler(undefined)
-      if (shouldSetHandler) setClickHandler((prev) => prev ? prev : handler)
+      if (shouldSetHandler) setClickHandler(prev => (prev ? prev : handler))
     }
     updateClickHandler(mediaQueryRef.current)
 

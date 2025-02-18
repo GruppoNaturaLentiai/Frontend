@@ -47,7 +47,6 @@ const AccessWarnings = ({ type }: AccessWarningsProps) => {
 
   return (
     <S.Wrapper>
-
       <S.HeaderWrapper>
         <T.H1>{data.text.header}</T.H1>
       </S.HeaderWrapper>
@@ -72,7 +71,6 @@ const AccessWarnings = ({ type }: AccessWarningsProps) => {
           </S.SingleRuleWrapper>
         ))}
       </S.ContentWrapper>
-
     </S.Wrapper>
   )
 }

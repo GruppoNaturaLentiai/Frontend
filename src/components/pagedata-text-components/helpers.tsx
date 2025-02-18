@@ -10,6 +10,50 @@ import * as S from "./styled"
 import * as T from "./../typography"
 import React from "react"
 
+const renderTextInner =
+  (
+    size: string,
+    font: T.FontFamilies | undefined,
+    position: "center" | "left" | "right" | undefined,
+  ) =>
+  (text: string) => {
+    const addProps = {
+      $textAlign: position,
+      $font: font,
+      dangerouslySetInnerHTML: { __html: text },
+    }
+    switch (size) {
+      case "h1":
+        return <T.H1 {...addProps} />
+      case "h2":
+        return <T.H2 {...addProps} />
+      case "h3":
+        return <T.H3 {...addProps} />
+      case "h4":
+        return <T.H4 {...addProps} />
+      case "h5":
+        return <T.H5 {...addProps} />
+      case "h6":
+        return <T.H6 {...addProps} />
+      case "h7":
+        return <T.H7 {...addProps} />
+      case "p1":
+        return <T.P1 {...addProps} />
+      case "p2":
+        return <T.P2 {...addProps} />
+      case "p3":
+        return <T.P3 {...addProps} />
+      case "p4":
+        return <T.P1 {...addProps} />
+      case "p5":
+        return <T.P1 {...addProps} />
+      case "note":
+        return <T.Notes {...addProps} />
+      default:
+        return <T.H2>Text size not found</T.H2>
+    }
+  }
+
 export const renderComponents =
   (images: ImageData[]) =>
   (content: DataJSONType[number], key: Number | string): any => {
@@ -52,128 +96,10 @@ export const renderComponents =
         const theText = castedTextContent.content.join(" <br /> ")
         if (!theText) return <T.H2 key={keyString}>Text not found</T.H2>
 
-        const { font, position } = castedTextContent
-        switch (castedTextContent.size) {
-          case "h1":
-            return (
-              <T.H1
-                key={keyString}
-                $textAlign={position}
-                $font={font}
-                dangerouslySetInnerHTML={{ __html: theText }}
-              />
-            )
-          case "h2":
-            return (
-              <T.H2
-                key={keyString}
-                $textAlign={position}
-                $font={font}
-                dangerouslySetInnerHTML={{ __html: theText }}
-              />
-            )
-          case "h3":
-            return (
-              <T.H3
-                key={keyString}
-                $textAlign={position}
-                $font={font}
-                dangerouslySetInnerHTML={{ __html: theText }}
-              />
-            )
-          case "h4":
-            return (
-              <T.H4
-                key={keyString}
-                $textAlign={position}
-                $font={font}
-                dangerouslySetInnerHTML={{ __html: theText }}
-              />
-            )
-          case "h5":
-            return (
-              <T.H5
-                key={keyString}
-                $textAlign={position}
-                $font={font}
-                dangerouslySetInnerHTML={{ __html: theText }}
-              />
-            )
-          case "h6":
-            return (
-              <T.H6
-                key={keyString}
-                $textAlign={position}
-                $font={font}
-                dangerouslySetInnerHTML={{ __html: theText }}
-              />
-            )
-          case "h7":
-            return (
-              <T.H7
-                key={keyString}
-                $textAlign={position}
-                $font={font}
-                dangerouslySetInnerHTML={{ __html: theText }}
-              />
-            )
-          case "p1":
-            return (
-              <T.P1
-                key={keyString}
-                $textAlign={position}
-                $font={font}
-                dangerouslySetInnerHTML={{ __html: theText }}
-              />
-            )
-          case "p2":
-            return (
-              <T.P2
-                key={keyString}
-                $textAlign={position}
-                $font={font}
-                dangerouslySetInnerHTML={{ __html: theText }}
-              />
-            )
-          case "p3":
-            return (
-              <T.P3
-                key={keyString}
-                $textAlign={position}
-                $font={font}
-                dangerouslySetInnerHTML={{ __html: theText }}
-              />
-            )
-          case "p4":
-            return (
-              <T.P4
-                key={keyString}
-                $textAlign={position}
-                $font={font}
-                dangerouslySetInnerHTML={{ __html: theText }}
-              />
-            )
-          case "p5":
-            return (
-              <T.P5
-                key={keyString}
-                $textAlign={position}
-                $font={font}
-                dangerouslySetInnerHTML={{ __html: theText }}
-              />
-            )
-          case "note":
-            return (
-              <T.Notes
-                key={keyString}
-                $textAlign={position}
-                $font={font}
-                dangerouslySetInnerHTML={{ __html: theText }}
-              />
-            )
-          default:
-            return <T.H2 key={keyString}>Text size not found</T.H2>
-        }
+        const { font, position, size } = castedTextContent
+        const textRenderer = renderTextInner(size, font, position)
+        return <>{textRenderer(theText)}</>
+
       case "two-columns": {
         const castedTwoColsComponent = content as TemplateTwoColumnsData
         const [leftComponents, rightComponents] = castedTwoColsComponent.content

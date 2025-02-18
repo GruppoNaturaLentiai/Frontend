@@ -29,7 +29,7 @@ const contactData = [
     linkURL: undefined,
     onClickHandler: () => {
       window.location.href = `tel:${phoneNumber}`
-    }
+    },
   },
   {
     icon: <Icon type="whatsapp" width={32} />,
@@ -37,7 +37,7 @@ const contactData = [
     linkURL: undefined,
     onClickHandler: () => {
       window.open(whatsappUrl, "_blank")
-    }
+    },
   },
   {
     icon: <Icon type="email" width={32} />,
@@ -45,8 +45,8 @@ const contactData = [
     linkURL: undefined,
     onClickHandler: () => {
       window.location.href = `mailto:${email}`
-    }
-  }
+    },
+  },
 ]
 
 const phoneNumber = contacts["phone"]
@@ -59,19 +59,23 @@ const ContactUs = () => (
     <S.ContactsWrapper>
       {contactData.map((el, idx) => (
         <S.Row key={idx}>
-          {el.linkURL
-            ? <a href={el.linkURL} target="_blank" rel="noopener noreferrer">
-              <S.IconWrapper onClick={el.onClickHandler}>{el.icon}</S.IconWrapper>
+          {el.linkURL ? (
+            <a href={el.linkURL} target="_blank" rel="noopener noreferrer">
+              <S.IconWrapper onClick={el.onClickHandler}>
+                {el.icon}
+              </S.IconWrapper>
             </a>
-            : <S.IconWrapper onClick={el.onClickHandler}>{el.icon}</S.IconWrapper>
-          }
+          ) : (
+            <S.IconWrapper onClick={el.onClickHandler}>{el.icon}</S.IconWrapper>
+          )}
           <S.LinkText onClick={el.onClickHandler}>
-            {el.linkURL
-              ? <a href={el.linkURL} target="_blank" rel="noopener noreferrer">
+            {el.linkURL ? (
+              <a href={el.linkURL} target="_blank" rel="noopener noreferrer">
                 <T.H2>{el.text}</T.H2>
               </a>
-              : <T.H2>{el.text}</T.H2>
-            }
+            ) : (
+              <T.H2>{el.text}</T.H2>
+            )}
           </S.LinkText>
         </S.Row>
       ))}

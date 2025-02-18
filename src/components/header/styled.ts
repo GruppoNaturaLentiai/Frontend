@@ -1,5 +1,10 @@
 import styled from "styled-components"
-import { breakpoint, breakpointNum, colors, horizBreakpointsHeight } from "../../styles"
+import {
+  breakpoint,
+  breakpointNum,
+  colors,
+  horizBreakpointsHeight,
+} from "../../styles"
 
 export const Header = styled.header`
   height: 60px;
