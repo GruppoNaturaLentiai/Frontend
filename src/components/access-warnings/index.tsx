@@ -25,7 +25,7 @@ const content = {
       header: "AREA FIORITURA NARCISI",
       subheader: "Avvertenze di accesso",
       rules: [
-        "I prati sono proprietà private. Si prega di non entrare nei terrenti",
+        "I prati sono proprietà private. Si prega di non entrare nei terreni",
         "I fiori vanno osservati, fotografati, ma non raccolti",
         "Si prega di non uscire dalla strada e di non parcheggiare l'auto sui prati",
         "Si prega di non lasciare tracce del proprio passaggio (rifiuti, ecc...)",

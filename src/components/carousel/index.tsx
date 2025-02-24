@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useCallback, useEffect, useState } from "react"
 import { ImageData } from "../../types"
 import * as T from "./../typography"
 import * as S from "./styled"
@@ -39,6 +39,24 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
   const closeImage = () => {
     setShowLargeImage(false)
   }
+
+  // Use arrows to move back and forth
+  const handleKeyDown = useCallback(
+    (event: KeyboardEvent) => {
+      if (event.key === "ArrowLeft") {
+        handlePrev()
+      } else if (event.key === "ArrowRight") {
+        handleNext()
+      }
+    },
+    [handlePrev, handleNext]
+  )
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown)
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [handleKeyDown])
 
   // If we are seeing an image, prevent the
   // the user to scroll and drag up/down
