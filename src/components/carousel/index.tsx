@@ -49,7 +49,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         handleNext()
       }
     },
-    [handlePrev, handleNext]
+    [handlePrev, handleNext],
   )
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown)

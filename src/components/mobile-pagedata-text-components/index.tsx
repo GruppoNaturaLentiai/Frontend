@@ -7,15 +7,11 @@ import {
   TextContentData,
 } from "../../types"
 import * as T from "./../typography"
-import { renderImage, renderText } from "./helpers"
+import { renderImage, ExpandableText } from "./helpers"
 import * as S from "./styled"
 
 const renderComponents =
-  (
-    images: ImageData[],
-    setExpandText: React.Dispatch<React.SetStateAction<any>>,
-    expandText: any,
-  ) =>
+  (images: ImageData[]) =>
   (content: DataJSONType[number], key: Number | string): any => {
     const keyString = key.toString()
     switch (content.type) {
@@ -25,11 +21,12 @@ const renderComponents =
 
       case "text":
         const castedTextContent = content as TextContentData
-        return renderText(
-          castedTextContent,
-          keyString,
-          setExpandText,
-          expandText,
+        return (
+          <ExpandableText
+            key={`expandable-${keyString}`}
+            content={castedTextContent}
+            innerKey={keyString}
+          />
         )
 
       case "two-columns": {
@@ -38,11 +35,7 @@ const renderComponents =
         return (
           <S.TwoWrapperMobile key={keyString}>
             {[...leftComponents, ...rightComponents].map((lc, idx) =>
-              renderComponents(
-                images,
-                setExpandText,
-                expandText,
-              )(lc, `two-cols-seq-${keyString}-${idx}`),
+              renderComponents(images)(lc, `two-cols-seq-${keyString}-${idx}`),
             )}
           </S.TwoWrapperMobile>
         )
@@ -56,11 +49,6 @@ const MobileContentToComponent: React.FC<{
   pageData: DataJSONType
   images: ImageData[]
 }> = ({ pageData, images }) => {
-  const [expandText, setExpandText] = useState("")
-  return (
-    <S.MainWrapper>
-      {pageData.map(renderComponents(images, setExpandText, expandText))}
-    </S.MainWrapper>
-  )
+  return <S.MainWrapper>{pageData.map(renderComponents(images))}</S.MainWrapper>
 }
 export default MobileContentToComponent

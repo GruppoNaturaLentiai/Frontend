@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef, useState } from "react"
 import { ImageContentData, ImageData, TextContentData } from "../../types"
 import ImageWithCredits from "../image-with-credits"
 import * as T from "../typography"
@@ -84,20 +84,16 @@ const renderTextInner =
     }
   }
 
-export const renderText = (
-  content: TextContentData,
-  key: string,
-  setExpandText: React.Dispatch<React.SetStateAction<string>>,
-  expandText: string,
-) => {
-  const theText = content.content.join(" <br /> ")
-  if (!theText) return <T.H2 key={key}>Text not found</T.H2>
+export const ExpandableText: React.FC<{
+  content: TextContentData
+  innerKey: string
+}> = ({ content, innerKey }) => {
+  const [isExpanded, setIsExpanded] = useState(false)
 
-  const isExpanded = key === expandText
-  const onClickFn = () => {
-    if (key === expandText) setExpandText("")
-    else setExpandText(key)
-  }
+  const theText = content.content.join(" <br /> ")
+  if (!theText) return <T.H2 key={innerKey}>Text not found</T.H2>
+
+  const textRef = useRef<HTMLDivElement | null>(null)
 
   const isShortText = theText.length <= 135
 
@@ -105,18 +101,26 @@ export const renderText = (
   const textRenderer = renderTextInner(content.size, font, position)
 
   if (collapsible === false)
-    return <React.Fragment key={key}>{textRenderer(theText)}</React.Fragment>
+    return (
+      <React.Fragment key={innerKey}>{textRenderer(theText)}</React.Fragment>
+    )
 
   return (
-    <S.TextWrapper $isExpanded={isExpanded} key={key}>
-      <S.TextContainer onClick={onClickFn}>
+    <S.TextWrapper $isExpanded={isExpanded} key={innerKey} ref={textRef}>
+      <S.TextContainer
+        onClick={() => {
+          setIsExpanded(true)
+        }}
+      >
         {textRenderer(theText)}
       </S.TextContainer>
       <S.FadeOut $isExpanded={isExpanded} $isShort={isShortText} />
       <S.ReadMoreWrapper
         $isExpanded={isExpanded}
         $isShort={isShortText}
-        onClick={onClickFn}
+        onClick={() => {
+          setIsExpanded(!isExpanded)
+        }}
       >
         <T.H3 key={isExpanded ? "chiudi" : "leggi-di-piu"}>
           {isExpanded ? "Chiudi" : "Leggi di più"}
