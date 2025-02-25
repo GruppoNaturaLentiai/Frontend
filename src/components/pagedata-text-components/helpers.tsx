@@ -8,7 +8,7 @@ import {
 import ImageWithCredits from "../image-with-credits"
 import * as S from "./styled"
 import * as T from "./../typography"
-import React from "react"
+import React, { Fragment } from "react"
 
 const renderTextInner =
   (
@@ -98,7 +98,7 @@ export const renderComponents =
 
         const { font, position, size } = castedTextContent
         const textRenderer = renderTextInner(size, font, position)
-        return <>{textRenderer(theText)}</>
+        return <Fragment key={keyString}>{textRenderer(theText)}</Fragment>
 
       case "two-columns": {
         const castedTwoColsComponent = content as TemplateTwoColumnsData

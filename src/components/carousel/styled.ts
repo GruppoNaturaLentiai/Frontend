@@ -11,16 +11,13 @@ export const OuterWrapper = styled.div`
   display: flex;
   flex-direction: row;
   min-width: calc(100vw - 82px);
-  min-height: 900px;
-  @media (max-width: ${breakpointNum.bigtablet + 1}px) {
-    min-height: 900px;
-  }
+  min-height: 85vh;
   @media (max-width: ${breakpointNum.tablet}px) {
     min-width: calc(100vw - 60px);
-    min-height: 60vh;
+    min-height: 78vh;
   }
   @media (max-width: ${breakpointNum.mobile}px) {
-    min-height: 500px;
+    min-height: 70vh;
   }
   @media (max-height: ${horizBreakpointsHeight.medium}px) {
     min-height: 350px;
@@ -132,12 +129,15 @@ export const ImgWrapper = styled.div<{ $showZoom: boolean }>`
 
 export const StyledGatsbyImage = styled(GatsbyImage)`
   img {
-    max-height: 600px;
+    max-height: 55vh;
+    @media (max-width: ${breakpointNum.bigtablet}px) {
+      max-height: 50vh;
+    }
     @media (max-width: ${breakpointNum.tablet}px) {
-      max-height: 400px;
+      max-height: 50vh;
     }
     @media (max-width: ${breakpointNum.mobile}px) {
-      max-height: 200px;
+      max-height: 50vh;
     }
     @media (max-height: ${horizBreakpointsHeight.medium}px) {
       max-height: 50vh;
