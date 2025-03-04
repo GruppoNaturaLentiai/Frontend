@@ -1,12 +1,26 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import DefaultLayout from "../../components/default-layout"
-import WorkInProgress from "../../components/work-in-progress"
+import dataJSON from "../../../content/narcisi/progetto.json"
+import { DataJSONType } from "../../types"
+import * as T from "./../../components/typography"
+import ContentToComponent from "../../components/pagedata-text-components"
+import MobileContentToComponent from "../../components/mobile-pagedata-text-components"
 
 const NarcisiProgettoPage: React.FC<PageProps> = () => {
+
+  const content = dataJSON.progetto as DataJSONType
+  if (!content)
+    return (
+      <DefaultLayout>
+        <T.H1>Contenuto non trovato!</T.H1>
+      </DefaultLayout>
+    )
+
   return (
     <DefaultLayout>
-      <WorkInProgress />
+      <ContentToComponent pageData={content} images={[]} />
+      <MobileContentToComponent pageData={content} images={[]} />
     </DefaultLayout>
   )
 }

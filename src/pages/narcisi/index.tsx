@@ -1,13 +1,13 @@
 import { graphql, useStaticQuery, type HeadFC, type PageProps } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import * as React from "react"
+import dataJSON from "../../../content/narcisi/index.json"
+import ButtonLink from "../../components/button-link"
 import DefaultLayout from "../../components/default-layout"
 import MobileContentToComponent from "../../components/mobile-pagedata-text-components"
 import ContentToComponent from "../../components/pagedata-text-components"
 import { DataJSONType, ImageData } from "../../types"
 import * as T from "./../../components/typography"
-import dataJSON from "../../../content/narcisi/index.json"
-import ButtonLink from "../../components/button-link"
 
 const NarcisiPage: React.FC<PageProps> = () => {
   const data = useStaticQuery(graphql`

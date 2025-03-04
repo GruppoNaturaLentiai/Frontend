@@ -1,0 +1,101 @@
+{
+  "chi-siamo": [
+    {
+      "type": "text",
+      "content": [
+        "Chi siamo"
+      ],
+      "size": "h1",
+      "font": "Caveat",
+      "position": "center"
+    },
+    {
+      "type": "text",
+      "content": [
+        "Gruppo Natura Lentiai: Storia e Impegno per l'Ambiente"
+      ],
+      "size": "h2",
+      "font": "Caveat"
+    },
+    {
+      "type": "text",
+      "content": [
+        "Il Gruppo Natura Lentiai (GNL) nasce circa 40 anni fa dalla volontà di un gruppo di cittadini di Lentiai, durante un incontro informale nella saletta del bar Canton. Fin dall’inizio, il GNL si è configurato come un sodalizio spontaneo, privo di una struttura formale ma con obiettivi chiari: mantenere pulito l’ambiente e promuovere l’integrità ecologica del territorio.",
+        "Uno dei primi interventi ha riguardato il biotopo dei Laghetti della Rimonta, un’area di risorgive situata tra gli ex comuni di Lentiai e Mel. In passato, questa zona era stata trasformata in una discarica diffusa, alimentata anche dai rifiuti provenienti dalla Forada. Il GNL, con il supporto di numerosi volontari e associazioni locali, ha avviato un'opera di bonifica, restituendo al luogo il suo valore naturalistico. Contestualmente, è stato ripristinato il sentiero principale, permettendo nuovamente l’accesso e la fruizione dell’area."
+      ],
+      "size": "p1"
+    },
+    {
+      "type": "text",
+      "content": ["I nostri documentari"],
+      "size": "h2",
+      "font": "Caveat"
+    },
+    {
+      "type": "text",
+      "content": [
+        "A partire da questa esperienza, il gruppo ha promosso iniziative di sensibilizzazione ambientale e realizzato i primi documentari storico-naturalistici, tra cui:",
+        "<ul>",
+        "<li><b>La Rosta</b>, in collaborazione con il prof. C. Comel e l’ex sindaco di Lentiai F. Tremea</li>",
+        "<li><b>Il Pane</b>, girato presso l’antico mulino</li>",
+        "<li><b>Il Pojat</b>, con E. Gasperin, presso il Portego dei Boschi</li>",
+        "<li><b>Il Meda</b>, con L. Tres e P. Tremea della Magnifica Comunità di San Gervasio</li>",
+        "</ul>",
+        "Alcuni di questi documentari sono reperibili nel canale Youtube del GNL."
+      ],
+      "size": "p1"
+    },
+    {
+      "type": "text",
+      "content": ["Alcuni nostri progetti"],
+      "size": "h2",
+      "font": "Caveat"
+    },
+    {
+      "type": "text",
+      "content": [
+        "In parallelo, il GNL ha affrontato il problema dell’abbandono dei rifiuti nel territorio comunale. Sebbene il dialogo con le amministrazioni locali sia stato costante, spesso le richieste del gruppo non sono state accolte. Tuttavia, il GNL ha continuato il suo impegno nella raccolta differenziata, distribuendo opuscoli educativi porta a porta per sensibilizzare la cittadinanza.",
+        "La collaborazione con altre realtà locali è stata un altro aspetto fondamentale: il gruppo ha lavorato con cacciatori, la Pro Loco, comitati frazionali e la Parrocchia, con l’obiettivo comune di promuovere la tutela ambientale. Nel corso degli anni, il GNL ha proseguito la manutenzione dell’area dei Laghetti, assumendo la gestione dei terreni demaniali adiacenti per garantirne la protezione. Tuttavia, con la revisione della gestione demaniale e l’introduzione di canoni annuali insostenibili, questa operazione è diventata impraticabile.",
+        "Un’altra importante iniziativa del GNL è stata la promozione della mobilità sostenibile. Il gruppo ha tracciato il <i>Percorso dei due Laghi</i>, che collega Busche di Cesiomaggiore (stazione FS) ai Laghetti della Rimonta, lungo la storica Via Claudia Augusta. Successivamente, su richiesta dell’amministrazione di Mel, il percorso è stato esteso fino a Trichiana, contribuendo alla nascita della ciclabile della Sinistra Piave e dell’Anello ciclabile della Valbelluna."
+      ],
+      "size": "p1"
+    },
+    {
+      "type": "text",
+      "content": ["La tutela dell'ambiente"],
+      "size": "h2",
+      "font": "Caveat"
+    },
+    {
+      "type": "text",
+      "content": [
+        "Negli ultimi anni, il GNL, in collaborazione con la Fondazione Unifarco, si è concentrato sulla tutela della biodiversità e della fioritura del narciso nella dorsale prealpina di Lentiai. Attraverso l’estirpazione manuale del veratro, il taglio dei prati e la protezione dell’area dai cinghiali, il gruppo lavora per garantire la sopravvivenza di questa specie simbolica del territorio.",
+        "Grazie a un contributo comunitario, la zona dei Laghetti è stata inoltre valorizzata con un percorso sicuro, arricchito da opere artistiche di autori locali e nazionali, coordinate dal maestro F. Vergerio e raccolte nel volume <i>RimontArte</i>, con fotografie di W. Argenta e R. Deon.",
+        "Ogni anno, il GNL organizza una giornata ecologica per contrastare l’abbandono dei rifiuti, in particolare lungo la SP1 tra Bardies e Marziai."
+      ],
+      "size": "p1"
+    },
+    {
+      "type": "text",
+      "content": ["La tutela del territorio"],
+      "size": "h2",
+      "font": "Caveat"
+    },
+
+    {
+      "type": "text",
+      "content": [
+        "Altri interventi significativi hanno riguardato la difesa del territorio per scongiurare scempi e rapine ambientali, fra cui:",
+        "<ul>",
+        "<li>Le mobilitazioni contro la mega-centrale di Zaetta-Busche proposta dall’ENEL</li>",
+        "<li>L’opposizione alla <i>Piattaforma dei Veleni</i>, progettata nella zona industriale di Lentiai.</li>",
+        "<li>L’adesione al Comitato AbC contro la proliferazione di centraline sui torrenti della provincia.</li>",
+        "<li>L’impegno per il referendum contro la privatizzazione dell’acqua.</li>",
+        "<li>La partecipazione al Movimento per la Pace.</li>",
+        "</ul>",
+        "Il GNL continua la sua missione con passione e dedizione, promuovendo un modello di sviluppo sostenibile e sensibilizzando la comunità sulla necessità di preservare il patrimonio naturale locale."
+      ],
+      "size": "p1"
+    }
+  ]
+}
