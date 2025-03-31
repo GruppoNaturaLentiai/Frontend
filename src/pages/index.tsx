@@ -29,7 +29,7 @@ const IndexPage: React.FC<PageProps> = () => {
           base
           childImageSharp {
             gatsbyImageData(
-              width: 1200
+              width: 1050
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
             )

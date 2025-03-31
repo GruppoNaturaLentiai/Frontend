@@ -54,6 +54,24 @@ export const navItems = [
   {
     label: "Sociale",
     url: "/sociale",
+    subsections: [
+      {
+        label: "Mobilità sostenibile",
+        url: "/sociale/mobilità-sostenibile",
+      },
+      {
+        label: "Educazione ambientale",
+        url: "/sociale/educazione-ambientale",
+      },
+      {
+        label: "Rifiuti",
+        url: "/sociale/rifiuti",
+      },
+      {
+        label: "I nostri Ideali",
+        url: "/sociale/ideali",
+      },
+    ],
   },
   {
     label: "Blog",
@@ -127,12 +145,30 @@ export const footerSections = [
     ],
   },
   {
-    label: "Su di noi",
+    label: "Sociale",
+    url: "/sociale",
     subsections: [
       {
-        label: "Sociale",
-        url: "/sociale",
+        label: "Mobilità sostenibile",
+        url: "/sociale/mobilità-sostenibile",
       },
+      {
+        label: "Educazione ambientale",
+        url: "/sociale/educazione-ambientale",
+      },
+      {
+        label: "Rifiuti",
+        url: "/sociale/rifiuti",
+      },
+      {
+        label: "I nostri Ideali",
+        url: "/sociale/ideali",
+      },
+    ],
+  },
+  {
+    label: "Su di noi",
+    subsections: [
       {
         label: "Blog",
         url: "/blog",
