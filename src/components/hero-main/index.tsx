@@ -2,7 +2,6 @@ import React from "react"
 import { ImageData } from "../../types"
 import * as S from "./styled"
 import * as T from "./../typography"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 interface HeroMainProps {
   img: ImageData
@@ -27,7 +26,7 @@ const HeroMain: React.FC<HeroMainProps> = ({ img, content }: HeroMainProps) => {
         />
       </S.TextWrapper>
       {img.image && (
-        <GatsbyImage
+        <S.StyledImg
           image={img.image}
           alt={img.alt ?? ""}
           style={{ borderRadius: "8px", marginTop: 4 }}

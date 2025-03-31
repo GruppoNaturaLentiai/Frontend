@@ -2,6 +2,44 @@
   "index": [
     {
       "type": "text",
+      "content": [
+        "“Non è da molto tempo che sono entrato nel Gruppo Natura Lentiai, ma mi ricordo che, una volta, andando a camminare verso malga Garda, in prossimità di Col Moscher per la precisione, ho visto dei cartelli che riguardavano il veratro e la sua estirpazione a cura del GNL. Da allora è iniziato il mio interesse per il Gruppo, quindi la mia partecipazione allo stesso e l'impegno verso i narcisi.",
+        "I narcisi, fino alla fine degli anni '70, crescevano in grande quantità sulle Prealpi dei tre comuni che, ora uniti, formano Borgo Valbelluna: Trichiana, Mel e Lentiai. In ogni comune, infatti, nel periodo primaverile, tra aprile e maggio (periodo di fioritura), si organizzavano una o più \"Feste del Narciso\".",
+        "I prati erano sempre tagliati e l'erba veniva raccolta per nutrire le \"bestie\" (le mucche). La montagna, allora, rappresentava un mezzo di sostentamento per le famiglie bellunesi. Poi, con l'avvento dell'industrializzazione, specialmente dopo il disastro del Vajont, le cose cambiarono. La gente si accorse che era meglio lavorare in fabbrica piuttosto che sudare nei campi e tra gli animali. Così, pian piano, la montagna fu abbandonata e i prati lasciati a se stessi: cespugli e bosco li invasero.",
+        "I narcisi furono soffocati e, anche dove era rimasto qualche pascolo, una pianta velenosa per l'uomo iniziò a prendere il sopravvento: il veratro. Questa pianta, essendo velenosa anche per le mucche, veniva da sempre estirpata con pazienza dai prati, ma con il loro abbandono ha iniziato a competere con la fioritura del narciso.",
+        "I miei colleghi \"storici\", che da tanto tempo fanno parte del Gruppo e ne sono anche i fondatori, hanno pensato di iniziare ad estirpare il veratro per verificare se i pochi narcisi rimasti sarebbero cresciuti meglio e in maggior numero. Subito c'è stato un riscontro positivo e, continuando a togliere il veratro, in Col d'Artent la fioritura è migliorata.”"
+      ],
+      "size": "p1",
+      "font": "Caveat"
+    },
+    {
+      "type": "text",
+      "content": ["Raoul Deola"],
+      "size": "h2",
+      "font": "Cedarville Cursive",
+      "position": "right"
+    },
+    {
+      "type": "text",
+      "content": ["Il progetto"],
+      "size": "h1",
+      "font": "Caveat"
+    },
+    {
+      "type": "text",
+      "content": [
+        "Dopo qualche anno di lavoro, il GNL è stato contattato dalla Fondazione Unifarco, importante azienda dermocosmetica bellunese, che voleva sviluppare un progetto sulla biodiversità in valle e garantire il recupero dei prati a narciso: era una grande occasione.",
+        "Insieme all'Amministrazione Comunale di Borgo Valbelluna, il GNL e la Fondazione Unifarco hanno redatto un progetto che prevede:",
+        "<ul><li>La gestione dei prati da Col Moscher a Col d'Artent da parte del GNL.</li>",
+        "<li>Il taglio e la raccolta dell'erba di questi prati.</li>",
+        "<li>Il successivo allestimento di recinti elettrici per difendere i prati dalle \"arature\" dei cinghiali.</li>",
+        "<li>Il controllo della crescita dei narcisi, ma anche di molte altre specie di piante che, grazie alla manutenzione dei prati, si sviluppano, a cura di tecnici specializzati.</li>",
+        "<li>L'accordo con il Comune per destinare quattro domeniche, nel periodo della fioritura, alla visita delle zone fiorite, chiudendo la strada al traffico, fornendo un servizio di navetta e allestendo un Infopoint a cura del GNL. Dovrebbe inoltre essere aperto lo chalet di Col d'Artent per offrire servizi basilari ai turisti.</li></ul>"
+      ],
+      "size": "p1"
+    },
+    {
+      "type": "text",
       "content": ["Regole per l'accesso."],
       "size": "h2",
       "font": "Caveat"

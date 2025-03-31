@@ -67,6 +67,8 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
     font-weight: bold;
     &:hover {
       text-decoration: underline;
+      text-decoration-color: ${({ $isActive }) =>
+        $isActive ? `${colors.green.green550}` : `${colors.green.green900}`};
     }
 
     &:active {

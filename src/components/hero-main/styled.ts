@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { breakpointNum, colors } from "../../styles"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export const Wrapper = styled.div`
   padding: 32px;
@@ -44,7 +45,7 @@ export const TextWrapper = styled.div`
   > * {
     color: ${colors.green.green100};
     position: relative;
-    max-width: 1150px;
+    max-width: 1000px;
   }
 
   @media (max-width: ${breakpointNum.medium}px) {
@@ -69,3 +70,5 @@ export const TextWrapper = styled.div`
     padding: 8px;
   }
 `
+
+export const StyledImg = styled(GatsbyImage)``
