@@ -3,7 +3,11 @@ import { graphql, useStaticQuery, type HeadFC, type PageProps } from "gatsby"
 import DefaultLayout from "../components/default-layout"
 import { getImage } from "gatsby-plugin-image"
 import Carousel from "../components/carousel"
-import { ImageData } from "../types"
+import { DataJSONType, ImageData } from "../types"
+import dataJSON from "../../content/chi-siamo.json"
+import ContentToComponent from "../components/pagedata-text-components"
+import MobileContentToComponent from "../components/mobile-pagedata-text-components"
+import * as T from "../components/typography"
 
 const ChiSiamoPage: React.FC<PageProps> = () => {
   const data = useStaticQuery(graphql`
@@ -47,8 +51,18 @@ const ChiSiamoPage: React.FC<PageProps> = () => {
     }
   }) as ImageData[]
 
+  const content = dataJSON["chi-siamo"] as DataJSONType
+  if (!content)
+    return (
+      <DefaultLayout>
+        <T.H1>Contenuto non trovato!</T.H1>
+      </DefaultLayout>
+    )
+
   return (
     <DefaultLayout>
+      <ContentToComponent pageData={content} images={filteredImages} />
+      <MobileContentToComponent pageData={content} images={filteredImages} />
       <Carousel images={filteredImages} />
     </DefaultLayout>
   )
