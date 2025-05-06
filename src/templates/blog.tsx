@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useState } from "react"
 import DefaultLayout from "../components/default-layout"
 import * as T from "../components/typography"
 import { remoteGraphqlURL } from "../constants"
+import WorkInProgress from "../components/work-in-progress"
 
 // Props injected during build time
 type PostInfo = {
@@ -77,13 +78,14 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
   return (
     <DefaultLayout>
       <T.H1>Blog</T.H1>
-      <ul>
+      <WorkInProgress />
+      {/* <ul>
         {posts.map((post, idx) => (
           <li key={`post-${idx}`}>
             <Link to={`${post.slug}`}>{post.title}</Link>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </DefaultLayout>
   )
 }
