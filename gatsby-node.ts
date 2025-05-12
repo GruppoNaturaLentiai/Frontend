@@ -95,7 +95,9 @@ export const createPages: GatsbyNode["createPages"] = async ({
           description: post.image?.asset?.description,
           altText: post.image?.asset?.altText,
           title: post.image?.asset?.title,
-          gatsbyImage: post.image ? getImage(post.image.asset.gatsbyImageData) : null,
+          gatsbyImage: post.image
+            ? getImage(post.image.asset.gatsbyImageData)
+            : null,
         },
       }
     }) ?? []

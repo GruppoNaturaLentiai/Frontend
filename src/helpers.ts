@@ -16,9 +16,9 @@ export const getSanityImageUrl = (ref: string) => {
   return `https://cdn.sanity.io/images/ze02ljgl/post-blog/${id}-${dimensions}.${format}`
 }
 
-export const fromBodyRawToExcerpt = (bodyRaw: any) => bodyRaw
-  .filter((c: any) => c._type === "block")
-  .map((c: any) => c.children[0].text)
-  .join(". ")
-  .slice(0, 200)
-
+export const fromBodyRawToExcerpt = (bodyRaw: any) =>
+  bodyRaw
+    .filter((c: any) => c._type === "block")
+    .map((c: any) => c.children[0].text)
+    .join(". ")
+    .slice(0, 200)

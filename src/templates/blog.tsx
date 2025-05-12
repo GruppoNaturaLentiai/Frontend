@@ -19,10 +19,10 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
   const { postsInfo } = pageContext
 
   const cachedPosts = useMemo(
-    () => postsInfo?.sort(sortByPublishedAt).reverse(),
+    () => postsInfo?.sort(sortByPublishedAt).reverse() ?? [],
     [postsInfo],
   )
-  const [posts, setPosts] = useState<PostInfo[]>(cachedPosts ?? [])
+  const [posts, setPosts] = useState<PostInfo[]>(cachedPosts)
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -46,7 +46,7 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
             }
           }
         }`
-        
+
         const response = await fetch(remoteGraphqlURL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -54,14 +54,14 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
         })
 
         const result = await response.json()
-        console.log(result)
+
         if (result.errors) {
           throw new Error(result.errors[0].message)
         }
 
-        // TODO typing  
-        const newPosts = _.get(result.data, "allPost", cachedPosts)
-          .map((p: any) => ({
+        // TODO typing
+        const remotePosts = _.get(result.data, "allPost", cachedPosts).map(
+          (p: any) => ({
             ...p,
             slug: p.slug.current,
             excerpt: fromBodyRawToExcerpt(p.bodyRaw),
@@ -70,13 +70,19 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
               description: p.image?.asset?.description,
               altText: p.image?.asset?.altText,
               title: p.image?.asset?.title,
-              gatsbyImage: p.image ? getImage(p.image.asset.gatsbyImageData) : null,
+              renderImageUrl: p.image ? p.image.asset.url : null,
             },
-          }))
-          .sort(sortByPublishedAt)
-          .reverse()
+          }),
+        )
 
-        setPosts(newPosts)
+        const newPosts = remotePosts
+          .filter((p: any) => !cachedPosts
+            ?.some((cp: any) => cp.slug === p.slug
+            )
+          )
+
+        setPosts([...cachedPosts, ...newPosts].sort(sortByPublishedAt).reverse())
+        
       } catch (err: any) {
         console.error(err)
         console.warn(
