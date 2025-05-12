@@ -4,14 +4,9 @@ import React, { useEffect, useMemo, useState } from "react"
 import DefaultLayout from "../components/default-layout"
 import * as T from "../components/typography"
 import { remoteGraphqlURL } from "../constants"
-import WorkInProgress from "../components/work-in-progress"
-
-// Props injected during build time
-type PostInfo = {
-  slug: string
-  title: string
-  publishedAt: string
-}
+import { FeaturedBlog, PostInfo } from "../components/blog-list"
+import { getImage } from "gatsby-plugin-image"
+import { fromBodyRawToExcerpt } from "../helpers"
 
 type PostPageContext = {
   postsInfo?: PostInfo[]
@@ -39,9 +34,19 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
             }
             title
             publishedAt
+            bodyRaw
+            author
+            image {
+              asset {
+                description
+                title
+                altText
+                url
+              }
+            }
           }
         }`
-
+        
         const response = await fetch(remoteGraphqlURL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -49,15 +54,24 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
         })
 
         const result = await response.json()
+        console.log(result)
         if (result.errors) {
           throw new Error(result.errors[0].message)
         }
 
-        // TODO typing
+        // TODO typing  
         const newPosts = _.get(result.data, "allPost", cachedPosts)
           .map((p: any) => ({
             ...p,
             slug: p.slug.current,
+            excerpt: fromBodyRawToExcerpt(p.bodyRaw),
+            id: p._id,
+            coverImage: {
+              description: p.image?.asset?.description,
+              altText: p.image?.asset?.altText,
+              title: p.image?.asset?.title,
+              gatsbyImage: p.image ? getImage(p.image.asset.gatsbyImageData) : null,
+            },
           }))
           .sort(sortByPublishedAt)
           .reverse()
@@ -78,14 +92,7 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
   return (
     <DefaultLayout>
       <T.H1>Blog</T.H1>
-      <WorkInProgress />
-      {/* <ul>
-        {posts.map((post, idx) => (
-          <li key={`post-${idx}`}>
-            <Link to={`${post.slug}`}>{post.title}</Link>
-          </li>
-        ))}
-      </ul> */}
+      <FeaturedBlog posts={posts} />;
     </DefaultLayout>
   )
 }

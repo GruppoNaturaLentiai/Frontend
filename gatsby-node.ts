@@ -1,4 +1,6 @@
 import { GatsbyNode } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
+import _ from "lodash"
 import path from "path"
 
 export const createPages: GatsbyNode["createPages"] = async ({
@@ -8,7 +10,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
 }) => {
   const { createPage } = actions
 
-  // Fetch all posts from Sanity
+  // Fetch all posts from Sanity (REMOTE)
   const allPosts = await graphql<any>(`
     query {
       allSanityPost {
@@ -75,11 +77,28 @@ export const createPages: GatsbyNode["createPages"] = async ({
 
   // Create the blog page injecting the posts info
   const postsInfo =
-    posts.map((post: any) => ({
-      slug: post?.slug?.current,
-      title: post?.title,
-      publishedAt: post?.publishedAt,
-    })) ?? []
+    posts.map((post: any) => {
+      const texts = post._rawBody
+        .filter((c: any) => c._type === "block")
+        .map((c: any) => c.children[0].text)
+        .join(". ")
+        .slice(0, 200)
+
+      return {
+        id: post?.id,
+        slug: post?.slug?.current,
+        title: post?.title,
+        publishedAt: post?.publishedAt,
+        author: post?.author,
+        excerpt: texts,
+        coverImage: {
+          description: post.image?.asset?.description,
+          altText: post.image?.asset?.altText,
+          title: post.image?.asset?.title,
+          gatsbyImage: post.image ? getImage(post.image.asset.gatsbyImageData) : null,
+        },
+      }
+    }) ?? []
   createPage({
     path: "blog",
     component: path.resolve("src/templates/blog.tsx"),
