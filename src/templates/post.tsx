@@ -1,12 +1,9 @@
-import { PortableText } from "@portabletext/react"
 import { PageProps } from "gatsby"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import React, { useEffect, useState } from "react"
 import DefaultLayout from "../components/default-layout"
-import Components from "../components/portable-text-components"
+import Post from "../components/post"
 import { remoteGraphqlURL } from "../constants"
-import _ from "lodash"
-import * as T from "../components/typography"
 
 // Props injected during build time
 type PostPageContext = {
@@ -138,25 +135,15 @@ const PostTemplate: React.FC<PageProps<{}, PostPageContext>> = ({
 
   return (
     <DefaultLayout>
-      <article style={{ padding: 32 }}>
-        <T.H1>{renderTitle}</T.H1>
-        {renderPublishedAt && (
-          <T.P4>
-            Articolo pubblicato in data:{" "}
-            {new Date(renderPublishedAt).toLocaleDateString()}
-          </T.P4>
-        )}
-        {gatsbyImage && <GatsbyImage image={gatsbyImage} alt={mainImgAlt} />}
-        {!gatsbyImage && renderImageUrl && (
-          <img
-            src={renderImageUrl}
-            alt={mainImgAlt}
-            style={{ maxWidth: "100%", height: "auto" }}
-          />
-        )}
-        <PortableText value={renderBody} components={Components} />
-        {author && <T.P3>Articolo firmato: {author}</T.P3>}
-      </article>
+      <Post
+        renderTitle={renderTitle}
+        renderPublishedAt={renderPublishedAt ?? ""}
+        gatsbyImage={gatsbyImage ?? undefined}
+        renderImageUrl={renderImageUrl ?? ""}
+        renderBody={renderBody}
+        author={author ?? ""}
+        coverImageAlt={mainImgAlt}
+      />
     </DefaultLayout>
   )
 }

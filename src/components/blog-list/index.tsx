@@ -1,6 +1,7 @@
 import React from "react"
 import { IGatsbyImageData, GatsbyImage } from "gatsby-plugin-image"
 import * as S from "./styled"
+import * as T from "../typography"
 import { navigate } from "gatsby"
 
 // Props injected during build time
@@ -29,16 +30,17 @@ const getImage = (post: any) => {
     image = (
       <GatsbyImage
         image={post.coverImage.gatsbyImage as IGatsbyImageData}
-        alt={post.coverImage.altText}
-        style={{ width: "100%", height: "auto" }}
+        alt={post.coverImage.altText ?? ""}
+        style={{ width: "30%", height: "auto" }}
       />
     )
   } else if (post.coverImage.renderImageUrl) {
     image = (
       <img
+        className="cover-image"
         src={post.coverImage.renderImageUrl}
-        alt={post.coverImage.altText}
-        style={{ width: "100%", height: "auto" }}
+        alt={post.coverImage.altText ?? ""}
+        style={{ height: "auto" }}
       />
     )
   }
@@ -48,7 +50,7 @@ const getImage = (post: any) => {
 
 export const FeaturedBlog: React.FC<BlogListProps> = ({ posts }) => {
   if (!posts || posts.length === 0) {
-    return <p>No posts available.</p>
+    return <T.P2>No posts available.</T.P2>
   }
 
   // Ordina per data decrescente
@@ -64,14 +66,21 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({ posts }) => {
     <S.Container>
       {/* Featured Post */}
       <S.FeaturedPostWrapper onClick={() => navigate(`${featured.slug}`)}>
-        {getImage(featured)}
+        <S.CoverImgWrapper>
+          {getImage(featured)}
+        </S.CoverImgWrapper>
         <S.FeaturedContent>
           <S.FeaturedTitle>{featured.title}</S.FeaturedTitle>
           <S.MetaInfo>
-            {new Date(featured.publishedAt).toLocaleDateString()} •{" "}
+            {new Date(featured.publishedAt).toLocaleDateString("it-IT", {
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })} •{" "}
             {featured.author}
           </S.MetaInfo>
-          <p>{featured.excerpt}</p>
+          <T.P3>{featured.excerpt}</T.P3>
         </S.FeaturedContent>
       </S.FeaturedPostWrapper>
 
@@ -80,11 +89,18 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({ posts }) => {
         {others.map(post => {
           return (
             <S.Card key={post.slug} onClick={() => navigate(`${post.slug}`)}>
-              {getImage(post)}
+              <S.CoverImgWrapper>
+                {getImage(post)}
+              </S.CoverImgWrapper>
               <S.CardContent>
                 <S.CardTitle>{post.title}</S.CardTitle>
                 <S.MetaInfo>
-                  {new Date(post.publishedAt).toLocaleDateString()} •{" "}
+                  {new Date(post.publishedAt).toLocaleDateString("it-IT", {
+                    weekday: "long",
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })} •{" "}
                   {post.author}
                 </S.MetaInfo>
                 <S.CardExcerpt>{post.excerpt}</S.CardExcerpt>

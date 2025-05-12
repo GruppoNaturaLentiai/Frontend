@@ -20,5 +20,7 @@ export const fromBodyRawToExcerpt = (bodyRaw: any) =>
   bodyRaw
     .filter((c: any) => c._type === "block")
     .map((c: any) => c.children[0].text)
-    .join(". ")
+    .join(" ")
     .slice(0, 200)
+    .concat("...")
+

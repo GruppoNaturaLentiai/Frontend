@@ -121,7 +121,8 @@ const Footer: React.FC = () => {
         <S.HorizontalSeparator />
         <S.LowerContent>
           <T.P2>
-            © Copyright GNL Lentiai 2025 - Tutti i diritti riservati.
+            © Copyright Andrea Nicolai - GNL Lentiai 2025 - Tutti i diritti
+            riservati.
           </T.P2>
         </S.LowerContent>
       </S.Footer>
@@ -210,7 +211,8 @@ const Footer: React.FC = () => {
         <S.HorizontalSeparator />
         <S.LowerContent>
           <T.P2>
-            © Copyright GNL Lentiai 2025 - Tutti i diritti riservati.
+            © Copyright Andrea Nicolai - GNL Lentiai 2025 - Tutti i diritti
+            riservati.
           </T.P2>
         </S.LowerContent>
       </S.MobileFooter>

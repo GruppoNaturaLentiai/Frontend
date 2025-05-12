@@ -1,16 +1,17 @@
-import { HeadFC, Link, PageProps } from "gatsby"
+import { HeadFC, PageProps } from "gatsby"
 import * as _ from "lodash"
 import React, { useEffect, useMemo, useState } from "react"
 import DefaultLayout from "../components/default-layout"
-import * as T from "../components/typography"
 import { remoteGraphqlURL } from "../constants"
 import { FeaturedBlog, PostInfo } from "../components/blog-list"
-import { getImage } from "gatsby-plugin-image"
 import { fromBodyRawToExcerpt } from "../helpers"
 
 type PostPageContext = {
   postsInfo?: PostInfo[]
 }
+
+const filterDummyPosts = (post: PostInfo) =>
+  post.slug !== "/post/1" && post.slug !== "/post/2"
 
 const sortByPublishedAt = (p1: PostInfo, p2: PostInfo) =>
   new Date(p1.publishedAt).getTime() - new Date(p2.publishedAt).getTime()
@@ -19,7 +20,9 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
   const { postsInfo } = pageContext
 
   const cachedPosts = useMemo(
-    () => postsInfo?.sort(sortByPublishedAt).reverse() ?? [],
+    () => postsInfo?.filter(filterDummyPosts)
+      .sort(sortByPublishedAt)
+      .reverse() ?? [],
     [postsInfo],
   )
   const [posts, setPosts] = useState<PostInfo[]>(cachedPosts)
@@ -79,10 +82,10 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
           .filter((p: any) => !cachedPosts
             ?.some((cp: any) => cp.slug === p.slug
             )
-          )
+          ).filter(filterDummyPosts)
 
         setPosts([...cachedPosts, ...newPosts].sort(sortByPublishedAt).reverse())
-        
+
       } catch (err: any) {
         console.error(err)
         console.warn(
@@ -97,8 +100,7 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
 
   return (
     <DefaultLayout>
-      <T.H1>Blog</T.H1>
-      <FeaturedBlog posts={posts} />;
+      <FeaturedBlog posts={posts} />
     </DefaultLayout>
   )
 }

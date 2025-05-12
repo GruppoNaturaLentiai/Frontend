@@ -1,10 +1,13 @@
 import styled from "styled-components"
 import { colors } from "../../styles"
+import * as T from "../typography"
 
 // Styled components
 export const Container = styled.div`
+  margin-top: 2rem;
   padding: 2rem;
-  max-width: 800px;
+  padding-top: 3rem;
+  max-width: 1000px;
   margin: 0 auto;
 `
 
@@ -19,12 +22,17 @@ export const FeaturedPostWrapper = styled.article`
     transform: translateY(-5px);
     box-shadow: 0 6px 16px ${colors.green.green700}66;
   }
+  .gatsby-image-wrapper img {
+    width: 33%;
+    justify-self: center;
+  }
+  .cover-image {
+    width: 33%;
+  }
 `
 
-export const FeaturedImage = styled.img`
-  width: 100%;
-  height: auto;
-  display: block;
+export const CoverImgWrapper = styled.div`
+  text-align: center;
 `
 
 export const FeaturedContent = styled.div`
@@ -32,14 +40,12 @@ export const FeaturedContent = styled.div`
   background: #fff;
 `
 
-export const FeaturedTitle = styled.h2`
+export const FeaturedTitle = styled(T.H2)`
   margin: 0 0 0.5rem;
-  font-size: 2rem;
 `
 
-export const MetaInfo = styled.div`
-  font-size: 0.9rem;
-  color: #666;
+export const MetaInfo = styled(T.P3)`
+  color: ${colors.green.green600};
   margin-bottom: 1rem;
 `
 
@@ -75,13 +81,10 @@ export const CardContent = styled.div`
   flex: 1;
 `
 
-export const CardTitle = styled.h3`
+export const CardTitle = styled(T.H3)`
   margin: 0 0 0.5rem;
-  font-size: 1.25rem;
 `
 
-export const CardExcerpt = styled.p`
+export const CardExcerpt = styled(T.P3)`
   margin: 0 0 1rem;
-  font-size: 0.95rem;
-  color: #444;
 `
