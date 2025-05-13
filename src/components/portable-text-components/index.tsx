@@ -22,7 +22,6 @@ const Components: PortableTextReactComponents = {
             src={imageUrl}
             alt={value.textAlt || "Content image"}
             style={{
-              maxWidth: "50%",
               height: "auto",
               display: "block",
               margin: "1em 0",
