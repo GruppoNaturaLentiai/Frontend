@@ -31,7 +31,10 @@ const getImage = (post: any, featured: boolean = false) => {
       <GatsbyImage
         image={post.coverImage.gatsbyImage as IGatsbyImageData}
         alt={post.coverImage.altText ?? ""}
-        style={{ width: "30%", height: "auto" }}
+        style={{
+          width: featured ? "60%" : "30%",
+          height: "auto"
+        }}
       />
     )
   } else if (post.coverImage.renderImageUrl) {
