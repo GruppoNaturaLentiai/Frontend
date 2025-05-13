@@ -33,7 +33,7 @@ export const UpperContent = styled.div`
   flex-wrap: wrap;
   row-gap: 20px;
   column-gap: 30px;
-  @media (max-width: ${breakpointNum.medium}px) {
+  @media (max-width: ${breakpointNum.large}px) {
     & > *:nth-child(3) {
       display: flex;
       justify-content: center;
@@ -148,18 +148,10 @@ export const SponsorsWrapper = styled.div`
   gap: 15px;
   text-align: center;
   align-items: center;
+  min-width: 300px;
   > h3 {
     margin-top: 0;
   }
-`
-
-export const SponsorsLogosWrapper = styled.div`
-  max-width: 250px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
 `
 
 export const SponsorPlaceholder = styled.div`

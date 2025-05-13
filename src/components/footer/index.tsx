@@ -6,6 +6,7 @@ import contacts from "./../../data/contacts.json"
 
 import Icon from "../icons"
 import { Link } from "gatsby"
+import Sponsors from "../sponsors"
 
 const contactData = [
   {
@@ -108,14 +109,8 @@ const Footer: React.FC = () => {
             ))}
           </S.SitemapWrapper>
           <S.SponsorsWrapper>
-            <T.H3 $font="Caveat">I nostri sponsor</T.H3>
-            <S.SponsorsLogosWrapper>
-              <S.SponsorPlaceholder />
-              <S.SponsorPlaceholder />
-              <S.SponsorPlaceholder />
-              <S.SponsorPlaceholder />
-              <S.SponsorPlaceholder />
-            </S.SponsorsLogosWrapper>
+            <T.H2 $font="Caveat">I nostri sponsor</T.H2>
+            <Sponsors />
           </S.SponsorsWrapper>
         </S.UpperContent>
         <S.HorizontalSeparator />
@@ -178,14 +173,8 @@ const Footer: React.FC = () => {
             </S.ContactsLong>
           </S.LogoWrapper>
           <S.SponsorsWrapper>
-            <T.H3 $font="Caveat">I nostri sponsor</T.H3>
-            <S.SponsorsLogosWrapper>
-              <S.SponsorPlaceholder />
-              <S.SponsorPlaceholder />
-              <S.SponsorPlaceholder />
-              <S.SponsorPlaceholder />
-              <S.SponsorPlaceholder />
-            </S.SponsorsLogosWrapper>
+            <T.H2 $font="Caveat">I nostri sponsor</T.H2>
+            <Sponsors />
           </S.SponsorsWrapper>
           <S.SitemapWrapper>
             {footerSections.map((main, idx) => (
