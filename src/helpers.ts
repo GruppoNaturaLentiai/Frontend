@@ -23,4 +23,3 @@ export const fromBodyRawToExcerpt = (bodyRaw: any) =>
     .join(" ")
     .slice(0, 200)
     .concat("...")
-

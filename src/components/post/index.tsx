@@ -25,11 +25,14 @@ const Post: React.FC<PostProps> = ({
   coverImageAlt,
 }) => {
   return (
-    <article style={{ padding: 32 }}>
-      
+    <article style={{ padding: 32, overflow: "hidden" }}>
       <T.H1>{renderTitle}</T.H1>
       <S.AuthorDateWrapper>
-        {author && <T.P3>Di <span style={{ fontWeight: "bold" }}>{author}</span></T.P3>}
+        {author && (
+          <T.P3>
+            Di <span style={{ fontWeight: "bold" }}>{author}</span>
+          </T.P3>
+        )}
         <T.P3>{" | "}</T.P3>
         {renderPublishedAt && (
           <T.P3>
@@ -48,14 +51,13 @@ const Post: React.FC<PostProps> = ({
           <img
             src={renderImageUrl}
             alt={coverImageAlt}
-            style={{ maxWidth: "100%", height: "auto" }}
+            style={{ maxWidth: "100%", height: "auto", objectFit: "cover" }}
           />
         )}
       </S.CoverImageWrp>
       <PortableText value={renderBody} components={Components} />
-
     </article>
   )
 }
 
-export default Post 
+export default Post

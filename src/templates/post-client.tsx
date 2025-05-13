@@ -1,10 +1,8 @@
-import { PageProps } from "gatsby"
-import { IGatsbyImageData } from "gatsby-plugin-image"
+import { useLocation } from "@reach/router"
 import React, { useEffect, useState } from "react"
 import DefaultLayout from "../components/default-layout"
 import Post from "../components/post"
 import { remoteGraphqlURL } from "../constants"
-import { useLocation } from "@reach/router"
 
 // type for fetching remote data: dynamic fallback
 type RemotePost = {
@@ -26,8 +24,6 @@ type RemotePost = {
 }
 
 const PostClientTemplate: React.FC = () => {
-  console.log("Client template being called!")
-  
   const { pathname } = useLocation()
   const slug = pathname // Use the full path as the slug
 
@@ -36,7 +32,6 @@ const PostClientTemplate: React.FC = () => {
   const [error, setError] = useState<string | null>(null)
 
   const fetchPostData = async (slug: string) => {
-    console.log("Fetching data for!", slug)
     try {
       const query = `query {
         allPost {
@@ -71,7 +66,11 @@ const PostClientTemplate: React.FC = () => {
 
       // TODO typing
       const thePost = result.data.allPost
-        .filter((post: RemotePost) => post.slug.current === slug)
+        .filter(
+          (post: RemotePost) =>
+            post.slug.current === slug ||
+            post.slug.current === slug.slice(0, -1),
+        )
         .at(0)
       if (!thePost) {
         console.warn("No post found for slug", slug)
@@ -109,8 +108,8 @@ const PostClientTemplate: React.FC = () => {
   const renderImageUrl = post?.image?.asset?.url || null
 
   // Handle loading and error states
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error: {error}</p>
+  if (loading) return <p>Caricamento...</p>
+  if (error) return <p>Errore: {error}</p>
 
   return (
     <DefaultLayout>

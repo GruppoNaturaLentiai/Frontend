@@ -23,4 +23,3 @@ export const CoverImageWrp = styled.div`
     max-width: 100%;
   }
 `
-

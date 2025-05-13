@@ -24,7 +24,7 @@ interface BlogListProps {
   posts: PostInfo[]
 }
 
-const getImage = (post: any) => {
+const getImage = (post: any, featured: boolean = false) => {
   let image = null
   if (post.coverImage.gatsbyImage) {
     image = (
@@ -40,7 +40,11 @@ const getImage = (post: any) => {
         className="cover-image"
         src={post.coverImage.renderImageUrl}
         alt={post.coverImage.altText ?? ""}
-        style={{ height: "auto" }}
+        style={{
+          height: "auto",
+          objectFit: "cover",
+          maxHeight: featured ? "400px" : "150px",
+        }}
       />
     )
   }
@@ -66,9 +70,7 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({ posts }) => {
     <S.Container>
       {/* Featured Post */}
       <S.FeaturedPostWrapper onClick={() => navigate(`${featured.slug}`)}>
-        <S.CoverImgWrapper>
-          {getImage(featured)}
-        </S.CoverImgWrapper>
+        <S.CoverImgWrapper>{getImage(featured, true)}</S.CoverImgWrapper>
         <S.FeaturedContent>
           <S.FeaturedTitle>{featured.title}</S.FeaturedTitle>
           <S.MetaInfo>
@@ -77,8 +79,8 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({ posts }) => {
               year: "numeric",
               month: "long",
               day: "numeric",
-            })} •{" "}
-            {featured.author}
+            })}{" "}
+            • {featured.author}
           </S.MetaInfo>
           <T.P3>{featured.excerpt}</T.P3>
         </S.FeaturedContent>
@@ -89,9 +91,7 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({ posts }) => {
         {others.map(post => {
           return (
             <S.Card key={post.slug} onClick={() => navigate(`${post.slug}`)}>
-              <S.CoverImgWrapper>
-                {getImage(post)}
-              </S.CoverImgWrapper>
+              <S.CoverImgWrapper>{getImage(post, false)}</S.CoverImgWrapper>
               <S.CardContent>
                 <S.CardTitle>{post.title}</S.CardTitle>
                 <S.MetaInfo>
@@ -100,8 +100,8 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({ posts }) => {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
-                  })} •{" "}
-                  {post.author}
+                  })}{" "}
+                  • {post.author}
                 </S.MetaInfo>
                 <S.CardExcerpt>{post.excerpt}</S.CardExcerpt>
               </S.CardContent>

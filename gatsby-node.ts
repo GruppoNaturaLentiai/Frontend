@@ -78,10 +78,9 @@ export const createPages: GatsbyNode["createPages"] = async ({
   // 2️⃣ Client-only fallback for any /post/* not built
   createPage({
     path: `/post`,
-    matchPath: `/post/*`,     // catch everything under /post/…
+    matchPath: `/post/*`, // catch everything under /post/…
     component: path.resolve(`src/templates/post-client.tsx`),
   })
-
 
   // BLOG PAGE
   // Create the blog page injecting the posts info
@@ -111,9 +110,9 @@ export const createPages: GatsbyNode["createPages"] = async ({
       }
     }) ?? []
 
-    createPage({
-      path: "blog",
-      component: path.resolve("src/templates/blog.tsx"),
-      context: { postsInfo },
-    })
+  createPage({
+    path: "blog",
+    component: path.resolve("src/templates/blog.tsx"),
+    context: { postsInfo },
+  })
 }

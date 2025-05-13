@@ -19,7 +19,6 @@ type PostPageContext = {
   }
 }
 
-
 const PostTemplate: React.FC<PageProps<{}, PostPageContext>> = ({
   pageContext,
 }) => {

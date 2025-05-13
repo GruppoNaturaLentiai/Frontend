@@ -20,9 +20,9 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
   const { postsInfo } = pageContext
 
   const cachedPosts = useMemo(
-    () => postsInfo?.filter(filterDummyPosts)
-      .sort(sortByPublishedAt)
-      .reverse() ?? [],
+    () =>
+      postsInfo?.filter(filterDummyPosts).sort(sortByPublishedAt).reverse() ??
+      [],
     [postsInfo],
   )
   const [posts, setPosts] = useState<PostInfo[]>(cachedPosts)
@@ -83,13 +83,14 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
         )
 
         const newPosts = remotePosts
-          .filter((p: any) => !cachedPosts
-            ?.some((cp: any) => cp.slug === p.slug
-            )
-          ).filter(filterDummyPosts)
+          .filter(
+            (p: any) => !cachedPosts?.some((cp: any) => cp.slug === p.slug),
+          )
+          .filter(filterDummyPosts)
 
-        setPosts([...cachedPosts, ...newPosts].sort(sortByPublishedAt).reverse())
-
+        setPosts(
+          [...cachedPosts, ...newPosts].sort(sortByPublishedAt).reverse(),
+        )
       } catch (err: any) {
         console.error(err)
         console.warn(
