@@ -52,7 +52,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
     return
   }
 
-  // Create pages for each post
+  // 1️⃣ Static pages for known slugs
   posts.forEach((post: any) => {
     if (post.slug?.current) {
       createPage({
@@ -75,6 +75,15 @@ export const createPages: GatsbyNode["createPages"] = async ({
     }
   })
 
+  // 2️⃣ Client-only fallback for any /post/* not built
+  createPage({
+    path: `/post`,
+    matchPath: `/post/*`,     // catch everything under /post/…
+    component: path.resolve(`src/templates/post-client.tsx`),
+  })
+
+
+  // BLOG PAGE
   // Create the blog page injecting the posts info
   const postsInfo =
     posts.map((post: any) => {
@@ -101,9 +110,10 @@ export const createPages: GatsbyNode["createPages"] = async ({
         },
       }
     }) ?? []
-  createPage({
-    path: "blog",
-    component: path.resolve("src/templates/blog.tsx"),
-    context: { postsInfo },
-  })
+
+    createPage({
+      path: "blog",
+      component: path.resolve("src/templates/blog.tsx"),
+      context: { postsInfo },
+    })
 }
