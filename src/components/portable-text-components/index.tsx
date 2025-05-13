@@ -17,22 +17,20 @@ const Components: PortableTextReactComponents = {
       if (!imageUrl) return null
 
       return (
-        <S.ImageWrapper $position={value.position}>
-          <div>
-            <S.ResponsiveImg
-              src={imageUrl}
-              alt={value.textAlt || "Content image"}
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-                display: "block",
-                margin: "1em 0",
-              }}
-            />
-            {value.undertext && (
-              <S.ImgDescription>{value.undertext}</S.ImgDescription>
-            )}
-          </div>
+        <S.ImageWrapper $position={value.position ?? "center"}>
+          <S.ResponsiveImg
+            src={imageUrl}
+            alt={value.textAlt || "Content image"}
+            style={{
+              maxWidth: "50%",
+              height: "auto",
+              display: "block",
+              margin: "1em 0",
+            }}
+          />
+          {value.undertext && (
+            <S.ImgDescription>{value.undertext}</S.ImgDescription>
+          )}
         </S.ImageWrapper>
       )
     },
