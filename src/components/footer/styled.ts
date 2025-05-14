@@ -33,6 +33,10 @@ export const UpperContent = styled.div`
   flex-wrap: wrap;
   row-gap: 20px;
   column-gap: 30px;
+  @media (max-width: ${breakpointNum.medium}px) {
+    justify-content: center;
+    column-gap: 50px;
+  }
   @media (max-width: ${breakpointNum.large}px) {
     & > *:nth-child(3) {
       display: flex;
@@ -41,7 +45,7 @@ export const UpperContent = styled.div`
     }
   }
 
-  @media (max-width: ${breakpointNum.tablet}px) {
+  @media (max-width: ${breakpointNum.bigtablet}px) {
     justify-content: center;
   }
 `

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Sponsor = styled.div`
-  background-color: white;
   max-height: 50px;
   max-width: 120px;
   min-block-size: fit-content;
