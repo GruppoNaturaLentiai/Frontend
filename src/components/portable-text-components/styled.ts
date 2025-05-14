@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import * as T from "../typography"
+import { breakpointNum } from "../../styles"
 
 export const ImageWrapper = styled.div<{
   $position?: "left" | "right" | "center"
@@ -21,10 +22,17 @@ export const ImageWrapper = styled.div<{
 `
 
 export const ResponsiveImg = styled.img`
-  max-width: "100%";
-  height: "auto";
-  display: "block";
-  margin: "1em 0";
+  height: auto;
+  display: block;
+  margin: 1em 0;
+  max-width: 50%;
+  object-fit: contain;
+  @media (max-width: ${breakpointNum.bigtablet}px) {
+    max-width: 80%;
+  }
+  @media (max-width: ${breakpointNum.smalltablet}px) {
+    max-width: 100%;
+  }
 `
 
 export const ImgDescription = styled(T.P4)`

@@ -25,7 +25,7 @@ export const TextWrapper = styled.div`
   margin-top: 10px;
   position: absolute;
   z-index: 4;
-  max-width: calc(100% - 140px);
+  max-width: calc(100% - 75px);
   text-align: center;
   user-select: none;
 
@@ -45,7 +45,8 @@ export const TextWrapper = styled.div`
   > * {
     color: ${colors.green.green100};
     position: relative;
-    max-width: 1000px;
+    max-width: 1025px;
+    padding-left: 5px;
   }
 
   @media (max-width: ${breakpointNum.medium}px) {
@@ -63,6 +64,7 @@ export const TextWrapper = styled.div`
     max-width: none;
     > * {
       color: ${colors.green.green950};
+      padding-left: none;
     }
   }
 

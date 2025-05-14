@@ -8,7 +8,7 @@ import { ImageData } from "../types"
 const content = {
   quote:
     "“Il Creato non è una proprietà di cui possiamo spadroneggiare a nostro piacimento; né, tanto meno, è una proprietà solo di alcuni, di pochi: il Creato è un dono, un dono meraviglioso che Dio ci ha dato perché ne abbiamo cura e lo utilizziamo a beneficio di tutti, sempre con grande rispetto e gratitudine.”",
-  signature: 'Papa Francesco <span style="font-family: Caveat"> XVI </span>',
+  signature: 'Papa Francesco',
 }
 
 const IndexPage: React.FC<PageProps> = () => {
