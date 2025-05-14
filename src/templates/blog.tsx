@@ -56,11 +56,7 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
           body: JSON.stringify({ query }),
         })
 
-        console.log("Response", response)
-
         const result = await response.json()
-
-        console.log("Result", result)
 
         if (result.errors) {
           throw new Error(result.errors[0].message)

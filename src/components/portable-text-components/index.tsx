@@ -8,6 +8,12 @@ import { getSanityImageUrl } from "../../helpers"
 import * as S from "./styled"
 import * as T from "../typography"
 
+const InlineText = ({ children }: { children: React.ReactNode }) => (
+  <T.P1 as="span" style={{ display: "inline", margin: 0, lineHeight: "inherit" }}>
+    {children}
+  </T.P1>
+)
+
 const Components: PortableTextReactComponents = {
   types: {
     image: ({ value }: { value: any }) => {
@@ -63,12 +69,8 @@ const Components: PortableTextReactComponents = {
     ),
   },
   listItem: {
-    bullet: ({ children }: PortableTextComponentProps<any>) => (
-      <li>{children}</li>
-    ),
-    number: ({ children }: PortableTextComponentProps<any>) => (
-      <li>{children}</li>
-    ),
+    bullet: ({ children }) => <li><InlineText>{children}</InlineText></li>,
+    number: ({ children }) => <li><InlineText>{children}</InlineText></li>,
   },
   hardBreak: () => <br />,
   unknownMark: ({ children }: PortableTextMarkComponentProps<any>) => (
