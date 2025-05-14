@@ -39,11 +39,11 @@ const sponsors = [
     logo: walber,
     url: "https://www.walber.it/punto-vendita/lentiai",
   },
-  {
-    name: "FPB Cassa di Fassa Primiero Belluno",
-    logo: fpb,
-    url: "https://www.fpbcassa.it/",
-  },
+  // {
+  //   name: "FPB Cassa di Fassa Primiero Belluno",
+  //   logo: fpb,
+  //   url: "https://www.fpbcassa.it/",
+  // },
 ]
 
 import * as S from "./styled"
