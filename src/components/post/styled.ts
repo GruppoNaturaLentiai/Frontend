@@ -1,6 +1,17 @@
 import styled from "styled-components"
 import { breakpoint } from "../../styles"
 
+export const Article = styled.article`
+  padding: 64px;
+  overflow: hidden;
+  @media (max-width: ${breakpoint.tablet}) {
+    padding: 32px;
+  }
+  @media (max-width: ${breakpoint.mobile}) {
+    padding: 16px;
+  }
+`
+
 export const AuthorDateWrapper = styled.div`
   display: flex;
   flex-direction: row;

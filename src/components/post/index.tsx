@@ -25,7 +25,7 @@ const Post: React.FC<PostProps> = ({
   coverImageAlt,
 }) => {
   return (
-    <article style={{ padding: 32, overflow: "hidden" }}>
+    <S.Article>
       <T.H1>{renderTitle}</T.H1>
       <S.AuthorDateWrapper>
         {author && (
@@ -56,7 +56,7 @@ const Post: React.FC<PostProps> = ({
         )}
       </S.CoverImageWrp>
       <PortableText value={renderBody} components={Components} />
-    </article>
+    </S.Article>
   )
 }
 
