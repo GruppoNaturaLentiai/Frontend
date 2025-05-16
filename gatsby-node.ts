@@ -2,6 +2,7 @@ import { GatsbyNode } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import _ from "lodash"
 import path from "path"
+import { fromBodyRawToExcerpt } from "./src/helpers"
 
 export const createPages: GatsbyNode["createPages"] = async ({
   graphql,
@@ -86,11 +87,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
   // Create the blog page injecting the posts info
   const postsInfo =
     posts.map((post: any) => {
-      const texts = post._rawBody
-        .filter((c: any) => c._type === "block")
-        .map((c: any) => c.children[0].text)
-        .join(". ")
-        .slice(0, 200)
+      const texts = fromBodyRawToExcerpt(post._rawBody)
 
       return {
         id: post?.id,

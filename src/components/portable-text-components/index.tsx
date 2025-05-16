@@ -9,7 +9,7 @@ import * as S from "./styled"
 import * as T from "../typography"
 
 const InlineText = ({ children }: { children: React.ReactNode }) => (
-  <T.P1 as="span" style={{ display: "inline", margin: 0, lineHeight: "inherit" }}>
+  <T.P1 as="span" style={{ display: "inline", margin: 0, lineHeight: "2em" }}>
     {children}
   </T.P1>
 )
