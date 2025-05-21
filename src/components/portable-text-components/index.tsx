@@ -44,6 +44,15 @@ const Components: PortableTextReactComponents = {
     normal: ({ children }) => (
       <T.P1 style={{ lineHeight: "1.6", margin: "1em 0" }}>{children}</T.P1>
     ),
+    h1: ({ children }) => (
+      <T.H1 style={{ margin: "1.2em 0 0.6em" }}>{children}</T.H1>
+    ),
+    h2: ({ children }) => (
+      <T.H2 style={{ margin: "1.2em 0 0.6em" }}>{children}</T.H2>
+    ),
+    h3: ({ children }) => (
+      <T.H3 style={{ margin: "1.2em 0 0.6em" }}>{children}</T.H3>
+    ),
   },
   marks: {
     link: ({ value, children }: PortableTextMarkComponentProps<any>) => {

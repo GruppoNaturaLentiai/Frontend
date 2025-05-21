@@ -1,5 +1,7 @@
 import React from "react"
 
+import * as S from "./styled"
+
 import auser from '../../logos/auser.png'
 import geometrie from '../../logos/geometrie-d-arredo.png'
 import offredi from '../../logos/offredi.png'
@@ -15,9 +17,19 @@ const sponsors = [
     url: "https://www.auser.veneto.it/belluno-alnarciso/dove-siamo.html",
   },
   {
+    name: "Unifarco",
+    logo: unifarco,
+    url: "https://www.unifarco.it/",
+  },
+  {
     name: "Geometrie D'Arredo",
     logo: geometrie,
     url: "https://www.geometriedarredo.it/",
+  },
+  {
+    name: "FPB Cassa di Fassa Primiero Belluno",
+    logo: fpb,
+    url: "https://www.fpbcassa.it/",
   },
   {
     name: "Offredi Ofsolar",
@@ -25,28 +37,16 @@ const sponsors = [
     url: "https://www.offrediofsolar.it/",
   },
   {
-    name: "Farmacia Dr. A. Zampol",
-    logo: farmacia,
-    url: "https://www.farmaciedelpiave.it/farmacia-zampol-d-ortia.php",
-  },
-  {
-    name: "Unifarco",
-    logo: unifarco,
-    url: "https://www.unifarco.it/",
-  },
-  {
     name: "Supermercati Walber",
     logo: walber,
     url: "https://www.walber.it/punto-vendita/lentiai",
   },
-  // {
-  //   name: "FPB Cassa di Fassa Primiero Belluno",
-  //   logo: fpb,
-  //   url: "https://www.fpbcassa.it/",
-  // },
+  {
+    name: "Farmacia Dr. A. Zampol",
+    logo: farmacia,
+    url: "https://www.farmaciedelpiave.it/farmacia-zampol-d-ortia.php",
+  },
 ]
-
-import * as S from "./styled"
 
 const Sponsors = () => {
   return (
