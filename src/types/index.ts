@@ -58,7 +58,7 @@ export type DataJSONType = (
 )[]
 
 export type Location = {
-  iconType?: "default" | "park"
+  iconType?: "default" | "park" | "daffodil"
   name: string
   lat: number
   lon: number

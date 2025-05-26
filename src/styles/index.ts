@@ -49,5 +49,8 @@ export const colors = {
     moonstone: "#009FB7",
     indigo: "#3A1772",
     liver: "#654236",
+    orange: "#FF9030",
+    green: "#446b34",
+    yellow: "#FFD700",
   },
 }
