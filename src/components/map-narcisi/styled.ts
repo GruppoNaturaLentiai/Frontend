@@ -63,6 +63,7 @@ export const PathInfo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 110px;
 `
 
 export const PathInfoUpper = styled.div`

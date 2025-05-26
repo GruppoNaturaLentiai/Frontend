@@ -114,49 +114,51 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
           </S.LegendElement>
         ))}
       </S.Legend>
-      {showPathInfo && (
-        <S.PathInfo>
-          <S.PathInfoUpper>
-            <S.PathInfoElement>
-              <S.PathInfoIcon>
-                <Icon type="time" />
-              </S.PathInfoIcon>
-              <T.P2>{showPathInfo.time}</T.P2>
-            </S.PathInfoElement>
-            <S.PathInfoElement>
-              <S.PathInfoIcon>
-                <Icon type="totDistance" />
-              </S.PathInfoIcon>
-              <T.P2>{showPathInfo.totDistance}</T.P2>
-            </S.PathInfoElement>
-            <S.PathInfoElement>
-              <S.PathInfoIcon>
-                <Icon type={showPathInfo.type === "andata" ? "andata" : "andata-ritorno"} />
-              </S.PathInfoIcon>
-              <T.P2>{showPathInfo.type}</T.P2>
-            </S.PathInfoElement>
-            <S.PathInfoElement>
-              <S.PathInfoIcon>
-                <Icon type="posElevation" />
-              </S.PathInfoIcon>
-              <T.P2>{showPathInfo.posElevation}</T.P2>
-            </S.PathInfoElement>
-            <S.PathInfoElement>
-              <S.PathInfoIcon>
-                <Icon type="negElevation" />
-              </S.PathInfoIcon>
-              <T.P2>{showPathInfo.negElevation}</T.P2>
-            </S.PathInfoElement>
-            <S.PathInfoElement>
-              <S.PathInfoIcon>
-                <Icon type="hiker" />
-              </S.PathInfoIcon>
-              <T.P2>{showPathInfo.difficulty}</T.P2>
-            </S.PathInfoElement>
-          </S.PathInfoUpper>
-          <T.P2>{showPathInfo.notes}</T.P2>
-        </S.PathInfo>
-      )}
+      <S.PathInfo>
+        {showPathInfo && (
+          <>
+            <S.PathInfoUpper>
+              <S.PathInfoElement>
+                <S.PathInfoIcon>
+                  <Icon type="time" />
+                </S.PathInfoIcon>
+                <T.P2>{showPathInfo.time}</T.P2>
+              </S.PathInfoElement>
+              <S.PathInfoElement>
+                <S.PathInfoIcon>
+                  <Icon type="totDistance" />
+                </S.PathInfoIcon>
+                <T.P2>{showPathInfo.totDistance}</T.P2>
+              </S.PathInfoElement>
+              <S.PathInfoElement>
+                <S.PathInfoIcon>
+                  <Icon type={showPathInfo.type === "andata" ? "andata" : "andata-ritorno"} />
+                </S.PathInfoIcon>
+                <T.P2>{showPathInfo.type}</T.P2>
+              </S.PathInfoElement>
+              <S.PathInfoElement>
+                <S.PathInfoIcon>
+                  <Icon type="posElevation" />
+                </S.PathInfoIcon>
+                <T.P2>{showPathInfo.posElevation}</T.P2>
+              </S.PathInfoElement>
+              <S.PathInfoElement>
+                <S.PathInfoIcon>
+                  <Icon type="negElevation" />
+                </S.PathInfoIcon>
+                <T.P2>{showPathInfo.negElevation}</T.P2>
+              </S.PathInfoElement>
+              <S.PathInfoElement>
+                <S.PathInfoIcon>
+                  <Icon type="hiker" />
+                </S.PathInfoIcon>
+                <T.P2>{showPathInfo.difficulty}</T.P2>
+              </S.PathInfoElement>
+            </S.PathInfoUpper>
+            <T.P2>{showPathInfo.notes}</T.P2>
+          </>
+        )}
+      </S.PathInfo>
       <MapContainer
         style={{ height: "500px", width: "100%" }}
         center={chaletColDArtent}

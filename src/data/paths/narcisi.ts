@@ -234,7 +234,7 @@ const paths = [
         time: "2h 50m",
         totDistance: "5.1km",
         posElevation: "800m",
-        negElevation: "92m",
+        negElevation: "90m",
         color: colors.paths.mustard,
         mean: "foot" as "foot",
         type: "Andata",
