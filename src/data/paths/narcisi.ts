@@ -227,7 +227,7 @@ const paths = [
         ] as [number, number][]
     },
     {
-        legend: "Stabie - Col Moscher",
+        legend: "Carrettiera Stabie - Col Moscher",
         key: "stabie-col-moscher",
         difficulty: "Medio-Facile",
         notes: "Escursione di difficoltà media. Sentieri facilmente percorribili. Non presenta particolari difficoltà se non la lunghezza del percorso e il dislivello.",
