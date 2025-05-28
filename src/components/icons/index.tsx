@@ -15,6 +15,13 @@ import { ReactComponent as DogLeash } from "./../../icons/dog-leash.svg"
 import { ReactComponent as Litter } from "./../../icons/litter.svg"
 import { ReactComponent as Crop } from "./../../icons/crop.svg"
 import { ReactComponent as ElectricDanger } from "./../../icons/electric-fence.svg"
+import { ReactComponent as UpRightArrow } from "./../../icons/arrow-up-right.svg"
+import { ReactComponent as DownRightArrow } from "./../../icons/arrow-down-right.svg"
+import { ReactComponent as RoundArrow } from "./../../icons/round-arrow.svg"
+import { ReactComponent as Clock } from "./../../icons/clock.svg"
+import { ReactComponent as RightArrow } from "./../../icons/arrow-right.svg"
+import { ReactComponent as Hiker } from "./../../icons/hiker.svg"
+
 
 interface IconsProps {
   type: string
@@ -56,6 +63,20 @@ const Icon: React.FC<IconsProps> = ({ type, ...props }) => {
       return <Crop viewBox="0 0 365 367" {...props} />
     case "electric-fence":
       return <ElectricDanger viewBox="0 0 592 879" {...props} />
+    case "time":
+      return <Clock viewBox="0 0 24 24" {...props} />
+    case "difficulty":
+    case "posElevation":
+      return <UpRightArrow viewBox="0 0 24 24" {...props} />
+    case "negElevation":
+      return <DownRightArrow viewBox="0 0 24 24" {...props} />
+    case "andata":
+    case "totDistance":
+      return <RightArrow viewBox="0 0 24 24" {...props} />
+    case "andata-ritorno":
+      return <RoundArrow viewBox="0 0 520 520" {...props} />
+    case "hiker":
+      return <Hiker viewBox="0 0 115 130" {...props} />
     default:
       return null
   }

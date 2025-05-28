@@ -4,12 +4,12 @@ import { breakpoint, colors, horizBreakpointsHeight } from "../../styles"
 export const fontSizes = {
   h1: 42,
   h2: 28,
-  h3: 18,
-  h4: 15,
-  h5: 13,
-  h6: 11,
-  h7: 10,
-  h8: 9,
+  h3: 22,
+  h4: 18,
+  h5: 15,
+  h6: 13,
+  h7: 11,
+  h8: 10,
   p1: 22,
   p2: 18,
   p3: 16,
@@ -82,11 +82,11 @@ export const H3 = styled.h3<{
   ${({ $font }) => $font && `font-family: ${$font};`}
   ${({ $textAlign }) => $textAlign && `text-align: ${$textAlign};`}
   @media (max-width: ${breakpoint.tablet}) {
-    font-size: ${fontSizes.h4}px;
+    font-size: ${fontSizes.h3}px;
   }
   @media (max-width: ${breakpoint.mobile}),
     (max-height: ${horizBreakpointsHeight.medium}px) {
-    font-size: ${fontSizes.h5}px;
+    font-size: ${fontSizes.h4}px;
   }
 `
 
