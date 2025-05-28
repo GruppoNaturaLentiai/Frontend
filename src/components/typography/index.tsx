@@ -82,11 +82,11 @@ export const H3 = styled.h3<{
   ${({ $font }) => $font && `font-family: ${$font};`}
   ${({ $textAlign }) => $textAlign && `text-align: ${$textAlign};`}
   @media (max-width: ${breakpoint.tablet}) {
-    font-size: ${fontSizes.h4}px;
+    font-size: ${fontSizes.h3}px;
   }
   @media (max-width: ${breakpoint.mobile}),
     (max-height: ${horizBreakpointsHeight.medium}px) {
-    font-size: ${fontSizes.h5}px;
+    font-size: ${fontSizes.h4}px;
   }
 `
 
