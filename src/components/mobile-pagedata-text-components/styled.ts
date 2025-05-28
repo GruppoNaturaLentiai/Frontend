@@ -73,7 +73,7 @@ export const ReadMoreWrapper = styled.div<{
   ${({ $isShort }) => $isShort && "display:none;"}
   cursor: pointer;
   position: absolute;
-  top: 2.3em;
+  top: 1.3em;
   z-index: 10;
   justify-self: anchor-center;
   ${({ $isExpanded }) => $isExpanded && "position: unset;"}
@@ -98,6 +98,6 @@ export const ReadMoreWrapper = styled.div<{
     top: 2em;
   }
   @media (max-width: ${breakpointNum.mobile}px) {
-    top: 4.2em;
+    top: 3.2em;
   }
 `
