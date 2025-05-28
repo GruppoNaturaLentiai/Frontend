@@ -29,7 +29,7 @@ const Header: React.FC = () => {
                 onMouseLeave={() => setMenuOpen("")}
               >
                 <Link to={el.url}>
-                  <T.H4>{el.label}</T.H4>
+                  <T.H5>{el.label}</T.H5>
                 </Link>
                 {el.subsections && (
                   <S.SubsectionList
@@ -39,7 +39,7 @@ const Header: React.FC = () => {
                     {el.subsections.map(subSection => (
                       <S.SubsectionItem key={subSection.url}>
                         <Link to={subSection.url}>
-                          <T.H4>{subSection.label}</T.H4>
+                          <T.H5>{subSection.label}</T.H5>
                         </Link>
                       </S.SubsectionItem>
                     ))}
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
                         setMenuOpen("")
                       }}
                     >
-                      <T.H2>{el.label}</T.H2>
+                      <T.H3>{el.label}</T.H3>
                     </Link>
                   </S.LinkIcon>
                 ) : (
@@ -103,7 +103,7 @@ const Header: React.FC = () => {
                       setMenuOpen("")
                     }}
                   >
-                    <T.H2>{el.label}</T.H2>
+                    <T.H3>{el.label}</T.H3>
                   </Link>
                 )}
                 {el.subsections && (
@@ -114,7 +114,7 @@ const Header: React.FC = () => {
                           to={subSection.url}
                           onClick={() => setMobileMenuOpen(false)}
                         >
-                          <T.H2>{subSection.label}</T.H2>
+                          <T.H4>{subSection.label}</T.H4>
                         </Link>
                       </li>
                     ))}
