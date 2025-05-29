@@ -1,7 +1,6 @@
 {
-  "phone": "+393711847744",
-  "phone-spaced": "+39 371 184 7744",
-  "email": "grupponaturalentiai@libero.it",
+  "phone": ["+39", "371", "184", "7744"],
+  "email": ["gruppo", "natura", "lentiai", "@", "libero", ".", "it"],
   "youtube": "https://www.youtube.com/channel/UCbP1HqPAvI5Ofoatb9MzZmQ",
   "facebook-laghetti": "https://www.facebook.com/profile.php?id=100064320537208",
   "facebook-narcisi": "https://www.facebook.com/profile.php?id=100069990139319"

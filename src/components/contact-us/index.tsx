@@ -4,57 +4,54 @@ import Icon from "../icons"
 import * as T from "./../typography"
 import contacts from "./../../data/contacts.json"
 
-const contactData = [
-  {
-    icon: <Icon type="facebook" width={32} />,
-    text: "I Laghetti della Rimonta - Bardies ",
-    linkURL: contacts["facebook-laghetti"],
-    onClickHandler: undefined,
-  },
-  {
-    icon: <Icon type="facebook" width={32} />,
-    text: "Borgo Valbelluna-montagna-narcisi ",
-    linkURL: contacts["facebook-narcisi"],
-    onClickHandler: undefined,
-  },
-  {
-    icon: <Icon type="youtube" width={32} />,
-    text: "Gruppo Natura Lentiai",
-    linkURL: contacts["youtube"],
-    onClickHandler: undefined,
-  },
-  {
-    icon: <Icon type="phone" width={32} />,
-    text: contacts["phone-spaced"],
-    linkURL: undefined,
-    onClickHandler: () => {
-      window.location.href = `tel:${phoneNumber}`
-    },
-  },
-  {
-    icon: <Icon type="whatsapp" width={32} />,
-    text: contacts["phone-spaced"],
-    linkURL: undefined,
-    onClickHandler: () => {
-      window.open(whatsappUrl, "_blank")
-    },
-  },
-  {
-    icon: <Icon type="email" width={32} />,
-    text: contacts["email"],
-    linkURL: undefined,
-    onClickHandler: () => {
-      window.location.href = `mailto:${email}`
-    },
-  },
-]
+const ContactUs = () => {
 
-const phoneNumber = contacts["phone"]
-const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\D/g, "")}`
-const email = contacts["email"]
+  const contactData = [
+    {
+      icon: <Icon type="facebook" width={32} />,
+      text: "I Laghetti della Rimonta - Bardies ",
+      linkURL: contacts["facebook-laghetti"],
+      onClickHandler: undefined,
+    },
+    {
+      icon: <Icon type="facebook" width={32} />,
+      text: "Borgo Valbelluna-montagna-narcisi ",
+      linkURL: contacts["facebook-narcisi"],
+      onClickHandler: undefined,
+    },
+    {
+      icon: <Icon type="youtube" width={32} />,
+      text: "Gruppo Natura Lentiai",
+      linkURL: contacts["youtube"],
+      onClickHandler: undefined,
+    },
+    {
+      icon: <Icon type="phone" width={32} />,
+      text: contacts["phone"].join(" "),
+      linkURL: undefined,
+      onClickHandler: () => {
+        window.location.href = `tel:${contacts["phone"].join("")}`
+      },
+    },
+    {
+      icon: <Icon type="whatsapp" width={32} />,
+      text: contacts["phone"].join(" "),
+      linkURL: undefined,
+      onClickHandler: () => {
+        window.open(`https://wa.me/${contacts["phone"].join("").replace(/\D/g, "")}`, "_blank")
+      },
+    },
+    {
+      icon: <Icon type="email" width={32} />,
+      text: contacts["email"].join(""),
+      linkURL: undefined,
+      onClickHandler: () => {
+        window.location.href = `mailto:${contacts["email"].join("")}`
+      },
+    },
+  ]
 
-const ContactUs = () => (
-  <S.Wrapper>
+  return (< S.Wrapper >
     <S.Title $font="Caveat">Contattaci!</S.Title>
     <S.ContactsWrapper>
       {contactData.map((el, idx) => (
@@ -80,7 +77,7 @@ const ContactUs = () => (
         </S.Row>
       ))}
     </S.ContactsWrapper>
-  </S.Wrapper>
-)
+  </S.Wrapper >)
+}
 
 export default ContactUs

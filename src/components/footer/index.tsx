@@ -28,7 +28,7 @@ const contactData = [
     icon: <Icon type="whatsapp" width={25} />,
     text: "Whatsapp",
     onClick: () => {
-      const whatsappUrl = `https://wa.me/${contacts["phone"].replace(/\D/g, "")}`
+      const whatsappUrl = `https://wa.me/${contacts["phone"].join("").replace(/\D/g, "")}`
       window.open(whatsappUrl, "_blank")
     },
   },
@@ -67,10 +67,10 @@ const Footer: React.FC = () => {
             </S.ContactsIcons>
             <S.ContactsLong>
               <S.ContactsLongText>
-                <T.H3>Email: </T.H3>
+                <T.H3>Email:  </T.H3>
                 <T.H4
                   onClick={() => {
-                    window.location.href = `mailto:${contacts["email"]}`
+                    window.location.href = `mailto:${contacts["email"].join("")}`
                   }}
                 >
                   {contacts["email"]}
@@ -80,10 +80,10 @@ const Footer: React.FC = () => {
                 <T.H3>Telefono: </T.H3>
                 <T.H4
                   onClick={() => {
-                    window.location.href = `tel:${contacts["phone"]}`
+                    window.location.href = `tel:${contacts["phone"].join("")}`
                   }}
                 >
-                  {contacts["phone-spaced"]}
+                  {contacts["phone"].join(" ")}
                 </T.H4>
               </S.ContactsLongText>
             </S.ContactsLong>
@@ -154,7 +154,7 @@ const Footer: React.FC = () => {
                 <T.H3>Email: </T.H3>
                 <T.H4
                   onClick={() => {
-                    window.location.href = `mailto:${contacts["email"]}`
+                    window.location.href = `mailto:${contacts["email"].join("")}`
                   }}
                 >
                   {contacts["email"]}
@@ -164,10 +164,10 @@ const Footer: React.FC = () => {
                 <T.H3>Telefono: </T.H3>
                 <T.H4
                   onClick={() => {
-                    window.location.href = `tel:${contacts["phone"]}`
+                    window.location.href = `tel:${contacts["phone"].join("")}`
                   }}
                 >
-                  {contacts["phone-spaced"]}
+                  {contacts["phone"].join(" ")}
                 </T.H4>
               </S.ContactsLongText>
             </S.ContactsLong>
