@@ -10,6 +10,7 @@ import unifarco from '../../logos/unifarco.png'
 import walber from '../../logos/superw.png'
 import fpb from '../../logos/fpb-cassa.png'
 import dolomitiCanapa from '../../logos/dolomiti-canapa.png'
+import bonTajer from '../../logos/bon-tajer.png'
 
 const sponsors = [
   {
@@ -33,14 +34,14 @@ const sponsors = [
     url: "https://www.fpbcassa.it/",
   },
   {
-    name: "Supermercati Walber",
-    logo: walber,
-    url: "https://www.walber.it/punto-vendita/lentiai",
-  },
-  {
     name: "Farmacia Dr. A. Zampol",
     logo: farmacia,
     url: "https://www.farmaciedelpiave.it/farmacia-zampol-d-ortia.php",
+  },
+  {
+    name: "Bon Tajer",
+    logo: bonTajer,
+    url: "https://bontajer.it/",
   },
   {
     name: "Offredi Ofsolar",
@@ -48,10 +49,15 @@ const sponsors = [
     url: "https://www.offrediofsolar.it/",
   },
   {
+    name: "Supermercati Walber",
+    logo: walber,
+    url: "https://www.walber.it/punto-vendita/lentiai",
+  },
+  {
     name: "Dolomiti Canapa",
     logo: dolomitiCanapa,
     url: "https://www.dolomiticanapa.com/",
-  }
+  },
 ]
 
 const Sponsors = () => {
