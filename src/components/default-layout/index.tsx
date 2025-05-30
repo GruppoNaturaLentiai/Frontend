@@ -1,6 +1,7 @@
 import React from "react"
 import Footer from "../footer"
 import Header from "../header"
+import CookieBanner from "../cookie-banner"
 import * as S from "./styled"
 
 const DefaultLayout: React.FC<{ children: any }> = ({ children }) => {
@@ -8,6 +9,7 @@ const DefaultLayout: React.FC<{ children: any }> = ({ children }) => {
     <>
       <Header />
       <S.Wrapper>{children}</S.Wrapper>
+      <CookieBanner />
       <Footer />
     </>
   )
