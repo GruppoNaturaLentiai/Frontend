@@ -21,10 +21,7 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
 
   const cachedPosts = useMemo(
     () =>
-      postsInfo
-        ?.filter(filterDummyPosts)
-        .sort(sortByPublishedAt)
-        .reverse() ??
+      postsInfo?.filter(filterDummyPosts).sort(sortByPublishedAt).reverse() ??
       [],
     [postsInfo],
   )

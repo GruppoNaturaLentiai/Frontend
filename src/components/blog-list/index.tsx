@@ -33,7 +33,7 @@ const getImage = (post: any, featured: boolean = false) => {
         alt={post.coverImage.altText ?? ""}
         style={{
           width: featured ? "60%" : "30%",
-          height: "auto"
+          height: "auto",
         }}
       />
     )

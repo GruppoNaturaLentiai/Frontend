@@ -78,8 +78,16 @@ const Components: PortableTextReactComponents = {
     ),
   },
   listItem: {
-    bullet: ({ children }) => <li><InlineText>{children}</InlineText></li>,
-    number: ({ children }) => <li><InlineText>{children}</InlineText></li>,
+    bullet: ({ children }) => (
+      <li>
+        <InlineText>{children}</InlineText>
+      </li>
+    ),
+    number: ({ children }) => (
+      <li>
+        <InlineText>{children}</InlineText>
+      </li>
+    ),
   },
   hardBreak: () => <br />,
   unknownMark: ({ children }: PortableTextMarkComponentProps<any>) => (

@@ -29,7 +29,13 @@ const config: GatsbyConfig = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-styled-components",
-    "gatsby-plugin-sitemap",
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        resolveSiteUrl: () => `https://grupponaturalentiai.it`,
+      },
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {

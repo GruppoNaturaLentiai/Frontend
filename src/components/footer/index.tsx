@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
             </S.ContactsIcons>
             <S.ContactsLong>
               <S.ContactsLongText>
-                <T.H3>Email:  </T.H3>
+                <T.H3>Email: </T.H3>
                 <T.H4
                   onClick={() => {
                     window.location.href = `mailto:${contacts["email"].join("")}`
