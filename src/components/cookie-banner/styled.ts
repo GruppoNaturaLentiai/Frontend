@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../styles";
+import { breakpoint, colors } from "../../styles";
 import * as T from "../typography"
 
 // Styled Components
@@ -12,6 +12,10 @@ export const BannerContainer = styled.div`
   padding: 1rem;
   text-align: center;
   z-index: 1000;
+  @media (max-width: ${breakpoint.verylarge}) {
+    width: 100%;
+    padding: 1rem 0;
+  }
 `;
 
 export const BannerText = styled(T.P2)`
