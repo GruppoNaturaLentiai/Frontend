@@ -115,6 +115,9 @@ const Footer: React.FC = () => {
         </S.UpperContent>
         <S.HorizontalSeparator />
         <S.LowerContent>
+          <S.TextLink to="/cookies-policy">
+            <T.P2 className="text-link">Politica dei Cookies</T.P2>
+          </S.TextLink>
           <T.P2>
             © Copyright Andrea Nicolai - GNL Lentiai 2025 - Tutti i diritti
             riservati.
@@ -199,6 +202,9 @@ const Footer: React.FC = () => {
         </S.UpperContent>
         <S.HorizontalSeparator />
         <S.LowerContent>
+          <S.TextLink to="/cookies-policy">
+            <T.P2 className="text-link">Politica dei Cookies</T.P2>
+          </S.TextLink>
           <T.P2>
             © Copyright Andrea Nicolai - GNL Lentiai 2025 - Tutti i diritti
             riservati.

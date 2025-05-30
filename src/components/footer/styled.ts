@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { breakpointNum, colors } from "../../styles"
+import { Link } from "gatsby"
 
 export const Footer = styled.footer`
   background-color: ${colors.green.green400};
@@ -173,7 +174,37 @@ export const HorizontalSeparator = styled.div`
 
 export const LowerContent = styled.div`
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
   > p {
     margin-top: 0px;
+  }
+`
+
+export const TextLink = styled(Link)`
+  > * {
+    margin-top: 0px;
+  }
+
+  color: ${colors.green.green800};
+  transition: all 0.5s;
+  &:active {
+    color: ${colors.green.green950};
+  }
+  &:hover {
+    color: ${colors.green.green900};
+  }
+
+  .text-link {
+    font-weight: bold;
+    color: ${colors.green.green800};
+    transition: all 0.5s;
+    &:active {
+      color: ${colors.green.green950};
+    }
+    &:hover {
+      color: ${colors.green.green900};
+    }
   }
 `

@@ -1,0 +1,181 @@
+{
+  "cookies-policy": [
+    {
+      "type": "text",
+      "size": "h1",
+      "content": [
+        "Politica sui cookie"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "p2",
+      "content": [
+        "<b>Data di ultima modifica:</b> 30 maggio 2025"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h2",
+      "content": [
+        "1. Introduzione"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "p2",
+      "collapsible": false,
+      "content": [
+        "Il nostro sito utilizza i cookie per garantire il corretto funzionamento delle pagine e migliorare l’esperienza di navigazione. In questa pagina trovi tutte le informazioni sui cookie che utilizziamo, sul loro scopo e sulle modalità per gestirli o rimuoverli."
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h2",
+      "content": [
+        "2. Cosa sono i cookie"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "p2",
+      "collapsible": false,
+      "content": [
+        "I cookie sono piccoli file di testo che i siti web inseriscono nel tuo dispositivo (computer, tablet, smartphone) quando li visiti. Possono essere “persistenti” (restano fino alla loro scadenza) o “di sessione” (si cancellano chiudendo il browser)."
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h2",
+      "content": [
+        "3. Tipologie di cookie utilizzati (Tipologia e descrizione)"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "p2",
+      "collapsible": false,
+      "content": [
+        "<ul><li><b>Tecnici necessari:</b> Garantisco il corretto funzionamento del sito (es. gestione sessione, bilanciamento del carico).</li>",
+        "<li><b>Analitici:</b> Raccolgono informazioni aggregate sul traffico per migliorare i contenuti (es. Google Analytics).</li></ul>"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h2",
+      "content": [
+        "Cookie tecnici (necessari)"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "p2",
+      "collapsible": false,
+      "content": [
+        "Questi cookie sono indispensabili per la navigazione e per l’uso delle funzionalità di base del sito. Senza di essi alcune parti del sito potrebbero non funzionare correttamente."
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h2",
+      "content": [
+        "Cookie analitici (su consenso)"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "p2",
+      "collapsible": false,
+      "content": [
+        "I cookie analitici ci aiutano a capire come i visitatori utilizzano il sito, raccogliendo informazioni in forma aggregata e anonima.",
+        "<b>Si attivano solo se dai il tuo consenso esplicito</b> tramite il banner."
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h2",
+      "content": [
+        "6. Durata e gestione del consenso"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "p2",
+      "collapsible": false,
+      "content": [
+        "Il tuo consenso viene registrato per 30 giorni: allo scadere del periodo ti verrà chiesto nuovamente di confermare o revocare le preferenze.",
+        "Puoi modificare o revocare il consenso in qualsiasi momento cliccando su **“Gestisci preferenze cookie”** nel footer del sito."
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h2",
+      "content": [
+        "7. Come disabilitare i cookie dal browser"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "p2",
+      "collapsible": false,
+      "content": [
+        "Puoi gestire i cookie direttamente dalle impostazioni del tuo browser. Ecco i link alle guide ufficiali:",
+        "<ul><li> <a href=\"https://support.google.com/accounts/answer/61416\">Chrome</a> </li>" ,
+        "<li> <a href=\"https://support.mozilla.org/it/kb/Gestione%20dei%20cookie\">Firefox</a> </li>",
+        "<li> <a href=\"https://support.apple.com/it-it/guide/safari/sfri11471/mac\">Safari</a> </li>",
+        "<li> <a href=\"https://support.microsoft.com/it-it/microsoft-edge/gestire-i-cookie-in-microsoft-edge-63947406-40ac-c3b8-57a6-1c9b4e0f0c94\">Edge</a> </li></ul>"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h2",
+      "content": [
+        "Diritti dell’utente"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "p2",
+      "collapsible": false,
+      "content": [
+        "Ai sensi del GDPR, hai il diritto di:",
+        "<ul><li> Ottenere conferma sull’uso dei tuoi dati.  </li>",
+        "<li> Accedere ai dati raccolti.  </li>",
+        "<li> Chiedere la cancellazione o la rettifica.  </li>",
+        "<li> Opporsi al trattamento o richiederne la limitazione.  </li></ul>",
+        "Per esercitare tali diritti, contattaci tramite l’indirizzo email che è disponibile nella sezione contatti"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h2",
+      "content": [
+        "Aggiornamenti della policy"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "p2",
+      "collapsible": false,
+      "content": [
+        "Potremmo aggiornare questa policy in seguito a modifiche normative o tecniche. La <b>data di ultima modifica</b> in cima alla pagina verrà aggiornata di conseguenza."
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h2",
+      "content": [
+        "Contatti"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "p2",
+      "collapsible": false,
+      "content": [
+        "Per domande o chiarimenti relativi alla gestione dei cookie e alla privacy, scrivi all'indirizzo email in contatti."
+      ]
+    }
+
+  ]
+}
