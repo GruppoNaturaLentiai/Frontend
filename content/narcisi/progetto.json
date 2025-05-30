@@ -2,15 +2,13 @@
   "progetto": [
     {
       "type": "text",
-      "content": [
-        "Il progetto “Biodiversità”"
-      ],
+      "content": ["Il progetto “Biodiversità”"],
       "size": "h1",
       "font": "Caveat"
     },
     {
       "type": "text",
-      "size" :"p1",
+      "size": "p1",
       "collapsible": false,
       "content": [
         "Il Progetto “Biodiversità” dei Narcisi nasce nel 2019 per contrastare il drastico declino della fioritura dei narcisi (<i>Narcissus radiiflorus</i>) nei prati montani di Lentiai, nel Comune di Borgo Valbelluna. Negli ultimi vent'anni, la presenza di questi fiori è diminuita del 70%, limitandosi ormai a quote superiori ai 700 metri e in aree circoscritte. Le cause principali di questa regressione includono il cambiamento climatico, l'abbandono delle pratiche agricole tradizionali, l'eccessiva concimazione, l'avanzare del bosco e la crescente presenza di cinghiali. Un tempo, infatti, in quasi tutte le municipalità della dorsale prealpina (Lentiai, Mel, Trichiana) e in provincia di Treviso (Milies) si celebrava la “Festa del narciso”, testimonianza di quanto fosse diffusa questo bellissimo fiore.",

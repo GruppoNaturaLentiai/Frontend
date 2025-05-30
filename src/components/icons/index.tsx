@@ -22,7 +22,6 @@ import { ReactComponent as Clock } from "./../../icons/clock.svg"
 import { ReactComponent as RightArrow } from "./../../icons/arrow-right.svg"
 import { ReactComponent as Hiker } from "./../../icons/hiker.svg"
 
-
 interface IconsProps {
   type: string
   width?: number

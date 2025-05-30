@@ -21,7 +21,9 @@ import daffodilMarker2x from "./../../markers/daffodil/daffodil-marker-64x64.png
 
 import Icon from "../icons"
 
-const chaletColDArtent = [46.00799922503996, 12.023267973535743,] as LocationMarker
+const chaletColDArtent = [
+  46.00799922503996, 12.023267973535743,
+] as LocationMarker
 
 type LocationMarker = [lat: number, lon: number]
 interface ComponentProps {
@@ -44,7 +46,9 @@ interface ComponentProps {
 
 const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
   const [isClient, setIsClient] = useState(false)
-  const [selectedPath, setSelectedPath] = useState("piazza-lentiai-chalet-col-d-artent")
+  const [selectedPath, setSelectedPath] = useState(
+    "piazza-lentiai-chalet-col-d-artent",
+  )
 
   // Enable rendering on the client side
   useEffect(() => {
@@ -54,10 +58,34 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
   const showPathInfo = useMemo(() => {
     const path = paths.find(path => path.key === selectedPath)
     if (!path) return null
-    const { notes, time, totDistance, posElevation, negElevation, difficulty, type } = path
-    if (!notes || !time || !totDistance || !posElevation || !negElevation || !difficulty || !type) return null
-    return { notes, time, totDistance, posElevation, negElevation, difficulty, type }
-
+    const {
+      notes,
+      time,
+      totDistance,
+      posElevation,
+      negElevation,
+      difficulty,
+      type,
+    } = path
+    if (
+      !notes ||
+      !time ||
+      !totDistance ||
+      !posElevation ||
+      !negElevation ||
+      !difficulty ||
+      !type
+    )
+      return null
+    return {
+      notes,
+      time,
+      totDistance,
+      posElevation,
+      negElevation,
+      difficulty,
+      type,
+    }
   }, [selectedPath])
 
   if (!isClient) {
@@ -128,11 +156,19 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
                 <S.PathInfoIcon>
                   <Icon type="totDistance" />
                 </S.PathInfoIcon>
-                <T.P2 style={{ fontWeight: "bold" }}>{showPathInfo.totDistance}</T.P2>
+                <T.P2 style={{ fontWeight: "bold" }}>
+                  {showPathInfo.totDistance}
+                </T.P2>
               </S.PathInfoElement>
               <S.PathInfoElement>
                 <S.PathInfoIcon>
-                  <Icon type={showPathInfo.type === "andata" ? "andata" : "andata-ritorno"} />
+                  <Icon
+                    type={
+                      showPathInfo.type === "andata"
+                        ? "andata"
+                        : "andata-ritorno"
+                    }
+                  />
                 </S.PathInfoIcon>
                 <T.P2 style={{ fontWeight: "bold" }}>{showPathInfo.type}</T.P2>
               </S.PathInfoElement>
@@ -140,19 +176,25 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
                 <S.PathInfoIcon>
                   <Icon type="posElevation" />
                 </S.PathInfoIcon>
-                <T.P2 style={{ fontWeight: "bold" }}>{showPathInfo.posElevation}</T.P2>
+                <T.P2 style={{ fontWeight: "bold" }}>
+                  {showPathInfo.posElevation}
+                </T.P2>
               </S.PathInfoElement>
               <S.PathInfoElement>
                 <S.PathInfoIcon>
                   <Icon type="negElevation" />
                 </S.PathInfoIcon>
-                <T.P2 style={{ fontWeight: "bold" }}>{showPathInfo.negElevation}</T.P2>
+                <T.P2 style={{ fontWeight: "bold" }}>
+                  {showPathInfo.negElevation}
+                </T.P2>
               </S.PathInfoElement>
               <S.PathInfoElement>
                 <S.PathInfoIcon>
                   <Icon type="hiker" />
                 </S.PathInfoIcon>
-                <T.P2 style={{ fontWeight: "bold" }}>{showPathInfo.difficulty}</T.P2>
+                <T.P2 style={{ fontWeight: "bold" }}>
+                  {showPathInfo.difficulty}
+                </T.P2>
               </S.PathInfoElement>
             </S.PathInfoUpper>
             <T.P2>{showPathInfo.notes}</T.P2>
@@ -206,11 +248,9 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
             hitTolerance={1000} // Expands the tap/click area // NOT WORKING
           />
         ))}
-
       </MapContainer>
     </S.Wrapper>
   )
 }
-
 
 export default MapComponent

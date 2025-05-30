@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from "styled-components"
 import * as T from "../typography"
-import { breakpoint, colors } from "../../styles";
+import { breakpoint, colors } from "../../styles"
 
 // Styled Components
 export const ModalOverlay = styled.div`
@@ -17,7 +17,7 @@ export const ModalOverlay = styled.div`
   padding: 1rem;
   box-sizing: border-box;
   overflow-y: auto;
-`;
+`
 
 export const ModalContainer = styled.div`
   background: ${colors.green.green100};
@@ -29,28 +29,28 @@ export const ModalContainer = styled.div`
   margin: auto;
   max-height: 90vh;
   overflow-y: auto;
-  
+
   @media (max-width: ${breakpoint.tablet}) {
     padding: 1.5rem;
     max-height: 85vh;
   }
-  
+
   @media (max-width: ${breakpoint.mobile}) {
     padding: 1.25rem;
     max-height: 80vh;
   }
-`;
+`
 
 export const Title = styled(T.H2)`
   font-weight: bold;
   margin: 0 0 1.5rem 0;
   color: ${colors.green.green900};
   text-align: center;
-  
+
   @media (max-width: ${breakpoint.mobile}) {
     margin-bottom: 1.25rem;
   }
-`;
+`
 
 export const ButtonRow = styled.div`
   margin-top: 2rem;
@@ -58,13 +58,13 @@ export const ButtonRow = styled.div`
   justify-content: flex-end;
   gap: 0.75rem;
   flex-wrap: wrap;
-  
+
   @media (max-width: ${breakpoint.mobile}) {
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 1.5rem;
   }
-`;
+`
 
 export const CookieType = styled.div`
   background: ${colors.green.green50};
@@ -72,30 +72,30 @@ export const CookieType = styled.div`
   padding: 1.25rem;
   margin-bottom: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  
+
   &:last-child {
     margin-bottom: 0;
   }
-`;
+`
 
 export const CookieHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.75rem;
-`;
+`
 
 export const CookieTitle = styled(T.H4)`
   font-weight: bold;
   color: ${colors.green.green900};
   margin: 0;
-`;
+`
 
 export const CookieDescription = styled(T.P3)`
   color: ${colors.green.green800};
   margin: 0.5rem 0 0 0;
   line-height: 1.5;
-`;
+`
 
 export const CheckboxLabel = styled.label`
   display: flex;
@@ -111,11 +111,11 @@ export const CheckboxLabel = styled.label`
     min-height: 1.1rem;
     cursor: pointer;
   }
-  
+
   .label {
     margin: 0;
   }
-`;
+`
 
 export const RequiredBadge = styled(T.P4)`
   display: inline-block;
@@ -125,16 +125,15 @@ export const RequiredBadge = styled(T.P4)`
   padding: 0.2rem 0.5rem;
   border-radius: 12px;
   margin-left: 0.75rem;
-`;
+`
 
 export const ButtonLabel = styled(T.P4)`
   color: ${colors.green.green50};
   margin: 0;
 `
 
-
 export const ModalButton = styled.button<{ color: string }>`
-  background-color: ${(props) => props.color};
+  background-color: ${props => props.color};
   color: white;
   padding: 0.7rem 1.5rem;
   border: none;
@@ -149,17 +148,16 @@ export const ModalButton = styled.button<{ color: string }>`
     width: 100%;
     padding: 0.8rem 1.5rem;
   }
-  
+
   &:hover {
-    background-color: ${(props) => `${props.color}cc`};
+    background-color: ${props => `${props.color}cc`};
     transform: translateY(-1px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  } 
-  
+  }
+
   &:active {
-    background-color: ${(props) => `${props.color}99`};
+    background-color: ${props => `${props.color}99`};
     transform: translateY(0);
     box-shadow: none;
   }
-  
-`;
+`

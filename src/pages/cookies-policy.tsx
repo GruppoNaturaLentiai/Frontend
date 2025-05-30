@@ -8,7 +8,6 @@ import MobileContentToComponent from "../components/mobile-pagedata-text-compone
 import * as T from "../components/typography"
 
 const CookiesPolicyPage: React.FC<PageProps> = () => {
-
   const content = dataJSON["cookies-policy"] as DataJSONType
   if (!content)
     return (

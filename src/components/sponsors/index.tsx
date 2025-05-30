@@ -2,19 +2,19 @@ import React from "react"
 
 import * as S from "./styled"
 
-import auser from '../../logos/auser.png'
-import geometrie from '../../logos/geometrie-d-arredo.png'
-import offredi from '../../logos/offredi.png'
-import farmacia from '../../logos/farmacia-zampol.png'
-import unifarco from '../../logos/unifarco.png'
-import walber from '../../logos/superw.png'
-import fpb from '../../logos/fpb-cassa.png'
-import dolomitiCanapa from '../../logos/dolomiti-canapa.png'
-import bonTajer from '../../logos/bon-tajer.png'
+import auser from "../../logos/auser.png"
+import geometrie from "../../logos/geometrie-d-arredo.png"
+import offredi from "../../logos/offredi.png"
+import farmacia from "../../logos/farmacia-zampol.png"
+import unifarco from "../../logos/unifarco.png"
+import walber from "../../logos/superw.png"
+import fpb from "../../logos/fpb-cassa.png"
+import dolomitiCanapa from "../../logos/dolomiti-canapa.png"
+import bonTajer from "../../logos/bon-tajer.png"
 
 const sponsors = [
   {
-    name: "AUSER Lentiai \"Il Narciso\"",
+    name: 'AUSER Lentiai "Il Narciso"',
     logo: auser,
     url: "https://www.auser.veneto.it/belluno-alnarciso/dove-siamo.html",
   },

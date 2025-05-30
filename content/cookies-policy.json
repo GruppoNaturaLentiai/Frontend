@@ -3,23 +3,17 @@
     {
       "type": "text",
       "size": "h1",
-      "content": [
-        "Politica sui cookie"
-      ]
+      "content": ["Politica sui cookie"]
     },
     {
       "type": "text",
       "size": "p2",
-      "content": [
-        "<b>Data di ultima modifica:</b> 30 maggio 2025"
-      ]
+      "content": ["<b>Data di ultima modifica:</b> 30 maggio 2025"]
     },
     {
       "type": "text",
       "size": "h2",
-      "content": [
-        "1. Introduzione"
-      ]
+      "content": ["1. Introduzione"]
     },
     {
       "type": "text",
@@ -32,9 +26,7 @@
     {
       "type": "text",
       "size": "h2",
-      "content": [
-        "2. Cosa sono i cookie"
-      ]
+      "content": ["2. Cosa sono i cookie"]
     },
     {
       "type": "text",
@@ -47,9 +39,7 @@
     {
       "type": "text",
       "size": "h2",
-      "content": [
-        "3. Tipologie di cookie utilizzati (Tipologia e descrizione)"
-      ]
+      "content": ["3. Tipologie di cookie utilizzati (Tipologia e descrizione)"]
     },
     {
       "type": "text",
@@ -63,9 +53,7 @@
     {
       "type": "text",
       "size": "h2",
-      "content": [
-        "Cookie tecnici (necessari)"
-      ]
+      "content": ["Cookie tecnici (necessari)"]
     },
     {
       "type": "text",
@@ -78,9 +66,7 @@
     {
       "type": "text",
       "size": "h2",
-      "content": [
-        "Cookie analitici (su consenso)"
-      ]
+      "content": ["Cookie analitici (su consenso)"]
     },
     {
       "type": "text",
@@ -94,9 +80,7 @@
     {
       "type": "text",
       "size": "h2",
-      "content": [
-        "6. Durata e gestione del consenso"
-      ]
+      "content": ["6. Durata e gestione del consenso"]
     },
     {
       "type": "text",
@@ -110,9 +94,7 @@
     {
       "type": "text",
       "size": "h2",
-      "content": [
-        "7. Come disabilitare i cookie dal browser"
-      ]
+      "content": ["7. Come disabilitare i cookie dal browser"]
     },
     {
       "type": "text",
@@ -120,7 +102,7 @@
       "collapsible": false,
       "content": [
         "Puoi gestire i cookie direttamente dalle impostazioni del tuo browser. Ecco i link alle guide ufficiali:",
-        "<ul><li> <a href=\"https://support.google.com/accounts/answer/61416\">Chrome</a> </li>" ,
+        "<ul><li> <a href=\"https://support.google.com/accounts/answer/61416\">Chrome</a> </li>",
         "<li> <a href=\"https://support.mozilla.org/it/kb/Gestione%20dei%20cookie\">Firefox</a> </li>",
         "<li> <a href=\"https://support.apple.com/it-it/guide/safari/sfri11471/mac\">Safari</a> </li>",
         "<li> <a href=\"https://support.microsoft.com/it-it/microsoft-edge/gestire-i-cookie-in-microsoft-edge-63947406-40ac-c3b8-57a6-1c9b4e0f0c94\">Edge</a> </li></ul>"
@@ -129,9 +111,7 @@
     {
       "type": "text",
       "size": "h2",
-      "content": [
-        "Diritti dell’utente"
-      ]
+      "content": ["Diritti dell’utente"]
     },
     {
       "type": "text",
@@ -149,9 +129,7 @@
     {
       "type": "text",
       "size": "h2",
-      "content": [
-        "Aggiornamenti della policy"
-      ]
+      "content": ["Aggiornamenti della policy"]
     },
     {
       "type": "text",
@@ -164,9 +142,7 @@
     {
       "type": "text",
       "size": "h2",
-      "content": [
-        "Contatti"
-      ]
+      "content": ["Contatti"]
     },
     {
       "type": "text",
@@ -176,6 +152,5 @@
         "Per domande o chiarimenti relativi alla gestione dei cookie e alla privacy, scrivi all'indirizzo email in contatti."
       ]
     }
-
   ]
 }
