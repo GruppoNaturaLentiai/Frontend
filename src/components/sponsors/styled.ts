@@ -17,4 +17,7 @@ export const SponsorGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 0.7rem;
   justify-items: center;
+  a {
+    display: ruby;
+  }
 `
