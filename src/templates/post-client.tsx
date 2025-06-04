@@ -1,4 +1,4 @@
-import { useLocation } from "@reach/router"
+import { useLocation, useNavigate } from "@reach/router"
 import React, { useEffect, useState } from "react"
 import DefaultLayout from "../components/default-layout"
 import Post from "../components/post"
@@ -27,11 +27,13 @@ const PostClientTemplate: React.FC = () => {
   const { pathname } = useLocation()
   const slug = pathname // Use the full path as the slug
 
-  const [post, setPost] = useState<RemotePost | null>(null)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-
-  const fetchPostData = async (slug: string) => {
+  const navigate = useNavigate();
+  const [post, setPost] = useState<RemotePost | null>(null);
+  const [loading, setLoading] = useState(true); // Start with loading true
+  const [error, setError] = useState<string | null>(null);
+  const [notFound, setNotFound] = useState(false);
+  
+  const fetchPostData = async (slug: string): Promise<RemotePost | null> => {
     try {
       const query = `query {
         allPost {
@@ -64,52 +66,113 @@ const PostClientTemplate: React.FC = () => {
         throw new Error(result.errors[0].message)
       }
 
-      // TODO typing
-      const thePost = result.data.allPost
-        .filter(
-          (post: RemotePost) =>
-            post.slug.current === slug ||
-            post.slug.current === slug.slice(0, -1),
+      const thePost = (result.data?.allPost || [])
+        .find((post: RemotePost) => 
+          post.slug?.current === slug || 
+          post.slug?.current === slug.replace(/\/$/, '')
         )
-        .at(0)
+      
       if (!thePost) {
-        console.warn("No post found for slug", slug)
-        console.log("Posts found were", result.data)
-        return
+        setNotFound(true)
+        return null
       }
+      
       return thePost
     } catch (err) {
+      console.error("Error fetching post:", err)
       setError("Failed to fetch post data.")
       return null
     }
   }
 
   useEffect(() => {
+    let isMounted = true;
+
     const loadPost = async () => {
-      setLoading(true)
-      const fetchedPost = await fetchPostData(slug)
-      if (fetchedPost) {
-        setPost(fetchedPost)
+      try {
+        setLoading(true);
+        setError(null);
+        
+        const fetchedPost = await fetchPostData(slug);
+        
+        if (!isMounted) return;
+        
+        if (fetchedPost) {
+          setPost(fetchedPost);
+          setNotFound(false);
+        } else {
+          setNotFound(true);
+        }
+      } catch (err) {
+        if (!isMounted) return;
+        console.error('Error in loadPost:', err);
+        setError('An error occurred while loading the post');
+      } finally {
+        if (isMounted) {
+          setLoading(false);
+        }
       }
-      setLoading(false)
+    };
+
+    loadPost();
+    
+    return () => {
+      isMounted = false;
+    };
+  }, [slug]);
+  
+  // Handle navigation when notFound changes
+  useEffect(() => {
+    if (notFound && typeof window !== 'undefined') {
+      navigate('/404', { replace: true }).catch((err: Error) => {
+        console.error('Navigation error:', err);
+      });
     }
+  }, [notFound, navigate]);
 
-    loadPost()
-  }, [slug])
+  // Show loading state
+  if (loading) {
+    return (
+      <DefaultLayout>
+        <p>Caricamento...</p>
+      </DefaultLayout>
+    );
+  }
 
-  // If we have static data, use it. Otherwise, use dynamic data
-  const renderTitle = post?.title || "Loading..."
-  const renderPublishedAt = post?.publishedAt || null
-  const renderBody = post?.bodyRaw || null
-  const author = post?.author || null
+  // If there was an error, show error message
+  if (error) {
+    return (
+      <DefaultLayout>
+        <p>Errore: {error}</p>
+      </DefaultLayout>
+    );
+  }
+
+  // If post is not found, we'll show a 404 page
+  // The navigation is handled by the useEffect above
+  if (notFound || !post) {
+    return null;
+  }
+
+  // At this point, we know post is defined
+  const renderTitle = post.title
+  const renderPublishedAt = post.publishedAt
+  const renderBody = post.bodyRaw
+  const author = post.author || null
 
   // main image code
-  const mainImgAlt = post?.image?.asset?.altText || ""
-  const renderImageUrl = post?.image?.asset?.url || null
+  const mainImgAlt = post.image?.asset?.altText || ""
+  const renderImageUrl = post.image?.asset?.url || null
 
   // Handle loading and error states
   if (loading) return <p>Caricamento...</p>
-  if (error) return <p>Errore: {error}</p>
+  if (error || !post) {
+    // This will set the status code to 404 on the server side
+    if (typeof window !== 'undefined') {
+      navigate('/404', { replace: true })
+    }
+    return null
+  }
 
   return (
     <DefaultLayout>
