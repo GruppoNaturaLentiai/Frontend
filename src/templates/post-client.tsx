@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from "@reach/router"
+import { useLocation, navigate } from "@reach/router"
 import React, { useEffect, useState } from "react"
 import DefaultLayout from "../components/default-layout"
 import Post from "../components/post"
@@ -27,7 +27,6 @@ const PostClientTemplate: React.FC = () => {
   const { pathname } = useLocation()
   const slug = pathname // Use the full path as the slug
 
-  const navigate = useNavigate();
   const [post, setPost] = useState<RemotePost | null>(null);
   const [loading, setLoading] = useState(true); // Start with loading true
   const [error, setError] = useState<string | null>(null);
