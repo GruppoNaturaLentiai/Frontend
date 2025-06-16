@@ -510,5 +510,21 @@
     "tags": ["chi-siamo"],
     "fileName": "chi-siamo_020.jpg",
     "copyright": "Orfeo Dal Piva"
+  },
+  {
+    "title": "Anello Ciclo-Pedonale di Lentiai",
+    "description": "Informazioni utili sull'anello ciclopedonale di Lentiai",
+    "alt": "Informazioni utili sull'anello ciclopedonale di Lentiai",
+    "tags": ["mobilità"],
+    "fileName": "anello-ciclopedonale-lentiai-00.jpeg",
+    "copyright": "Gruppo Natura Lentiai"
+  },
+  {
+    "title": "Anello Ciclo-Pedonale di Lentiai",
+    "description": "Cartina dell'anello ciclopedonale di Lentiai",
+    "alt": "Cartina dell'anello ciclopedonale di Lentiai",
+    "tags": ["mobilità"],
+    "fileName": "anello-ciclopedonale-lentiai-01.jpeg",
+    "copyright": "Gruppo Natura Lentiai"
   }
 ]
