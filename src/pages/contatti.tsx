@@ -13,6 +13,8 @@ const ContactPage: React.FC<PageProps> = () => {
 
 export default ContactPage
 
-export const Head: HeadFC = () => (
-  <title>Gruppo Natura Lentiai - Contattaci</title>
+import { SEO } from "../components/seo"
+
+export const Head: HeadFC = ({ location }) => (
+  <SEO title="Gruppo Natura Lentiai - Contattaci" pathname={location.pathname} />
 )

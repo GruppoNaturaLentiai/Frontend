@@ -108,4 +108,8 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
 
 export default Blog
 
-export const Head: HeadFC = () => <title>Gruppo Natura Lentiai - Blog</title>
+import { SEO } from "../components/seo"
+
+export const Head: HeadFC = ({ location }) => (
+  <SEO title="Gruppo Natura Lentiai - Blog" pathname={location.pathname} />
+)

@@ -70,28 +70,30 @@ const MobilitàSostenibilePage: React.FC<PageProps> = () => {
     <DefaultLayout>
       <ContentToComponent pageData={content} images={filteredImages} />
       <MobileContentToComponent pageData={content} images={filteredImages} />
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "2em", gap: "2em" }}>
-          {mapUp && (
-            <GatsbyImage
-              image={mapUp}
-              alt={"Informazioni utili dell'anello Ciclopedonale di Lentiai Fronte"}
-              style={{ borderRadius: "8px", marginTop: 4, maxWidth: 1600 }}
-            />
-          )}
-          {mapDown && (
-            <GatsbyImage
-              image={mapDown}
-              alt={"Cartina dell'anello Ciclopedonale di Lentiai"}
-              style={{ borderRadius: "8px", marginTop: 4, maxWidth: 1600 }}
-            />
-          )}
-        </div>
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "2em", gap: "2em" }}>
+        {mapUp && (
+          <GatsbyImage
+            image={mapUp}
+            alt={"Informazioni utili dell'anello Ciclopedonale di Lentiai Fronte"}
+            style={{ borderRadius: "8px", marginTop: 4, maxWidth: 1600 }}
+          />
+        )}
+        {mapDown && (
+          <GatsbyImage
+            image={mapDown}
+            alt={"Cartina dell'anello Ciclopedonale di Lentiai"}
+            style={{ borderRadius: "8px", marginTop: 4, maxWidth: 1600 }}
+          />
+        )}
+      </div>
     </DefaultLayout>
   )
 }
 
 export default MobilitàSostenibilePage
 
-export const Head: HeadFC = () => (
-  <title>Gruppo Natura Lentiai - Mobilità sostenibile</title>
+import { SEO } from "../../components/seo"
+
+export const Head: HeadFC = ({ location }) => (
+  <SEO title="Gruppo Natura Lentiai - Mobilità sostenibile" pathname={location.pathname} />
 )

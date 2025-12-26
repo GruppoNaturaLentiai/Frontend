@@ -70,6 +70,8 @@ const ChiSiamoPage: React.FC<PageProps> = () => {
 
 export default ChiSiamoPage
 
-export const Head: HeadFC = () => (
-  <title>Gruppo Natura Lentiai - Chi siamo</title>
+import { SEO } from "../components/seo"
+
+export const Head: HeadFC = ({ location }) => (
+  <SEO title="Gruppo Natura Lentiai - Chi siamo" pathname={location.pathname} />
 )

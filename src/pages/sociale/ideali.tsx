@@ -13,6 +13,8 @@ const NostriIdealiPage: React.FC<PageProps> = () => {
 
 export default NostriIdealiPage
 
-export const Head: HeadFC = () => (
-  <title>Gruppo Natura Lentiai - I nostri Ideali</title>
+import { SEO } from "../../components/seo"
+
+export const Head: HeadFC = ({ location }) => (
+  <SEO title="Gruppo Natura Lentiai - I nostri Ideali" pathname={location.pathname} />
 )
