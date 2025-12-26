@@ -13,4 +13,8 @@ const RifiutiPage: React.FC<PageProps> = () => {
 
 export default RifiutiPage
 
-export const Head: HeadFC = () => <title>Gruppo Natura Lentiai - Rifiuti</title>
+import { SEO } from "../../components/seo"
+
+export const Head: HeadFC = ({ location }) => (
+  <SEO title="Gruppo Natura Lentiai - Rifiuti" pathname={location.pathname} />
+)

@@ -1,4 +1,5 @@
-import { PageProps } from "gatsby"
+import { PageProps, HeadFC } from "gatsby"
+import { SEO } from "../components/seo"
 import { IGatsbyImageData } from "gatsby-plugin-image"
 import React from "react"
 import DefaultLayout from "../components/default-layout"
@@ -52,3 +53,14 @@ const PostTemplate: React.FC<PageProps<{}, PostPageContext>> = ({
 }
 
 export default PostTemplate
+
+export const Head: HeadFC<{}, PostPageContext> = ({ location, pageContext }) => {
+  const { title, mainImage } = pageContext
+  return (
+    <SEO
+      title={`Gruppo Natura Lentiai - ${title}`}
+      description={mainImage?.description || mainImage?.altText}
+      pathname={location.pathname}
+    />
+  )
+}

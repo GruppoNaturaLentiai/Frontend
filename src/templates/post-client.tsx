@@ -31,7 +31,7 @@ const PostClientTemplate: React.FC = () => {
   const [loading, setLoading] = useState(true); // Start with loading true
   const [error, setError] = useState<string | null>(null);
   const [notFound, setNotFound] = useState(false);
-  
+
   const fetchPostData = async (slug: string): Promise<RemotePost | null> => {
     try {
       const query = `query {
@@ -66,16 +66,16 @@ const PostClientTemplate: React.FC = () => {
       }
 
       const thePost = (result.data?.allPost || [])
-        .find((post: RemotePost) => 
-          post.slug?.current === slug || 
+        .find((post: RemotePost) =>
+          post.slug?.current === slug ||
           post.slug?.current === slug.replace(/\/$/, '')
         )
-      
+
       if (!thePost) {
         setNotFound(true)
         return null
       }
-      
+
       return thePost
     } catch (err) {
       console.error("Error fetching post:", err)
@@ -91,11 +91,11 @@ const PostClientTemplate: React.FC = () => {
       try {
         setLoading(true);
         setError(null);
-        
+
         const fetchedPost = await fetchPostData(slug);
-        
+
         if (!isMounted) return;
-        
+
         if (fetchedPost) {
           setPost(fetchedPost);
           setNotFound(false);
@@ -114,12 +114,12 @@ const PostClientTemplate: React.FC = () => {
     };
 
     loadPost();
-    
+
     return () => {
       isMounted = false;
     };
   }, [slug]);
-  
+
   // Handle navigation when notFound changes
   useEffect(() => {
     if (notFound && typeof window !== 'undefined') {
@@ -189,3 +189,10 @@ const PostClientTemplate: React.FC = () => {
 }
 
 export default PostClientTemplate
+
+import { HeadFC } from "gatsby"
+import { SEO } from "../components/seo"
+
+export const Head: HeadFC = ({ location }) => (
+  <SEO title="Gruppo Natura Lentiai" pathname={location.pathname} />
+)

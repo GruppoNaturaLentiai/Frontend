@@ -68,4 +68,8 @@ const NarcisiProgettoPage: React.FC<PageProps> = () => {
 
 export default NarcisiProgettoPage
 
-export const Head: HeadFC = () => <title>Progetto Narcisi - Progetto</title>
+import { SEO } from "../../components/seo"
+
+export const Head: HeadFC = ({ location }) => (
+  <SEO title="Progetto Narcisi - Progetto" pathname={location.pathname} />
+)

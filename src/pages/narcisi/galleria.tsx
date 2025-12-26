@@ -56,4 +56,8 @@ const NarcisiGalleriaPage: React.FC<PageProps> = () => {
 
 export default NarcisiGalleriaPage
 
-export const Head: HeadFC = () => <title>Progetto Narcisi - Galleria</title>
+import { SEO } from "../../components/seo"
+
+export const Head: HeadFC = ({ location }) => (
+  <SEO title="Progetto Narcisi - Galleria" pathname={location.pathname} />
+)

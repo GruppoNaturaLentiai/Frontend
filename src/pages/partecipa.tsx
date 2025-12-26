@@ -13,6 +13,8 @@ const PartecipaPage: React.FC<PageProps> = () => {
 
 export default PartecipaPage
 
-export const Head: HeadFC = () => (
-  <title>Gruppo Natura Lentiai - Partecipa!</title>
+import { SEO } from "../components/seo"
+
+export const Head: HeadFC = ({ location }) => (
+  <SEO title="Gruppo Natura Lentiai - Partecipa!" pathname={location.pathname} />
 )

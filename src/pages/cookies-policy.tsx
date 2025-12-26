@@ -26,6 +26,8 @@ const CookiesPolicyPage: React.FC<PageProps> = () => {
 
 export default CookiesPolicyPage
 
-export const Head: HeadFC = () => (
-  <title>Gruppo Natura Lentiai - Politica sui cookie</title>
+import { SEO } from "../components/seo"
+
+export const Head: HeadFC = ({ location }) => (
+  <SEO title="Gruppo Natura Lentiai - Politica sui cookie" pathname={location.pathname} />
 )

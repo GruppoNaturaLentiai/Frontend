@@ -56,6 +56,8 @@ const LaghettiGalleriaPage: React.FC<PageProps> = () => {
 
 export default LaghettiGalleriaPage
 
-export const Head: HeadFC = () => (
-  <title>Laghetti della Rimonta - Galleria</title>
+import { SEO } from "../../components/seo"
+
+export const Head: HeadFC = ({ location }) => (
+  <SEO title="Laghetti della Rimonta - Galleria" pathname={location.pathname} />
 )
