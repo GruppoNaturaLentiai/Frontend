@@ -1,4 +1,4 @@
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./gatsby-ssr.tsx
@@ -8,7 +8,7 @@ export const onRenderBody = ({ setHtmlAttributes }: any) => {
   // Set the HTML language attribute
   setHtmlAttributes({ lang: "it" })
 }
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./flake.nix
@@ -47,13 +47,13 @@ FILE: ./flake.nix
         '';
       };
     };
-}Generated at Sat Feb 21 04:30:50 PM UTC 2026
+}Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./static/CNAME
 ========================================
 
-grupponaturalentiai.itGenerated at Sat Feb 21 04:30:50 PM UTC 2026
+grupponaturalentiai.itGenerated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./tsconfig.json
@@ -169,7 +169,7 @@ FILE: ./tsconfig.json
     "./plugins/**/*"
   ]
 }
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./package.json
@@ -238,7 +238,7 @@ FILE: ./package.json
     "gh-pages": "^6.3.0",
     "typescript": "^5.3.3"
   }
-}Generated at Sat Feb 21 04:30:50 PM UTC 2026
+}Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./gatsby-node.ts
@@ -309,21 +309,14 @@ export const createPages: GatsbyNode["createPages"] = async ({
     }
   })
 
-  // 2️⃣ Fallback client-only
-  createPage({
-    path: `/post`,
-    matchPath: `/post/*`,
-    component: path.resolve(`src/templates/post-client.tsx`),
-  })
-
-  // 3️⃣ Pagina Blog (ORA VUOTA)
+  // 2️⃣ Pagina Blog (ORA VUOTA)
   createPage({
     path: "blog",
     component: path.resolve("src/templates/blog.tsx"),
     context: {}, // I dati verranno presi dalla Page Query che abbiamo scritto prima
   })
 }
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./gatsby-config.ts
@@ -427,7 +420,7 @@ const config: GatsbyConfig = {
 }
 
 export default config
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./.prettierrc
@@ -437,7 +430,7 @@ semi: false
 arrowParens: avoid
 singleQuote: false
 trailingComma: all
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./README.md
@@ -492,7 +485,7 @@ FILE: ./README.md
 Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
 
 [<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./flake.lock
@@ -525,7 +518,7 @@ FILE: ./flake.lock
   "root": "root",
   "version": 7
 }
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./.gitignore
@@ -536,7 +529,7 @@ node_modules/
 public
 src/gatsby-types.d.ts
 docs/
-.direnv/Generated at Sat Feb 21 04:30:50 PM UTC 2026
+.direnv/Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./.prettierignore
@@ -545,7 +538,7 @@ FILE: ./.prettierignore
 docs/
 public/
 .cache/
-node_modules/Generated at Sat Feb 21 04:30:50 PM UTC 2026
+node_modules/Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./generate_context.sh
@@ -578,7 +571,7 @@ find . -type f \
   -exec cat {} \; > context_for_llm.txt
 
 echo "✅ Fatto! Il contesto è stato salvato in 'context_for_llm.txt'"
-echo "⚠️  Attenzione: Se il file è molto grande, incollalo in più parti."Generated at Sat Feb 21 04:30:50 PM UTC 2026
+echo "⚠️  Attenzione: Se il file è molto grande, incollalo in più parti."Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/data/contacts.json
@@ -591,7 +584,7 @@ FILE: ./src/data/contacts.json
   "facebook-laghetti": "https://www.facebook.com/profile.php?id=100064320537208",
   "facebook-narcisi": "https://www.facebook.com/profile.php?id=100069990139319"
 }
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/data/sustain-us.json
@@ -603,7 +596,7 @@ FILE: ./src/data/sustain-us.json
     "account": "IT07 U081 4005 8650 0003 1160 657"
   }
 }
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/data/imageMetadata.json
@@ -1356,7 +1349,7 @@ FILE: ./src/data/imageMetadata.json
     "fileName": "narcisi_valbelluna_le_lei_pic.jpeg",
     "copyright": "Mamma Gloria (account FB)"
   }
-]Generated at Sat Feb 21 04:30:50 PM UTC 2026
+]Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/data/paths/laghetti.ts
@@ -1548,7 +1541,7 @@ const paths = [
 ]
 
 export default paths
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/data/paths/narcisi.ts
@@ -2273,7 +2266,7 @@ const paths = [
 ]
 
 export default paths
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/data/sections.ts
@@ -2473,7 +2466,7 @@ export const footerSections = [
     ],
   },
 ]
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/hooks/useResponsiveClickHandler.tsx
@@ -2515,7 +2508,7 @@ const useResponsiveClickHandler = (
 }
 
 export default useResponsiveClickHandler
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/hooks/useThrottledState.ts
@@ -2541,7 +2534,7 @@ const useThrottledState = <T>(
 }
 
 export default useThrottledState
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/hooks/useSwipe.ts
@@ -2591,7 +2584,7 @@ export default (input: SwipeInput): SwipeOutput => {
     onTouchEnd,
   }
 }
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/hooks/usePreventDragAndWheel.tsx
@@ -2640,7 +2633,7 @@ const usePreventScrollOnImageView = (condition: boolean) => {
 }
 
 export default usePreventScrollOnImageView
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/cookie-preferences/index.tsx
@@ -2785,7 +2778,7 @@ const CookiePreferences: React.FC<Props> = ({ onClose }) => {
 }
 
 export default CookiePreferences
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/cookie-preferences/styled.ts
@@ -2954,7 +2947,7 @@ export const ModalButton = styled.button<{ color: string }>`
     box-shadow: none;
   }
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/image-with-credits/index.tsx
@@ -3030,7 +3023,7 @@ const ImageWithCredits = ({
 )
 
 export default ImageWithCredits
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/image-with-credits/styled.ts
@@ -3060,13 +3053,13 @@ export const ImgWrapper = styled.div<{
 export const ImageDescription = styled(T.P3)`
   white-space: break-spaces;
   margin-top: 0.5em;
-`Generated at Sat Feb 21 04:30:50 PM UTC 2026
+`Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/blog-list/index.tsx
 ========================================
 
-import React from "react"
+import React, { useState, useRef } from "react"
 import { IGatsbyImageData, GatsbyImage } from "gatsby-plugin-image"
 import * as S from "./styled"
 import * as T from "../typography"
@@ -3076,7 +3069,7 @@ import { navigate } from "gatsby"
 export type PostInfo = {
   slug: string
   title: string
-  publishedAt: string // ISO date string
+  publishedAt: string
   author: string
   excerpt: string
   coverImage: {
@@ -3092,57 +3085,70 @@ interface BlogListProps {
   posts: PostInfo[]
 }
 
-const getImage = (post: any, featured: boolean = false) => {
-  let image = null
+const getImage = (post: PostInfo) => {
   if (post.coverImage.gatsbyImage) {
-    image = (
+    return (
       <GatsbyImage
         image={post.coverImage.gatsbyImage as IGatsbyImageData}
-        alt={post.coverImage.altText ?? ""}
-        style={{
-          width: featured ? "60%" : "30%",
-          height: "auto",
-        }}
+        alt={post.coverImage.altText ?? "Cover image"}
       />
     )
   } else if (post.coverImage.renderImageUrl) {
-    image = (
+    return (
       <img
         className="cover-image"
         src={post.coverImage.renderImageUrl}
-        alt={post.coverImage.altText ?? ""}
-        style={{
-          height: "auto",
-          objectFit: "cover",
-          maxHeight: featured ? "400px" : "150px",
-        }}
+        alt={post.coverImage.altText ?? "Cover image"}
       />
     )
   }
-
-  return image
+  return null
 }
 
 export const FeaturedBlog: React.FC<BlogListProps> = ({ posts }) => {
+  const [currentPage, setCurrentPage] = useState(1)
+  const gridRef = useRef<HTMLDivElement>(null)
+
+  // Quanti post mostrare nella griglia per ogni pagina
+  const POSTS_PER_PAGE = 6
+
   if (!posts || posts.length === 0) {
-    return <T.P2>No posts available.</T.P2>
+    return <T.P2 style={{ textAlign: "center", marginTop: "2rem" }}>Nessun articolo pubblicato al momento.</T.P2>
   }
 
   // Ordina per data decrescente
   const sorted = [...posts].sort(
-    (a, b) =>
-      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
   )
 
-  // Il primo è il featured post
+  // Il primo è sempre il featured post, gli altri finiscono nella griglia
   const [featured, ...others] = sorted
+
+  // Calcoli per la paginazione
+  const totalPages = Math.ceil(others.length / POSTS_PER_PAGE)
+  const currentPosts = others.slice(
+    (currentPage - 1) * POSTS_PER_PAGE,
+    currentPage * POSTS_PER_PAGE
+  )
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page)
+    // Scrolla dolcemente verso l'alto (sotto al post in evidenza) quando si cambia pagina
+    if (gridRef.current) {
+      const yOffset = gridRef.current.getBoundingClientRect().top + window.scrollY - 100
+      window.scrollTo({ top: yOffset, behavior: "smooth" })
+    }
+  }
 
   return (
     <S.Container>
-      {/* Featured Post */}
+      {/* Featured Post (Sempre visibile e sempre in cima) */}
       <S.FeaturedPostWrapper onClick={() => navigate(`${featured.slug}`)}>
-        <S.CoverImgWrapper>{getImage(featured, true)}</S.CoverImgWrapper>
+        <S.CoverImgWrapper $isFeatured={true}>
+          {getImage(featured)}
+        </S.CoverImgWrapper>
         <S.FeaturedContent>
+          <T.P4 style={{ color: "#FE4A49", fontWeight: "bold", marginBottom: "0.5rem" }}>ULTIMO ARTICOLO</T.P4>
           <S.FeaturedTitle>{featured.title}</S.FeaturedTitle>
           <S.MetaInfo>
             {new Date(featured.publishedAt).toLocaleDateString("it-IT", {
@@ -3153,82 +3159,147 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({ posts }) => {
             })}{" "}
             • {featured.author}
           </S.MetaInfo>
-          <T.P3>{featured.excerpt}</T.P3>
+          <T.P2>{featured.excerpt}</T.P2>
         </S.FeaturedContent>
       </S.FeaturedPostWrapper>
 
-      {/* Griglia post successivi */}
-      <S.Grid>
-        {others.map(post => {
-          return (
+      {/* Griglia post successivi paginata */}
+      <div ref={gridRef}>
+        <S.Grid>
+          {currentPosts.map(post => (
             <S.Card key={post.slug} onClick={() => navigate(`${post.slug}`)}>
-              <S.CoverImgWrapper>{getImage(post, false)}</S.CoverImgWrapper>
+              <S.CoverImgWrapper $isFeatured={false}>
+                {getImage(post)}
+              </S.CoverImgWrapper>
               <S.CardContent>
                 <S.CardTitle>{post.title}</S.CardTitle>
                 <S.MetaInfo>
                   {new Date(post.publishedAt).toLocaleDateString("it-IT", {
-                    weekday: "long",
                     year: "numeric",
                     month: "long",
                     day: "numeric",
-                  })}{" "}
-                  • {post.author}
+                  })}
                 </S.MetaInfo>
                 <S.CardExcerpt>{post.excerpt}</S.CardExcerpt>
               </S.CardContent>
             </S.Card>
-          )
-        })}
-      </S.Grid>
+          ))}
+        </S.Grid>
+      </div>
+
+      {/* Controlli Paginazione */}
+      {totalPages > 1 && (
+        <S.PaginationWrapper>
+          <S.PageButton
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            aria-label="Pagina precedente"
+          >
+            &#8592;
+          </S.PageButton>
+
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+            <S.PageButton
+              key={page}
+              $active={currentPage === page}
+              onClick={() => handlePageChange(page)}
+            >
+              {page}
+            </S.PageButton>
+          ))}
+
+          <S.PageButton
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            aria-label="Pagina successiva"
+          >
+            &#8594;
+          </S.PageButton>
+        </S.PaginationWrapper>
+      )}
     </S.Container>
   )
-}
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+}Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/blog-list/styled.ts
 ========================================
 
 import styled from "styled-components"
-import { colors } from "../../styles"
+import { breakpoint, colors } from "../../styles"
 import * as T from "../typography"
 
-// Styled components
 export const Container = styled.div`
   margin-top: 2rem;
   padding: 2rem;
   padding-top: 3rem;
-  max-width: 1000px;
+  max-width: 1200px; /* Allargato leggermente per respirare meglio */
   margin: 0 auto;
 `
 
 export const FeaturedPostWrapper = styled.article`
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px ${colors.green.green600}66;
   cursor: pointer;
+  background: #fff;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: row; 
+  align-items: stretch;
+  
+  /* Sostituisci max-height con height fisso per forzare la forma del banner su Desktop */
+  height: 400px; 
+
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 16px ${colors.green.green700}66;
+    box-shadow: 0 8px 24px ${colors.green.green700}66;
   }
-  .gatsby-image-wrapper img {
-    width: 33%;
-    justify-self: center;
-  }
-  .cover-image {
-    width: 33%;
+
+  /* Spostiamo il passaggio a colonna ai 900px (bigtablet) per evitare schiacciamenti */
+  @media (max-width: ${breakpoint.bigtablet}) {
+    flex-direction: column; 
+    height: auto; /* Sblocchiamo l'altezza in verticale per far adattare il testo */
   }
 `
 
-export const CoverImgWrapper = styled.div`
-  text-align: center;
+export const CoverImgWrapper = styled.div<{ $isFeatured?: boolean }>`
+  flex: ${({ $isFeatured }) => ($isFeatured ? "1" : "none")};
+  
+  .gatsby-image-wrapper, .cover-image {
+    width: 100%;
+    /* Su desktop l'immagine prende tutta l'altezza (i 400px definiti sopra) */
+    height: ${({ $isFeatured }) => ($isFeatured ? "100%" : "220px")};
+    object-fit: cover;
+    
+    /* FIX PER TABLET/MOBILE: Quando andiamo in colonna, diamo un'altezza massima fissa all'immagine in evidenza */
+    @media (max-width: ${breakpoint.bigtablet}) {
+      height: ${({ $isFeatured }) => ($isFeatured ? "350px" : "220px")};
+    }
+    
+    @media (max-width: ${breakpoint.mobile}) {
+      height: ${({ $isFeatured }) => ($isFeatured ? "250px" : "200px")};
+    }
+  }
 `
 
 export const FeaturedContent = styled.div`
-  padding: 1.5rem;
-  background: #fff;
+  flex: 1;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+
+  /* Adattiamo il padding per farlo respirare meglio sui tablet */
+  @media (max-width: ${breakpoint.bigtablet}) {
+    padding: 2rem;
+  }
+
+  @media (max-width: ${breakpoint.mobile}) {
+    padding: 1.5rem;
+  }
 `
 
 export const FeaturedTitle = styled(T.H2)`
@@ -3238,48 +3309,86 @@ export const FeaturedTitle = styled(T.H2)`
 export const MetaInfo = styled(T.P3)`
   color: ${colors.green.green600};
   margin-bottom: 1rem;
+  font-style: italic;
 `
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
 `
 
 export const Card = styled.article`
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 8px ${colors.green.green600}66;
+  box-shadow: 0 2px 8px ${colors.green.green600}40;
   background: #fff;
   display: flex;
   flex-direction: column;
   cursor: pointer;
   transition: all 0.3s ease;
+  
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 16px ${colors.green.green700}66;
+    box-shadow: 0 8px 20px ${colors.green.green700}50;
   }
 `
 
-export const CardImage = styled.img`
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-`
-
 export const CardContent = styled.div`
-  padding: 1rem;
+  padding: 1.5rem;
   flex: 1;
+  display: flex;
+  flex-direction: column;
 `
 
 export const CardTitle = styled(T.H3)`
   margin: 0 0 0.5rem;
+  line-height: 1.3;
 `
 
 export const CardExcerpt = styled(T.P3)`
-  margin: 0 0 1rem;
+  margin: 0;
+  color: ${colors.green.green900};
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Tronca il testo dopo 3 righe */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+
+/* --- NUOVI STILI PER LA PAGINAZIONE --- */
+export const PaginationWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4rem;
+`
+
+export const PageButton = styled.button<{ $active?: boolean }>`
+  background-color: ${({ $active }) => ($active ? colors.green.green600 : colors.green.green200)};
+  color: ${({ $active }) => ($active ? colors.green.green50 : colors.green.green900)};
+  border: none;
+  border-radius: 8px;
+  width: 45px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover:not(:disabled) {
+    background-color: ${({ $active }) => ($active ? colors.green.green700 : colors.green.green300)};
+    transform: translateY(-2px);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+`Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/icons/index.tsx
@@ -3369,7 +3478,7 @@ const Icon: React.FC<IconsProps> = ({ type, ...props }) => {
 }
 
 export default Icon
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/map-narcisi/index.tsx
@@ -3631,7 +3740,7 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
 }
 
 export default MapComponent
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/map-narcisi/styled.ts
@@ -3724,7 +3833,7 @@ export const PathInfoIcon = styled.div`
   width: 24px;
   height: 24px;
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/sponsors/index.tsx
@@ -3813,7 +3922,7 @@ const Sponsors = () => {
 }
 
 export default Sponsors
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/sponsors/styled.ts
@@ -3842,7 +3951,7 @@ export const SponsorGrid = styled.div`
     display: ruby;
   }
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/sustain-us/index.tsx
@@ -3879,7 +3988,7 @@ const SustainUs = () => {
 }
 
 export default SustainUs
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/sustain-us/styled.ts
@@ -3935,7 +4044,7 @@ export const IBANWrapper = styled.div`
     align-self: start;
   }
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/work-in-progress/index.tsx
@@ -3956,7 +4065,7 @@ const WorkInProgress = () => (
 )
 
 export default WorkInProgress
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/work-in-progress/styled.ts
@@ -3975,7 +4084,7 @@ export const Wrapper = styled.div`
     fill: ${colors.green.green900};
   }
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/map-laghetti/helpers.ts
@@ -4016,7 +4125,7 @@ const decodePolyline = (encoded: string) => {
 
   return points
 }
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/map-laghetti/index.tsx
@@ -4229,7 +4338,7 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
 // }
 
 export default MapComponent
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/map-laghetti/styled.ts
@@ -4291,7 +4400,7 @@ export const Dot = styled.div<{ $color: string }>`
   ${({ $color }) => `background-color: ${$color};`}
   border-radius: 50%;
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/contact-us/index.tsx
@@ -4386,7 +4495,7 @@ const ContactUs = () => {
 }
 
 export default ContactUs
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/contact-us/styled.ts
@@ -4470,7 +4579,7 @@ export const Row = styled.div`
   gap: 20px;
   align-items: center;
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/portable-text-components/index.tsx
@@ -4588,7 +4697,7 @@ const Components: PortableTextReactComponents = {
 }
 
 export default Components
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/portable-text-components/styled.ts
@@ -4636,7 +4745,7 @@ export const ImgDescription = styled(T.P4)`
   text-align: center;
   margin-block-start: 0.5em;
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/carousel/index.tsx
@@ -4808,7 +4917,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
 }
 
 export default Carousel
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/carousel/styled.ts
@@ -5043,7 +5152,7 @@ export const StyledGatsbyImageLarge = styled(GatsbyImage)`
     }
   }
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/seo/index.tsx
@@ -5096,7 +5205,7 @@ export const SEO: React.FC<SEOProps> = ({
     </>
   )
 }
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/cookie-banner/index.tsx
@@ -5219,7 +5328,7 @@ const CookieBanner = () => {
 }
 
 export default CookieBanner
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/cookie-banner/styled.ts
@@ -5278,7 +5387,7 @@ export const BannerButton = styled.button<{ color: string }>`
     transition: all 0.3s ease;
   }
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/header/index.tsx
@@ -5434,7 +5543,7 @@ const Header: React.FC = () => {
 }
 
 export default Header
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/header/styled.ts
@@ -5477,6 +5586,10 @@ export const LeftWrapper = styled.div`
   min-width: 120px;
   @media (max-height: ${horizBreakpointsHeight.medium}px) {
     min-width: 80px;
+  }
+  > a:hover > svg {
+    scale: 1.02;
+    transition: all 0.2s ease-in-out;
   }
 `
 
@@ -5802,7 +5915,7 @@ export const FaiLogoMobile = styled.div`
     height: 50px;
     width: auto;
   }
-`Generated at Sat Feb 21 04:30:50 PM UTC 2026
+`Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/custom-polyline/index.tsx
@@ -5833,7 +5946,7 @@ const ExtendedPolyline: React.FC<ExtendedPolylineProps> = ({
 }
 
 export default ExtendedPolyline
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/default-layout/index.tsx
@@ -5859,7 +5972,7 @@ const DefaultLayout: React.FC<{ children: any }> = ({ children }) => {
 }
 
 export default DefaultLayout
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/default-layout/styled.ts
@@ -5890,7 +6003,7 @@ export const Wrapper = styled.main`
     min-height: 300px;
   }
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/mobile-pagedata-text-components/index.tsx
@@ -5950,7 +6063,7 @@ const MobileContentToComponent: React.FC<{
   return <S.MainWrapper>{pageData.map(renderComponents(images))}</S.MainWrapper>
 }
 export default MobileContentToComponent
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/mobile-pagedata-text-components/styled.ts
@@ -6059,7 +6172,7 @@ export const ReadMoreWrapper = styled.div<{
     top: 3.2em;
   }
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/mobile-pagedata-text-components/helpers.tsx
@@ -6196,7 +6309,7 @@ export const ExpandableText: React.FC<{
     </S.TextWrapper>
   )
 }
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/post/index.tsx
@@ -6265,7 +6378,7 @@ const Post: React.FC<PostProps> = ({
 }
 
 export default Post
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/post/styled.ts
@@ -6307,7 +6420,7 @@ export const CoverImageWrp = styled.div`
     max-width: 100%;
   }
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/typography/index.tsx
@@ -6549,7 +6662,7 @@ export const Notes = styled.p<{
   ${({ $font }) => $font && `font-family: ${$font};`}
   ${({ $textAlign }) => $textAlign && `text-align: ${$textAlign};`}
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/404/index.tsx
@@ -6570,7 +6683,7 @@ const Component404 = () => (
 )
 
 export default Component404
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/404/styled.ts
@@ -6593,7 +6706,7 @@ export const Wrapper = styled.div`
     }
   }
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/button-link/index.tsx
@@ -6620,7 +6733,7 @@ const ButtonLink = ({ to, label }: ButtonLinkProps) => (
 )
 
 export default ButtonLink
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/button-link/styled.ts
@@ -6654,7 +6767,7 @@ export const ButtonWrapper = styled.div`
     margin-top: 0;
   }
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/hero-main/index.tsx
@@ -6699,7 +6812,7 @@ const HeroMain: React.FC<HeroMainProps> = ({ img, content }: HeroMainProps) => {
 }
 
 export default HeroMain
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/hero-main/styled.ts
@@ -6781,7 +6894,7 @@ export const TextWrapper = styled.div`
 `
 
 export const StyledImg = styled(GatsbyImage)``
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/footer/index.tsx
@@ -7005,7 +7118,7 @@ const Footer: React.FC = () => {
 }
 
 export default Footer
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/footer/styled.ts
@@ -7221,7 +7334,7 @@ export const TextLink = styled(Link)`
     }
   }
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/access-warnings/index.tsx
@@ -7305,7 +7418,7 @@ const AccessWarnings = ({ type }: AccessWarningsProps) => {
 }
 
 export default AccessWarnings
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/access-warnings/styled.ts
@@ -7399,7 +7512,7 @@ export const IconWrapper = styled.div`
     min-height: 50px;
   }
 `
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/pagedata-text-components/index.tsx
@@ -7418,7 +7531,7 @@ const ContentToComponent: React.FC<{
 )
 
 export default ContentToComponent
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/pagedata-text-components/styled.ts
@@ -7484,7 +7597,7 @@ export const RightTwoColsWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`Generated at Sat Feb 21 04:30:50 PM UTC 2026
+`Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/components/pagedata-text-components/helpers.tsx
@@ -7615,7 +7728,7 @@ export const renderComponents =
           return <T.H1 key={keyString}>Content type Not Found</T.H1>
       }
     }
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/types/index.ts
@@ -7688,7 +7801,7 @@ export type Location = {
   lon: number
   type: string
 }
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/svg.d.ts
@@ -7701,7 +7814,7 @@ declare module "*.svg" {
     React.SVGProps<SVGSVGElement> & { title?: string }
   >
 }
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/gatsby-types.d.ts
@@ -12541,6 +12654,13 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = { readonly tracedSVG: st
 
 type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: number, readonly maxWidth: number };
 
+type SinglePostQueryQueryVariables = Exact<{
+  slug: Scalars['String'];
+}>;
+
+
+type SinglePostQueryQuery = { readonly sanityPost: { readonly title: string | null, readonly publishedAt: string | null, readonly _rawBody: Record<string, unknown> | null, readonly author: string | null, readonly image: { readonly asset: { readonly description: string | null, readonly altText: string | null, readonly title: string | null, readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null };
+
 type SourcingAllPostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -12548,7 +12668,7 @@ type SourcingAllPostsQuery = { readonly allSanityPost: { readonly nodes: Readonl
 
 
 }
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/helpers.ts
@@ -12579,211 +12699,7 @@ export const fromBodyRawToExcerpt = (bodyRaw: any) =>
     .join(" ")
     .slice(0, 200)
     .concat("...")
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
-
-========================================
-FILE: ./src/templates/post-client.tsx
-========================================
-
-import { useLocation, navigate } from "@reach/router"
-import React, { useEffect, useState } from "react"
-import DefaultLayout from "../components/default-layout"
-import Post from "../components/post"
-import { remoteGraphqlURL } from "../constants"
-
-// type for fetching remote data: dynamic fallback
-type RemotePost = {
-  title: string
-  publishedAt: string
-  bodyRaw: any
-  author?: string
-  image?: {
-    asset?: {
-      url?: string
-      description?: string
-      altText?: string
-      title?: string
-    }
-  }
-  slug: {
-    current: string
-  }
-}
-
-const PostClientTemplate: React.FC = () => {
-  const { pathname } = useLocation()
-  const slug = pathname // Use the full path as the slug
-
-  const [post, setPost] = useState<RemotePost | null>(null);
-  const [loading, setLoading] = useState(true); // Start with loading true
-  const [error, setError] = useState<string | null>(null);
-  const [notFound, setNotFound] = useState(false);
-
-  const fetchPostData = async (slug: string): Promise<RemotePost | null> => {
-    try {
-      const query = `query {
-        allPost {
-          title
-          slug {
-            current
-          }
-          publishedAt
-          bodyRaw
-          author
-          image {
-            asset {
-              description
-              title
-              altText
-              url
-            }
-          }
-        }
-      }`
-
-      const response = await fetch(remoteGraphqlURL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query }),
-      })
-
-      const result = await response.json()
-      if (result.errors) {
-        throw new Error(result.errors[0].message)
-      }
-
-      const thePost = (result.data?.allPost || [])
-        .find((post: RemotePost) =>
-          post.slug?.current === slug ||
-          post.slug?.current === slug.replace(/\/$/, '')
-        )
-
-      if (!thePost) {
-        setNotFound(true)
-        return null
-      }
-
-      return thePost
-    } catch (err) {
-      console.error("Error fetching post:", err)
-      setError("Failed to fetch post data.")
-      return null
-    }
-  }
-
-  useEffect(() => {
-    let isMounted = true;
-
-    const loadPost = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-
-        const fetchedPost = await fetchPostData(slug);
-
-        if (!isMounted) return;
-
-        if (fetchedPost) {
-          setPost(fetchedPost);
-          setNotFound(false);
-        } else {
-          setNotFound(true);
-        }
-      } catch (err) {
-        if (!isMounted) return;
-        console.error('Error in loadPost:', err);
-        setError('An error occurred while loading the post');
-      } finally {
-        if (isMounted) {
-          setLoading(false);
-        }
-      }
-    };
-
-    loadPost();
-
-    return () => {
-      isMounted = false;
-    };
-  }, [slug]);
-
-  // Handle navigation when notFound changes
-  useEffect(() => {
-    if (notFound && typeof window !== 'undefined') {
-      navigate('/404', { replace: true }).catch((err: Error) => {
-        console.error('Navigation error:', err);
-      });
-    }
-  }, [notFound, navigate]);
-
-  // Show loading state
-  if (loading) {
-    return (
-      <DefaultLayout>
-        <p>Caricamento...</p>
-      </DefaultLayout>
-    );
-  }
-
-  // If there was an error, show error message
-  if (error) {
-    return (
-      <DefaultLayout>
-        <p>Errore: {error}</p>
-      </DefaultLayout>
-    );
-  }
-
-  // If post is not found, we'll show a 404 page
-  // The navigation is handled by the useEffect above
-  if (notFound || !post) {
-    return null;
-  }
-
-  // At this point, we know post is defined
-  const renderTitle = post.title
-  const renderPublishedAt = post.publishedAt
-  const renderBody = post.bodyRaw
-  const author = post.author || null
-
-  // main image code
-  const mainImgAlt = post.image?.asset?.altText || ""
-  const renderImageUrl = post.image?.asset?.url || null
-
-  // Handle loading and error states
-  if (loading) return <p>Caricamento...</p>
-  if (error || !post) {
-    // This will set the status code to 404 on the server side
-    if (typeof window !== 'undefined') {
-      navigate('/404', { replace: true })
-    }
-    return null
-  }
-
-  return (
-    <DefaultLayout>
-      <Post
-        renderTitle={renderTitle}
-        renderPublishedAt={renderPublishedAt ?? ""}
-        gatsbyImage={undefined}
-        renderImageUrl={renderImageUrl ?? ""}
-        renderBody={renderBody}
-        author={author ?? ""}
-        coverImageAlt={mainImgAlt}
-      />
-    </DefaultLayout>
-  )
-}
-
-export default PostClientTemplate
-
-import { HeadFC } from "gatsby"
-import { SEO } from "../components/seo"
-
-export const Head: HeadFC = ({ location }) => (
-  <SEO title="Gruppo Natura Lentiai" pathname={location.pathname} />
-)
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/templates/blog.tsx
@@ -12957,7 +12873,7 @@ export default Blog
 
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Blog" pathname={location.pathname} />
-)Generated at Sat Feb 21 04:30:50 PM UTC 2026
+)Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/templates/post.tsx
@@ -13063,7 +12979,7 @@ export const query = graphql`
       }
     }
   }
-`Generated at Sat Feb 21 04:30:50 PM UTC 2026
+`Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/sociale/ideali.tsx
@@ -13089,7 +13005,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - I nostri Ideali" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/sociale/index.tsx
@@ -13115,7 +13031,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Sociale" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/sociale/mobilità-sostenibile.tsx
@@ -13220,7 +13136,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Mobilità sostenibile" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/sociale/rifiuti.tsx
@@ -13246,7 +13162,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Rifiuti" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/sociale/educazione-ambientale.tsx
@@ -13272,7 +13188,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Educazione ambientale" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/chi-siamo.tsx
@@ -13355,7 +13271,7 @@ import { SEO } from "../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Chi siamo" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/404.tsx
@@ -13381,7 +13297,7 @@ import { SEO } from "../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - 404" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/cookies-policy.tsx
@@ -13420,7 +13336,7 @@ import { SEO } from "../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Politica sui cookie" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/contatti.tsx
@@ -13446,7 +13362,7 @@ import { SEO } from "../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Contattaci" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/index.tsx
@@ -13523,7 +13439,7 @@ import { SEO } from "../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/laghetti/rimontarte.tsx
@@ -13616,7 +13532,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Laghetti della Rimonta - Rimontarte" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/laghetti/galleria.tsx
@@ -13685,7 +13601,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Laghetti della Rimonta - Galleria" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/laghetti/index.tsx
@@ -13797,7 +13713,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Laghetti della Rimonta" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/laghetti/natura.tsx
@@ -13877,7 +13793,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Laghetti della Rimonta - Natura" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/laghetti/mappe.tsx
@@ -13978,7 +13894,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Laghetti della Rimonta - Mappe" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/laghetti/storia.tsx
@@ -14058,7 +13974,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Laghetti della Rimonta - Storia" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/progetto.tsx
@@ -14138,7 +14054,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Progetto Narcisi - Progetto" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/valbelluna.tsx
@@ -14218,7 +14134,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Progetto Narcisi - Valbelluna" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/galleria.tsx
@@ -14287,7 +14203,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Progetto Narcisi - Galleria" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/index.tsx
@@ -14369,7 +14285,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Progetto Narcisi" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/natura.tsx
@@ -14395,7 +14311,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Progetto Narcisi - Natura" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/mappe.tsx
@@ -14470,7 +14386,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Progetto Narcisi - Mappe" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/storia.tsx
@@ -14496,7 +14412,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Progetto Narcisi - Storia" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/partecipa.tsx
@@ -14522,7 +14438,7 @@ import { SEO } from "../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Partecipa!" pathname={location.pathname} />
 )
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/constants.ts
@@ -14533,7 +14449,7 @@ export const remoteGraphqlURL =
 
 // export const pathPrefix = "/Frontend" as const // old when hosted in https://grupponaturalentiai.github.io/Frontend
 export const pathPrefix = "" // actual having bought the domain
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/styles/index.ts
@@ -14595,7 +14511,7 @@ export const colors = {
     yellow: "#FFD700",
   },
 }
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./src/images.d.ts
@@ -14621,7 +14537,7 @@ declare module "*.svg" {
   const value: string
   export default value
 }
-Generated at Sat Feb 21 04:30:50 PM UTC 2026
+Generated at Sat Feb 21 05:02:51 PM UTC 2026
 
 ========================================
 FILE: ./gatsby-browser.tsx
