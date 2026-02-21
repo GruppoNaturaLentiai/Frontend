@@ -86,6 +86,7 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
     }
 
     > * {
+      margin-top: 0;
       ${({ $isActive }) => $isActive && `color: ${colors.green.green550}`};
       &:active {
         color: ${colors.green.green600};
@@ -217,6 +218,7 @@ export const MobileNavBarItem = styled.li<{ $isActive: boolean }>`
   > a {
     text-decoration: none;
     > * {
+      margin-top: 0;
       color: ${({ $isActive }) =>
     $isActive ? colors.green.green500 : colors.green.green300};
       &:active {
