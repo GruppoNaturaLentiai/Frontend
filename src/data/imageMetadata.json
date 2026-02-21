@@ -3,7 +3,11 @@
     "title": "Mappa dei laghetti della Rimonta",
     "description": "Mappa dei laghetti della Rimonta",
     "alt": "Mappa dei laghetti della Rimonta",
-    "tags": ["laghetti", "laghetti-mappe", "mappe"],
+    "tags": [
+      "laghetti",
+      "laghetti-mappe",
+      "mappe"
+    ],
     "fileName": "laghetti-mappa.png",
     "copyright": ""
   },
@@ -11,7 +15,10 @@
     "title": "Bardies - Catasto asburgico (1818-1829)",
     "description": "Una mappa del catasto austriaco risalente al 1830 ci riporta l’immagine di un paese sulla sponda di un ragguardevole corso d’acqua, a difesa del quale appaiono una serie di strutture costiere. ",
     "alt": "Foto tratta dal catasto asburgico in cui compare Bardies (Borgo Valbelluna)",
-    "tags": ["laghetti", "laghetti-storia"],
+    "tags": [
+      "laghetti",
+      "laghetti-storia"
+    ],
     "fileName": "CatastoAsburgo1818-1829.jpg",
     "copyright": ""
   },
@@ -19,7 +26,10 @@
     "title": "Bardies",
     "description": "Bardies (Borgo Valbelluna) e la sua piazza",
     "alt": "Foto storica di Bardies (Borgo Valbelluna) con la piazza",
-    "tags": ["laghetti", "laghetti-storia"],
+    "tags": [
+      "laghetti",
+      "laghetti-storia"
+    ],
     "fileName": "Bardies00.jpg",
     "copyright": ""
   },
@@ -27,7 +37,10 @@
     "title": "Bardies",
     "description": "Il ponte sul torrente Rimonta. Sulla sinistra si nota la chiesa Sant'Antonio Abate di Bardies, mentre sulla destra l'attuale albergo 'Cavallino Rosso'",
     "alt": "Foto storica di Bardies (Borgo Valbelluna) con un ponte l'albergo 'Cavallino Rosso'",
-    "tags": ["laghetti", "laghetti-storia"],
+    "tags": [
+      "laghetti",
+      "laghetti-storia"
+    ],
     "fileName": "Bardies01.jpg",
     "copyright": ""
   },
@@ -35,7 +48,9 @@
     "title": "Rimontarte",
     "description": "Logo di Rimontarte",
     "alt": "Rimontarte Logo",
-    "tags": ["laghetti-rimontarte"],
+    "tags": [
+      "laghetti-rimontarte"
+    ],
     "fileName": "rimontarte-logo.png",
     "copyright": ""
   },
@@ -43,7 +58,10 @@
     "title": "",
     "description": "Un pettirosso",
     "alt": "Foto di un pettirosso",
-    "tags": ["laghetti", "laghetti-natura"],
+    "tags": [
+      "laghetti",
+      "laghetti-natura"
+    ],
     "fileName": "rimonta-pettirosso.png",
     "copyright": "Riccardo Deon"
   },
@@ -51,7 +69,10 @@
     "title": "",
     "description": "Un cervo",
     "alt": "Foto di un cervo",
-    "tags": ["laghetti", "laghetti-natura"],
+    "tags": [
+      "laghetti",
+      "laghetti-natura"
+    ],
     "fileName": "rimonta-cervo.png",
     "copyright": "Riccardo Deon"
   },
@@ -59,7 +80,10 @@
     "title": "",
     "description": "Una forra",
     "alt": "Foto di una forra",
-    "tags": ["laghetti", "laghetti-natura"],
+    "tags": [
+      "laghetti",
+      "laghetti-natura"
+    ],
     "fileName": "rimonta-canyon.png",
     "copyright": "Walter Argenta"
   },
@@ -67,7 +91,10 @@
     "title": "",
     "description": "Panorama delle prealpi di Lentiai",
     "alt": "Foto di un panorama collinare di Lentiai",
-    "tags": ["laghetti", "laghetti-natura"],
+    "tags": [
+      "laghetti",
+      "laghetti-natura"
+    ],
     "fileName": "rimonta-bacino.png",
     "copyright": "Walter Argenta"
   },
@@ -75,7 +102,10 @@
     "title": "",
     "description": "Panorama dei laghetti della Rimonta",
     "alt": "Panorama con un lago e un cigno",
-    "tags": ["laghetti", "laghetti-natura"],
+    "tags": [
+      "laghetti",
+      "laghetti-natura"
+    ],
     "fileName": "rimonta-panorama.jpg",
     "copyright": "Walter Argenta"
   },
@@ -83,7 +113,10 @@
     "title": "",
     "description": "La vegetazione subacquea",
     "alt": "Foto subacquea con alcune piante",
-    "tags": ["laghetti", "laghetti-natura"],
+    "tags": [
+      "laghetti",
+      "laghetti-natura"
+    ],
     "fileName": "rimonta-underwater.png",
     "copyright": "Walter Argenta"
   },
@@ -91,7 +124,10 @@
     "title": "<b>Walter Bernardi</b> - La via dell'acqua",
     "description": "",
     "alt": "Murales di Walter Bernardi",
-    "tags": ["laghetti", "laghetti-rimontarte"],
+    "tags": [
+      "laghetti",
+      "laghetti-rimontarte"
+    ],
     "fileName": "rimontarte-01-la-via-dell-acqua.png",
     "copyright": "Walter Argenta"
   },
@@ -99,7 +135,10 @@
     "title": "<b>Bruno Corriani</b> - La libellula",
     "description": "",
     "alt": "Scultura in ferro di una libellula fatta da Bruno Corriani",
-    "tags": ["laghetti", "laghetti-rimontarte"],
+    "tags": [
+      "laghetti",
+      "laghetti-rimontarte"
+    ],
     "fileName": "rimontarte-02-la-libellula.png",
     "copyright": "Walter Argenta"
   },
@@ -107,7 +146,10 @@
     "title": "<b>Mauro Ricci</b> - Il cervo volante",
     "description": "",
     "alt": "Scultura in ferro di un cervo volante eseguita da Mauro Ricci",
-    "tags": ["laghetti", "laghetti-rimontarte"],
+    "tags": [
+      "laghetti",
+      "laghetti-rimontarte"
+    ],
     "fileName": "rimontarte-03-il-cervo-volante.png",
     "copyright": "Walter Argenta"
   },
@@ -115,7 +157,10 @@
     "title": "<b>Andrea Gaspari</b> - Rufus il drago",
     "description": "",
     "alt": "Scultura in legno eseguita da Andrea Gaspari di un drago immerso in un laghetto e nascosto da un canneto",
-    "tags": ["laghetti", "laghetti-rimontarte"],
+    "tags": [
+      "laghetti",
+      "laghetti-rimontarte"
+    ],
     "fileName": "rimontarte-04-rufus-il-drago.jpg",
     "copyright": "Walter Argenta"
   },
@@ -123,7 +168,10 @@
     "title": "<b>Ezio Giordano</b> - Lo gnomo",
     "description": "",
     "alt": "Scultura in legno eseguita da Ezio Giordano di uno gnomo con una chiocciola sopra.",
-    "tags": ["laghetti", "laghetti-rimontarte"],
+    "tags": [
+      "laghetti",
+      "laghetti-rimontarte"
+    ],
     "fileName": "rimontarte-05-lo-gnomo.png",
     "copyright": "Walter Argenta"
   },
@@ -131,7 +179,10 @@
     "title": "<b>Franco Vergerio</b> - La ragnatela",
     "description": "",
     "alt": "Scultura in legno e corda di Franco Vergerio, raffigurante una ragnatela sospesa fra due alberi ed un ragno.",
-    "tags": ["laghetti", "laghetti-rimontarte"],
+    "tags": [
+      "laghetti",
+      "laghetti-rimontarte"
+    ],
     "fileName": "rimontarte-06-la-ragnatela.png",
     "copyright": "Walter Argenta"
   },
@@ -139,7 +190,10 @@
     "title": "<b>Artisti vari</b> - La rinascita",
     "description": "",
     "alt": "Una scultura su un ceppo di legno raffigurante un fiore",
-    "tags": ["laghetti", "laghetti-rimontarte"],
+    "tags": [
+      "laghetti",
+      "laghetti-rimontarte"
+    ],
     "fileName": "rimontarte-07-la-rinascita.png",
     "copyright": "Walter Argenta"
   },
@@ -147,7 +201,10 @@
     "title": "<b>Artisti vari</b> - La rinascita",
     "description": "",
     "alt": "Alcune opere d'arte su base di ceppi di legno",
-    "tags": ["laghetti", "laghetti-rimontarte"],
+    "tags": [
+      "laghetti",
+      "laghetti-rimontarte"
+    ],
     "fileName": "rimontarte-07-la-rinascita-bis.png",
     "copyright": "Walter Argenta"
   },
@@ -155,7 +212,10 @@
     "title": "<b>Beppino Lorenzet</b> - Il folletto",
     "description": "",
     "alt": "Una scultura di legno eseguita da Beppino lorenzet di uno gnomo che si arrampica su una corda ed un gufo sulla spalla.",
-    "tags": ["laghetti", "laghetti-rimontarte"],
+    "tags": [
+      "laghetti",
+      "laghetti-rimontarte"
+    ],
     "fileName": "rimontarte-08-il-folletto.png",
     "copyright": "Walter Argenta"
   },
@@ -163,7 +223,10 @@
     "title": "<b>Sara Andrich</b> - Il nido",
     "description": "",
     "alt": "Una scultura eseguita da Sara Andrich di un nido con degli uccellini col il becco aperto arancione.",
-    "tags": ["laghetti", "laghetti-rimontarte"],
+    "tags": [
+      "laghetti",
+      "laghetti-rimontarte"
+    ],
     "fileName": "rimontarte-09-il-nido.png",
     "copyright": "Walter Argenta"
   },
@@ -171,7 +234,10 @@
     "title": "<b>Beppino Lorenzet</b> - Il fungo",
     "description": "",
     "alt": "Una scultura eseguita da Beppino Lorenzed di un fungo.",
-    "tags": ["laghetti", "laghetti-rimontarte"],
+    "tags": [
+      "laghetti",
+      "laghetti-rimontarte"
+    ],
     "fileName": "rimontarte-10-il-fungo.png",
     "copyright": "Walter Argenta"
   },
@@ -179,7 +245,10 @@
     "title": "<b>Gianni Stiletto e Franco Vergerio</b> - Concerto con coro di farfalle",
     "description": "",
     "alt": "Un'installazione di ideata e creata da Franco Vergerio raffigurante un contrabbasso, sopra il quale sono posizionate delle farfalle create da Gianni Stiletto.",
-    "tags": ["laghetti", "laghetti-rimontarte"],
+    "tags": [
+      "laghetti",
+      "laghetti-rimontarte"
+    ],
     "fileName": "rimontarte-11-concerto-con-coro-di-farfalle.png",
     "copyright": "Walter Argenta"
   },
@@ -187,7 +256,10 @@
     "title": "<b>Luca Lisot</b> - La rana",
     "description": "",
     "alt": "Una scultura di legno raffigurante una rana creata da Luca Lisot.",
-    "tags": ["laghetti", "laghetti-rimontarte"],
+    "tags": [
+      "laghetti",
+      "laghetti-rimontarte"
+    ],
     "fileName": "rimontarte-12-la-rana.png",
     "copyright": "Walter Argenta"
   },
@@ -195,7 +267,10 @@
     "title": "",
     "description": "",
     "alt": "Una passerella in legno con dietro il torrente Rimonta",
-    "tags": ["laghetti", "laghetti-main"],
+    "tags": [
+      "laghetti",
+      "laghetti-main"
+    ],
     "fileName": "rimonta-cover-01-old.png",
     "copyright": "Walter Argenta"
   },
@@ -203,7 +278,10 @@
     "title": "",
     "description": "",
     "alt": "Un panorama invernale dei laghetti della Rimonta",
-    "tags": ["laghetti", "laghetti-main"],
+    "tags": [
+      "laghetti",
+      "laghetti-main"
+    ],
     "fileName": "rimonta-cover-02-old.png",
     "copyright": "Walter Argenta"
   },
@@ -211,7 +289,10 @@
     "title": "",
     "description": "Panoramica dell'interno della chiesa di Bardies in cui sono visibili pareti affrescate.",
     "alt": "Panoramica dell'interno della chiesa di Bardies",
-    "tags": ["laghetti", "laghetti-storia"],
+    "tags": [
+      "laghetti",
+      "laghetti-storia"
+    ],
     "fileName": "bardies-chiesa-00.png",
     "copyright": "Walter Argenta"
   },
@@ -219,7 +300,10 @@
     "title": "",
     "description": "Particolare di un affresco raffigurante Sant'Antonio Abate.",
     "alt": "Particolare di un affresco raffigurante Sant'Antonio Abate",
-    "tags": ["laghetti", "laghetti-storia"],
+    "tags": [
+      "laghetti",
+      "laghetti-storia"
+    ],
     "fileName": "bardies-chiesa-01.png",
     "copyright": "Walter Argenta"
   },
@@ -227,7 +311,10 @@
     "title": "",
     "description": "Sottostante al ponte si trovano le acque del torrente Forada.",
     "alt": "L'arcata inferiore del ponte romano in cui si intravedono le acque del torrente Forata",
-    "tags": ["laghetti", "laghetti-storia"],
+    "tags": [
+      "laghetti",
+      "laghetti-storia"
+    ],
     "fileName": "ponte_00.jpg",
     "copyright": "Alida Cavalet"
   },
@@ -235,7 +322,10 @@
     "title": "",
     "description": "L'ultima azione di restauro del ponte risale al 2016.",
     "alt": "Un ponte romano con un telo che ne protegge la parte superiore",
-    "tags": ["laghetti", "laghetti-storia"],
+    "tags": [
+      "laghetti",
+      "laghetti-storia"
+    ],
     "fileName": "ponte_01.jpeg",
     "copyright": ""
   },
@@ -243,7 +333,10 @@
     "title": "",
     "description": "",
     "alt": "Una foto artistica di uno scorcio su un lago",
-    "tags": ["laghetti", "laghetti-main"],
+    "tags": [
+      "laghetti",
+      "laghetti-main"
+    ],
     "fileName": "rimonta-cover-01.jpg",
     "copyright": "Walter Argenta"
   },
@@ -251,7 +344,10 @@
     "title": "",
     "description": "",
     "alt": "Un panorama invernale dei laghetti della Rimonta con alberi innevati",
-    "tags": ["laghetti", "laghetti-main"],
+    "tags": [
+      "laghetti",
+      "laghetti-main"
+    ],
     "fileName": "rimonta-cover-02.jpg",
     "copyright": "Walter Argenta"
   },
@@ -259,7 +355,9 @@
     "title": "",
     "description": "Laghetti d'inverno. Si intravede Rufus il Drago",
     "alt": "Panorama invernale dei laghetti. Si intravede l'opera di legno \"Rufus il Drago\"",
-    "tags": ["laghetti"],
+    "tags": [
+      "laghetti"
+    ],
     "fileName": "Laghetti02.jpg",
     "copyright": "Walter Argenta"
   },
@@ -267,7 +365,9 @@
     "title": "",
     "description": "Il sentiero dei Laghetti attraversa una radura. Sullo sfondo le Dolomiti.",
     "alt": "Panoramica del sentiero che attraversa una radura. Si vede una persona in piedi e le Dolomiti sullo sfondo.",
-    "tags": ["laghetti"],
+    "tags": [
+      "laghetti"
+    ],
     "fileName": "Laghetti06.jpg",
     "copyright": "Walter Argenta"
   },
@@ -275,7 +375,9 @@
     "title": "",
     "description": "Durante il percorso si possono trovare pannelli informativi affiancati alle opere d'arte.",
     "alt": "Una persona di spalle sta leggendo un pannello informativo. A fianco, uno dei ceppi scolpiti facente parte del gruppo di opere \"La Rinascita\".",
-    "tags": ["laghetti"],
+    "tags": [
+      "laghetti"
+    ],
     "fileName": "Laghetti07.jpg",
     "copyright": "Walter Argenta"
   },
@@ -283,7 +385,9 @@
     "title": "",
     "description": "Sul percorso dei laghetti della Rimonta si sfruttano passerelle di legno.",
     "alt": "Una passerella di legno",
-    "tags": ["laghetti"],
+    "tags": [
+      "laghetti"
+    ],
     "fileName": "Laghetti08.jpg",
     "copyright": "Walter Argenta"
   },
@@ -291,7 +395,9 @@
     "title": "",
     "description": "Prato costellato di narcisi durante il periodo della fioritura.",
     "alt": "Un prato di narcisi bianchi al tramonto. Sullo sfondo a destra degli alberi e un recinto.",
-    "tags": ["narcisi"],
+    "tags": [
+      "narcisi"
+    ],
     "fileName": "Fioritura01.jpg",
     "copyright": "Walter Argenta"
   },
@@ -299,7 +405,10 @@
     "title": "",
     "description": "Durante la fioritura dei narcisi i prati si tingono di bianco. Sullo sfondo la Valbelluna coperta dalle nuvole e le cime delle dolomiti innevate.",
     "alt": "Un panorama con un prato di narcisi bianchi. Sullo sfondo la Valbelluna coperta dalle nuvole e le cime delle dolomiti innevate.",
-    "tags": ["narcisi", "main"],
+    "tags": [
+      "narcisi",
+      "main"
+    ],
     "fileName": "Fioritura02.jpg",
     "copyright": "Walter Argenta"
   },
@@ -307,7 +416,9 @@
     "title": "",
     "description": "Alcuni narcisi in primo piano. Sullo sfondo la Valbelluna e le Dolomiti bellunesi.",
     "alt": "Alcuni narcisi in primo piano. Sullo sfondo la Valbelluna e le Dolomiti bellunesi.",
-    "tags": ["narcisi"],
+    "tags": [
+      "narcisi"
+    ],
     "fileName": "Fioritura03.jpg",
     "copyright": "Walter Argenta"
   },
@@ -315,7 +426,9 @@
     "title": "",
     "description": "I prati sembrano innevati durante la fioritura dei Narcisi. Sullo sfondo il monte Avena.",
     "alt": "Un prato con molti narcisi bianchi. Sullo sfondo alcune montagne",
-    "tags": ["narcisi"],
+    "tags": [
+      "narcisi"
+    ],
     "fileName": "Fioritura04.jpg",
     "copyright": "Walter Argenta"
   },
@@ -323,7 +436,9 @@
     "title": "",
     "description": "Panorama di prati con narcisi in fiore. Sullo sfondo Col Moscher e Malga Garda. Continuando si può scendere fino a Malga Mariech, Milies e infine Valdobbiadene.",
     "alt": "Un prato con alcuni narcisi e sullo sfondo le Prealpi Bellunesi.",
-    "tags": ["narcisi"],
+    "tags": [
+      "narcisi"
+    ],
     "fileName": "Fioritura05.jpg",
     "copyright": "Walter Argenta"
   },
@@ -331,7 +446,9 @@
     "title": "",
     "description": "Il Principe Bianco.",
     "alt": "Un primo piano di una coppia di Narcisi incorniciati da fiori volgarmente detti \"Botton d'oro\".",
-    "tags": ["narcisi"],
+    "tags": [
+      "narcisi"
+    ],
     "fileName": "Fioritura06.jpg",
     "copyright": "Walter Argenta"
   },
@@ -339,7 +456,9 @@
     "title": "",
     "description": "",
     "alt": "Un prato con molti narcisi e le Prealpi bellunesi sullo sfondo.",
-    "tags": ["narcisi"],
+    "tags": [
+      "narcisi"
+    ],
     "fileName": "Fioritura07.jpg",
     "copyright": "Walter Argenta"
   },
@@ -347,7 +466,9 @@
     "title": "Chi siamo",
     "description": "Il Maestro Franco Vergerio mentre restaura la statua di Rufus il drago",
     "alt": "Un uomo che ristruttura una statua d'inverno",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_000.jpeg",
     "copyright": "Orfeo Dal Piva"
   },
@@ -355,7 +476,9 @@
     "title": "Chi siamo",
     "description": "I volontari si occupano di tenere pulito il sentiero dei laghetti della Rimonta",
     "alt": "Un uomo che taglia un tronco con una motosega",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_001.jpeg",
     "copyright": "Orfeo Dal Piva"
   },
@@ -363,7 +486,9 @@
     "title": "Chi siamo",
     "description": "",
     "alt": "Un uomo su una scala sta montando la scultura de \"La ragnatela\"",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_002.jpeg",
     "copyright": "Orfeo Dal Piva"
   },
@@ -371,7 +496,9 @@
     "title": "Chi siamo",
     "description": "Alcuni volontari",
     "alt": "Alcuni volontari del GNL",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_003.jpeg",
     "copyright": ""
   },
@@ -379,7 +506,9 @@
     "title": "Chi siamo",
     "description": "Alcuni volontari",
     "alt": "Un folto gruppo di volontari del GNL",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_004.jpeg",
     "copyright": ""
   },
@@ -387,7 +516,9 @@
     "title": "Chi siamo",
     "description": "Alcuni volontari",
     "alt": "Un volontario si occupa della sostituzione di pannelli informativi lungo il sentiero dei Laghetti della Rimonta",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_005.jpeg",
     "copyright": "Orfeo Dal Piva"
   },
@@ -395,7 +526,9 @@
     "title": "Chi siamo",
     "description": "I volontari si occupano della bonifica dell'ecosistema dei Laghetti",
     "alt": "Alcuni volontari  si occupano della bonifica dell'ecosistema dei Laghetti togliendo il fango con alcuni secchi",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_006.jpeg",
     "copyright": ""
   },
@@ -403,7 +536,9 @@
     "title": "Chi siamo",
     "description": "",
     "alt": "Un volontario sorride seduto su un trattore",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_007.jpeg",
     "copyright": ""
   },
@@ -411,7 +546,9 @@
     "title": "Chi siamo",
     "description": "",
     "alt": "Un paio di volontari mostrano i nuovi pannelli informativi del percorso dei Laghetti della Rimonta",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_008.jpeg",
     "copyright": ""
   },
@@ -419,7 +556,9 @@
     "title": "Chi siamo",
     "description": "Un momento di convivialità",
     "alt": "Un uomo versa della birra in un bicchiere ad un'altra persona",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_009.jpeg",
     "copyright": "Orfeo Dal Piva"
   },
@@ -427,7 +566,9 @@
     "title": "Chi siamo",
     "description": "I volontari si occupano di tenere pulito il sentiero dei Laghetti della Rimonta",
     "alt": "Un paio di volontari stanno tagliando con una motosega un albero caduto che ostruisce il percorso",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_010.jpeg",
     "copyright": ""
   },
@@ -435,7 +576,9 @@
     "title": "Chi siamo",
     "description": "Alcuni volontari aiutano a montare l'opera \"Concerto con coro di farfalle\"",
     "alt": "Un paio di volontari stanno tagliando con una motosega un albero caduto che ostruisce il percorso",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_011.jpeg",
     "copyright": ""
   },
@@ -443,7 +586,9 @@
     "title": "Chi siamo",
     "description": "I volontari si occupano della manutenzione delle passerelle del sentiero dei Laghetti della Rimonta",
     "alt": "Un uomo è chino a riparare una passerella in legno",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_012.jpeg",
     "copyright": "Orfeo Dal Piva"
   },
@@ -451,7 +596,9 @@
     "title": "Chi siamo",
     "description": "Alcuni volontari in Col D'Artent",
     "alt": "Un gruppo di volontari in montagna",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_013.jpeg",
     "copyright": "Orfeo Dal Piva"
   },
@@ -459,7 +606,9 @@
     "title": "Chi siamo",
     "description": "Alcuni volontari durante le domeniche di fioritura del Narciso",
     "alt": "Un paio seduti di uomini sotto un gazebo informativo in Col D'Artent",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_014.jpeg",
     "copyright": ""
   },
@@ -467,7 +616,9 @@
     "title": "Chi siamo",
     "description": "Alcuni volontari del GNL durante le domeniche di fioritura del Narciso",
     "alt": "Alcuni uomini sotto un gazebo informativo in Col D'Artent",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_016.jpeg",
     "copyright": ""
   },
@@ -475,7 +626,9 @@
     "title": "Chi siamo",
     "description": "Un volontario si occupa di fare la \"meda\" durante la fienagione.",
     "alt": "Un uomo durante la fienagione butta del fieno sopra un cumulo di fieno con una forca.",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_015.jpeg",
     "copyright": ""
   },
@@ -483,7 +636,9 @@
     "title": "Chi siamo",
     "description": "I volontari del GNL durante le giornate di estirpazione del veratro in Col D'Artent.",
     "alt": "Alcuni volontari su una collina si occupano di estirpare il veratro, pianta infestante, in Col D'Artent",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_017.jpeg",
     "copyright": ""
   },
@@ -491,7 +646,9 @@
     "title": "Chi siamo",
     "description": "",
     "alt": "Un uomo su un cumulo di fieno",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_018.jpeg",
     "copyright": ""
   },
@@ -499,7 +656,9 @@
     "title": "Chi siamo",
     "description": "Periodicamente i volontari si occupano di organizzare Giornate Ecologiche per la pulizia dell'ambiente.",
     "alt": "Alcuni volontari con giubbotti arancioni durante una giornata ecologica",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_019.jpeg",
     "copyright": ""
   },
@@ -507,7 +666,9 @@
     "title": "Chi siamo",
     "description": "I volontari del GNL dopo aver estirpato il veratro in Col D'Artent.",
     "alt": "Un gruppo di persone dopo aver estirpato il veratro in col D'Artent",
-    "tags": ["chi-siamo"],
+    "tags": [
+      "chi-siamo"
+    ],
     "fileName": "chi-siamo_020.jpg",
     "copyright": "Orfeo Dal Piva"
   },
@@ -515,7 +676,9 @@
     "title": "Anello Ciclo-Pedonale di Lentiai",
     "description": "Informazioni utili sull'anello ciclopedonale di Lentiai",
     "alt": "Informazioni utili sull'anello ciclopedonale di Lentiai",
-    "tags": ["mobilità"],
+    "tags": [
+      "mobilità"
+    ],
     "fileName": "anello-ciclopedonale-lentiai-00.jpeg",
     "copyright": "Gruppo Natura Lentiai"
   },
@@ -523,8 +686,63 @@
     "title": "Anello Ciclo-Pedonale di Lentiai",
     "description": "Cartina dell'anello ciclopedonale di Lentiai",
     "alt": "Cartina dell'anello ciclopedonale di Lentiai",
-    "tags": ["mobilità"],
+    "tags": [
+      "mobilità"
+    ],
     "fileName": "anello-ciclopedonale-lentiai-01.jpeg",
     "copyright": "Gruppo Natura Lentiai"
+  },
+  {
+    "title": "Mappa dell'area",
+    "description": "Cartina con la zona di fioritura dei narcisi sul Monte Avena",
+    "alt": "Cartina del percorso dei narcisi in località Monte Avena",
+    "tags": [
+      "narcisi-valbelluna",
+      "narcisi"
+    ],
+    "fileName": "narcisi_valbelluna_avena_map.jpeg",
+    "copyright": ""
+  },
+  {
+    "title": "La fioritura dei Narcisi sul monte Avena",
+    "description": "La fioritura dei Narcisi sul monte Avena",
+    "alt": "",
+    "tags": [
+      "narcisi-valbelluna",
+      "narcisi"
+    ],
+    "fileName": "narcisi_valbelluna_avena_pic.jpeg",
+    "copyright": "Antonella Cossa"
+  },
+  {
+    "title": "Mappa dell'area",
+    "description": "Cartina con la zona di fioritura dei narcisi in località Castron - Praderadego",
+    "alt": "Cartina del percorso dei narcisi in località Castron",
+    "tags": [
+      "narcisi-valbelluna"
+    ],
+    "fileName": "narcisi_valbelluna_castron_map.jpeg",
+    "copyright": ""
+  },
+  {
+    "title": "Mappa dell'area",
+    "description": "Cartina con la zona di fioritura dei narcisi in località Le Lei - Lamon",
+    "alt": "Cartina del percorso dei narcisi in località Le Lei - Lamon",
+    "tags": [
+      "narcisi-valbelluna"
+    ],
+    "fileName": "narcisi_valbelluna_le_lei_map.jpeg",
+    "copyright": ""
+  },
+  {
+    "title": "La fioritura dei Narcisi in località Le Lei - Lamon",
+    "description": "La fioritura dei Narcisi in località Le Lei - Lamon",
+    "alt": "",
+    "tags": [
+      "narcisi-valbelluna",
+      "narcisi"
+    ],
+    "fileName": "narcisi_valbelluna_le_lei_pic.jpeg",
+    "copyright": "Mamma Gloria (account FB)"
   }
 ]

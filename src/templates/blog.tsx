@@ -1,13 +1,32 @@
-import { HeadFC, PageProps } from "gatsby"
+import { graphql, HeadFC, PageProps } from "gatsby"
 import * as _ from "lodash"
 import React, { useEffect, useMemo, useState } from "react"
 import DefaultLayout from "../components/default-layout"
 import { remoteGraphqlURL } from "../constants"
 import { FeaturedBlog, PostInfo } from "../components/blog-list"
 import { fromBodyRawToExcerpt } from "../helpers"
+import { SEO } from "../components/seo"
 
-type PostPageContext = {
-  postsInfo?: PostInfo[]
+// Definiamo il tipo per i dati che arrivano dalla query GraphQL di Gatsby
+type BlogData = {
+  allSanityPost: {
+    nodes: Array<{
+      id: string
+      title: string
+      publishedAt: string
+      _rawBody: any
+      author: string
+      slug: { current: string }
+      image: {
+        asset: {
+          description: string
+          altText: string
+          title: string
+          gatsbyImageData: any
+        }
+      }
+    }>
+  }
 }
 
 const filterDummyPosts = (post: PostInfo) =>
@@ -16,25 +35,36 @@ const filterDummyPosts = (post: PostInfo) =>
 const sortByPublishedAt = (p1: PostInfo, p2: PostInfo) =>
   new Date(p1.publishedAt).getTime() - new Date(p2.publishedAt).getTime()
 
-const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
-  const { postsInfo } = pageContext
+const Blog: React.FC<PageProps<BlogData>> = ({ data }) => {
+  // Trasformiamo i dati statici di Gatsby nel formato PostInfo
+  const staticPosts: PostInfo[] = useMemo(() => {
+    return (data.allSanityPost.nodes || []).map(node => ({
+      id: node.id,
+      title: node.title,
+      publishedAt: node.publishedAt,
+      author: node.author,
+      slug: node.slug.current,
+      excerpt: fromBodyRawToExcerpt(node._rawBody),
+      coverImage: {
+        description: node.image?.asset?.description,
+        altText: node.image?.asset?.altText,
+        title: node.image?.asset?.title,
+        gatsbyImage: node.image?.asset?.gatsbyImageData || null,
+      },
+    }))
+  }, [data])
 
-  const cachedPosts = useMemo(
-    () =>
-      postsInfo?.filter(filterDummyPosts).sort(sortByPublishedAt).reverse() ??
-      [],
-    [postsInfo],
+  const [posts, setPosts] = useState<PostInfo[]>(
+    staticPosts.filter(filterDummyPosts).sort(sortByPublishedAt).reverse()
   )
-  const [posts, setPosts] = useState<PostInfo[]>(cachedPosts)
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
         const query = `query {
           allPost {
-            slug {
-              current
-            }
+            _id
+            slug { current }
             title
             publishedAt
             bodyRaw
@@ -57,47 +87,43 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
         })
 
         const result = await response.json()
+        if (result.errors) throw new Error(result.errors[0].message)
 
-        if (result.errors) {
-          throw new Error(result.errors[0].message)
-        }
+        const remotePostsRaw = _.get(result.data, "allPost", [])
 
-        // TODO typing
-        const remotePosts = _.get(result.data, "allPost", cachedPosts).map(
-          (p: any) => ({
-            ...p,
-            slug: p.slug.current,
-            excerpt: fromBodyRawToExcerpt(p.bodyRaw),
-            id: p._id,
-            coverImage: {
-              description: p.image?.asset?.description,
-              altText: p.image?.asset?.altText,
-              title: p.image?.asset?.title,
-              renderImageUrl: p.image ? p.image.asset.url : null,
-            },
-          }),
-        )
+        const remotePosts: PostInfo[] = remotePostsRaw.map((p: any) => ({
+          id: p._id,
+          title: p.title,
+          publishedAt: p.publishedAt,
+          author: p.author,
+          slug: p.slug.current,
+          excerpt: fromBodyRawToExcerpt(p.bodyRaw),
+          coverImage: {
+            description: p.image?.asset?.description,
+            altText: p.image?.asset?.altText,
+            title: p.image?.asset?.title,
+            renderImageUrl: p.image?.asset?.url || null,
+          },
+        }))
 
-        const newPosts = remotePosts
-          .filter(
-            (p: any) => !cachedPosts?.some((cp: any) => cp.slug === p.slug),
-          )
-          .filter(filterDummyPosts)
+        // Uniamo i post statici con quelli remoti (evitando duplicati)
+        const combined = [...staticPosts]
+        remotePosts.forEach(rp => {
+          if (!combined.some(cp => cp.slug === rp.slug)) {
+            combined.push(rp)
+          }
+        })
 
         setPosts(
-          [...cachedPosts, ...newPosts].sort(sortByPublishedAt).reverse(),
+          combined.filter(filterDummyPosts).sort(sortByPublishedAt).reverse()
         )
       } catch (err: any) {
-        console.error(err)
-        console.warn(
-          "Using cached posts, error in doing the remote query",
-          remoteGraphqlURL,
-        )
+        console.error("Errore nel fetch remoto, uso i dati statici:", err)
       }
     }
 
     fetchPosts()
-  }, [cachedPosts, remoteGraphqlURL])
+  }, [staticPosts])
 
   return (
     <DefaultLayout>
@@ -106,9 +132,37 @@ const Blog: React.FC<PageProps<{}, PostPageContext>> = ({ pageContext }) => {
   )
 }
 
-export default Blog
+// Questa query viene eseguita da Gatsby a tempo di build
+export const query = graphql`
+  query BlogPageQuery {
+    allSanityPost(sort: { publishedAt: DESC }) {
+      nodes {
+        id
+        title
+        publishedAt
+        _rawBody
+        author
+        slug {
+          current
+        }
+        image {
+          asset {
+            description
+            altText
+            title
+            gatsbyImageData(
+              width: 800
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
+        }
+      }
+    }
+  }
+`
 
-import { SEO } from "../components/seo"
+export default Blog
 
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Blog" pathname={location.pathname} />

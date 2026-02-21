@@ -6,6 +6,8 @@ import { navItems } from "./../../data/sections"
 import * as S from "./styled"
 import { useLocation } from "@reach/router"
 
+import { ReactComponent as FaiLogo } from "../../logos/fai-logo.svg"
+
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<string>("")
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false)
@@ -48,6 +50,15 @@ const Header: React.FC = () => {
               </S.NavBarItem>
             ))}
           </S.NavBarList>
+
+          <S.FaiWrapper>
+            <a href="https://fondoambiente.it" target="_blank" rel="noopener noreferrer">
+              <S.FaiLogoDesktop>
+                <FaiLogo />
+              </S.FaiLogoDesktop>
+            </a>
+          </S.FaiWrapper>
+
         </S.RightWrapper>
       </S.Header>
       <S.HeaderMobile>
@@ -123,6 +134,13 @@ const Header: React.FC = () => {
               </S.MobileNavBarItem>
             ))}
           </S.MobileNavBarList>
+
+          <S.FaiLogoMobile>
+            <a href="https://fondoambiente.it/" target="_blank" rel="noopener noreferrer" title="Con il patrocinio di FAI Veneto">
+              <FaiLogo />
+            </a>
+          </S.FaiLogoMobile>
+
         </S.RightSidebar>
       </S.HeaderMobile>
     </>

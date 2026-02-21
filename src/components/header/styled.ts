@@ -7,12 +7,13 @@ import {
 } from "../../styles"
 
 export const Header = styled.header`
-  height: 60px;
+  height: 80px;
   background-color: ${colors.green.green200};
   display: flex;
   flex-direction: row;
   gap: 16px;
-  padding: 32px;
+  padding: 0 32px;
+  align-items: center;
   justify-content: space-between;
   @media (max-width: ${breakpoint.tablet}) {
     display: none;
@@ -41,8 +42,13 @@ export const RightWrapper = styled.nav`
   display: flex;
   flex-direction: row;
   gap: 32px;
+  align-items: center;
   &.mobile {
     cursor: pointer;
+  }
+
+  @media (max-width: ${breakpointNum.medium}px) {
+    gap: 16px;
   }
 `
 
@@ -61,6 +67,10 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
   text-align: center;
   align-items: center;
   align-self: center;
+  @media (max-width: ${breakpointNum.medium}px) {
+    margin: 0 0.5rem;
+  }
+
   > a {
     text-decoration: none;
     ${({ $isActive }) => $isActive && `color: ${colors.green.green550}`};
@@ -68,7 +78,7 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
     &:hover {
       text-decoration: underline;
       text-decoration-color: ${({ $isActive }) =>
-        $isActive ? `${colors.green.green550}` : `${colors.green.green900}`};
+    $isActive ? `${colors.green.green550}` : `${colors.green.green900}`};
     }
 
     &:active {
@@ -76,6 +86,7 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
     }
 
     > * {
+      margin-top: 0;
       ${({ $isActive }) => $isActive && `color: ${colors.green.green550}`};
       &:active {
         color: ${colors.green.green600};
@@ -207,12 +218,13 @@ export const MobileNavBarItem = styled.li<{ $isActive: boolean }>`
   > a {
     text-decoration: none;
     > * {
+      margin-top: 0;
       color: ${({ $isActive }) =>
-        $isActive ? colors.green.green500 : colors.green.green300};
+    $isActive ? colors.green.green500 : colors.green.green300};
       &:active {
         transition: all 0.5s;
         color: ${({ $isActive }) =>
-          $isActive ? colors.green.green600 : colors.green.green500};
+    $isActive ? colors.green.green600 : colors.green.green500};
       }
       font-weight: bold;
     }
@@ -229,11 +241,11 @@ export const LinkIcon = styled.div<{ $isActive: boolean }>`
     > * {
       margin-top: 0px;
       color: ${({ $isActive }) =>
-        $isActive ? colors.green.green500 : colors.green.green300};
+    $isActive ? colors.green.green500 : colors.green.green300};
       &:active {
         transition: all 0.5s;
         color: ${({ $isActive }) =>
-          $isActive ? colors.green.green600 : colors.green.green500};
+    $isActive ? colors.green.green600 : colors.green.green500};
       }
       font-weight: bold;
     }
@@ -245,15 +257,15 @@ export const IconWrapper = styled.div<{ $isActive: boolean; $isOpen: boolean }>`
   cursor: pointer;
   > svg {
     fill: ${({ $isActive }) =>
-      $isActive ? colors.green.green500 : colors.green.green300};
+    $isActive ? colors.green.green500 : colors.green.green300};
 
     &:active {
       transition: all 0.5s;
       fill: ${({ $isActive }) =>
-        $isActive ? colors.green.green600 : colors.green.green500};
+    $isActive ? colors.green.green600 : colors.green.green500};
     }
     transform: ${({ $isOpen }) =>
-      $isOpen ? "rotate(0deg)" : "rotate(-90deg)"};
+    $isOpen ? "rotate(0deg)" : "rotate(-90deg)"};
     transition: all 0.7s;
   }
 `
@@ -282,5 +294,70 @@ export const MobileSubsectionList = styled.ul<{ $show: boolean }>`
         }
       }
     }
+  }
+`
+
+export const FaiWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  padding-left: 20px;
+  border-left: 1px solid ${colors.green.green400};
+
+  @media (max-width: ${breakpointNum.medium}px) {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    height: 55px; 
+    width: auto;  
+    display: block;
+  }
+
+  @media (max-width: ${breakpointNum.tablet}) {
+    display: none; 
+  }
+`
+
+export const FaiLogoDesktop = styled.div`
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+  align-self: center;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: ${breakpointNum.medium}px) {
+    height: 30px;
+  }
+`
+
+export const FaiLogoMobile = styled.div`
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  margin-bottom: 30px;
+
+  a {
+    display: flex;
+    justify-content: center;
+  }
+
+  svg {
+    height: 50px;
+    width: auto;
   }
 `
