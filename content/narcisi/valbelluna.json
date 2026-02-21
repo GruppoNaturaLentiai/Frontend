@@ -1,0 +1,128 @@
+{
+  "valbelluna": [
+    {
+      "type": "text",
+      "size": "h1",
+      "position": "left",
+      "content": [
+        "Zone di fioritura dei narcisi in Valbelluna"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "p1",
+      "position": "left",
+      "content": [
+        "In Valbelluna le aree di fioritura del narciso si sono progressivamente ridotte nel tempo. Oggi, oltre ai prati del Monte Artent e di Col Moscher, le località dove la fioritura primaverile è ancora significativa sono essenzialmente tre."
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h2",
+      "content": [
+        "Monte Avena – Località Le Buse"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "p1",
+      "content": [
+        "Una delle aree di fioritura si trova sul Monte Avena, in località Le Buse. La fioritura avviene generalmente nei primi giorni di maggio, con leggere variazioni legate all’andamento climatico della stagione."
+      ]
+    },
+    {
+      "type": "two-columns",
+      "content": [
+        [
+          {
+            "type": "image",
+            "content": [
+              "narcisi_valbelluna_avena_map.jpeg"
+            ]
+          }
+        ],
+        [
+          {
+            "type": "image",
+            "content": [
+              "narcisi_valbelluna_avena_pic.jpeg"
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h2",
+      "content": [
+        "Castron – Passo di Praderadego"
+      ]
+    },
+    {
+      "type": "two-columns",
+      "content": [
+        [
+          {
+            "type": "text",
+            "size": "p1",
+            "content": [
+              "Un’altra zona di fioritura si trova in località Castron, nei pressi del Passo di Praderadego. Anche qui i narcisi fioriscono a inizio maggio, offrendo un paesaggio di grande valore naturalistico."
+            ]
+          }
+        ],
+        [
+          {
+            "type": "image",
+            "content": [
+              "narcisi_valbelluna_castron_map.jpeg"
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h2",
+      "content": [
+        "Le Lei – Comune di Lamon"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "p1",
+      "content": [
+        "La terza area significativa si trova nel comune di Lamon, nella zona conosciuta come “Le Lei”. Si tratta di un contesto delicato, che necessita di attenzione e rispetto per garantire la conservazione della fioritura."
+      ]
+    },
+    {
+      "type": "two-columns",
+      "content": [
+        [
+          {
+            "type": "image",
+            "content": [
+              "narcisi_valbelluna_le_lei_map.jpeg"
+            ]
+          }
+        ],
+        [
+          {
+            "type": "image",
+            "content": [
+              "narcisi_valbelluna_le_lei_pic.jpeg"
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "size": "p1",
+      "position": "left",
+      "content": [
+        "Esistono inoltre aree in cui il narciso era storicamente presente ma dove oggi compare solo in modo sporadico, come sul Monte Foral di Mel. Questo dato evidenzia la fragilità di questi habitat e l’importanza di una tutela attiva.",
+        "Invitiamo chi visita questi luoghi a rispettare i prati fioriti: è fondamentale non calpestare le aree in fiore e non raccogliere i narcisi. Ogni gesto responsabile contribuisce a preservare questi paesaggi per le generazioni future."
+      ]
+    }
+  ]
+}

@@ -1,17 +1,17 @@
-import { graphql, useStaticQuery, type HeadFC, type PageProps } from "gatsby"
-import { getImage } from "gatsby-plugin-image"
 import * as React from "react"
-import dataJSON from "../../../content/narcisi/progetto.json"
+import { graphql, useStaticQuery, type HeadFC, type PageProps } from "gatsby"
 import DefaultLayout from "../../components/default-layout"
-import MobileContentToComponent from "../../components/mobile-pagedata-text-components"
-import ContentToComponent from "../../components/pagedata-text-components"
+import { getImage } from "gatsby-plugin-image"
 import { DataJSONType, ImageData } from "../../types"
+import dataJSON from "../../../content/narcisi/valbelluna.json"
 import * as T from "./../../components/typography"
+import ContentToComponent from "../../components/pagedata-text-components"
+import MobileContentToComponent from "../../components/mobile-pagedata-text-components"
 
-const NarcisiProgettoPage: React.FC<PageProps> = () => {
+const NarcisiValbellunaPage: React.FC<PageProps> = () => {
   const data = useStaticQuery(graphql`
     query {
-      allImageMetadataJson(filter: { tags: { in: ["narcisi-progetto"] } }) {
+      allImageMetadataJson(filter: { tags: { in: ["narcisi-valbelluna"] } }) {
         nodes {
           title
           description
@@ -36,7 +36,7 @@ const NarcisiProgettoPage: React.FC<PageProps> = () => {
     }
   `)
 
-  const content = dataJSON.progetto as DataJSONType
+  const content = dataJSON.valbelluna as DataJSONType
   if (!content)
     return (
       <DefaultLayout>
@@ -65,10 +65,10 @@ const NarcisiProgettoPage: React.FC<PageProps> = () => {
   )
 }
 
-export default NarcisiProgettoPage
+export default NarcisiValbellunaPage
 
 import { SEO } from "../../components/seo"
 
 export const Head: HeadFC = ({ location }) => (
-  <SEO title="Progetto Narcisi - Progetto" pathname={location.pathname} />
+  <SEO title="Progetto Narcisi - Valbelluna" pathname={location.pathname} />
 )

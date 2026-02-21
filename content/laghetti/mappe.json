@@ -2,13 +2,18 @@
   "mappe": [
     {
       "type": "text",
-      "content": ["Mappa dei laghetti"],
+      "content": [
+        "Mappa dei laghetti"
+      ],
       "size": "h1",
       "font": "Caveat"
     },
     {
       "type": "image",
-      "content": ["laghetti-mappa.png"]
+      "content": [
+        "laghetti-mappa.png"
+      ],
+      "objectFit": "contain"
     }
   ]
 }

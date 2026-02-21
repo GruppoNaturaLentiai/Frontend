@@ -46,6 +46,10 @@ export const navItems = [
         url: "/narcisi/natura",
       },
       {
+        label: "Narcisi in Valbelluna",
+        url: "/narcisi/valbelluna",
+      },
+      {
         label: "Galleria",
         url: "/narcisi/galleria",
       },
