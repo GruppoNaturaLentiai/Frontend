@@ -6,6 +6,8 @@ find . -type f \
   -not -path "*/.cache/*" \
   -not -path "*/public/*" \
   -not -path "*/.gatsby/*" \
+  -not -path "*/.direnv/*" \
+  -not -path "*/.github/*" \
   -not -path "./content/*" \
   -not -name "package-lock.json" \
   -not -name "yarn.lock" \
@@ -14,6 +16,9 @@ find . -type f \
   -not -name "*.jpeg" \
   -not -name "*.svg" \
   -not -name "*.ico" \
+  -not -name "*.woff*" \
+  -not -name "*.ttf" \
+  -not -name ".env*" \
   -not -name "context_for_llm.txt" \
   -exec echo -e "Generated at $(date)" \; \
   -exec echo -e "\n========================================\nFILE: {}\n========================================\n" \; \
