@@ -63,14 +63,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
     }
   })
 
-  // 2️⃣ Fallback client-only
-  createPage({
-    path: `/post`,
-    matchPath: `/post/*`,
-    component: path.resolve(`src/templates/post-client.tsx`),
-  })
-
-  // 3️⃣ Pagina Blog (ORA VUOTA)
+  // 2️⃣ Pagina Blog (ORA VUOTA)
   createPage({
     path: "blog",
     component: path.resolve("src/templates/blog.tsx"),

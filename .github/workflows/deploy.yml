@@ -1,0 +1,40 @@
+name: Build and Deploy Gatsby Site
+
+on:
+  push:
+    branches:
+      - main # O 'master' a seconda di come si chiama il tuo branch principale
+  repository_dispatch:
+    types:
+      - sanity-publish # Questo è il nome del segnale che invierà Sanity
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Fondamentale per permettere a GitHub di scrivere sul branch gh-pages
+
+    steps:
+      - name: Checkout del codice
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Gatsby Site
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          cname: grupponaturalentiai.it

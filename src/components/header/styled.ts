@@ -36,6 +36,10 @@ export const LeftWrapper = styled.div`
   @media (max-height: ${horizBreakpointsHeight.medium}px) {
     min-width: 80px;
   }
+  > a:hover > svg {
+    scale: 1.02;
+    transition: all 0.2s ease-in-out;
+  }
 `
 
 export const RightWrapper = styled.nav`
