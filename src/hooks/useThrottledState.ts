@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import * as _ from "lodash"
+import throttle from "lodash/throttle"
 
 const useThrottledState = <T>(
   defaultVal: T,
@@ -8,7 +8,7 @@ const useThrottledState = <T>(
 ) => {
   const [value, setValue] = useState(defaultVal)
 
-  const throttledFunc = useRef(_.throttle(dispatch, throttleRate)).current
+  const throttledFunc = useRef(throttle(dispatch, throttleRate)).current
 
   useEffect(() => {
     throttledFunc(value)

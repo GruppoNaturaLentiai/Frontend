@@ -1,81 +1,104 @@
 import React from "react"
-
+import { graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as S from "./styled"
 
-import auser from "../../logos/auser.png"
-import geometrie from "../../logos/geometrie-d-arredo.png"
-import offredi from "../../logos/offredi.png"
-import farmacia from "../../logos/farmacia-zampol.png"
-import unifarco from "../../logos/unifarco.png"
-import walber from "../../logos/superw.png"
-import fpb from "../../logos/fpb-cassa.png"
-import dolomitiCanapa from "../../logos/dolomiti-canapa.png"
-import bonTajer from "../../logos/bon-tajer.png"
-
-const sponsors = [
+const sponsorsBase = [
   {
     name: 'AUSER Lentiai "Il Narciso"',
-    logo: auser,
+    fileName: "auser.png",
     url: "https://www.auser.veneto.it/belluno-alnarciso/dove-siamo.html",
   },
   {
     name: "Unifarco",
-    logo: unifarco,
+    fileName: "unifarco.png",
     url: "https://www.unifarco.it/",
   },
   {
     name: "Geometrie D'Arredo",
-    logo: geometrie,
+    fileName: "geometrie-d-arredo.png",
     url: "https://www.geometriedarredo.it/",
   },
   {
     name: "FPB Cassa di Fassa Primiero Belluno",
-    logo: fpb,
+    fileName: "fpb-cassa.png",
     url: "https://www.fpbcassa.it/",
   },
   {
     name: "Farmacia Dr. A. Zampol",
-    logo: farmacia,
+    fileName: "farmacia-zampol.png",
     url: "https://www.farmaciedelpiave.it/farmacia-zampol-d-ortia.php",
   },
   {
     name: "Bon Tajer",
-    logo: bonTajer,
+    fileName: "bon-tajer.png",
     url: "https://bontajer.it/",
   },
   {
     name: "Offredi Ofsolar",
-    logo: offredi,
+    fileName: "offredi.png",
     url: "https://www.offrediofsolar.it/",
   },
   {
     name: "Supermercati Walber",
-    logo: walber,
+    fileName: "superw.png",
     url: "https://www.walber.it/punto-vendita/lentiai",
   },
   {
     name: "Dolomiti Canapa",
-    logo: dolomitiCanapa,
+    fileName: "dolomiti-canapa.png",
     url: "https://www.dolomiticanapa.com/",
   },
 ]
 
 const Sponsors = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(filter: { sourceInstanceName: { eq: "logos" }, extension: { in: ["png", "jpg", "jpeg", "webp"] } }) {
+        nodes {
+          base
+          childImageSharp {
+            gatsbyImageData(
+              width: 200
+              placeholder: NONE
+              formats: [AUTO, WEBP, AVIF]
+              layout: CONSTRAINED
+            )
+          }
+        }
+      }
+    }
+  `)
+
+  const images = data.allFile.nodes
+
   return (
     <S.SponsorGrid>
-      {sponsors.map((sponsor, idx) => (
-        <a
-          href={sponsor.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          title={sponsor.name}
-          key={`sponsor-${idx}`}
-        >
-          <S.Sponsor>
-            <img src={sponsor.logo} alt={sponsor.name} />
-          </S.Sponsor>
-        </a>
-      ))}
+      {sponsorsBase.map((sponsor, idx) => {
+        const imgNode = images.find((img: any) => img.base === sponsor.fileName)
+        const gatsbyImg = imgNode ? getImage(imgNode.childImageSharp) : null
+
+        return (
+          <a
+            href={sponsor.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={sponsor.name}
+            key={`sponsor-${idx}`}
+          >
+            <S.Sponsor>
+              {gatsbyImg && (
+                <GatsbyImage
+                  image={gatsbyImg}
+                  alt={sponsor.name}
+                  objectFit="contain"
+                  style={{ maxHeight: "50px", maxWidth: "120px" }}
+                />
+              )}
+            </S.Sponsor>
+          </a>
+        )
+      })}
     </S.SponsorGrid>
   )
 }

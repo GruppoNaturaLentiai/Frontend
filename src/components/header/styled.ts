@@ -71,8 +71,13 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
   text-align: center;
   align-items: center;
   align-self: center;
+  
   @media (max-width: ${breakpointNum.medium}px) {
-    margin: 0 0.5rem;
+    margin: 0 0.4rem; 
+    
+    > a > * {
+      font-size: 13px;
+    }
   }
 
   > a {
@@ -100,6 +105,26 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
       }
     }
   }
+
+  &:last-child > a {
+    background-color: ${colors.green.green700};
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+
+    > * {
+      color: ${colors.green.green50} !important;
+      margin: 0;
+    }
+    
+    &:hover {
+      background-color: ${colors.green.green800};
+      text-decoration: none; 
+      transform: scale(1.05);
+    }
+  }
 `
 
 export const SubsectionList = styled.ul<{ $isOpen: boolean }>`
@@ -109,7 +134,7 @@ export const SubsectionList = styled.ul<{ $isOpen: boolean }>`
   min-width: 110px;
   margin: 0;
   position: absolute;
-  top: 100%;
+  top: calc(100% + 20px); 
   left: 0px;
   background-color: ${colors.green.green400};
   box-shadow: 0 4px 6px ${colors.green.green950}60;
@@ -118,6 +143,16 @@ export const SubsectionList = styled.ul<{ $isOpen: boolean }>`
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease-in-out;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -20px; 
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: transparent;
+  }
 
   ${({ $isOpen }) =>
     $isOpen &&

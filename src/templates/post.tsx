@@ -6,7 +6,6 @@ import React from "react"
 import DefaultLayout from "../components/default-layout"
 import Post from "../components/post"
 
-// Definisci i tipi in base a ciò che ritorna la query
 type PostData = {
   sanityPost: {
     title: string
@@ -19,18 +18,23 @@ type PostData = {
         altText: string
         title: string
         gatsbyImageData: IGatsbyImageData
+        url: string
       }
     }
   }
 }
 
-// pageContext conterrà solo lo slug che gli passiamo da gatsby-node
 type PostPageContext = {
   slug: string
+  prevSlug: string | null
+  prevTitle: string | null
+  nextSlug: string | null
+  nextTitle: string | null
 }
 
 const PostTemplate: React.FC<PageProps<PostData, PostPageContext>> = ({
   data,
+  pageContext
 }) => {
   const post = data.sanityPost
 
@@ -57,6 +61,8 @@ const PostTemplate: React.FC<PageProps<PostData, PostPageContext>> = ({
         renderBody={renderBody}
         author={author ?? ""}
         coverImageAlt={mainImgAlt}
+        prevPost={pageContext.prevSlug ? { slug: pageContext.prevSlug, title: pageContext.prevTitle } : null}
+        nextPost={pageContext.nextSlug ? { slug: pageContext.nextSlug, title: pageContext.nextTitle } : null}
       />
     </DefaultLayout>
   )
@@ -72,6 +78,7 @@ export const Head: HeadFC<PostData, PostPageContext> = ({ location, data }) => {
       title={`Gruppo Natura Lentiai - ${post?.title}`}
       description={post?.image?.asset?.description || post?.image?.asset?.altText}
       pathname={location.pathname}
+      image={post?.image?.asset?.url}
     />
   )
 }
@@ -88,6 +95,7 @@ export const query = graphql`
         asset {
           description
           altText
+          url
           title
           gatsbyImageData(
             width: 1200

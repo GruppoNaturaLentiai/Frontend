@@ -35,11 +35,11 @@ export const ButtonText = styled(T.P2)`
   color: white;
 `
 
-export const BannerButton = styled.button<{ color: string }>`
+export const BannerButton = styled.button<{ color: string; border?: string }>`
   background-color: ${props => props.color};
   color: white;
   padding: 0.5rem 1rem;
-  border: none;
+  border: ${props => props.border || "none"};
   border-radius: 5px;
   cursor: pointer;
   &:hover {

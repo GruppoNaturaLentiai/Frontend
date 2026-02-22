@@ -1,13 +1,19 @@
 import styled from "styled-components"
-import { breakpoint, colors } from "../../styles"
+import { breakpoint, breakpointNum, colors } from "../../styles"
 import * as T from "../typography"
 
 export const Container = styled.div`
   margin-top: 2rem;
   padding: 2rem;
   padding-top: 3rem;
-  max-width: 1200px; /* Allargato leggermente per respirare meglio */
+  max-width: 1200px; 
   margin: 0 auto;
+  width: 100%; 
+  box-sizing: border-box; 
+
+  @media (max-width: ${breakpointNum.mobile}px) {
+    padding: 1.5rem 1rem; 
+  }
 `
 
 export const FeaturedPostWrapper = styled.article`
@@ -65,7 +71,6 @@ export const FeaturedContent = styled.div`
   justify-content: center;
   overflow: hidden;
 
-  /* Adattiamo il padding per farlo respirare meglio sui tablet */
   @media (max-width: ${breakpoint.bigtablet}) {
     padding: 2rem;
   }
@@ -87,8 +92,12 @@ export const MetaInfo = styled(T.P3)`
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2.5rem;
+
+  @media (max-width: ${breakpointNum.mobile}px) {
+    grid-template-columns: 1fr; /* Forza una singola colonna perfetta su smartphone */
+  }
 `
 
 export const Card = styled.article`

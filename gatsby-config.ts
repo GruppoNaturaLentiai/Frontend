@@ -58,6 +58,13 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/images/`, // Path to folder containing images
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `logos`,
+        path: `${__dirname}/src/logos/`,
+      },
+    },
     `gatsby-transformer-json`,
     `gatsby-transformer-remark`,
     {
