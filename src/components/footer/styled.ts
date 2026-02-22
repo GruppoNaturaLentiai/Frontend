@@ -179,6 +179,7 @@ export const LowerContent = styled.div`
   gap: 1em;
   > p {
     margin-top: 0px;
+    color: ${colors.green.green950}; /* <--- Aggiunto colore ultra-scuro per il Copyright */
   }
 `
 
@@ -187,7 +188,7 @@ export const TextLink = styled(Link)`
     margin-top: 0px;
   }
 
-  color: ${colors.green.green800};
+  color: ${colors.green.green950}; /* <--- Modificato in green950 */
   transition: all 0.5s;
   &:active {
     color: ${colors.green.green950};
@@ -198,7 +199,7 @@ export const TextLink = styled(Link)`
 
   .text-link {
     font-weight: bold;
-    color: ${colors.green.green800};
+    color: ${colors.green.green950}; /* <--- Modificato in green950 */
     transition: all 0.5s;
     &:active {
       color: ${colors.green.green950};

@@ -52,7 +52,7 @@ const Header: React.FC = () => {
           </S.NavBarList>
 
           <S.FaiWrapper>
-            <a href="https://fondoambiente.it" target="_blank" rel="noopener noreferrer">
+            <a href="https://fondoambiente.it" target="_blank" rel="noopener noreferrer" aria-label="Sito ufficiale del FAI Veneto">
               <S.FaiLogoDesktop>
                 <FaiLogo />
               </S.FaiLogoDesktop>
@@ -63,7 +63,7 @@ const Header: React.FC = () => {
       </S.Header>
       <S.HeaderMobile>
         <S.LeftWrapper>
-          <Link to="/" onClick={() => setMobileMenuOpen(false)}>
+          <Link to="/" onClick={() => setMobileMenuOpen(false)} aria-label="Vai alla home">
             <Icon type="logo" />
           </Link>
         </S.LeftWrapper>

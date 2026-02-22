@@ -123,7 +123,7 @@ export const CardContent = styled.div`
   flex-direction: column;
 `
 
-export const CardTitle = styled(T.H3)`
+export const CardTitle = styled(T.H3).attrs({ as: 'h2' })`
   margin: 0 0 0.5rem;
   line-height: 1.3;
 `
