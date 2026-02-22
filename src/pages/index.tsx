@@ -81,10 +81,13 @@ const IndexPage: React.FC<PageProps> = () => {
     alt: post.image?.asset?.altText || "Copertina articolo"
   }))
 
+  const latestPostNode = data.allSanityPost.nodes[0]
+  const latestPost = latestPostNode ? { title: latestPostNode.title, slug: latestPostNode.slug.current } : null
+
   return (
     <DefaultLayout>
       {/* 1. L'IMPATTO EMOTIVO (Intoccato) */}
-      {coverImage && <HeroMain content={content} img={coverImage} />}
+      {coverImage && <HeroMain content={content} img={coverImage} latestPost={latestPost} />}
 
       {/* 2. LA SEZIONE NOVITÀ (Sotto la Hero) */}
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '3rem 1.5rem' }}>
