@@ -7,7 +7,6 @@ find . -type f \
   -not -path "*/public/*" \
   -not -path "*/.gatsby/*" \
   -not -path "*/.direnv/*" \
-  -not -path "*/.github/*" \
   -not -path "./content/*" \
   -not -name "package-lock.json" \
   -not -name "yarn.lock" \

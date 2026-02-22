@@ -34,7 +34,7 @@ export const SEO: React.FC<SEOProps> = ({
     image: image
       ? `${site.siteMetadata.siteUrl}${image}`
       : `${site.siteMetadata.siteUrl}/default-share-image.jpg`, // Inserisci un'immagine generica di fallback in static/
-    url: `${site.siteMetadata.siteUrl}${pathname || ""}`,
+    url: `${site.siteMetadata.siteUrl}${pathname || ""}`.replace(/\/?$/, '/'),
   }
 
   return (
