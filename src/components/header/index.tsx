@@ -136,7 +136,7 @@ const Header: React.FC = () => {
           </S.MobileNavBarList>
 
           <S.FaiLogoMobile>
-            <a href="https://fondoambiente.it/" target="_blank" rel="noopener noreferrer" title="Con il patrocinio di FAI Veneto">
+            <a href="https://fondoambiente.it" target="_blank" rel="noopener noreferrer" aria-label="Sito ufficiale del FAI Veneto">
               <FaiLogo />
             </a>
           </S.FaiLogoMobile>
