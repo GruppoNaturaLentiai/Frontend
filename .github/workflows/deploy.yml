@@ -22,10 +22,20 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
-          cache: "npm"
+
+      - name: Cache Node Modules
+        id: cache-node-modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-modules-
 
       - name: Install Dependencies
-        run: npm ci
+        # Esegue l'installazione SOLO se la cache non è stata trovata
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        run: npm ci 
 
       # --- Caching strategy for pictures ---
       - name: Ripristina la Cache di Gatsby

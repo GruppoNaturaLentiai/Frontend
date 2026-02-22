@@ -11,6 +11,7 @@ const config: GatsbyConfig = {
     description: `Sito ufficiale del Gruppo Natura Lentiai. Associazione di volontariato per la tutela e la valorizzazione dei Laghetti della Rimonta, dei narcisi e del territorio.`,
     siteUrl: `https://grupponaturalentiai.it`,
   },
+  trailingSlash: "always",
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
@@ -85,7 +86,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-react-leaflet",
       options: {
-        linkStyles: true,
+        linkStyles: false,
       },
     },
     {
