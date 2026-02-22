@@ -92,7 +92,7 @@ const CookieBanner = () => {
             <S.BannerButton
               onClick={() => setShowPreferences(true)}
               color="transparent"
-              border={`1px solid ${colors.green.green600}`}
+              $border={`1px solid ${colors.green.green600}`}
               aria-label="Gestisci le preferenze dei cookie"
             >
               <S.ButtonText>Personalizza</S.ButtonText>

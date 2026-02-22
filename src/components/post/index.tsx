@@ -14,8 +14,8 @@ interface PostProps {
   renderBody: any
   author: string
   coverImageAlt: string
-  prevPost?: { slug: string, title: string | null } | null
-  nextPost?: { slug: string, title: string | null } | null
+  prevPost?: { slug: string; title: string | null } | null
+  nextPost?: { slug: string; title: string | null } | null
 }
 
 const Post: React.FC<PostProps> = ({
@@ -69,7 +69,13 @@ const Post: React.FC<PostProps> = ({
         <S.NavSide className="left">
           {prevPost && (
             <S.NavButton $align="left">
-              <Link to={prevPost.slug.startsWith('/') ? prevPost.slug : `/${prevPost.slug}`}>
+              <Link
+                to={
+                  prevPost.slug.startsWith("/")
+                    ? prevPost.slug
+                    : `/${prevPost.slug}`
+                }
+              >
                 <T.P4 className="nav-label">Articolo precedente</T.P4>
                 <T.H4 className="nav-title">← {prevPost.title}</T.H4>
               </Link>
@@ -84,7 +90,13 @@ const Post: React.FC<PostProps> = ({
         <S.NavSide className="right">
           {nextPost && (
             <S.NavButton $align="right">
-              <Link to={nextPost.slug.startsWith('/') ? nextPost.slug : `/${nextPost.slug}`}>
+              <Link
+                to={
+                  nextPost.slug.startsWith("/")
+                    ? nextPost.slug
+                    : `/${nextPost.slug}`
+                }
+              >
                 <T.P4 className="nav-label">Articolo successivo</T.P4>
                 <T.H4 className="nav-title">{nextPost.title} →</T.H4>
               </Link>
@@ -92,7 +104,6 @@ const Post: React.FC<PostProps> = ({
           )}
         </S.NavSide>
       </S.PostNavigation>
-
     </S.Article>
   )
 }

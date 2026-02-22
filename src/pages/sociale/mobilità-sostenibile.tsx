@@ -58,23 +58,35 @@ const MobilitàSostenibilePage: React.FC<PageProps> = () => {
   }) as ImageData[]
 
   const mapUp = getImage(
-    images.find((img: any) => img.base === "anello-ciclopedonale-lentiai-00.jpeg")
-      .childImageSharp,
+    images.find(
+      (img: any) => img.base === "anello-ciclopedonale-lentiai-00.jpeg",
+    ).childImageSharp,
   )
   const mapDown = getImage(
-    images.find((img: any) => img.base === "anello-ciclopedonale-lentiai-01.jpeg")
-      .childImageSharp,
+    images.find(
+      (img: any) => img.base === "anello-ciclopedonale-lentiai-01.jpeg",
+    ).childImageSharp,
   )
 
   return (
     <DefaultLayout>
       <ContentToComponent pageData={content} images={filteredImages} />
       <MobileContentToComponent pageData={content} images={filteredImages} />
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "2em", gap: "2em" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          margin: "2em",
+          gap: "2em",
+        }}
+      >
         {mapUp && (
           <GatsbyImage
             image={mapUp}
-            alt={"Informazioni utili dell'anello Ciclopedonale di Lentiai Fronte"}
+            alt={
+              "Informazioni utili dell'anello Ciclopedonale di Lentiai Fronte"
+            }
             style={{ borderRadius: "8px", marginTop: 4, maxWidth: 1600 }}
           />
         )}
@@ -95,5 +107,8 @@ export default MobilitàSostenibilePage
 import { SEO } from "../../components/seo"
 
 export const Head: HeadFC = ({ location }) => (
-  <SEO title="Gruppo Natura Lentiai - Mobilità sostenibile" pathname={location.pathname} />
+  <SEO
+    title="Gruppo Natura Lentiai - Mobilità sostenibile"
+    pathname={location.pathname}
+  />
 )

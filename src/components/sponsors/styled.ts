@@ -6,7 +6,7 @@ export const Sponsor = styled.div`
   justify-content: center;
   height: 50px;
   width: 120px;
-  
+
   .gatsby-image-wrapper {
     max-height: 100%;
     max-width: 100%;

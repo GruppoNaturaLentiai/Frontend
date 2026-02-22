@@ -54,7 +54,12 @@ const sponsorsBase = [
 const Sponsors = () => {
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: { sourceInstanceName: { eq: "logos" }, extension: { in: ["png", "jpg", "jpeg", "webp"] } }) {
+      allFile(
+        filter: {
+          sourceInstanceName: { eq: "logos" }
+          extension: { in: ["png", "jpg", "jpeg", "webp"] }
+        }
+      ) {
         nodes {
           base
           childImageSharp {

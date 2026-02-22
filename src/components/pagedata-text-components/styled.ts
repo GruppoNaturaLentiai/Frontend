@@ -4,14 +4,14 @@ import { breakpoint, breakpointNum } from "../../styles"
 export const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 60px; 
+  gap: 60px;
   padding: 32px;
   justify-content: center;
 
   width: 100%;
   max-width: 1200px;
   box-sizing: border-box;
-  
+
   @media (max-width: ${breakpointNum.bigtablet}px) {
     display: none;
   }
@@ -28,7 +28,7 @@ export const ImageWrapper = styled.div`
 export const TwoColsWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 40px; 
+  gap: 40px;
   width: 100%;
 
   @media (max-width: ${breakpoint.bigtablet}) {

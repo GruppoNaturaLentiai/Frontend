@@ -16,5 +16,8 @@ export default EducazioneAmbientalePage
 import { SEO } from "../../components/seo"
 
 export const Head: HeadFC = ({ location }) => (
-  <SEO title="Gruppo Natura Lentiai - Educazione ambientale" pathname={location.pathname} />
+  <SEO
+    title="Gruppo Natura Lentiai - Educazione ambientale"
+    pathname={location.pathname}
+  />
 )

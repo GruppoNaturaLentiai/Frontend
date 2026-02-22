@@ -16,5 +16,8 @@ export default NostriIdealiPage
 import { SEO } from "../../components/seo"
 
 export const Head: HeadFC = ({ location }) => (
-  <SEO title="Gruppo Natura Lentiai - I nostri Ideali" pathname={location.pathname} />
+  <SEO
+    title="Gruppo Natura Lentiai - I nostri Ideali"
+    pathname={location.pathname}
+  />
 )

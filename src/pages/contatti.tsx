@@ -16,5 +16,8 @@ export default ContactPage
 import { SEO } from "../components/seo"
 
 export const Head: HeadFC = ({ location }) => (
-  <SEO title="Gruppo Natura Lentiai - Contattaci" pathname={location.pathname} />
+  <SEO
+    title="Gruppo Natura Lentiai - Contattaci"
+    pathname={location.pathname}
+  />
 )

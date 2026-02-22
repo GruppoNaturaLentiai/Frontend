@@ -83,5 +83,8 @@ export default LaghettiRimontartePage
 import { SEO } from "../../components/seo"
 
 export const Head: HeadFC = ({ location }) => (
-  <SEO title="Laghetti della Rimonta - Rimontarte" pathname={location.pathname} />
+  <SEO
+    title="Laghetti della Rimonta - Rimontarte"
+    pathname={location.pathname}
+  />
 )

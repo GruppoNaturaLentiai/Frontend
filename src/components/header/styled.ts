@@ -71,10 +71,10 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
   text-align: center;
   align-items: center;
   align-self: center;
-  
+
   @media (max-width: ${breakpointNum.medium}px) {
-    margin: 0 0.4rem; 
-    
+    margin: 0 0.4rem;
+
     > a > * {
       font-size: 13px;
     }
@@ -87,7 +87,7 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
     &:hover {
       text-decoration: underline;
       text-decoration-color: ${({ $isActive }) =>
-    $isActive ? `${colors.green.green550}` : `${colors.green.green900}`};
+        $isActive ? `${colors.green.green550}` : `${colors.green.green900}`};
     }
 
     &:active {
@@ -118,10 +118,10 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
       color: ${colors.green.green50} !important;
       margin: 0;
     }
-    
+
     &:hover {
       background-color: ${colors.green.green800};
-      text-decoration: none; 
+      text-decoration: none;
       transform: scale(1.05);
     }
   }
@@ -134,7 +134,7 @@ export const SubsectionList = styled.ul<{ $isOpen: boolean }>`
   min-width: 110px;
   margin: 0;
   position: absolute;
-  top: calc(100% + 20px); 
+  top: calc(100% + 20px);
   left: 0px;
   background-color: ${colors.green.green400};
   box-shadow: 0 4px 6px ${colors.green.green950}60;
@@ -145,9 +145,9 @@ export const SubsectionList = styled.ul<{ $isOpen: boolean }>`
   transition: all 0.3s ease-in-out;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
-    top: -20px; 
+    top: -20px;
     left: 0;
     width: 100%;
     height: 20px;
@@ -259,11 +259,11 @@ export const MobileNavBarItem = styled.li<{ $isActive: boolean }>`
     > * {
       margin-top: 0;
       color: ${({ $isActive }) =>
-    $isActive ? colors.green.green500 : colors.green.green300};
+        $isActive ? colors.green.green500 : colors.green.green300};
       &:active {
         transition: all 0.5s;
         color: ${({ $isActive }) =>
-    $isActive ? colors.green.green600 : colors.green.green500};
+          $isActive ? colors.green.green600 : colors.green.green500};
       }
       font-weight: bold;
     }
@@ -280,11 +280,11 @@ export const LinkIcon = styled.div<{ $isActive: boolean }>`
     > * {
       margin-top: 0px;
       color: ${({ $isActive }) =>
-    $isActive ? colors.green.green500 : colors.green.green300};
+        $isActive ? colors.green.green500 : colors.green.green300};
       &:active {
         transition: all 0.5s;
         color: ${({ $isActive }) =>
-    $isActive ? colors.green.green600 : colors.green.green500};
+          $isActive ? colors.green.green600 : colors.green.green500};
       }
       font-weight: bold;
     }
@@ -296,15 +296,15 @@ export const IconWrapper = styled.div<{ $isActive: boolean; $isOpen: boolean }>`
   cursor: pointer;
   > svg {
     fill: ${({ $isActive }) =>
-    $isActive ? colors.green.green500 : colors.green.green300};
+      $isActive ? colors.green.green500 : colors.green.green300};
 
     &:active {
       transition: all 0.5s;
       fill: ${({ $isActive }) =>
-    $isActive ? colors.green.green600 : colors.green.green500};
+        $isActive ? colors.green.green600 : colors.green.green500};
     }
     transform: ${({ $isOpen }) =>
-    $isOpen ? "rotate(0deg)" : "rotate(-90deg)"};
+      $isOpen ? "rotate(0deg)" : "rotate(-90deg)"};
     transition: all 0.7s;
   }
 `
@@ -347,20 +347,20 @@ export const FaiWrapper = styled.div`
     margin-left: 0;
     padding-left: 0;
   }
-  
+
   a {
     display: flex;
     align-items: center;
   }
 
   svg {
-    height: 55px; 
-    width: auto;  
+    height: 55px;
+    width: auto;
     display: block;
   }
 
   @media (max-width: ${breakpointNum.tablet}) {
-    display: none; 
+    display: none;
   }
 `
 

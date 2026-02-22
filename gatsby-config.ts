@@ -8,6 +8,7 @@ const config: GatsbyConfig = {
   // pathPrefix: pathPrefix, // restore if we want to use the old https://grupponaturalentiai.github.io/Frontend
   siteMetadata: {
     title: `site-gruppo-natura-lentiai`,
+    description: `Sito ufficiale del Gruppo Natura Lentiai. Associazione di volontariato per la tutela e la valorizzazione dei Laghetti della Rimonta, dei narcisi e del territorio.`,
     siteUrl: `https://grupponaturalentiai.it`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.

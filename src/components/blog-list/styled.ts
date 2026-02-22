@@ -6,13 +6,13 @@ export const Container = styled.div`
   margin-top: 2rem;
   padding: 2rem;
   padding-top: 3rem;
-  max-width: 1200px; 
+  max-width: 1200px;
   margin: 0 auto;
-  width: 100%; 
-  box-sizing: border-box; 
+  width: 100%;
+  box-sizing: border-box;
 
   @media (max-width: ${breakpointNum.mobile}px) {
-    padding: 1.5rem 1rem; 
+    padding: 1.5rem 1rem;
   }
 `
 
@@ -25,11 +25,11 @@ export const FeaturedPostWrapper = styled.article`
   background: #fff;
   transition: all 0.3s ease;
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   align-items: stretch;
-  
+
   /* Sostituisci max-height con height fisso per forzare la forma del banner su Desktop */
-  height: 400px; 
+  height: 400px;
 
   &:hover {
     transform: translateY(-5px);
@@ -38,25 +38,26 @@ export const FeaturedPostWrapper = styled.article`
 
   /* Spostiamo il passaggio a colonna ai 900px (bigtablet) per evitare schiacciamenti */
   @media (max-width: ${breakpoint.bigtablet}) {
-    flex-direction: column; 
+    flex-direction: column;
     height: auto; /* Sblocchiamo l'altezza in verticale per far adattare il testo */
   }
 `
 
 export const CoverImgWrapper = styled.div<{ $isFeatured?: boolean }>`
   flex: ${({ $isFeatured }) => ($isFeatured ? "1" : "none")};
-  
-  .gatsby-image-wrapper, .cover-image {
+
+  .gatsby-image-wrapper,
+  .cover-image {
     width: 100%;
     /* Su desktop l'immagine prende tutta l'altezza (i 400px definiti sopra) */
     height: ${({ $isFeatured }) => ($isFeatured ? "100%" : "220px")};
     object-fit: cover;
-    
+
     /* FIX PER TABLET/MOBILE: Quando andiamo in colonna, diamo un'altezza massima fissa all'immagine in evidenza */
     @media (max-width: ${breakpoint.bigtablet}) {
       height: ${({ $isFeatured }) => ($isFeatured ? "350px" : "220px")};
     }
-    
+
     @media (max-width: ${breakpoint.mobile}) {
       height: ${({ $isFeatured }) => ($isFeatured ? "250px" : "200px")};
     }
@@ -109,7 +110,7 @@ export const Card = styled.article`
   flex-direction: column;
   cursor: pointer;
   transition: all 0.3s ease;
-  
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px ${colors.green.green700}50;
@@ -123,7 +124,7 @@ export const CardContent = styled.div`
   flex-direction: column;
 `
 
-export const CardTitle = styled(T.H3)`
+export const CardTitle = styled(T.H3).attrs({ as: "h2" })`
   margin: 0 0 0.5rem;
   line-height: 1.3;
 `
@@ -147,8 +148,10 @@ export const PaginationWrapper = styled.div`
 `
 
 export const PageButton = styled.button<{ $active?: boolean }>`
-  background-color: ${({ $active }) => ($active ? colors.green.green600 : colors.green.green200)};
-  color: ${({ $active }) => ($active ? colors.green.green50 : colors.green.green900)};
+  background-color: ${({ $active }) =>
+    $active ? colors.green.green600 : colors.green.green200};
+  color: ${({ $active }) =>
+    $active ? colors.green.green50 : colors.green.green900};
   border: none;
   border-radius: 8px;
   width: 45px;
@@ -162,12 +165,35 @@ export const PageButton = styled.button<{ $active?: boolean }>`
   justify-content: center;
 
   &:hover:not(:disabled) {
-    background-color: ${({ $active }) => ($active ? colors.green.green700 : colors.green.green300)};
+    background-color: ${({ $active }) =>
+      $active ? colors.green.green700 : colors.green.green300};
     transform: translateY(-2px);
   }
 
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+  }
+`
+
+export const PageNumbers = styled.div`
+  display: flex;
+  gap: 12px;
+
+  /* Nasconde i numeri singoli su mobile */
+  @media (max-width: ${breakpointNum.mobile}px) {
+    display: none;
+  }
+`
+
+export const MobilePageIndicator = styled(T.P3)`
+  display: none;
+
+  /* Mostra la scritta "Pagina X di Y" solo su mobile */
+  @media (max-width: ${breakpointNum.mobile}px) {
+    display: block;
+    font-weight: bold;
+    margin: 0 1rem;
+    color: ${colors.green.green900};
   }
 `

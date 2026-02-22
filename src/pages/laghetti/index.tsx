@@ -102,5 +102,8 @@ export default LaghettiPage
 import { SEO } from "../../components/seo"
 
 export const Head: HeadFC = ({ location }) => (
-  <SEO title="Gruppo Natura Lentiai - Laghetti della Rimonta" pathname={location.pathname} />
+  <SEO
+    title="Gruppo Natura Lentiai - Laghetti della Rimonta"
+    pathname={location.pathname}
+  />
 )

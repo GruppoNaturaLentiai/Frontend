@@ -4,11 +4,11 @@ import { Link } from "gatsby"
 
 export const Article = styled.article`
   padding: 64px;
-  
+
   width: 100%;
-  max-width: 1400px; 
-  box-sizing: border-box; 
-  overflow-wrap: break-word; 
+  max-width: 1400px;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
 
   @media (max-width: ${breakpoint.tablet}) {
     padding: 32px;
@@ -23,18 +23,19 @@ export const AuthorDateWrapper = styled.div`
   flex-direction: row;
   gap: 1em;
   align-items: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 `
 
 export const CoverImageWrp = styled.div`
   padding: 2em 0;
   width: 100%;
-  max-width: 1000px; 
-  margin: 0 auto; 
-  
-  .gatsby-image-wrapper, img {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .gatsby-image-wrapper,
+  img {
     border-radius: 12px;
-    max-height: 550px; 
+    max-height: 550px;
     width: 100%;
     object-fit: cover;
   }
@@ -48,14 +49,14 @@ export const CoverImageWrp = styled.div`
 export const BackLink = styled(Link)`
   display: inline-flex;
   align-items: center;
-  margin-bottom: 0.5rem; 
-  color: ${colors.green.green600}; 
+  margin-bottom: 0.5rem;
+  color: ${colors.green.green600};
   text-decoration: none;
   font-weight: bold;
-  font-size: 0.85rem; 
-  text-transform: uppercase; 
+  font-size: 0.85rem;
+  text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: 'Funnel Sans', sans-serif;
+  font-family: "Funnel Sans", sans-serif;
   transition: all 0.3s ease;
 
   &:hover {
@@ -86,12 +87,12 @@ export const NavSide = styled.div`
   flex: 1;
   max-width: 40%; /* Impedisce ai lati di occupare troppo spazio, lasciando respiro al bottone centrale */
   display: flex;
-  min-width: 0; 
-  
+  min-width: 0;
+
   &.left {
     justify-content: flex-start;
   }
-  
+
   &.right {
     justify-content: flex-end;
   }
@@ -99,7 +100,8 @@ export const NavSide = styled.div`
   @media (max-width: ${breakpoint.bigtablet}) {
     width: 100%;
     max-width: 100%; /* Su mobile togliamo il limite */
-    &.left, &.right {
+    &.left,
+    &.right {
       justify-content: center;
     }
   }
@@ -107,18 +109,20 @@ export const NavSide = styled.div`
 
 export const NavButton = styled.div<{ $align: "left" | "right" }>`
   max-width: 100%;
-  
+
   a {
     text-decoration: none;
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    align-items: ${({ $align }) => ($align === "left" ? "flex-start" : "flex-end")};
+    align-items: ${({ $align }) =>
+      $align === "left" ? "flex-start" : "flex-end"};
     text-align: ${({ $align }) => $align};
     max-width: 100%;
 
     &:hover {
-      transform: ${({ $align }) => ($align === "left" ? "translateX(-5px)" : "translateX(5px)")};
+      transform: ${({ $align }) =>
+        $align === "left" ? "translateX(-5px)" : "translateX(5px)"};
       .nav-title {
         color: ${colors.green.green500};
       }
@@ -143,7 +147,7 @@ export const NavButton = styled.div<{ $align: "left" | "right" }>`
     color: ${colors.green.green900};
     margin: 0;
     transition: color 0.3s ease;
-    
+
     /* TRONCAMENTO AGGRESSIVO */
     white-space: nowrap;
     overflow: hidden;
@@ -163,7 +167,7 @@ export const BackToBlogButton = styled(Link)`
   text-decoration: none;
   transition: all 0.3s ease;
   white-space: nowrap;
-  font-family: 'Funnel Sans', sans-serif;
+  font-family: "Funnel Sans", sans-serif;
 
   > * {
     margin: 0;

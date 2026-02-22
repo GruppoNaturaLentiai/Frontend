@@ -27,19 +27,19 @@ export type TextContentData = {
   position?: "left" | "right" | "center"
   content: [string]
   size:
-  | "h1"
-  | "h2"
-  | "h3"
-  | "h4"
-  | "h5"
-  | "h6"
-  | "h7"
-  | "p1"
-  | "p2"
-  | "p3"
-  | "p4"
-  | "p5"
-  | "note"
+    | "h1"
+    | "h2"
+    | "h3"
+    | "h4"
+    | "h5"
+    | "h6"
+    | "h7"
+    | "p1"
+    | "p2"
+    | "p3"
+    | "p4"
+    | "p5"
+    | "note"
   font?: T.FontFamilies
   collapsible?: boolean
 }

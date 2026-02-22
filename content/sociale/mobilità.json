@@ -1,23 +1,23 @@
 {
-    "mobilità": [
-        {
-          "type": "text",
-          "content": ["Il Percorso Ciclo-Pedonale di Lentiai"],
-          "size": "h1",
-          "font": "Caveat"
-        },
-        {
-          "type": "text",
-          "content": [
-            "Il <strong>Gruppo Natura Lentiai</strong>, in collaborazione con <strong>FIAB Feltreinbici APS</strong>, ha ideato e sviluppato il progetto dell’<strong>Anello ciclo-pedonale di Lentiai</strong>, sottoponendolo all’attenzione delle Amministrazioni Comunali competenti. L’obiettivo è quello di promuovere e valorizzare un’area territoriale di pregio, compresa tra i comuni di <strong>Cesiomaggiore</strong> e <strong>Borgo Valbelluna</strong>, nello specifico tra le località di <em>Busche</em> e <em>Bardies</em>.",
-            "Il progetto è orientato a incentivare una mobilità sostenibile e sicura, sia in ambito urbano che extraurbano, a beneficio di pedoni e ciclisti. L’anello si sviluppa su una lunghezza di circa <strong>16 km</strong>, senza particolari difficoltà tecniche, salvo alcuni brevi tratti sterrati. È un percorso accessibile a tutti, comprese le famiglie, con partenza dalla <strong>stazione ferroviaria di Busche</strong>, nodo intermodale strategico per chi arriva in treno, in auto o in autobus.",
-            "L’itinerario collega diverse frazioni e punti di interesse della zona, tra cui <strong>Lattebusche</strong>, l’area rivierasca di <strong>Cesana Beach</strong>, la <strong>Chiesa Arcipretale di Lentiai</strong>, i <strong>Laghetti della Rimonta</strong>, e altri luoghi rilevanti dal punto di vista storico, culturale e ambientale.",
-            "Il percorso è pensato anche come incentivo alla mobilità attiva dei residenti, configurandosi come una vera e propria <em>“palestra all’aria aperta”</em>. Questo approccio è pienamente coerente con le raccomandazioni dell’<strong>Assessorato alla Salute della Regione del Veneto</strong> e con la filosofia dei <strong>“Green Tour”</strong>, progetto strategico che ha recentemente incluso l’<strong>Anello della Valbelluna</strong> in un <strong>Protocollo d’Intesa</strong> sottoscritto a Santa Giustina lo scorso anno, con la partecipazione anche dei Comuni coinvolti.",
-            "La presenza di un’infrastruttura ciclo-pedonale riconoscibile rappresenta inoltre un valore aggiunto per la <strong>ciclovia internazionale Claudia Augusta</strong> e per l’<strong>Anello della Valbelluna</strong>, di cui il percorso segue in larga parte il tracciato. In questo senso, l’anello può contribuire in maniera concreta allo sviluppo del cicloturismo nella Valbelluna, a livello locale e sovralocale, offrendo nuove opportunità che tuttavia richiedono interventi puntuali in termini di infrastrutture e manutenzione.",
-            "Lasciamo qui in basso la cartina del percorso, utile per una visione d’insieme e per la pianificazione del tragitto."
-          ],
-          "size": "p1",
-          "collapsible": false
-        }
-    ]
+  "mobilità": [
+    {
+      "type": "text",
+      "content": ["Il Percorso Ciclo-Pedonale di Lentiai"],
+      "size": "h1",
+      "font": "Caveat"
+    },
+    {
+      "type": "text",
+      "content": [
+        "Il <strong>Gruppo Natura Lentiai</strong>, in collaborazione con <strong>FIAB Feltreinbici APS</strong>, ha ideato e sviluppato il progetto dell’<strong>Anello ciclo-pedonale di Lentiai</strong>, sottoponendolo all’attenzione delle Amministrazioni Comunali competenti. L’obiettivo è quello di promuovere e valorizzare un’area territoriale di pregio, compresa tra i comuni di <strong>Cesiomaggiore</strong> e <strong>Borgo Valbelluna</strong>, nello specifico tra le località di <em>Busche</em> e <em>Bardies</em>.",
+        "Il progetto è orientato a incentivare una mobilità sostenibile e sicura, sia in ambito urbano che extraurbano, a beneficio di pedoni e ciclisti. L’anello si sviluppa su una lunghezza di circa <strong>16 km</strong>, senza particolari difficoltà tecniche, salvo alcuni brevi tratti sterrati. È un percorso accessibile a tutti, comprese le famiglie, con partenza dalla <strong>stazione ferroviaria di Busche</strong>, nodo intermodale strategico per chi arriva in treno, in auto o in autobus.",
+        "L’itinerario collega diverse frazioni e punti di interesse della zona, tra cui <strong>Lattebusche</strong>, l’area rivierasca di <strong>Cesana Beach</strong>, la <strong>Chiesa Arcipretale di Lentiai</strong>, i <strong>Laghetti della Rimonta</strong>, e altri luoghi rilevanti dal punto di vista storico, culturale e ambientale.",
+        "Il percorso è pensato anche come incentivo alla mobilità attiva dei residenti, configurandosi come una vera e propria <em>“palestra all’aria aperta”</em>. Questo approccio è pienamente coerente con le raccomandazioni dell’<strong>Assessorato alla Salute della Regione del Veneto</strong> e con la filosofia dei <strong>“Green Tour”</strong>, progetto strategico che ha recentemente incluso l’<strong>Anello della Valbelluna</strong> in un <strong>Protocollo d’Intesa</strong> sottoscritto a Santa Giustina lo scorso anno, con la partecipazione anche dei Comuni coinvolti.",
+        "La presenza di un’infrastruttura ciclo-pedonale riconoscibile rappresenta inoltre un valore aggiunto per la <strong>ciclovia internazionale Claudia Augusta</strong> e per l’<strong>Anello della Valbelluna</strong>, di cui il percorso segue in larga parte il tracciato. In questo senso, l’anello può contribuire in maniera concreta allo sviluppo del cicloturismo nella Valbelluna, a livello locale e sovralocale, offrendo nuove opportunità che tuttavia richiedono interventi puntuali in termini di infrastrutture e manutenzione.",
+        "Lasciamo qui in basso la cartina del percorso, utile per una visione d’insieme e per la pianificazione del tragitto."
+      ],
+      "size": "p1",
+      "collapsible": false
+    }
+  ]
 }

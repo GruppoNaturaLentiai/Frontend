@@ -56,7 +56,7 @@ const Blog: React.FC<PageProps<BlogData>> = ({ data, location }) => {
   }, [data])
 
   const [posts, setPosts] = useState<PostInfo[]>(
-    staticPosts.filter(filterDummyPosts).sort(sortByPublishedAt).reverse()
+    staticPosts.filter(filterDummyPosts).sort(sortByPublishedAt).reverse(),
   )
 
   useEffect(() => {
@@ -116,7 +116,7 @@ const Blog: React.FC<PageProps<BlogData>> = ({ data, location }) => {
         })
 
         setPosts(
-          combined.filter(filterDummyPosts).sort(sortByPublishedAt).reverse()
+          combined.filter(filterDummyPosts).sort(sortByPublishedAt).reverse(),
         )
       } catch (err: any) {
         console.error("Errore nel fetch remoto, uso i dati statici:", err)

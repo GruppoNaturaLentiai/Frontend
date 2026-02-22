@@ -1,4 +1,3 @@
-import "leaflet-css"
 import React, { useEffect, useState } from "react"
 import { MapContainer, Marker, TileLayer } from "react-leaflet"
 import { Location } from "../../types"

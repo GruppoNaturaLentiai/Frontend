@@ -124,7 +124,7 @@ const CookiePreferences: React.FC<Props> = ({ onClose }) => {
           </S.ModalButton>
           <S.ModalButton
             onClick={onClose}
-            color={colors.green.green400}
+            color={colors.green.green700}
             disabled={isSaving}
             aria-label="Annulla e torna indietro"
           >
