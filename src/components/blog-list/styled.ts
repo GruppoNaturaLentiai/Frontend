@@ -171,3 +171,25 @@ export const PageButton = styled.button<{ $active?: boolean }>`
     cursor: not-allowed;
   }
 `
+
+export const PageNumbers = styled.div`
+  display: flex;
+  gap: 12px;
+  
+  /* Nasconde i numeri singoli su mobile */
+  @media (max-width: ${breakpointNum.mobile}px) {
+    display: none;
+  }
+`
+
+export const MobilePageIndicator = styled(T.P3)`
+  display: none;
+  
+  /* Mostra la scritta "Pagina X di Y" solo su mobile */
+  @media (max-width: ${breakpointNum.mobile}px) {
+    display: block;
+    font-weight: bold;
+    margin: 0 1rem;
+    color: ${colors.green.green900};
+  }
+`

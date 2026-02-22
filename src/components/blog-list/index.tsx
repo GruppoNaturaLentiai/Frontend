@@ -95,8 +95,19 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({ posts, isFromPost }) => 
     }
   }
 
-  // Sostituito Array.from con un approccio funzionale standard
-  const pagesArray = Array(totalPages).fill(0).map((_, i) => i + 1)
+  // --- LOGICA SMART PAGINATION ---
+  const getVisiblePages = (current: number, total: number) => {
+    // Se ci sono 5 pagine o meno, mostrale tutte
+    if (total <= 5) return Array(total).fill(0).map((_, i) => i + 1)
+    // Se siamo all'inizio, mostra le prime 5
+    if (current <= 3) return [1, 2, 3, 4, 5]
+    // Se siamo alla fine, mostra le ultime 5
+    if (current >= total - 2) return [total - 4, total - 3, total - 2, total - 1, total]
+    // Altrimenti, mostra la pagina corrente al centro con 2 prima e 2 dopo
+    return [current - 2, current - 1, current, current + 1, current + 2]
+  }
+
+  const visiblePages = getVisiblePages(currentPage, totalPages)
 
   return (
     <S.Container>
@@ -151,31 +162,63 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({ posts, isFromPost }) => 
       {/* Controlli Paginazione aggiornati */}
       {totalPages > 1 && (
         <S.PaginationWrapper>
+
+          {/* 1. Vai alla PRIMA pagina (nascosto su mobile) */}
+          <S.PageButton
+            className="desktop-only"
+            onClick={() => handlePageChange(1)}
+            disabled={currentPage === 1}
+            aria-label="Prima pagina"
+          >
+            «
+          </S.PageButton>
+
+          {/* 2. Pagina Precedente */}
           <S.PageButton
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
             aria-label="Pagina precedente"
           >
-            &#8592;
+            ←
           </S.PageButton>
 
-          {pagesArray.map(page => (
-            <S.PageButton
-              key={page}
-              $active={currentPage === page}
-              onClick={() => handlePageChange(page)}
-            >
-              {page}
-            </S.PageButton>
-          ))}
+          {/* 3. Finestra Scorrevole dei Numeri (visibile solo su desktop) */}
+          <S.PageNumbers>
+            {visiblePages.map(page => (
+              <S.PageButton
+                key={page}
+                $active={currentPage === page}
+                onClick={() => handlePageChange(page)}
+              >
+                {page}
+              </S.PageButton>
+            ))}
+          </S.PageNumbers>
 
+          {/* 4. L'indicatore Testuale (visibile SOLO su mobile) */}
+          <S.MobilePageIndicator>
+            Pagina {currentPage} di {totalPages}
+          </S.MobilePageIndicator>
+
+          {/* 5. Pagina Successiva */}
           <S.PageButton
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
             aria-label="Pagina successiva"
           >
-            &#8594;
+            →
           </S.PageButton>
+
+          {/* 6. Vai all'ULTIMA pagina (nascosto su mobile) */}
+          <S.PageButton
+            className="desktop-only"
+            onClick={() => handlePageChange(totalPages)}
+            disabled={currentPage === totalPages}
+            aria-label="Ultima pagina"
+          >
+            »
+          </S.PageButton>
+
         </S.PaginationWrapper>
       )}
     </S.Container>
