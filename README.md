@@ -1,49 +1,80 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# 🌿 Gruppo Natura Lentiai - Sito Ufficiale
 
-## 🚀 Quick start
+Benvenuto nel repository frontend del sito ufficiale dell'associazione **Gruppo Natura Lentiai**.
+Il sito è progettato per essere super-veloce, accessibile e facilmente aggiornabile grazie a un'architettura **Jamstack** basata su Gatsby e Sanity CMS.
 
-1.  **Create a Gatsby site.**
+🌐 **Sito Live:** [grupponaturalentiai.it](https://grupponaturalentiai.it)
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+---
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+## 🛠 Tech Stack
 
-2.  **Start developing.**
+- **Framework:** [Gatsby](https://www.gatsbyjs.com/) (React) - Generazione di siti statici (SSG) per performance ottimali.
+- **Linguaggio:** [TypeScript](https://www.typescriptlang.org/) - Per codice tipizzato e sicuro.
+- **Styling:** [Styled Components](https://styled-components.com/) - CSS-in-JS.
+- **CMS (Headless):** [Sanity.io](https://www.sanity.io/) - Gestione dei contenuti del Blog tramite query GraphQL.
+- **Mappe:** [React Leaflet](https://react-leaflet.js.org/) - Mappe interattive per i percorsi dell'associazione.
+- **Automazione:** [GitHub Actions](https://github.com/features/actions) - Build e deploy automatici e gratuiti.
 
-    Navigate into your new site’s directory and start it up.
+---
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## 🚀 Sviluppo Locale
 
-3.  **Open the code and start customizing!**
+Se vuoi contribuire al codice sorgente o testare modifiche in locale, segui questi passaggi.
 
-    Your site is now running at http://localhost:8000!
+### 1. Prerequisiti
+Assicurati di avere installato sul tuo computer:
+- **Node.js** (Versione 20 o superiore consigliata)
+- **npm** (incluso in Node.js)
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+### 2. Installazione
+Clona il repository e installa le dipendenze:
+```bash
+git clone [https://github.com/GruppoNaturaLentiai/Frontend.git](https://github.com/GruppoNaturaLentiai/Frontend.git)
+cd Frontend
+npm ci
+```
 
-4.  **Learn more**
+### 3. Avvio del server di sviluppo
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+Per avviare l'ambiente di sviluppo locale con hot-reloading:
 
-## 🚀 Quick start (Netlify)
+```bash
+npm run develop
+```
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+Il sito sarà visibile all'indirizzo: `http://localhost:8000`
+L'interfaccia di esplorazione GraphQL sarà disponibile su: `http://localhost:8000/___graphql`
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+---
+
+## 🏗 Architettura e Deploy
+
+Il sito è ospitato gratuitamente su **GitHub Pages** (sul branch `gh-pages`).
+Non è necessario eseguire script di build o deploy manuali dal proprio computer. Il processo è interamente automatizzato tramite **GitHub Actions** (`.github/workflows/deploy.yml`).
+
+Il deploy automatico viene attivato in due scenari:
+
+1. **Modifiche al codice:** Quando una Pull Request viene unita (merged) al branch `main`.
+2. **Pubblicazione Articoli:** Quando un redattore pubblica, modifica o elimina un articolo dall'interfaccia di Sanity CMS (tramite Webhook che invia l'evento `sanity-publish`).
+
+Il processo di build utilizza un sistema di **Cache** per le immagini processate da Gatsby e per i pacchetti `npm`, riducendo i tempi di compilazione da 20 minuti a pochi minuti.
+
+---
+
+## 📁 Struttura principale del Progetto
+
+* `/src/components` - Componenti React riutilizzabili (Header, Footer, UI, ecc.).
+* `/src/pages` - Pagine statiche principali del sito (es. index, blog, chi-siamo, contatti).
+* `/src/templates` - Template dinamici generati a tempo di build (es. `post.tsx` per i singoli articoli del blog).
+* `/src/data` - Dati statici JSON, coordinate dei tracciati GPS e percorsi mappa.
+* `/src/styles` - Variabili globali CSS, breakpoints, palette colori (i "verdi" di GNL).
+* `/gatsby-node.ts` - Logica di back-end di Gatsby per la creazione programmatica delle pagine recuperando i dati da Sanity.
+* `/.github/workflows` - File di configurazione delle pipeline CI/CD.
+
+---
+
+## 🤝 Crediti e Copyright
+
+Sviluppato e mantenuto per **Gruppo Natura Lentiai**.
+© Copyright Andrea Nicolai - Tutti i diritti riservati.

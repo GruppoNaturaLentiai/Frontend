@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import * as S from "./styled"
 import * as T from "../typography"
+import { colors } from "../../styles"
 
 interface Props {
   onClose: () => void
@@ -113,7 +114,7 @@ const CookiePreferences: React.FC<Props> = ({ onClose }) => {
         <S.ButtonRow>
           <S.ModalButton
             onClick={savePreferences}
-            color="#3182ce"
+            color={colors.green.green600}
             disabled={isSaving}
             aria-label="Salva le preferenze"
           >
@@ -123,9 +124,8 @@ const CookiePreferences: React.FC<Props> = ({ onClose }) => {
           </S.ModalButton>
           <S.ModalButton
             onClick={onClose}
-            color="#4a5568"
+            color={colors.green.green400}
             disabled={isSaving}
-            style={{ background: "#4a5568" }}
             aria-label="Annulla e torna indietro"
           >
             <S.ButtonLabel>Annulla</S.ButtonLabel>

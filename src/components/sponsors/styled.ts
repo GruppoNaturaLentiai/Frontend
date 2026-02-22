@@ -1,13 +1,15 @@
 import styled from "styled-components"
 
 export const Sponsor = styled.div`
-  max-height: 50px;
-  max-width: 120px;
-  min-block-size: fit-content;
-  img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 120px;
+  
+  .gatsby-image-wrapper {
     max-height: 100%;
     max-width: 100%;
-    object-fit: contain;
   }
 `
 

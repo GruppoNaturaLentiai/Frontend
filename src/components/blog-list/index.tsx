@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import { IGatsbyImageData, GatsbyImage } from "gatsby-plugin-image"
 import * as S from "./styled"
 import * as T from "../typography"
@@ -22,6 +22,7 @@ export type PostInfo = {
 
 interface BlogListProps {
   posts: PostInfo[]
+  isFromPost?: boolean
 }
 
 const getImage = (post: PostInfo) => {
@@ -44,26 +45,37 @@ const getImage = (post: PostInfo) => {
   return null
 }
 
-export const FeaturedBlog: React.FC<BlogListProps> = ({ posts }) => {
+export const FeaturedBlog: React.FC<BlogListProps> = ({ posts, isFromPost }) => {
+  // Inizializziamo a 1 di default
   const [currentPage, setCurrentPage] = useState(1)
   const gridRef = useRef<HTMLDivElement>(null)
 
-  // Quanti post mostrare nella griglia per ogni pagina
+  // Quando il componente viene montato, controlla se c'è una pagina salvata in memoria
+  useEffect(() => {
+    if (isFromPost) {
+      // Se arriviamo da un post, ripristiniamo la pagina salvata
+      const savedPage = sessionStorage.getItem("gnl-blog-page")
+      if (savedPage) {
+        setCurrentPage(parseInt(savedPage, 10))
+      }
+    } else {
+      // Se arriviamo da qualsiasi altra parte (es. Menu), resettiamo a 1 e puliamo la memoria
+      sessionStorage.removeItem("gnl-blog-page")
+      setCurrentPage(1)
+    }
+  }, [isFromPost])
+
   const POSTS_PER_PAGE = 6
 
   if (!posts || posts.length === 0) {
     return <T.P2 style={{ textAlign: "center", marginTop: "2rem" }}>Nessun articolo pubblicato al momento.</T.P2>
   }
 
-  // Ordina per data decrescente
   const sorted = [...posts].sort(
     (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
   )
 
-  // Il primo è sempre il featured post, gli altri finiscono nella griglia
   const [featured, ...others] = sorted
-
-  // Calcoli per la paginazione
   const totalPages = Math.ceil(others.length / POSTS_PER_PAGE)
   const currentPosts = others.slice(
     (currentPage - 1) * POSTS_PER_PAGE,
@@ -72,41 +84,51 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({ posts }) => {
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page)
-    // Scrolla dolcemente verso l'alto (sotto al post in evidenza) quando si cambia pagina
+    // SALVA LA PAGINA IN MEMORIA!
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem("gnl-blog-page", page.toString())
+    }
+
     if (gridRef.current) {
       const yOffset = gridRef.current.getBoundingClientRect().top + window.scrollY - 100
       window.scrollTo({ top: yOffset, behavior: "smooth" })
     }
   }
 
+  // Sostituito Array.from con un approccio funzionale standard
+  const pagesArray = Array(totalPages).fill(0).map((_, i) => i + 1)
+
   return (
     <S.Container>
-      {/* Featured Post (Sempre visibile e sempre in cima) */}
-      <S.FeaturedPostWrapper onClick={() => navigate(`${featured.slug}`)}>
-        <S.CoverImgWrapper $isFeatured={true}>
-          {getImage(featured)}
-        </S.CoverImgWrapper>
-        <S.FeaturedContent>
-          <T.P4 style={{ color: "#FE4A49", fontWeight: "bold", marginBottom: "0.5rem" }}>ULTIMO ARTICOLO</T.P4>
-          <S.FeaturedTitle>{featured.title}</S.FeaturedTitle>
-          <S.MetaInfo>
-            {new Date(featured.publishedAt).toLocaleDateString("it-IT", {
-              weekday: "long",
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}{" "}
-            • {featured.author}
-          </S.MetaInfo>
-          <T.P2>{featured.excerpt}</T.P2>
-        </S.FeaturedContent>
-      </S.FeaturedPostWrapper>
+      {/* Mostra il post in evidenza SOLO nella prima pagina */}
+      {currentPage === 1 && (
+        <S.FeaturedPostWrapper onClick={() => navigate(`${featured.slug}`)}>
+          <S.CoverImgWrapper $isFeatured={true}>
+            {getImage(featured)}
+          </S.CoverImgWrapper>
+          <S.FeaturedContent>
+            <T.P4 style={{ color: "#FE4A49", fontWeight: "bold", marginBottom: "0.5rem" }}>ULTIMO ARTICOLO</T.P4>
+            <S.FeaturedTitle>{featured.title}</S.FeaturedTitle>
+            <S.MetaInfo>
+              {new Date(featured.publishedAt).toLocaleDateString("it-IT", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}{" "}
+              • {featured.author}
+            </S.MetaInfo>
+            <T.P2>{featured.excerpt}</T.P2>
+          </S.FeaturedContent>
+        </S.FeaturedPostWrapper>
+      )}
 
       {/* Griglia post successivi paginata */}
       <div ref={gridRef}>
         <S.Grid>
           {currentPosts.map(post => (
             <S.Card key={post.slug} onClick={() => navigate(`${post.slug}`)}>
+              {/* ... (Lascia intatto il contenuto della Card) ... */}
               <S.CoverImgWrapper $isFeatured={false}>
                 {getImage(post)}
               </S.CoverImgWrapper>
@@ -126,7 +148,7 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({ posts }) => {
         </S.Grid>
       </div>
 
-      {/* Controlli Paginazione */}
+      {/* Controlli Paginazione aggiornati */}
       {totalPages > 1 && (
         <S.PaginationWrapper>
           <S.PageButton
@@ -137,7 +159,7 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({ posts }) => {
             &#8592;
           </S.PageButton>
 
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+          {pagesArray.map(page => (
             <S.PageButton
               key={page}
               $active={currentPage === page}

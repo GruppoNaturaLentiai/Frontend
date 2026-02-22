@@ -103,6 +103,8 @@ export const CheckboxLabel = styled.label`
   color: ${colors.green.green900};
   cursor: pointer;
   margin: 0;
+  min-width: 105px;
+  justify-content: space-between;
 
   input[type="checkbox"] {
     margin-right: 0.75rem;
@@ -110,6 +112,8 @@ export const CheckboxLabel = styled.label`
     min-width: 1.1rem;
     min-height: 1.1rem;
     cursor: pointer;
+    align-self: center;
+    accent-color: ${colors.green.green700};
   }
 
   .label {

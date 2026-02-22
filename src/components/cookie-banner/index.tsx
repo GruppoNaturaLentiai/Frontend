@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import CookiePreferences from "../cookie-preferences"
 import * as S from "./styled"
+import { colors } from "../../styles"
 
 const CookieBanner = () => {
   const [visible, setVisible] = useState(false)
@@ -76,21 +77,22 @@ const CookieBanner = () => {
           <S.ButtonRow>
             <S.BannerButton
               onClick={() => saveConsent("all")}
-              color="#3182ce"
+              color={colors.green.green600}
               aria-label="Accetta tutti i cookie"
             >
               <S.ButtonText>Accetta tutti</S.ButtonText>
             </S.BannerButton>
             <S.BannerButton
               onClick={() => saveConsent("necessary")}
-              color="#e53e3e"
+              color={colors.green.green800}
               aria-label="Rifiuta tutti i cookie tranne quelli tecnici"
             >
               <S.ButtonText>Accetta solo necessari</S.ButtonText>
             </S.BannerButton>
             <S.BannerButton
               onClick={() => setShowPreferences(true)}
-              color="#4a5568"
+              color="transparent"
+              border={`1px solid ${colors.green.green600}`}
               aria-label="Gestisci le preferenze dei cookie"
             >
               <S.ButtonText>Personalizza</S.ButtonText>

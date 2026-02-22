@@ -1,5 +1,4 @@
 import { graphql, HeadFC, PageProps } from "gatsby"
-import * as _ from "lodash"
 import React, { useEffect, useMemo, useState } from "react"
 import DefaultLayout from "../components/default-layout"
 import { remoteGraphqlURL } from "../constants"
@@ -35,7 +34,9 @@ const filterDummyPosts = (post: PostInfo) =>
 const sortByPublishedAt = (p1: PostInfo, p2: PostInfo) =>
   new Date(p1.publishedAt).getTime() - new Date(p2.publishedAt).getTime()
 
-const Blog: React.FC<PageProps<BlogData>> = ({ data }) => {
+const Blog: React.FC<PageProps<BlogData>> = ({ data, location }) => {
+  const isFromPost = (location.state as any)?.fromPost === true
+
   // Trasformiamo i dati statici di Gatsby nel formato PostInfo
   const staticPosts: PostInfo[] = useMemo(() => {
     return (data.allSanityPost.nodes || []).map(node => ({
@@ -89,7 +90,7 @@ const Blog: React.FC<PageProps<BlogData>> = ({ data }) => {
         const result = await response.json()
         if (result.errors) throw new Error(result.errors[0].message)
 
-        const remotePostsRaw = _.get(result.data, "allPost", [])
+        const remotePostsRaw = result.data?.allPost ?? []
 
         const remotePosts: PostInfo[] = remotePostsRaw.map((p: any) => ({
           id: p._id,
@@ -127,7 +128,7 @@ const Blog: React.FC<PageProps<BlogData>> = ({ data }) => {
 
   return (
     <DefaultLayout>
-      <FeaturedBlog posts={posts} />
+      <FeaturedBlog posts={posts} isFromPost={isFromPost} />
     </DefaultLayout>
   )
 }
