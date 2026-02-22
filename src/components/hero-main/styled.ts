@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  
+
   @media (max-width: ${breakpointNum.smalltablet}px) {
     padding: 24px;
   }
@@ -17,18 +17,22 @@ export const Wrapper = styled.div`
     padding: 16px;
   }
   animation: fadeIn 1s ease-in-out forwards;
-  
+
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 `
 
 /* NUOVO CONTENITORE: Ancora il testo esattamente ai bordi della foto! */
 export const ImageContainer = styled.div`
-  position: relative; 
+  position: relative;
   width: 100%;
-  max-width: 1050px; 
+  max-width: 1050px;
   margin: 0 auto;
 `
 
@@ -42,12 +46,18 @@ export const TextWrapper = styled.div`
 
   animation: fadeIn 3s ease-in-out forwards;
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
-  > p { margin-top: 0; }
-  
+  > p {
+    margin-top: 0;
+  }
+
   > * {
     color: ${colors.green.green100};
     position: relative;
@@ -56,11 +66,15 @@ export const TextWrapper = styled.div`
   }
 
   @media (max-width: ${breakpointNum.medium}px) {
-    .signature { margin-top: 4px; }
+    .signature {
+      margin-top: 4px;
+    }
   }
 
   @media (max-width: ${breakpointNum.bigtablet + 10}px) {
-    .signature { margin-top: 1em; }
+    .signature {
+      margin-top: 1em;
+    }
     margin-top: none;
     position: unset;
     max-width: none;
@@ -81,7 +95,7 @@ export const NewsPillWrapper = styled.div`
   justify-content: center;
   margin-bottom: 24px; /* Spazio elegante tra la pillola e la foto */
   z-index: 10;
-  
+
   a {
     text-decoration: none;
   }
@@ -91,7 +105,7 @@ export const NewsPill = styled.div`
   /* Colori solidi per risaltare sullo sfondo chiaro del sito */
   background: ${colors.green.green100};
   border: 1px solid ${colors.green.green300};
-  padding: 6px 12px; 
+  padding: 6px 12px;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -120,7 +134,7 @@ export const NewsPill = styled.div`
   .title {
     color: ${colors.green.green900};
     font-size: 0.95rem;
-    font-family: 'Funnel Sans', sans-serif;
+    font-family: "Funnel Sans", sans-serif;
     font-weight: 600;
     white-space: nowrap;
     overflow: hidden;

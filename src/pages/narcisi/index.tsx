@@ -72,5 +72,8 @@ export default NarcisiPage
 import { SEO } from "../../components/seo"
 
 export const Head: HeadFC = ({ location }) => (
-  <SEO title="Gruppo Natura Lentiai - Progetto Narcisi" pathname={location.pathname} />
+  <SEO
+    title="Gruppo Natura Lentiai - Progetto Narcisi"
+    pathname={location.pathname}
+  />
 )

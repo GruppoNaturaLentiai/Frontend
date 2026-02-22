@@ -11,7 +11,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
   // Fetch all posts from Sanity (REMOTE)
   const allPosts = await graphql<any>(`
     query SourcingAllPosts {
-      allSanityPost(sort: { publishedAt: DESC }) { 
+      allSanityPost(sort: { publishedAt: DESC }) {
         nodes {
           slug {
             current

@@ -15,7 +15,7 @@ const ImageWithCredits = ({
   maxWidth,
   noDescription,
   noCopyright,
-  objectFit = "cover" // Default a "cover" per mantenere belle le foto
+  objectFit = "cover", // Default a "cover" per mantenere belle le foto
 }: {
   title: string
   description: string
@@ -45,10 +45,10 @@ const ImageWithCredits = ({
         marginTop: "1em",
         width: "100%",
         maxHeight: maxHeight ? `${maxHeight}px` : undefined, // RIMOSSO il "450px" forzato!
-        boxShadow: "0 8px 24px rgba(44, 69, 34, 0.12)"
+        boxShadow: "0 8px 24px rgba(44, 69, 34, 0.12)",
       }}
       imgStyle={{
-        objectFit: objectFit // Usiamo la prop dinamica
+        objectFit: objectFit, // Usiamo la prop dinamica
       }}
     />
     {noCopyright ? null : copyright ? (

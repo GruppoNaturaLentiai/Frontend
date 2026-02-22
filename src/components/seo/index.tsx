@@ -31,7 +31,9 @@ export const SEO: React.FC<SEOProps> = ({
   const seo = {
     title: title || site.siteMetadata.title,
     description: description || site.siteMetadata.description,
-    image: image ? `${site.siteMetadata.siteUrl}${image}` : `${site.siteMetadata.siteUrl}/default-share-image.jpg`, // Inserisci un'immagine generica di fallback in static/
+    image: image
+      ? `${site.siteMetadata.siteUrl}${image}`
+      : `${site.siteMetadata.siteUrl}/default-share-image.jpg`, // Inserisci un'immagine generica di fallback in static/
     url: `${site.siteMetadata.siteUrl}${pathname || ""}`,
   }
 

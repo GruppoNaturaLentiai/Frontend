@@ -13,12 +13,15 @@ interface HeroMainProps {
   latestPost?: { title: string; slug: string } | null
 }
 
-const HeroMain: React.FC<HeroMainProps> = ({ img, content, latestPost }: HeroMainProps) => {
+const HeroMain: React.FC<HeroMainProps> = ({
+  img,
+  content,
+  latestPost,
+}: HeroMainProps) => {
   const { quote, signature } = content
 
   return (
     <S.Wrapper>
-
       {/* LA PILLOLA ORA È FUORI DALLA FOTO */}
       {latestPost && (
         <S.NewsPillWrapper>
@@ -52,7 +55,6 @@ const HeroMain: React.FC<HeroMainProps> = ({ img, content, latestPost }: HeroMai
           />
         )}
       </S.ImageContainer>
-
     </S.Wrapper>
   )
 }

@@ -1,4 +1,4 @@
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./gatsby-ssr.tsx
@@ -8,7 +8,7 @@ export const onRenderBody = ({ setHtmlAttributes }: any) => {
   // Set the HTML language attribute
   setHtmlAttributes({ lang: "it" })
 }
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./flake.nix
@@ -47,13 +47,13 @@ FILE: ./flake.nix
         '';
       };
     };
-}Generated at Sun Feb 22 04:34:59 PM UTC 2026
+}Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./static/CNAME
 ========================================
 
-grupponaturalentiai.itGenerated at Sun Feb 22 04:34:59 PM UTC 2026
+grupponaturalentiai.itGenerated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./tsconfig.json
@@ -169,7 +169,7 @@ FILE: ./tsconfig.json
     "./plugins/**/*"
   ]
 }
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./package.json
@@ -238,7 +238,8 @@ FILE: ./package.json
     "gh-pages": "^6.3.0",
     "typescript": "^5.3.3"
   }
-}Generated at Sun Feb 22 04:34:59 PM UTC 2026
+}
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./gatsby-node.ts
@@ -257,7 +258,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
   // Fetch all posts from Sanity (REMOTE)
   const allPosts = await graphql<any>(`
     query SourcingAllPosts {
-      allSanityPost(sort: { publishedAt: DESC }) { 
+      allSanityPost(sort: { publishedAt: DESC }) {
         nodes {
           slug {
             current
@@ -298,7 +299,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
     }
   })
 }
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./gatsby-config.ts
@@ -410,7 +411,7 @@ const config: GatsbyConfig = {
 }
 
 export default config
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./.prettierrc
@@ -420,7 +421,7 @@ semi: false
 arrowParens: avoid
 singleQuote: false
 trailingComma: all
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./README.md
@@ -451,12 +452,16 @@ Il sito è progettato per essere super-veloce, accessibile e facilmente aggiorna
 Se vuoi contribuire al codice sorgente o testare modifiche in locale, segui questi passaggi.
 
 ### 1. Prerequisiti
+
 Assicurati di avere installato sul tuo computer:
+
 - **Node.js** (Versione 20 o superiore consigliata)
 - **npm** (incluso in Node.js)
 
 ### 2. Installazione
+
 Clona il repository e installa le dipendenze:
+
 ```bash
 git clone [https://github.com/GruppoNaturaLentiai/Frontend.git](https://github.com/GruppoNaturaLentiai/Frontend.git)
 cd Frontend
@@ -492,20 +497,21 @@ Il processo di build utilizza un sistema di **Cache** per le immagini processate
 
 ## 📁 Struttura principale del Progetto
 
-* `/src/components` - Componenti React riutilizzabili (Header, Footer, UI, ecc.).
-* `/src/pages` - Pagine statiche principali del sito (es. index, blog, chi-siamo, contatti).
-* `/src/templates` - Template dinamici generati a tempo di build (es. `post.tsx` per i singoli articoli del blog).
-* `/src/data` - Dati statici JSON, coordinate dei tracciati GPS e percorsi mappa.
-* `/src/styles` - Variabili globali CSS, breakpoints, palette colori (i "verdi" di GNL).
-* `/gatsby-node.ts` - Logica di back-end di Gatsby per la creazione programmatica delle pagine recuperando i dati da Sanity.
-* `/.github/workflows` - File di configurazione delle pipeline CI/CD.
+- `/src/components` - Componenti React riutilizzabili (Header, Footer, UI, ecc.).
+- `/src/pages` - Pagine statiche principali del sito (es. index, blog, chi-siamo, contatti).
+- `/src/templates` - Template dinamici generati a tempo di build (es. `post.tsx` per i singoli articoli del blog).
+- `/src/data` - Dati statici JSON, coordinate dei tracciati GPS e percorsi mappa.
+- `/src/styles` - Variabili globali CSS, breakpoints, palette colori (i "verdi" di GNL).
+- `/gatsby-node.ts` - Logica di back-end di Gatsby per la creazione programmatica delle pagine recuperando i dati da Sanity.
+- `/.github/workflows` - File di configurazione delle pipeline CI/CD.
 
 ---
 
 ## 🤝 Crediti e Copyright
 
 Sviluppato e mantenuto per **Gruppo Natura Lentiai**.
-© Copyright Andrea Nicolai - Tutti i diritti riservati.Generated at Sun Feb 22 04:34:59 PM UTC 2026
+© Copyright Andrea Nicolai - Tutti i diritti riservati.
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./flake.lock
@@ -538,7 +544,7 @@ FILE: ./flake.lock
   "root": "root",
   "version": 7
 }
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./.gitignore
@@ -549,7 +555,7 @@ node_modules/
 public
 src/gatsby-types.d.ts
 docs/
-.direnv/Generated at Sun Feb 22 04:34:59 PM UTC 2026
+.direnv/Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./.prettierignore
@@ -558,7 +564,7 @@ FILE: ./.prettierignore
 docs/
 public/
 .cache/
-node_modules/Generated at Sun Feb 22 04:34:59 PM UTC 2026
+node_modules/Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./generate_context.sh
@@ -591,7 +597,7 @@ find . -type f \
   -exec cat {} \; > context_for_llm.txt
 
 echo "✅ Fatto! Il contesto è stato salvato in 'context_for_llm.txt'"
-echo "⚠️  Attenzione: Se il file è molto grande, incollalo in più parti."Generated at Sun Feb 22 04:34:59 PM UTC 2026
+echo "⚠️  Attenzione: Se il file è molto grande, incollalo in più parti."Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/data/contacts.json
@@ -604,7 +610,7 @@ FILE: ./src/data/contacts.json
   "facebook-laghetti": "https://www.facebook.com/profile.php?id=100064320537208",
   "facebook-narcisi": "https://www.facebook.com/profile.php?id=100069990139319"
 }
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/data/sustain-us.json
@@ -616,7 +622,7 @@ FILE: ./src/data/sustain-us.json
     "account": "IT07 U081 4005 8650 0003 1160 657"
   }
 }
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/data/imageMetadata.json
@@ -627,11 +633,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Mappa dei laghetti della Rimonta",
     "description": "Mappa dei laghetti della Rimonta",
     "alt": "Mappa dei laghetti della Rimonta",
-    "tags": [
-      "laghetti",
-      "laghetti-mappe",
-      "mappe"
-    ],
+    "tags": ["laghetti", "laghetti-mappe", "mappe"],
     "fileName": "laghetti-mappa.png",
     "copyright": ""
   },
@@ -639,10 +641,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Bardies - Catasto asburgico (1818-1829)",
     "description": "Una mappa del catasto austriaco risalente al 1830 ci riporta l’immagine di un paese sulla sponda di un ragguardevole corso d’acqua, a difesa del quale appaiono una serie di strutture costiere. ",
     "alt": "Foto tratta dal catasto asburgico in cui compare Bardies (Borgo Valbelluna)",
-    "tags": [
-      "laghetti",
-      "laghetti-storia"
-    ],
+    "tags": ["laghetti", "laghetti-storia"],
     "fileName": "CatastoAsburgo1818-1829.jpg",
     "copyright": ""
   },
@@ -650,10 +649,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Bardies",
     "description": "Bardies (Borgo Valbelluna) e la sua piazza",
     "alt": "Foto storica di Bardies (Borgo Valbelluna) con la piazza",
-    "tags": [
-      "laghetti",
-      "laghetti-storia"
-    ],
+    "tags": ["laghetti", "laghetti-storia"],
     "fileName": "Bardies00.jpg",
     "copyright": ""
   },
@@ -661,10 +657,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Bardies",
     "description": "Il ponte sul torrente Rimonta. Sulla sinistra si nota la chiesa Sant'Antonio Abate di Bardies, mentre sulla destra l'attuale albergo 'Cavallino Rosso'",
     "alt": "Foto storica di Bardies (Borgo Valbelluna) con un ponte l'albergo 'Cavallino Rosso'",
-    "tags": [
-      "laghetti",
-      "laghetti-storia"
-    ],
+    "tags": ["laghetti", "laghetti-storia"],
     "fileName": "Bardies01.jpg",
     "copyright": ""
   },
@@ -672,9 +665,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Rimontarte",
     "description": "Logo di Rimontarte",
     "alt": "Rimontarte Logo",
-    "tags": [
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti-rimontarte"],
     "fileName": "rimontarte-logo.png",
     "copyright": ""
   },
@@ -682,10 +673,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "Un pettirosso",
     "alt": "Foto di un pettirosso",
-    "tags": [
-      "laghetti",
-      "laghetti-natura"
-    ],
+    "tags": ["laghetti", "laghetti-natura"],
     "fileName": "rimonta-pettirosso.png",
     "copyright": "Riccardo Deon"
   },
@@ -693,10 +681,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "Un cervo",
     "alt": "Foto di un cervo",
-    "tags": [
-      "laghetti",
-      "laghetti-natura"
-    ],
+    "tags": ["laghetti", "laghetti-natura"],
     "fileName": "rimonta-cervo.png",
     "copyright": "Riccardo Deon"
   },
@@ -704,10 +689,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "Una forra",
     "alt": "Foto di una forra",
-    "tags": [
-      "laghetti",
-      "laghetti-natura"
-    ],
+    "tags": ["laghetti", "laghetti-natura"],
     "fileName": "rimonta-canyon.png",
     "copyright": "Walter Argenta"
   },
@@ -715,10 +697,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "Panorama delle prealpi di Lentiai",
     "alt": "Foto di un panorama collinare di Lentiai",
-    "tags": [
-      "laghetti",
-      "laghetti-natura"
-    ],
+    "tags": ["laghetti", "laghetti-natura"],
     "fileName": "rimonta-bacino.png",
     "copyright": "Walter Argenta"
   },
@@ -726,10 +705,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "Panorama dei laghetti della Rimonta",
     "alt": "Panorama con un lago e un cigno",
-    "tags": [
-      "laghetti",
-      "laghetti-natura"
-    ],
+    "tags": ["laghetti", "laghetti-natura"],
     "fileName": "rimonta-panorama.jpg",
     "copyright": "Walter Argenta"
   },
@@ -737,10 +713,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "La vegetazione subacquea",
     "alt": "Foto subacquea con alcune piante",
-    "tags": [
-      "laghetti",
-      "laghetti-natura"
-    ],
+    "tags": ["laghetti", "laghetti-natura"],
     "fileName": "rimonta-underwater.png",
     "copyright": "Walter Argenta"
   },
@@ -748,10 +721,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "<b>Walter Bernardi</b> - La via dell'acqua",
     "description": "",
     "alt": "Murales di Walter Bernardi",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-01-la-via-dell-acqua.png",
     "copyright": "Walter Argenta"
   },
@@ -759,10 +729,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "<b>Bruno Corriani</b> - La libellula",
     "description": "",
     "alt": "Scultura in ferro di una libellula fatta da Bruno Corriani",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-02-la-libellula.png",
     "copyright": "Walter Argenta"
   },
@@ -770,10 +737,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "<b>Mauro Ricci</b> - Il cervo volante",
     "description": "",
     "alt": "Scultura in ferro di un cervo volante eseguita da Mauro Ricci",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-03-il-cervo-volante.png",
     "copyright": "Walter Argenta"
   },
@@ -781,10 +745,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "<b>Andrea Gaspari</b> - Rufus il drago",
     "description": "",
     "alt": "Scultura in legno eseguita da Andrea Gaspari di un drago immerso in un laghetto e nascosto da un canneto",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-04-rufus-il-drago.jpg",
     "copyright": "Walter Argenta"
   },
@@ -792,10 +753,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "<b>Ezio Giordano</b> - Lo gnomo",
     "description": "",
     "alt": "Scultura in legno eseguita da Ezio Giordano di uno gnomo con una chiocciola sopra.",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-05-lo-gnomo.png",
     "copyright": "Walter Argenta"
   },
@@ -803,10 +761,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "<b>Franco Vergerio</b> - La ragnatela",
     "description": "",
     "alt": "Scultura in legno e corda di Franco Vergerio, raffigurante una ragnatela sospesa fra due alberi ed un ragno.",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-06-la-ragnatela.png",
     "copyright": "Walter Argenta"
   },
@@ -814,10 +769,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "<b>Artisti vari</b> - La rinascita",
     "description": "",
     "alt": "Una scultura su un ceppo di legno raffigurante un fiore",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-07-la-rinascita.png",
     "copyright": "Walter Argenta"
   },
@@ -825,10 +777,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "<b>Artisti vari</b> - La rinascita",
     "description": "",
     "alt": "Alcune opere d'arte su base di ceppi di legno",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-07-la-rinascita-bis.png",
     "copyright": "Walter Argenta"
   },
@@ -836,10 +785,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "<b>Beppino Lorenzet</b> - Il folletto",
     "description": "",
     "alt": "Una scultura di legno eseguita da Beppino lorenzet di uno gnomo che si arrampica su una corda ed un gufo sulla spalla.",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-08-il-folletto.png",
     "copyright": "Walter Argenta"
   },
@@ -847,10 +793,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "<b>Sara Andrich</b> - Il nido",
     "description": "",
     "alt": "Una scultura eseguita da Sara Andrich di un nido con degli uccellini col il becco aperto arancione.",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-09-il-nido.png",
     "copyright": "Walter Argenta"
   },
@@ -858,10 +801,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "<b>Beppino Lorenzet</b> - Il fungo",
     "description": "",
     "alt": "Una scultura eseguita da Beppino Lorenzed di un fungo.",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-10-il-fungo.png",
     "copyright": "Walter Argenta"
   },
@@ -869,10 +809,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "<b>Gianni Stiletto e Franco Vergerio</b> - Concerto con coro di farfalle",
     "description": "",
     "alt": "Un'installazione di ideata e creata da Franco Vergerio raffigurante un contrabbasso, sopra il quale sono posizionate delle farfalle create da Gianni Stiletto.",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-11-concerto-con-coro-di-farfalle.png",
     "copyright": "Walter Argenta"
   },
@@ -880,10 +817,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "<b>Luca Lisot</b> - La rana",
     "description": "",
     "alt": "Una scultura di legno raffigurante una rana creata da Luca Lisot.",
-    "tags": [
-      "laghetti",
-      "laghetti-rimontarte"
-    ],
+    "tags": ["laghetti", "laghetti-rimontarte"],
     "fileName": "rimontarte-12-la-rana.png",
     "copyright": "Walter Argenta"
   },
@@ -891,10 +825,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "",
     "alt": "Una passerella in legno con dietro il torrente Rimonta",
-    "tags": [
-      "laghetti",
-      "laghetti-main"
-    ],
+    "tags": ["laghetti", "laghetti-main"],
     "fileName": "rimonta-cover-01-old.png",
     "copyright": "Walter Argenta"
   },
@@ -902,10 +833,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "",
     "alt": "Un panorama invernale dei laghetti della Rimonta",
-    "tags": [
-      "laghetti",
-      "laghetti-main"
-    ],
+    "tags": ["laghetti", "laghetti-main"],
     "fileName": "rimonta-cover-02-old.png",
     "copyright": "Walter Argenta"
   },
@@ -913,10 +841,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "Panoramica dell'interno della chiesa di Bardies in cui sono visibili pareti affrescate.",
     "alt": "Panoramica dell'interno della chiesa di Bardies",
-    "tags": [
-      "laghetti",
-      "laghetti-storia"
-    ],
+    "tags": ["laghetti", "laghetti-storia"],
     "fileName": "bardies-chiesa-00.png",
     "copyright": "Walter Argenta"
   },
@@ -924,10 +849,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "Particolare di un affresco raffigurante Sant'Antonio Abate.",
     "alt": "Particolare di un affresco raffigurante Sant'Antonio Abate",
-    "tags": [
-      "laghetti",
-      "laghetti-storia"
-    ],
+    "tags": ["laghetti", "laghetti-storia"],
     "fileName": "bardies-chiesa-01.png",
     "copyright": "Walter Argenta"
   },
@@ -935,10 +857,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "Sottostante al ponte si trovano le acque del torrente Forada.",
     "alt": "L'arcata inferiore del ponte romano in cui si intravedono le acque del torrente Forata",
-    "tags": [
-      "laghetti",
-      "laghetti-storia"
-    ],
+    "tags": ["laghetti", "laghetti-storia"],
     "fileName": "ponte_00.jpg",
     "copyright": "Alida Cavalet"
   },
@@ -946,10 +865,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "L'ultima azione di restauro del ponte risale al 2016.",
     "alt": "Un ponte romano con un telo che ne protegge la parte superiore",
-    "tags": [
-      "laghetti",
-      "laghetti-storia"
-    ],
+    "tags": ["laghetti", "laghetti-storia"],
     "fileName": "ponte_01.jpeg",
     "copyright": ""
   },
@@ -957,10 +873,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "",
     "alt": "Una foto artistica di uno scorcio su un lago",
-    "tags": [
-      "laghetti",
-      "laghetti-main"
-    ],
+    "tags": ["laghetti", "laghetti-main"],
     "fileName": "rimonta-cover-01.jpg",
     "copyright": "Walter Argenta"
   },
@@ -968,10 +881,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "",
     "alt": "Un panorama invernale dei laghetti della Rimonta con alberi innevati",
-    "tags": [
-      "laghetti",
-      "laghetti-main"
-    ],
+    "tags": ["laghetti", "laghetti-main"],
     "fileName": "rimonta-cover-02.jpg",
     "copyright": "Walter Argenta"
   },
@@ -979,9 +889,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "Laghetti d'inverno. Si intravede Rufus il Drago",
     "alt": "Panorama invernale dei laghetti. Si intravede l'opera di legno \"Rufus il Drago\"",
-    "tags": [
-      "laghetti"
-    ],
+    "tags": ["laghetti"],
     "fileName": "Laghetti02.jpg",
     "copyright": "Walter Argenta"
   },
@@ -989,9 +897,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "Il sentiero dei Laghetti attraversa una radura. Sullo sfondo le Dolomiti.",
     "alt": "Panoramica del sentiero che attraversa una radura. Si vede una persona in piedi e le Dolomiti sullo sfondo.",
-    "tags": [
-      "laghetti"
-    ],
+    "tags": ["laghetti"],
     "fileName": "Laghetti06.jpg",
     "copyright": "Walter Argenta"
   },
@@ -999,9 +905,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "Durante il percorso si possono trovare pannelli informativi affiancati alle opere d'arte.",
     "alt": "Una persona di spalle sta leggendo un pannello informativo. A fianco, uno dei ceppi scolpiti facente parte del gruppo di opere \"La Rinascita\".",
-    "tags": [
-      "laghetti"
-    ],
+    "tags": ["laghetti"],
     "fileName": "Laghetti07.jpg",
     "copyright": "Walter Argenta"
   },
@@ -1009,9 +913,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "Sul percorso dei laghetti della Rimonta si sfruttano passerelle di legno.",
     "alt": "Una passerella di legno",
-    "tags": [
-      "laghetti"
-    ],
+    "tags": ["laghetti"],
     "fileName": "Laghetti08.jpg",
     "copyright": "Walter Argenta"
   },
@@ -1019,9 +921,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "Prato costellato di narcisi durante il periodo della fioritura.",
     "alt": "Un prato di narcisi bianchi al tramonto. Sullo sfondo a destra degli alberi e un recinto.",
-    "tags": [
-      "narcisi"
-    ],
+    "tags": ["narcisi"],
     "fileName": "Fioritura01.jpg",
     "copyright": "Walter Argenta"
   },
@@ -1029,10 +929,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "Durante la fioritura dei narcisi i prati si tingono di bianco. Sullo sfondo la Valbelluna coperta dalle nuvole e le cime delle dolomiti innevate.",
     "alt": "Un panorama con un prato di narcisi bianchi. Sullo sfondo la Valbelluna coperta dalle nuvole e le cime delle dolomiti innevate.",
-    "tags": [
-      "narcisi",
-      "main"
-    ],
+    "tags": ["narcisi", "main"],
     "fileName": "Fioritura02.jpg",
     "copyright": "Walter Argenta"
   },
@@ -1040,9 +937,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "Alcuni narcisi in primo piano. Sullo sfondo la Valbelluna e le Dolomiti bellunesi.",
     "alt": "Alcuni narcisi in primo piano. Sullo sfondo la Valbelluna e le Dolomiti bellunesi.",
-    "tags": [
-      "narcisi"
-    ],
+    "tags": ["narcisi"],
     "fileName": "Fioritura03.jpg",
     "copyright": "Walter Argenta"
   },
@@ -1050,9 +945,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "I prati sembrano innevati durante la fioritura dei Narcisi. Sullo sfondo il monte Avena.",
     "alt": "Un prato con molti narcisi bianchi. Sullo sfondo alcune montagne",
-    "tags": [
-      "narcisi"
-    ],
+    "tags": ["narcisi"],
     "fileName": "Fioritura04.jpg",
     "copyright": "Walter Argenta"
   },
@@ -1060,9 +953,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "Panorama di prati con narcisi in fiore. Sullo sfondo Col Moscher e Malga Garda. Continuando si può scendere fino a Malga Mariech, Milies e infine Valdobbiadene.",
     "alt": "Un prato con alcuni narcisi e sullo sfondo le Prealpi Bellunesi.",
-    "tags": [
-      "narcisi"
-    ],
+    "tags": ["narcisi"],
     "fileName": "Fioritura05.jpg",
     "copyright": "Walter Argenta"
   },
@@ -1070,9 +961,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "Il Principe Bianco.",
     "alt": "Un primo piano di una coppia di Narcisi incorniciati da fiori volgarmente detti \"Botton d'oro\".",
-    "tags": [
-      "narcisi"
-    ],
+    "tags": ["narcisi"],
     "fileName": "Fioritura06.jpg",
     "copyright": "Walter Argenta"
   },
@@ -1080,9 +969,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "",
     "description": "",
     "alt": "Un prato con molti narcisi e le Prealpi bellunesi sullo sfondo.",
-    "tags": [
-      "narcisi"
-    ],
+    "tags": ["narcisi"],
     "fileName": "Fioritura07.jpg",
     "copyright": "Walter Argenta"
   },
@@ -1090,9 +977,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "Il Maestro Franco Vergerio mentre restaura la statua di Rufus il drago",
     "alt": "Un uomo che ristruttura una statua d'inverno",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_000.jpeg",
     "copyright": "Orfeo Dal Piva"
   },
@@ -1100,9 +985,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "I volontari si occupano di tenere pulito il sentiero dei laghetti della Rimonta",
     "alt": "Un uomo che taglia un tronco con una motosega",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_001.jpeg",
     "copyright": "Orfeo Dal Piva"
   },
@@ -1110,9 +993,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "",
     "alt": "Un uomo su una scala sta montando la scultura de \"La ragnatela\"",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_002.jpeg",
     "copyright": "Orfeo Dal Piva"
   },
@@ -1120,9 +1001,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "Alcuni volontari",
     "alt": "Alcuni volontari del GNL",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_003.jpeg",
     "copyright": ""
   },
@@ -1130,9 +1009,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "Alcuni volontari",
     "alt": "Un folto gruppo di volontari del GNL",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_004.jpeg",
     "copyright": ""
   },
@@ -1140,9 +1017,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "Alcuni volontari",
     "alt": "Un volontario si occupa della sostituzione di pannelli informativi lungo il sentiero dei Laghetti della Rimonta",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_005.jpeg",
     "copyright": "Orfeo Dal Piva"
   },
@@ -1150,9 +1025,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "I volontari si occupano della bonifica dell'ecosistema dei Laghetti",
     "alt": "Alcuni volontari  si occupano della bonifica dell'ecosistema dei Laghetti togliendo il fango con alcuni secchi",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_006.jpeg",
     "copyright": ""
   },
@@ -1160,9 +1033,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "",
     "alt": "Un volontario sorride seduto su un trattore",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_007.jpeg",
     "copyright": ""
   },
@@ -1170,9 +1041,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "",
     "alt": "Un paio di volontari mostrano i nuovi pannelli informativi del percorso dei Laghetti della Rimonta",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_008.jpeg",
     "copyright": ""
   },
@@ -1180,9 +1049,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "Un momento di convivialità",
     "alt": "Un uomo versa della birra in un bicchiere ad un'altra persona",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_009.jpeg",
     "copyright": "Orfeo Dal Piva"
   },
@@ -1190,9 +1057,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "I volontari si occupano di tenere pulito il sentiero dei Laghetti della Rimonta",
     "alt": "Un paio di volontari stanno tagliando con una motosega un albero caduto che ostruisce il percorso",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_010.jpeg",
     "copyright": ""
   },
@@ -1200,9 +1065,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "Alcuni volontari aiutano a montare l'opera \"Concerto con coro di farfalle\"",
     "alt": "Un paio di volontari stanno tagliando con una motosega un albero caduto che ostruisce il percorso",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_011.jpeg",
     "copyright": ""
   },
@@ -1210,9 +1073,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "I volontari si occupano della manutenzione delle passerelle del sentiero dei Laghetti della Rimonta",
     "alt": "Un uomo è chino a riparare una passerella in legno",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_012.jpeg",
     "copyright": "Orfeo Dal Piva"
   },
@@ -1220,9 +1081,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "Alcuni volontari in Col D'Artent",
     "alt": "Un gruppo di volontari in montagna",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_013.jpeg",
     "copyright": "Orfeo Dal Piva"
   },
@@ -1230,9 +1089,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "Alcuni volontari durante le domeniche di fioritura del Narciso",
     "alt": "Un paio seduti di uomini sotto un gazebo informativo in Col D'Artent",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_014.jpeg",
     "copyright": ""
   },
@@ -1240,9 +1097,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "Alcuni volontari del GNL durante le domeniche di fioritura del Narciso",
     "alt": "Alcuni uomini sotto un gazebo informativo in Col D'Artent",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_016.jpeg",
     "copyright": ""
   },
@@ -1250,9 +1105,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "Un volontario si occupa di fare la \"meda\" durante la fienagione.",
     "alt": "Un uomo durante la fienagione butta del fieno sopra un cumulo di fieno con una forca.",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_015.jpeg",
     "copyright": ""
   },
@@ -1260,9 +1113,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "I volontari del GNL durante le giornate di estirpazione del veratro in Col D'Artent.",
     "alt": "Alcuni volontari su una collina si occupano di estirpare il veratro, pianta infestante, in Col D'Artent",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_017.jpeg",
     "copyright": ""
   },
@@ -1270,9 +1121,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "",
     "alt": "Un uomo su un cumulo di fieno",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_018.jpeg",
     "copyright": ""
   },
@@ -1280,9 +1129,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "Periodicamente i volontari si occupano di organizzare Giornate Ecologiche per la pulizia dell'ambiente.",
     "alt": "Alcuni volontari con giubbotti arancioni durante una giornata ecologica",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_019.jpeg",
     "copyright": ""
   },
@@ -1290,9 +1137,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Chi siamo",
     "description": "I volontari del GNL dopo aver estirpato il veratro in Col D'Artent.",
     "alt": "Un gruppo di persone dopo aver estirpato il veratro in col D'Artent",
-    "tags": [
-      "chi-siamo"
-    ],
+    "tags": ["chi-siamo"],
     "fileName": "chi-siamo_020.jpg",
     "copyright": "Orfeo Dal Piva"
   },
@@ -1300,9 +1145,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Anello Ciclo-Pedonale di Lentiai",
     "description": "Informazioni utili sull'anello ciclopedonale di Lentiai",
     "alt": "Informazioni utili sull'anello ciclopedonale di Lentiai",
-    "tags": [
-      "mobilità"
-    ],
+    "tags": ["mobilità"],
     "fileName": "anello-ciclopedonale-lentiai-00.jpeg",
     "copyright": "Gruppo Natura Lentiai"
   },
@@ -1310,9 +1153,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Anello Ciclo-Pedonale di Lentiai",
     "description": "Cartina dell'anello ciclopedonale di Lentiai",
     "alt": "Cartina dell'anello ciclopedonale di Lentiai",
-    "tags": [
-      "mobilità"
-    ],
+    "tags": ["mobilità"],
     "fileName": "anello-ciclopedonale-lentiai-01.jpeg",
     "copyright": "Gruppo Natura Lentiai"
   },
@@ -1320,10 +1161,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Mappa dell'area",
     "description": "Cartina con la zona di fioritura dei narcisi sul Monte Avena",
     "alt": "Cartina del percorso dei narcisi in località Monte Avena",
-    "tags": [
-      "narcisi-valbelluna",
-      "narcisi"
-    ],
+    "tags": ["narcisi-valbelluna", "narcisi"],
     "fileName": "narcisi_valbelluna_avena_map.jpeg",
     "copyright": ""
   },
@@ -1331,10 +1169,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "La fioritura dei Narcisi sul monte Avena",
     "description": "La fioritura dei Narcisi sul monte Avena",
     "alt": "",
-    "tags": [
-      "narcisi-valbelluna",
-      "narcisi"
-    ],
+    "tags": ["narcisi-valbelluna", "narcisi"],
     "fileName": "narcisi_valbelluna_avena_pic.jpeg",
     "copyright": "Antonella Cossa"
   },
@@ -1342,9 +1177,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Mappa dell'area",
     "description": "Cartina con la zona di fioritura dei narcisi in località Castron - Praderadego",
     "alt": "Cartina del percorso dei narcisi in località Castron",
-    "tags": [
-      "narcisi-valbelluna"
-    ],
+    "tags": ["narcisi-valbelluna"],
     "fileName": "narcisi_valbelluna_castron_map.jpeg",
     "copyright": ""
   },
@@ -1352,9 +1185,7 @@ FILE: ./src/data/imageMetadata.json
     "title": "Mappa dell'area",
     "description": "Cartina con la zona di fioritura dei narcisi in località Le Lei - Lamon",
     "alt": "Cartina del percorso dei narcisi in località Le Lei - Lamon",
-    "tags": [
-      "narcisi-valbelluna"
-    ],
+    "tags": ["narcisi-valbelluna"],
     "fileName": "narcisi_valbelluna_le_lei_map.jpeg",
     "copyright": ""
   },
@@ -1362,14 +1193,12 @@ FILE: ./src/data/imageMetadata.json
     "title": "La fioritura dei Narcisi in località Le Lei - Lamon",
     "description": "La fioritura dei Narcisi in località Le Lei - Lamon",
     "alt": "",
-    "tags": [
-      "narcisi-valbelluna",
-      "narcisi"
-    ],
+    "tags": ["narcisi-valbelluna", "narcisi"],
     "fileName": "narcisi_valbelluna_le_lei_pic.jpeg",
     "copyright": "Mamma Gloria (account FB)"
   }
-]Generated at Sun Feb 22 04:34:59 PM UTC 2026
+]
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/data/paths/laghetti.ts
@@ -1561,7 +1390,7 @@ const paths = [
 ]
 
 export default paths
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/data/paths/narcisi.ts
@@ -2286,7 +2115,7 @@ const paths = [
 ]
 
 export default paths
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/data/sections.ts
@@ -2486,7 +2315,7 @@ export const footerSections = [
     ],
   },
 ]
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/hooks/useResponsiveClickHandler.tsx
@@ -2528,7 +2357,7 @@ const useResponsiveClickHandler = (
 }
 
 export default useResponsiveClickHandler
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/hooks/useThrottledState.ts
@@ -2554,7 +2383,7 @@ const useThrottledState = <T>(
 }
 
 export default useThrottledState
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/hooks/useSwipe.ts
@@ -2604,7 +2433,7 @@ export default (input: SwipeInput): SwipeOutput => {
     onTouchEnd,
   }
 }
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/hooks/usePreventDragAndWheel.tsx
@@ -2653,7 +2482,7 @@ const usePreventScrollOnImageView = (condition: boolean) => {
 }
 
 export default usePreventScrollOnImageView
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/cookie-preferences/index.tsx
@@ -2798,7 +2627,7 @@ const CookiePreferences: React.FC<Props> = ({ onClose }) => {
 }
 
 export default CookiePreferences
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/cookie-preferences/styled.ts
@@ -2971,7 +2800,7 @@ export const ModalButton = styled.button<{ color: string }>`
     box-shadow: none;
   }
 `
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/image-with-credits/index.tsx
@@ -2994,7 +2823,7 @@ const ImageWithCredits = ({
   maxWidth,
   noDescription,
   noCopyright,
-  objectFit = "cover" // Default a "cover" per mantenere belle le foto
+  objectFit = "cover", // Default a "cover" per mantenere belle le foto
 }: {
   title: string
   description: string
@@ -3024,10 +2853,10 @@ const ImageWithCredits = ({
         marginTop: "1em",
         width: "100%",
         maxHeight: maxHeight ? `${maxHeight}px` : undefined, // RIMOSSO il "450px" forzato!
-        boxShadow: "0 8px 24px rgba(44, 69, 34, 0.12)"
+        boxShadow: "0 8px 24px rgba(44, 69, 34, 0.12)",
       }}
       imgStyle={{
-        objectFit: objectFit // Usiamo la prop dinamica
+        objectFit: objectFit, // Usiamo la prop dinamica
       }}
     />
     {noCopyright ? null : copyright ? (
@@ -3047,7 +2876,7 @@ const ImageWithCredits = ({
 )
 
 export default ImageWithCredits
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/image-with-credits/styled.ts
@@ -3077,7 +2906,8 @@ export const ImgWrapper = styled.div<{
 export const ImageDescription = styled(T.P3)`
   white-space: break-spaces;
   margin-top: 0.5em;
-`Generated at Sun Feb 22 04:34:59 PM UTC 2026
+`
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/blog-list/index.tsx
@@ -3130,7 +2960,10 @@ const getImage = (post: PostInfo) => {
   return null
 }
 
-export const FeaturedBlog: React.FC<BlogListProps> = ({ posts, isFromPost }) => {
+export const FeaturedBlog: React.FC<BlogListProps> = ({
+  posts,
+  isFromPost,
+}) => {
   // Inizializziamo a 1 di default
   const [currentPage, setCurrentPage] = useState(1)
   const gridRef = useRef<HTMLDivElement>(null)
@@ -3153,18 +2986,23 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({ posts, isFromPost }) => 
   const POSTS_PER_PAGE = 6
 
   if (!posts || posts.length === 0) {
-    return <T.P2 style={{ textAlign: "center", marginTop: "2rem" }}>Nessun articolo pubblicato al momento.</T.P2>
+    return (
+      <T.P2 style={{ textAlign: "center", marginTop: "2rem" }}>
+        Nessun articolo pubblicato al momento.
+      </T.P2>
+    )
   }
 
   const sorted = [...posts].sort(
-    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+    (a, b) =>
+      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
   )
 
   const [featured, ...others] = sorted
   const totalPages = Math.ceil(others.length / POSTS_PER_PAGE)
   const currentPosts = others.slice(
     (currentPage - 1) * POSTS_PER_PAGE,
-    currentPage * POSTS_PER_PAGE
+    currentPage * POSTS_PER_PAGE,
   )
 
   const handlePageChange = (page: number) => {
@@ -3175,7 +3013,8 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({ posts, isFromPost }) => 
     }
 
     if (gridRef.current) {
-      const yOffset = gridRef.current.getBoundingClientRect().top + window.scrollY - 100
+      const yOffset =
+        gridRef.current.getBoundingClientRect().top + window.scrollY - 100
       window.scrollTo({ top: yOffset, behavior: "smooth" })
     }
   }
@@ -3183,11 +3022,15 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({ posts, isFromPost }) => 
   // --- LOGICA SMART PAGINATION ---
   const getVisiblePages = (current: number, total: number) => {
     // Se ci sono 5 pagine o meno, mostrale tutte
-    if (total <= 5) return Array(total).fill(0).map((_, i) => i + 1)
+    if (total <= 5)
+      return Array(total)
+        .fill(0)
+        .map((_, i) => i + 1)
     // Se siamo all'inizio, mostra le prime 5
     if (current <= 3) return [1, 2, 3, 4, 5]
     // Se siamo alla fine, mostra le ultime 5
-    if (current >= total - 2) return [total - 4, total - 3, total - 2, total - 1, total]
+    if (current >= total - 2)
+      return [total - 4, total - 3, total - 2, total - 1, total]
     // Altrimenti, mostra la pagina corrente al centro con 2 prima e 2 dopo
     return [current - 2, current - 1, current, current + 1, current + 2]
   }
@@ -3203,7 +3046,15 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({ posts, isFromPost }) => 
             {getImage(featured)}
           </S.CoverImgWrapper>
           <S.FeaturedContent>
-            <T.P4 style={{ color: "#FE4A49", fontWeight: "bold", marginBottom: "0.5rem" }}>ULTIMO ARTICOLO</T.P4>
+            <T.P4
+              style={{
+                color: "#FE4A49",
+                fontWeight: "bold",
+                marginBottom: "0.5rem",
+              }}
+            >
+              ULTIMO ARTICOLO
+            </T.P4>
             <S.FeaturedTitle>{featured.title}</S.FeaturedTitle>
             <S.MetaInfo>
               {new Date(featured.publishedAt).toLocaleDateString("it-IT", {
@@ -3247,7 +3098,6 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({ posts, isFromPost }) => 
       {/* Controlli Paginazione aggiornati */}
       {totalPages > 1 && (
         <S.PaginationWrapper>
-
           {/* 1. Vai alla PRIMA pagina (nascosto su mobile) */}
           <S.PageButton
             className="desktop-only"
@@ -3303,12 +3153,12 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({ posts, isFromPost }) => 
           >
             »
           </S.PageButton>
-
         </S.PaginationWrapper>
       )}
     </S.Container>
   )
-}Generated at Sun Feb 22 04:34:59 PM UTC 2026
+}
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/blog-list/styled.ts
@@ -3322,13 +3172,13 @@ export const Container = styled.div`
   margin-top: 2rem;
   padding: 2rem;
   padding-top: 3rem;
-  max-width: 1200px; 
+  max-width: 1200px;
   margin: 0 auto;
-  width: 100%; 
-  box-sizing: border-box; 
+  width: 100%;
+  box-sizing: border-box;
 
   @media (max-width: ${breakpointNum.mobile}px) {
-    padding: 1.5rem 1rem; 
+    padding: 1.5rem 1rem;
   }
 `
 
@@ -3341,11 +3191,11 @@ export const FeaturedPostWrapper = styled.article`
   background: #fff;
   transition: all 0.3s ease;
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   align-items: stretch;
-  
+
   /* Sostituisci max-height con height fisso per forzare la forma del banner su Desktop */
-  height: 400px; 
+  height: 400px;
 
   &:hover {
     transform: translateY(-5px);
@@ -3354,25 +3204,26 @@ export const FeaturedPostWrapper = styled.article`
 
   /* Spostiamo il passaggio a colonna ai 900px (bigtablet) per evitare schiacciamenti */
   @media (max-width: ${breakpoint.bigtablet}) {
-    flex-direction: column; 
+    flex-direction: column;
     height: auto; /* Sblocchiamo l'altezza in verticale per far adattare il testo */
   }
 `
 
 export const CoverImgWrapper = styled.div<{ $isFeatured?: boolean }>`
   flex: ${({ $isFeatured }) => ($isFeatured ? "1" : "none")};
-  
-  .gatsby-image-wrapper, .cover-image {
+
+  .gatsby-image-wrapper,
+  .cover-image {
     width: 100%;
     /* Su desktop l'immagine prende tutta l'altezza (i 400px definiti sopra) */
     height: ${({ $isFeatured }) => ($isFeatured ? "100%" : "220px")};
     object-fit: cover;
-    
+
     /* FIX PER TABLET/MOBILE: Quando andiamo in colonna, diamo un'altezza massima fissa all'immagine in evidenza */
     @media (max-width: ${breakpoint.bigtablet}) {
       height: ${({ $isFeatured }) => ($isFeatured ? "350px" : "220px")};
     }
-    
+
     @media (max-width: ${breakpoint.mobile}) {
       height: ${({ $isFeatured }) => ($isFeatured ? "250px" : "200px")};
     }
@@ -3425,7 +3276,7 @@ export const Card = styled.article`
   flex-direction: column;
   cursor: pointer;
   transition: all 0.3s ease;
-  
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px ${colors.green.green700}50;
@@ -3439,7 +3290,7 @@ export const CardContent = styled.div`
   flex-direction: column;
 `
 
-export const CardTitle = styled(T.H3).attrs({ as: 'h2' })`
+export const CardTitle = styled(T.H3).attrs({ as: "h2" })`
   margin: 0 0 0.5rem;
   line-height: 1.3;
 `
@@ -3463,8 +3314,10 @@ export const PaginationWrapper = styled.div`
 `
 
 export const PageButton = styled.button<{ $active?: boolean }>`
-  background-color: ${({ $active }) => ($active ? colors.green.green600 : colors.green.green200)};
-  color: ${({ $active }) => ($active ? colors.green.green50 : colors.green.green900)};
+  background-color: ${({ $active }) =>
+    $active ? colors.green.green600 : colors.green.green200};
+  color: ${({ $active }) =>
+    $active ? colors.green.green50 : colors.green.green900};
   border: none;
   border-radius: 8px;
   width: 45px;
@@ -3478,7 +3331,8 @@ export const PageButton = styled.button<{ $active?: boolean }>`
   justify-content: center;
 
   &:hover:not(:disabled) {
-    background-color: ${({ $active }) => ($active ? colors.green.green700 : colors.green.green300)};
+    background-color: ${({ $active }) =>
+      $active ? colors.green.green700 : colors.green.green300};
     transform: translateY(-2px);
   }
 
@@ -3491,7 +3345,7 @@ export const PageButton = styled.button<{ $active?: boolean }>`
 export const PageNumbers = styled.div`
   display: flex;
   gap: 12px;
-  
+
   /* Nasconde i numeri singoli su mobile */
   @media (max-width: ${breakpointNum.mobile}px) {
     display: none;
@@ -3500,7 +3354,7 @@ export const PageNumbers = styled.div`
 
 export const MobilePageIndicator = styled(T.P3)`
   display: none;
-  
+
   /* Mostra la scritta "Pagina X di Y" solo su mobile */
   @media (max-width: ${breakpointNum.mobile}px) {
     display: block;
@@ -3508,7 +3362,8 @@ export const MobilePageIndicator = styled(T.P3)`
     margin: 0 1rem;
     color: ${colors.green.green900};
   }
-`Generated at Sun Feb 22 04:34:59 PM UTC 2026
+`
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/icons/index.tsx
@@ -3598,7 +3453,7 @@ const Icon: React.FC<IconsProps> = ({ type, ...props }) => {
 }
 
 export default Icon
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/map-narcisi/index.tsx
@@ -3859,7 +3714,7 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
 }
 
 export default MapComponent
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/map-narcisi/styled.ts
@@ -3952,7 +3807,7 @@ export const PathInfoIcon = styled.div`
   width: 24px;
   height: 24px;
 `
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/sponsors/index.tsx
@@ -4014,7 +3869,12 @@ const sponsorsBase = [
 const Sponsors = () => {
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: { sourceInstanceName: { eq: "logos" }, extension: { in: ["png", "jpg", "jpeg", "webp"] } }) {
+      allFile(
+        filter: {
+          sourceInstanceName: { eq: "logos" }
+          extension: { in: ["png", "jpg", "jpeg", "webp"] }
+        }
+      ) {
         nodes {
           base
           childImageSharp {
@@ -4063,7 +3923,8 @@ const Sponsors = () => {
   )
 }
 
-export default SponsorsGenerated at Sun Feb 22 04:34:59 PM UTC 2026
+export default Sponsors
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/sponsors/styled.ts
@@ -4077,7 +3938,7 @@ export const Sponsor = styled.div`
   justify-content: center;
   height: 50px;
   width: 120px;
-  
+
   .gatsby-image-wrapper {
     max-height: 100%;
     max-width: 100%;
@@ -4094,7 +3955,7 @@ export const SponsorGrid = styled.div`
     display: ruby;
   }
 `
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/sustain-us/index.tsx
@@ -4131,7 +3992,7 @@ const SustainUs = () => {
 }
 
 export default SustainUs
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/sustain-us/styled.ts
@@ -4187,7 +4048,7 @@ export const IBANWrapper = styled.div`
     align-self: start;
   }
 `
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/work-in-progress/index.tsx
@@ -4208,7 +4069,7 @@ const WorkInProgress = () => (
 )
 
 export default WorkInProgress
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/work-in-progress/styled.ts
@@ -4227,7 +4088,7 @@ export const Wrapper = styled.div`
     fill: ${colors.green.green900};
   }
 `
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/map-laghetti/helpers.ts
@@ -4268,7 +4129,7 @@ const decodePolyline = (encoded: string) => {
 
   return points
 }
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/map-laghetti/index.tsx
@@ -4480,7 +4341,7 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
 // }
 
 export default MapComponent
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/map-laghetti/styled.ts
@@ -4542,7 +4403,7 @@ export const Dot = styled.div<{ $color: string }>`
   ${({ $color }) => `background-color: ${$color};`}
   border-radius: 50%;
 `
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/contact-us/index.tsx
@@ -4637,7 +4498,7 @@ const ContactUs = () => {
 }
 
 export default ContactUs
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/contact-us/styled.ts
@@ -4721,7 +4582,7 @@ export const Row = styled.div`
   gap: 20px;
   align-items: center;
 `
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/portable-text-components/index.tsx
@@ -4839,7 +4700,7 @@ const Components: PortableTextReactComponents = {
 }
 
 export default Components
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/portable-text-components/styled.ts
@@ -4887,7 +4748,7 @@ export const ImgDescription = styled(T.P4)`
   text-align: center;
   margin-block-start: 0.5em;
 `
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/carousel/index.tsx
@@ -5059,7 +4920,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
 }
 
 export default Carousel
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/carousel/styled.ts
@@ -5294,7 +5155,7 @@ export const StyledGatsbyImageLarge = styled(GatsbyImage)`
     }
   }
 `
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/seo/index.tsx
@@ -5333,7 +5194,9 @@ export const SEO: React.FC<SEOProps> = ({
   const seo = {
     title: title || site.siteMetadata.title,
     description: description || site.siteMetadata.description,
-    image: image ? `${site.siteMetadata.siteUrl}${image}` : `${site.siteMetadata.siteUrl}/default-share-image.jpg`, // Inserisci un'immagine generica di fallback in static/
+    image: image
+      ? `${site.siteMetadata.siteUrl}${image}`
+      : `${site.siteMetadata.siteUrl}/default-share-image.jpg`, // Inserisci un'immagine generica di fallback in static/
     url: `${site.siteMetadata.siteUrl}${pathname || ""}`,
   }
 
@@ -5360,7 +5223,8 @@ export const SEO: React.FC<SEOProps> = ({
       {children}
     </>
   )
-}Generated at Sun Feb 22 04:34:59 PM UTC 2026
+}
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/cookie-banner/index.tsx
@@ -5485,7 +5349,7 @@ const CookieBanner = () => {
 }
 
 export default CookieBanner
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/cookie-banner/styled.ts
@@ -5544,7 +5408,7 @@ export const BannerButton = styled.button<{ color: string; $border?: string }>`
     transition: all 0.3s ease;
   }
 `
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/header/index.tsx
@@ -5604,18 +5468,26 @@ const Header: React.FC = () => {
           </S.NavBarList>
 
           <S.FaiWrapper>
-            <a href="https://fondoambiente.it" target="_blank" rel="noopener noreferrer" aria-label="Sito ufficiale del FAI Veneto">
+            <a
+              href="https://fondoambiente.it"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Sito ufficiale del FAI Veneto"
+            >
               <S.FaiLogoDesktop>
                 <FaiLogo />
               </S.FaiLogoDesktop>
             </a>
           </S.FaiWrapper>
-
         </S.RightWrapper>
       </S.Header>
       <S.HeaderMobile>
         <S.LeftWrapper>
-          <Link to="/" onClick={() => setMobileMenuOpen(false)} aria-label="Vai alla home">
+          <Link
+            to="/"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-label="Vai alla home"
+          >
             <Icon type="logo" />
           </Link>
         </S.LeftWrapper>
@@ -5688,11 +5560,15 @@ const Header: React.FC = () => {
           </S.MobileNavBarList>
 
           <S.FaiLogoMobile>
-            <a href="https://fondoambiente.it" target="_blank" rel="noopener noreferrer" aria-label="Sito ufficiale del FAI Veneto">
+            <a
+              href="https://fondoambiente.it"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Sito ufficiale del FAI Veneto"
+            >
               <FaiLogo />
             </a>
           </S.FaiLogoMobile>
-
         </S.RightSidebar>
       </S.HeaderMobile>
     </>
@@ -5700,7 +5576,7 @@ const Header: React.FC = () => {
 }
 
 export default Header
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/header/styled.ts
@@ -5779,10 +5655,10 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
   text-align: center;
   align-items: center;
   align-self: center;
-  
+
   @media (max-width: ${breakpointNum.medium}px) {
-    margin: 0 0.4rem; 
-    
+    margin: 0 0.4rem;
+
     > a > * {
       font-size: 13px;
     }
@@ -5795,7 +5671,7 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
     &:hover {
       text-decoration: underline;
       text-decoration-color: ${({ $isActive }) =>
-    $isActive ? `${colors.green.green550}` : `${colors.green.green900}`};
+        $isActive ? `${colors.green.green550}` : `${colors.green.green900}`};
     }
 
     &:active {
@@ -5826,10 +5702,10 @@ export const NavBarItem = styled.li<{ $isActive: boolean }>`
       color: ${colors.green.green50} !important;
       margin: 0;
     }
-    
+
     &:hover {
       background-color: ${colors.green.green800};
-      text-decoration: none; 
+      text-decoration: none;
       transform: scale(1.05);
     }
   }
@@ -5842,7 +5718,7 @@ export const SubsectionList = styled.ul<{ $isOpen: boolean }>`
   min-width: 110px;
   margin: 0;
   position: absolute;
-  top: calc(100% + 20px); 
+  top: calc(100% + 20px);
   left: 0px;
   background-color: ${colors.green.green400};
   box-shadow: 0 4px 6px ${colors.green.green950}60;
@@ -5853,9 +5729,9 @@ export const SubsectionList = styled.ul<{ $isOpen: boolean }>`
   transition: all 0.3s ease-in-out;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
-    top: -20px; 
+    top: -20px;
     left: 0;
     width: 100%;
     height: 20px;
@@ -5967,11 +5843,11 @@ export const MobileNavBarItem = styled.li<{ $isActive: boolean }>`
     > * {
       margin-top: 0;
       color: ${({ $isActive }) =>
-    $isActive ? colors.green.green500 : colors.green.green300};
+        $isActive ? colors.green.green500 : colors.green.green300};
       &:active {
         transition: all 0.5s;
         color: ${({ $isActive }) =>
-    $isActive ? colors.green.green600 : colors.green.green500};
+          $isActive ? colors.green.green600 : colors.green.green500};
       }
       font-weight: bold;
     }
@@ -5988,11 +5864,11 @@ export const LinkIcon = styled.div<{ $isActive: boolean }>`
     > * {
       margin-top: 0px;
       color: ${({ $isActive }) =>
-    $isActive ? colors.green.green500 : colors.green.green300};
+        $isActive ? colors.green.green500 : colors.green.green300};
       &:active {
         transition: all 0.5s;
         color: ${({ $isActive }) =>
-    $isActive ? colors.green.green600 : colors.green.green500};
+          $isActive ? colors.green.green600 : colors.green.green500};
       }
       font-weight: bold;
     }
@@ -6004,15 +5880,15 @@ export const IconWrapper = styled.div<{ $isActive: boolean; $isOpen: boolean }>`
   cursor: pointer;
   > svg {
     fill: ${({ $isActive }) =>
-    $isActive ? colors.green.green500 : colors.green.green300};
+      $isActive ? colors.green.green500 : colors.green.green300};
 
     &:active {
       transition: all 0.5s;
       fill: ${({ $isActive }) =>
-    $isActive ? colors.green.green600 : colors.green.green500};
+        $isActive ? colors.green.green600 : colors.green.green500};
     }
     transform: ${({ $isOpen }) =>
-    $isOpen ? "rotate(0deg)" : "rotate(-90deg)"};
+      $isOpen ? "rotate(0deg)" : "rotate(-90deg)"};
     transition: all 0.7s;
   }
 `
@@ -6055,20 +5931,20 @@ export const FaiWrapper = styled.div`
     margin-left: 0;
     padding-left: 0;
   }
-  
+
   a {
     display: flex;
     align-items: center;
   }
 
   svg {
-    height: 55px; 
-    width: auto;  
+    height: 55px;
+    width: auto;
     display: block;
   }
 
   @media (max-width: ${breakpointNum.tablet}) {
-    display: none; 
+    display: none;
   }
 `
 
@@ -6107,7 +5983,8 @@ export const FaiLogoMobile = styled.div`
     height: 50px;
     width: auto;
   }
-`Generated at Sun Feb 22 04:34:59 PM UTC 2026
+`
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/custom-polyline/index.tsx
@@ -6138,7 +6015,7 @@ const ExtendedPolyline: React.FC<ExtendedPolylineProps> = ({
 }
 
 export default ExtendedPolyline
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/default-layout/index.tsx
@@ -6150,11 +6027,9 @@ import Header from "../header"
 import CookieBanner from "../cookie-banner"
 import * as S from "./styled"
 
-
 const DefaultLayout: React.FC<{ children: any }> = ({ children }) => {
   return (
     <>
-
       <Header />
       <S.Wrapper>{children}</S.Wrapper>
       <CookieBanner />
@@ -6164,7 +6039,7 @@ const DefaultLayout: React.FC<{ children: any }> = ({ children }) => {
 }
 
 export default DefaultLayout
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/default-layout/styled.ts
@@ -6195,7 +6070,7 @@ export const Wrapper = styled.main`
     min-height: 300px;
   }
 `
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/mobile-pagedata-text-components/index.tsx
@@ -6255,7 +6130,7 @@ const MobileContentToComponent: React.FC<{
   return <S.MainWrapper>{pageData.map(renderComponents(images))}</S.MainWrapper>
 }
 export default MobileContentToComponent
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/mobile-pagedata-text-components/styled.ts
@@ -6364,7 +6239,7 @@ export const ReadMoreWrapper = styled.div<{
     top: 3.2em;
   }
 `
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/mobile-pagedata-text-components/helpers.tsx
@@ -6501,7 +6376,7 @@ export const ExpandableText: React.FC<{
     </S.TextWrapper>
   )
 }
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/post/index.tsx
@@ -6523,8 +6398,8 @@ interface PostProps {
   renderBody: any
   author: string
   coverImageAlt: string
-  prevPost?: { slug: string, title: string | null } | null
-  nextPost?: { slug: string, title: string | null } | null
+  prevPost?: { slug: string; title: string | null } | null
+  nextPost?: { slug: string; title: string | null } | null
 }
 
 const Post: React.FC<PostProps> = ({
@@ -6578,7 +6453,13 @@ const Post: React.FC<PostProps> = ({
         <S.NavSide className="left">
           {prevPost && (
             <S.NavButton $align="left">
-              <Link to={prevPost.slug.startsWith('/') ? prevPost.slug : `/${prevPost.slug}`}>
+              <Link
+                to={
+                  prevPost.slug.startsWith("/")
+                    ? prevPost.slug
+                    : `/${prevPost.slug}`
+                }
+              >
                 <T.P4 className="nav-label">Articolo precedente</T.P4>
                 <T.H4 className="nav-title">← {prevPost.title}</T.H4>
               </Link>
@@ -6593,7 +6474,13 @@ const Post: React.FC<PostProps> = ({
         <S.NavSide className="right">
           {nextPost && (
             <S.NavButton $align="right">
-              <Link to={nextPost.slug.startsWith('/') ? nextPost.slug : `/${nextPost.slug}`}>
+              <Link
+                to={
+                  nextPost.slug.startsWith("/")
+                    ? nextPost.slug
+                    : `/${nextPost.slug}`
+                }
+              >
                 <T.P4 className="nav-label">Articolo successivo</T.P4>
                 <T.H4 className="nav-title">{nextPost.title} →</T.H4>
               </Link>
@@ -6601,13 +6488,12 @@ const Post: React.FC<PostProps> = ({
           )}
         </S.NavSide>
       </S.PostNavigation>
-
     </S.Article>
   )
 }
 
 export default Post
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/post/styled.ts
@@ -6619,11 +6505,11 @@ import { Link } from "gatsby"
 
 export const Article = styled.article`
   padding: 64px;
-  
+
   width: 100%;
-  max-width: 1400px; 
-  box-sizing: border-box; 
-  overflow-wrap: break-word; 
+  max-width: 1400px;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
 
   @media (max-width: ${breakpoint.tablet}) {
     padding: 32px;
@@ -6638,18 +6524,19 @@ export const AuthorDateWrapper = styled.div`
   flex-direction: row;
   gap: 1em;
   align-items: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 `
 
 export const CoverImageWrp = styled.div`
   padding: 2em 0;
   width: 100%;
-  max-width: 1000px; 
-  margin: 0 auto; 
-  
-  .gatsby-image-wrapper, img {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .gatsby-image-wrapper,
+  img {
     border-radius: 12px;
-    max-height: 550px; 
+    max-height: 550px;
     width: 100%;
     object-fit: cover;
   }
@@ -6663,14 +6550,14 @@ export const CoverImageWrp = styled.div`
 export const BackLink = styled(Link)`
   display: inline-flex;
   align-items: center;
-  margin-bottom: 0.5rem; 
-  color: ${colors.green.green600}; 
+  margin-bottom: 0.5rem;
+  color: ${colors.green.green600};
   text-decoration: none;
   font-weight: bold;
-  font-size: 0.85rem; 
-  text-transform: uppercase; 
+  font-size: 0.85rem;
+  text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: 'Funnel Sans', sans-serif;
+  font-family: "Funnel Sans", sans-serif;
   transition: all 0.3s ease;
 
   &:hover {
@@ -6701,12 +6588,12 @@ export const NavSide = styled.div`
   flex: 1;
   max-width: 40%; /* Impedisce ai lati di occupare troppo spazio, lasciando respiro al bottone centrale */
   display: flex;
-  min-width: 0; 
-  
+  min-width: 0;
+
   &.left {
     justify-content: flex-start;
   }
-  
+
   &.right {
     justify-content: flex-end;
   }
@@ -6714,7 +6601,8 @@ export const NavSide = styled.div`
   @media (max-width: ${breakpoint.bigtablet}) {
     width: 100%;
     max-width: 100%; /* Su mobile togliamo il limite */
-    &.left, &.right {
+    &.left,
+    &.right {
       justify-content: center;
     }
   }
@@ -6722,18 +6610,20 @@ export const NavSide = styled.div`
 
 export const NavButton = styled.div<{ $align: "left" | "right" }>`
   max-width: 100%;
-  
+
   a {
     text-decoration: none;
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    align-items: ${({ $align }) => ($align === "left" ? "flex-start" : "flex-end")};
+    align-items: ${({ $align }) =>
+      $align === "left" ? "flex-start" : "flex-end"};
     text-align: ${({ $align }) => $align};
     max-width: 100%;
 
     &:hover {
-      transform: ${({ $align }) => ($align === "left" ? "translateX(-5px)" : "translateX(5px)")};
+      transform: ${({ $align }) =>
+        $align === "left" ? "translateX(-5px)" : "translateX(5px)"};
       .nav-title {
         color: ${colors.green.green500};
       }
@@ -6758,7 +6648,7 @@ export const NavButton = styled.div<{ $align: "left" | "right" }>`
     color: ${colors.green.green900};
     margin: 0;
     transition: color 0.3s ease;
-    
+
     /* TRONCAMENTO AGGRESSIVO */
     white-space: nowrap;
     overflow: hidden;
@@ -6778,7 +6668,7 @@ export const BackToBlogButton = styled(Link)`
   text-decoration: none;
   transition: all 0.3s ease;
   white-space: nowrap;
-  font-family: 'Funnel Sans', sans-serif;
+  font-family: "Funnel Sans", sans-serif;
 
   > * {
     margin: 0;
@@ -6794,7 +6684,8 @@ export const BackToBlogButton = styled(Link)`
   &:active {
     transform: translateY(0);
   }
-`Generated at Sun Feb 22 04:34:59 PM UTC 2026
+`
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/typography/index.tsx
@@ -7036,7 +6927,7 @@ export const Notes = styled.p<{
   ${({ $font }) => $font && `font-family: ${$font};`}
   ${({ $textAlign }) => $textAlign && `text-align: ${$textAlign};`}
 `
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/404/index.tsx
@@ -7057,7 +6948,7 @@ const Component404 = () => (
 )
 
 export default Component404
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/404/styled.ts
@@ -7080,7 +6971,7 @@ export const Wrapper = styled.div`
     }
   }
 `
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/button-link/index.tsx
@@ -7107,7 +6998,7 @@ const ButtonLink = ({ to, label }: ButtonLinkProps) => (
 )
 
 export default ButtonLink
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/button-link/styled.ts
@@ -7141,7 +7032,7 @@ export const ButtonWrapper = styled.div`
     margin-top: 0;
   }
 `
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/hero-main/index.tsx
@@ -7162,12 +7053,15 @@ interface HeroMainProps {
   latestPost?: { title: string; slug: string } | null
 }
 
-const HeroMain: React.FC<HeroMainProps> = ({ img, content, latestPost }: HeroMainProps) => {
+const HeroMain: React.FC<HeroMainProps> = ({
+  img,
+  content,
+  latestPost,
+}: HeroMainProps) => {
   const { quote, signature } = content
 
   return (
     <S.Wrapper>
-
       {/* LA PILLOLA ORA È FUORI DALLA FOTO */}
       {latestPost && (
         <S.NewsPillWrapper>
@@ -7201,12 +7095,12 @@ const HeroMain: React.FC<HeroMainProps> = ({ img, content, latestPost }: HeroMai
           />
         )}
       </S.ImageContainer>
-
     </S.Wrapper>
   )
 }
 
-export default HeroMainGenerated at Sun Feb 22 04:34:59 PM UTC 2026
+export default HeroMain
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/hero-main/styled.ts
@@ -7223,7 +7117,7 @@ export const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  
+
   @media (max-width: ${breakpointNum.smalltablet}px) {
     padding: 24px;
   }
@@ -7231,18 +7125,22 @@ export const Wrapper = styled.div`
     padding: 16px;
   }
   animation: fadeIn 1s ease-in-out forwards;
-  
+
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 `
 
 /* NUOVO CONTENITORE: Ancora il testo esattamente ai bordi della foto! */
 export const ImageContainer = styled.div`
-  position: relative; 
+  position: relative;
   width: 100%;
-  max-width: 1050px; 
+  max-width: 1050px;
   margin: 0 auto;
 `
 
@@ -7256,12 +7154,18 @@ export const TextWrapper = styled.div`
 
   animation: fadeIn 3s ease-in-out forwards;
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
-  > p { margin-top: 0; }
-  
+  > p {
+    margin-top: 0;
+  }
+
   > * {
     color: ${colors.green.green100};
     position: relative;
@@ -7270,11 +7174,15 @@ export const TextWrapper = styled.div`
   }
 
   @media (max-width: ${breakpointNum.medium}px) {
-    .signature { margin-top: 4px; }
+    .signature {
+      margin-top: 4px;
+    }
   }
 
   @media (max-width: ${breakpointNum.bigtablet + 10}px) {
-    .signature { margin-top: 1em; }
+    .signature {
+      margin-top: 1em;
+    }
     margin-top: none;
     position: unset;
     max-width: none;
@@ -7295,7 +7203,7 @@ export const NewsPillWrapper = styled.div`
   justify-content: center;
   margin-bottom: 24px; /* Spazio elegante tra la pillola e la foto */
   z-index: 10;
-  
+
   a {
     text-decoration: none;
   }
@@ -7305,7 +7213,7 @@ export const NewsPill = styled.div`
   /* Colori solidi per risaltare sullo sfondo chiaro del sito */
   background: ${colors.green.green100};
   border: 1px solid ${colors.green.green300};
-  padding: 6px 12px; 
+  padding: 6px 12px;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -7334,7 +7242,7 @@ export const NewsPill = styled.div`
   .title {
     color: ${colors.green.green900};
     font-size: 0.95rem;
-    font-family: 'Funnel Sans', sans-serif;
+    font-family: "Funnel Sans", sans-serif;
     font-weight: 600;
     white-space: nowrap;
     overflow: hidden;
@@ -7355,7 +7263,7 @@ export const NewsPill = styled.div`
 `
 
 export const StyledImg = styled(GatsbyImage)``
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/footer/index.tsx
@@ -7579,7 +7487,7 @@ const Footer: React.FC = () => {
 }
 
 export default Footer
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/footer/styled.ts
@@ -7766,7 +7674,8 @@ export const LowerContent = styled.div`
   gap: 1em;
   > p {
     margin-top: 0px;
-    color: ${colors.green.green950}; /* <--- Aggiunto colore ultra-scuro per il Copyright */
+    color: ${colors.green
+      .green950}; /* <--- Aggiunto colore ultra-scuro per il Copyright */
   }
 `
 
@@ -7796,7 +7705,7 @@ export const TextLink = styled(Link)`
     }
   }
 `
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/access-warnings/index.tsx
@@ -7880,7 +7789,7 @@ const AccessWarnings = ({ type }: AccessWarningsProps) => {
 }
 
 export default AccessWarnings
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/access-warnings/styled.ts
@@ -7974,7 +7883,7 @@ export const IconWrapper = styled.div`
     min-height: 50px;
   }
 `
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/pagedata-text-components/index.tsx
@@ -7993,7 +7902,7 @@ const ContentToComponent: React.FC<{
 )
 
 export default ContentToComponent
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/pagedata-text-components/styled.ts
@@ -8005,14 +7914,14 @@ import { breakpoint, breakpointNum } from "../../styles"
 export const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 60px; 
+  gap: 60px;
   padding: 32px;
   justify-content: center;
 
   width: 100%;
   max-width: 1200px;
   box-sizing: border-box;
-  
+
   @media (max-width: ${breakpointNum.bigtablet}px) {
     display: none;
   }
@@ -8029,7 +7938,7 @@ export const ImageWrapper = styled.div`
 export const TwoColsWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 40px; 
+  gap: 40px;
   width: 100%;
 
   @media (max-width: ${breakpoint.bigtablet}) {
@@ -8059,7 +7968,8 @@ export const RightTwoColsWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`Generated at Sun Feb 22 04:34:59 PM UTC 2026
+`
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/components/pagedata-text-components/helpers.tsx
@@ -8083,114 +7993,114 @@ const renderTextInner =
     font: T.FontFamilies | undefined,
     position: "center" | "left" | "right" | undefined,
   ) =>
-    (text: string) => {
-      const addProps = {
-        $textAlign: position,
-        $font: font,
-        dangerouslySetInnerHTML: { __html: text },
-      }
-      switch (size) {
-        case "h1":
-          return <T.H1 {...addProps} />
-        case "h2":
-          return <T.H2 {...addProps} />
-        case "h3":
-          return <T.H3 {...addProps} />
-        case "h4":
-          return <T.H4 {...addProps} />
-        case "h5":
-          return <T.H5 {...addProps} />
-        case "h6":
-          return <T.H6 {...addProps} />
-        case "h7":
-          return <T.H7 {...addProps} />
-        case "p1":
-          return <T.P1 {...addProps} />
-        case "p2":
-          return <T.P2 {...addProps} />
-        case "p3":
-          return <T.P3 {...addProps} />
-        case "p4":
-          return <T.P1 {...addProps} />
-        case "p5":
-          return <T.P1 {...addProps} />
-        case "note":
-          return <T.Notes {...addProps} />
-        default:
-          return <T.H2>Text size not found</T.H2>
-      }
+  (text: string) => {
+    const addProps = {
+      $textAlign: position,
+      $font: font,
+      dangerouslySetInnerHTML: { __html: text },
     }
+    switch (size) {
+      case "h1":
+        return <T.H1 {...addProps} />
+      case "h2":
+        return <T.H2 {...addProps} />
+      case "h3":
+        return <T.H3 {...addProps} />
+      case "h4":
+        return <T.H4 {...addProps} />
+      case "h5":
+        return <T.H5 {...addProps} />
+      case "h6":
+        return <T.H6 {...addProps} />
+      case "h7":
+        return <T.H7 {...addProps} />
+      case "p1":
+        return <T.P1 {...addProps} />
+      case "p2":
+        return <T.P2 {...addProps} />
+      case "p3":
+        return <T.P3 {...addProps} />
+      case "p4":
+        return <T.P1 {...addProps} />
+      case "p5":
+        return <T.P1 {...addProps} />
+      case "note":
+        return <T.Notes {...addProps} />
+      default:
+        return <T.H2>Text size not found</T.H2>
+    }
+  }
 
 export const renderComponents =
   (images: ImageData[]) =>
-    (content: DataJSONType[number], key: Number | string): any => {
-      const keyString = key.toString()
+  (content: DataJSONType[number], key: Number | string): any => {
+    const keyString = key.toString()
 
-      switch (content.type) {
-        case "image":
-          const castedImgContent = content as ImageContentData
-          const filteredImages = castedImgContent.content.map(imgFilename =>
-            images.find(img => img.fileName === imgFilename),
-          )
-          return (
-            <S.ImageWrapper key={keyString}>
-              {filteredImages.map((img, index) =>
-                img ? (
-                  img.image && (
-                    <ImageWithCredits
-                      key={index}
-                      title={img.title}
-                      description={img.description}
-                      alt={img.alt || img.description}
-                      image={img.image}
-                      copyright={img.copyright}
-                      minHeight={content.minHeight}
-                      minWidth={content.minWidth}
-                      maxHeight={content.maxHeight}
-                      maxWidth={content.maxWidth}
-                      noDescription={content.noDescription}
-                      noCopyright={content.noCopyright}
-                      objectFit={content.objectFit}
-                    />
-                  )
-                ) : (
-                  <T.H2 key={`img-${index}`}>Image not found</T.H2>
-                ),
+    switch (content.type) {
+      case "image":
+        const castedImgContent = content as ImageContentData
+        const filteredImages = castedImgContent.content.map(imgFilename =>
+          images.find(img => img.fileName === imgFilename),
+        )
+        return (
+          <S.ImageWrapper key={keyString}>
+            {filteredImages.map((img, index) =>
+              img ? (
+                img.image && (
+                  <ImageWithCredits
+                    key={index}
+                    title={img.title}
+                    description={img.description}
+                    alt={img.alt || img.description}
+                    image={img.image}
+                    copyright={img.copyright}
+                    minHeight={content.minHeight}
+                    minWidth={content.minWidth}
+                    maxHeight={content.maxHeight}
+                    maxWidth={content.maxWidth}
+                    noDescription={content.noDescription}
+                    noCopyright={content.noCopyright}
+                    objectFit={content.objectFit}
+                  />
+                )
+              ) : (
+                <T.H2 key={`img-${index}`}>Image not found</T.H2>
+              ),
+            )}
+          </S.ImageWrapper>
+        )
+      case "text":
+        const castedTextContent = content as TextContentData
+        const theText = castedTextContent.content.join(" <br /> ")
+        if (!theText) return <T.H2 key={keyString}>Text not found</T.H2>
+
+        const { font, position, size } = castedTextContent
+        const textRenderer = renderTextInner(size, font, position)
+        return <Fragment key={keyString}>{textRenderer(theText)}</Fragment>
+
+      case "two-columns": {
+        const castedTwoColsComponent = content as TemplateTwoColumnsData
+        const [leftComponents, rightComponents] = castedTwoColsComponent.content
+        return (
+          <S.TwoColsWrapper key={keyString}>
+            <S.LeftTwoColsWrapper>
+              {leftComponents.map((lc, idx) =>
+                renderComponents(images)(lc, `two-cols-left-${idx}`),
               )}
-            </S.ImageWrapper>
-          )
-        case "text":
-          const castedTextContent = content as TextContentData
-          const theText = castedTextContent.content.join(" <br /> ")
-          if (!theText) return <T.H2 key={keyString}>Text not found</T.H2>
-
-          const { font, position, size } = castedTextContent
-          const textRenderer = renderTextInner(size, font, position)
-          return <Fragment key={keyString}>{textRenderer(theText)}</Fragment>
-
-        case "two-columns": {
-          const castedTwoColsComponent = content as TemplateTwoColumnsData
-          const [leftComponents, rightComponents] = castedTwoColsComponent.content
-          return (
-            <S.TwoColsWrapper key={keyString}>
-              <S.LeftTwoColsWrapper>
-                {leftComponents.map((lc, idx) =>
-                  renderComponents(images)(lc, `two-cols-left-${idx}`),
-                )}
-              </S.LeftTwoColsWrapper>
-              <S.RightTwoColsWrapper>
-                {rightComponents.map((lc, idx) =>
-                  renderComponents(images)(lc, `two-cols-right-${idx}`),
-                )}
-              </S.RightTwoColsWrapper>
-            </S.TwoColsWrapper>
-          )
-        }
-        default:
-          return <T.H1 key={keyString}>Content type Not Found</T.H1>
+            </S.LeftTwoColsWrapper>
+            <S.RightTwoColsWrapper>
+              {rightComponents.map((lc, idx) =>
+                renderComponents(images)(lc, `two-cols-right-${idx}`),
+              )}
+            </S.RightTwoColsWrapper>
+          </S.TwoColsWrapper>
+        )
       }
+      default:
+        return <T.H1 key={keyString}>Content type Not Found</T.H1>
     }
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+  }
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/types/index.ts
@@ -8225,19 +8135,19 @@ export type TextContentData = {
   position?: "left" | "right" | "center"
   content: [string]
   size:
-  | "h1"
-  | "h2"
-  | "h3"
-  | "h4"
-  | "h5"
-  | "h6"
-  | "h7"
-  | "p1"
-  | "p2"
-  | "p3"
-  | "p4"
-  | "p5"
-  | "note"
+    | "h1"
+    | "h2"
+    | "h3"
+    | "h4"
+    | "h5"
+    | "h6"
+    | "h7"
+    | "p1"
+    | "p2"
+    | "p3"
+    | "p4"
+    | "p5"
+    | "note"
   font?: T.FontFamilies
   collapsible?: boolean
 }
@@ -8263,7 +8173,7 @@ export type Location = {
   lon: number
   type: string
 }
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/svg.d.ts
@@ -8276,7 +8186,7 @@ declare module "*.svg" {
     React.SVGProps<SVGSVGElement> & { title?: string }
   >
 }
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/gatsby-types.d.ts
@@ -13130,7 +13040,7 @@ type SourcingAllPostsQuery = { readonly allSanityPost: { readonly nodes: Readonl
 
 
 }
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/helpers.ts
@@ -13161,7 +13071,7 @@ export const fromBodyRawToExcerpt = (bodyRaw: any) =>
     .join(" ")
     .slice(0, 200)
     .concat("...")
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/templates/post.tsx
@@ -13203,12 +13113,16 @@ type PostPageContext = {
 
 const PostTemplate: React.FC<PageProps<PostData, PostPageContext>> = ({
   data,
-  pageContext
+  pageContext,
 }) => {
   const post = data.sanityPost
 
   if (!post) {
-    return <DefaultLayout><p>Post non trovato</p></DefaultLayout>
+    return (
+      <DefaultLayout>
+        <p>Post non trovato</p>
+      </DefaultLayout>
+    )
   }
 
   const renderTitle = post.title || "Loading..."
@@ -13230,8 +13144,16 @@ const PostTemplate: React.FC<PageProps<PostData, PostPageContext>> = ({
         renderBody={renderBody}
         author={author ?? ""}
         coverImageAlt={mainImgAlt}
-        prevPost={pageContext.prevSlug ? { slug: pageContext.prevSlug, title: pageContext.prevTitle } : null}
-        nextPost={pageContext.nextSlug ? { slug: pageContext.nextSlug, title: pageContext.nextTitle } : null}
+        prevPost={
+          pageContext.prevSlug
+            ? { slug: pageContext.prevSlug, title: pageContext.prevTitle }
+            : null
+        }
+        nextPost={
+          pageContext.nextSlug
+            ? { slug: pageContext.nextSlug, title: pageContext.nextTitle }
+            : null
+        }
       />
     </DefaultLayout>
   )
@@ -13245,7 +13167,9 @@ export const Head: HeadFC<PostData, PostPageContext> = ({ location, data }) => {
   return (
     <SEO
       title={`Gruppo Natura Lentiai - ${post?.title}`}
-      description={post?.image?.asset?.description || post?.image?.asset?.altText}
+      description={
+        post?.image?.asset?.description || post?.image?.asset?.altText
+      }
       pathname={location.pathname}
       image={post?.image?.asset?.url}
     />
@@ -13275,7 +13199,8 @@ export const query = graphql`
       }
     }
   }
-`Generated at Sun Feb 22 04:34:59 PM UTC 2026
+`
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/sociale/ideali.tsx
@@ -13299,9 +13224,12 @@ export default NostriIdealiPage
 import { SEO } from "../../components/seo"
 
 export const Head: HeadFC = ({ location }) => (
-  <SEO title="Gruppo Natura Lentiai - I nostri Ideali" pathname={location.pathname} />
+  <SEO
+    title="Gruppo Natura Lentiai - I nostri Ideali"
+    pathname={location.pathname}
+  />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/sociale/index.tsx
@@ -13327,7 +13255,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Sociale" pathname={location.pathname} />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/sociale/mobilità-sostenibile.tsx
@@ -13393,23 +13321,35 @@ const MobilitàSostenibilePage: React.FC<PageProps> = () => {
   }) as ImageData[]
 
   const mapUp = getImage(
-    images.find((img: any) => img.base === "anello-ciclopedonale-lentiai-00.jpeg")
-      .childImageSharp,
+    images.find(
+      (img: any) => img.base === "anello-ciclopedonale-lentiai-00.jpeg",
+    ).childImageSharp,
   )
   const mapDown = getImage(
-    images.find((img: any) => img.base === "anello-ciclopedonale-lentiai-01.jpeg")
-      .childImageSharp,
+    images.find(
+      (img: any) => img.base === "anello-ciclopedonale-lentiai-01.jpeg",
+    ).childImageSharp,
   )
 
   return (
     <DefaultLayout>
       <ContentToComponent pageData={content} images={filteredImages} />
       <MobileContentToComponent pageData={content} images={filteredImages} />
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "2em", gap: "2em" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          margin: "2em",
+          gap: "2em",
+        }}
+      >
         {mapUp && (
           <GatsbyImage
             image={mapUp}
-            alt={"Informazioni utili dell'anello Ciclopedonale di Lentiai Fronte"}
+            alt={
+              "Informazioni utili dell'anello Ciclopedonale di Lentiai Fronte"
+            }
             style={{ borderRadius: "8px", marginTop: 4, maxWidth: 1600 }}
           />
         )}
@@ -13430,9 +13370,12 @@ export default MobilitàSostenibilePage
 import { SEO } from "../../components/seo"
 
 export const Head: HeadFC = ({ location }) => (
-  <SEO title="Gruppo Natura Lentiai - Mobilità sostenibile" pathname={location.pathname} />
+  <SEO
+    title="Gruppo Natura Lentiai - Mobilità sostenibile"
+    pathname={location.pathname}
+  />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/sociale/rifiuti.tsx
@@ -13458,7 +13401,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Rifiuti" pathname={location.pathname} />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/sociale/educazione-ambientale.tsx
@@ -13482,9 +13425,12 @@ export default EducazioneAmbientalePage
 import { SEO } from "../../components/seo"
 
 export const Head: HeadFC = ({ location }) => (
-  <SEO title="Gruppo Natura Lentiai - Educazione ambientale" pathname={location.pathname} />
+  <SEO
+    title="Gruppo Natura Lentiai - Educazione ambientale"
+    pathname={location.pathname}
+  />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/chi-siamo.tsx
@@ -13567,7 +13513,7 @@ import { SEO } from "../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Chi siamo" pathname={location.pathname} />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/404.tsx
@@ -13593,7 +13539,7 @@ import { SEO } from "../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - 404" pathname={location.pathname} />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/cookies-policy.tsx
@@ -13630,9 +13576,12 @@ export default CookiesPolicyPage
 import { SEO } from "../components/seo"
 
 export const Head: HeadFC = ({ location }) => (
-  <SEO title="Gruppo Natura Lentiai - Politica sui cookie" pathname={location.pathname} />
+  <SEO
+    title="Gruppo Natura Lentiai - Politica sui cookie"
+    pathname={location.pathname}
+  />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/contatti.tsx
@@ -13656,15 +13605,24 @@ export default ContactPage
 import { SEO } from "../components/seo"
 
 export const Head: HeadFC = ({ location }) => (
-  <SEO title="Gruppo Natura Lentiai - Contattaci" pathname={location.pathname} />
+  <SEO
+    title="Gruppo Natura Lentiai - Contattaci"
+    pathname={location.pathname}
+  />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/index.tsx
 ========================================
 
-import { graphql, useStaticQuery, type HeadFC, type PageProps, navigate } from "gatsby"
+import {
+  graphql,
+  useStaticQuery,
+  type HeadFC,
+  type PageProps,
+  navigate,
+} from "gatsby"
 import { getImage, GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import * as React from "react"
 import DefaultLayout from "../components/default-layout"
@@ -13718,7 +13676,11 @@ const IndexPage: React.FC<PageProps> = () => {
           image {
             asset {
               altText
-              gatsbyImageData(width: 600, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+              gatsbyImageData(
+                width: 600
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
             }
           }
         }
@@ -13736,7 +13698,9 @@ const IndexPage: React.FC<PageProps> = () => {
       image: image ? getImage(image.childImageSharp) : null,
     }
   }) as ImageData[]
-  const coverImage = filteredImages.find(img => img.fileName === "Fioritura02.jpg")
+  const coverImage = filteredImages.find(
+    img => img.fileName === "Fioritura02.jpg",
+  )
 
   const latestPosts = data.allSanityPost.nodes.map((post: any) => ({
     title: post.title,
@@ -13744,34 +13708,49 @@ const IndexPage: React.FC<PageProps> = () => {
     publishedAt: post.publishedAt,
     excerpt: fromBodyRawToExcerpt(post._rawBody),
     image: post.image?.asset?.gatsbyImageData as IGatsbyImageData,
-    alt: post.image?.asset?.altText || "Copertina articolo"
+    alt: post.image?.asset?.altText || "Copertina articolo",
   }))
 
   const latestPostNode = data.allSanityPost.nodes[0]
-  const latestPost = latestPostNode ? { title: latestPostNode.title, slug: latestPostNode.slug.current } : null
+  const latestPost = latestPostNode
+    ? { title: latestPostNode.title, slug: latestPostNode.slug.current }
+    : null
 
   return (
     <DefaultLayout>
       {/* 1. L'IMPATTO EMOTIVO (Intoccato) */}
-      {coverImage && <HeroMain content={content} img={coverImage} latestPost={latestPost} />}
+      {coverImage && (
+        <HeroMain content={content} img={coverImage} latestPost={latestPost} />
+      )}
 
       {/* 2. LA SEZIONE NOVITÀ (Sotto la Hero) */}
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '3rem 1.5rem' }}>
-        <T.H1 $font="Caveat" $textAlign="center" style={{ marginBottom: '3rem' }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "3rem 1.5rem" }}>
+        <T.H1
+          $font="Caveat"
+          $textAlign="center"
+          style={{ marginBottom: "3rem" }}
+        >
           Racconti e Novità
         </T.H1>
 
         <SBlog.Grid>
           {latestPosts.map((post: any) => (
-            <SBlog.Card key={post.slug} onClick={() => navigate(`/${post.slug}`)}>
+            <SBlog.Card
+              key={post.slug}
+              onClick={() => navigate(`/${post.slug}`)}
+            >
               <SBlog.CoverImgWrapper $isFeatured={false}>
-                {post.image && <GatsbyImage image={post.image} alt={post.alt} />}
+                {post.image && (
+                  <GatsbyImage image={post.image} alt={post.alt} />
+                )}
               </SBlog.CoverImgWrapper>
               <SBlog.CardContent>
                 <SBlog.CardTitle>{post.title}</SBlog.CardTitle>
                 <SBlog.MetaInfo>
                   {new Date(post.publishedAt).toLocaleDateString("it-IT", {
-                    year: "numeric", month: "long", day: "numeric"
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
                   })}
                 </SBlog.MetaInfo>
                 <SBlog.CardExcerpt>{post.excerpt}</SBlog.CardExcerpt>
@@ -13780,7 +13759,7 @@ const IndexPage: React.FC<PageProps> = () => {
           ))}
         </SBlog.Grid>
 
-        <div style={{ marginTop: '2rem' }}>
+        <div style={{ marginTop: "2rem" }}>
           <ButtonLink to="/blog" label="Vai al Blog →" />
         </div>
       </div>
@@ -13793,7 +13772,8 @@ export default IndexPage
 import { SEO } from "../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai" pathname={location.pathname} />
-)Generated at Sun Feb 22 04:34:59 PM UTC 2026
+)
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/laghetti/rimontarte.tsx
@@ -13884,9 +13864,12 @@ export default LaghettiRimontartePage
 import { SEO } from "../../components/seo"
 
 export const Head: HeadFC = ({ location }) => (
-  <SEO title="Laghetti della Rimonta - Rimontarte" pathname={location.pathname} />
+  <SEO
+    title="Laghetti della Rimonta - Rimontarte"
+    pathname={location.pathname}
+  />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/laghetti/galleria.tsx
@@ -13955,7 +13938,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Laghetti della Rimonta - Galleria" pathname={location.pathname} />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/laghetti/index.tsx
@@ -14065,9 +14048,12 @@ export default LaghettiPage
 import { SEO } from "../../components/seo"
 
 export const Head: HeadFC = ({ location }) => (
-  <SEO title="Gruppo Natura Lentiai - Laghetti della Rimonta" pathname={location.pathname} />
+  <SEO
+    title="Gruppo Natura Lentiai - Laghetti della Rimonta"
+    pathname={location.pathname}
+  />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/laghetti/natura.tsx
@@ -14147,7 +14133,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Laghetti della Rimonta - Natura" pathname={location.pathname} />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/laghetti/mappe.tsx
@@ -14248,7 +14234,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Laghetti della Rimonta - Mappe" pathname={location.pathname} />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/laghetti/storia.tsx
@@ -14328,7 +14314,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Laghetti della Rimonta - Storia" pathname={location.pathname} />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/progetto.tsx
@@ -14408,7 +14394,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Progetto Narcisi - Progetto" pathname={location.pathname} />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/valbelluna.tsx
@@ -14488,7 +14474,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Progetto Narcisi - Valbelluna" pathname={location.pathname} />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/galleria.tsx
@@ -14557,7 +14543,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Progetto Narcisi - Galleria" pathname={location.pathname} />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/index.tsx
@@ -14637,9 +14623,12 @@ export default NarcisiPage
 import { SEO } from "../../components/seo"
 
 export const Head: HeadFC = ({ location }) => (
-  <SEO title="Gruppo Natura Lentiai - Progetto Narcisi" pathname={location.pathname} />
+  <SEO
+    title="Gruppo Natura Lentiai - Progetto Narcisi"
+    pathname={location.pathname}
+  />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/natura.tsx
@@ -14665,7 +14654,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Progetto Narcisi - Natura" pathname={location.pathname} />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/mappe.tsx
@@ -14740,7 +14729,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Progetto Narcisi - Mappe" pathname={location.pathname} />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/storia.tsx
@@ -14766,7 +14755,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Progetto Narcisi - Storia" pathname={location.pathname} />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/partecipa.tsx
@@ -14790,9 +14779,12 @@ export default PartecipaPage
 import { SEO } from "../components/seo"
 
 export const Head: HeadFC = ({ location }) => (
-  <SEO title="Gruppo Natura Lentiai - Partecipa!" pathname={location.pathname} />
+  <SEO
+    title="Gruppo Natura Lentiai - Partecipa!"
+    pathname={location.pathname}
+  />
 )
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/pages/blog.tsx
@@ -14856,7 +14848,7 @@ const Blog: React.FC<PageProps<BlogData>> = ({ data, location }) => {
   }, [data])
 
   const [posts, setPosts] = useState<PostInfo[]>(
-    staticPosts.filter(filterDummyPosts).sort(sortByPublishedAt).reverse()
+    staticPosts.filter(filterDummyPosts).sort(sortByPublishedAt).reverse(),
   )
 
   useEffect(() => {
@@ -14916,7 +14908,7 @@ const Blog: React.FC<PageProps<BlogData>> = ({ data, location }) => {
         })
 
         setPosts(
-          combined.filter(filterDummyPosts).sort(sortByPublishedAt).reverse()
+          combined.filter(filterDummyPosts).sort(sortByPublishedAt).reverse(),
         )
       } catch (err: any) {
         console.error("Errore nel fetch remoto, uso i dati statici:", err)
@@ -14967,7 +14959,8 @@ export default Blog
 
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Blog" pathname={location.pathname} />
-)Generated at Sun Feb 22 04:34:59 PM UTC 2026
+)
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/constants.ts
@@ -14978,7 +14971,7 @@ export const remoteGraphqlURL =
 
 // export const pathPrefix = "/Frontend" as const // old when hosted in https://grupponaturalentiai.github.io/Frontend
 export const pathPrefix = "" // actual having bought the domain
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/styles/index.ts
@@ -15040,7 +15033,7 @@ export const colors = {
     yellow: "#FFD700",
   },
 }
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./src/images.d.ts
@@ -15066,7 +15059,7 @@ declare module "*.svg" {
   const value: string
   export default value
 }
-Generated at Sun Feb 22 04:34:59 PM UTC 2026
+Generated at Sun Feb 22 04:36:11 PM UTC 2026
 
 ========================================
 FILE: ./gatsby-browser.tsx

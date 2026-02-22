@@ -179,7 +179,8 @@ export const LowerContent = styled.div`
   gap: 1em;
   > p {
     margin-top: 0px;
-    color: ${colors.green.green950}; /* <--- Aggiunto colore ultra-scuro per il Copyright */
+    color: ${colors.green
+      .green950}; /* <--- Aggiunto colore ultra-scuro per il Copyright */
   }
 `
 

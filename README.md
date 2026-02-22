@@ -23,12 +23,16 @@ Il sito è progettato per essere super-veloce, accessibile e facilmente aggiorna
 Se vuoi contribuire al codice sorgente o testare modifiche in locale, segui questi passaggi.
 
 ### 1. Prerequisiti
+
 Assicurati di avere installato sul tuo computer:
+
 - **Node.js** (Versione 20 o superiore consigliata)
 - **npm** (incluso in Node.js)
 
 ### 2. Installazione
+
 Clona il repository e installa le dipendenze:
+
 ```bash
 git clone [https://github.com/GruppoNaturaLentiai/Frontend.git](https://github.com/GruppoNaturaLentiai/Frontend.git)
 cd Frontend
@@ -64,13 +68,13 @@ Il processo di build utilizza un sistema di **Cache** per le immagini processate
 
 ## 📁 Struttura principale del Progetto
 
-* `/src/components` - Componenti React riutilizzabili (Header, Footer, UI, ecc.).
-* `/src/pages` - Pagine statiche principali del sito (es. index, blog, chi-siamo, contatti).
-* `/src/templates` - Template dinamici generati a tempo di build (es. `post.tsx` per i singoli articoli del blog).
-* `/src/data` - Dati statici JSON, coordinate dei tracciati GPS e percorsi mappa.
-* `/src/styles` - Variabili globali CSS, breakpoints, palette colori (i "verdi" di GNL).
-* `/gatsby-node.ts` - Logica di back-end di Gatsby per la creazione programmatica delle pagine recuperando i dati da Sanity.
-* `/.github/workflows` - File di configurazione delle pipeline CI/CD.
+- `/src/components` - Componenti React riutilizzabili (Header, Footer, UI, ecc.).
+- `/src/pages` - Pagine statiche principali del sito (es. index, blog, chi-siamo, contatti).
+- `/src/templates` - Template dinamici generati a tempo di build (es. `post.tsx` per i singoli articoli del blog).
+- `/src/data` - Dati statici JSON, coordinate dei tracciati GPS e percorsi mappa.
+- `/src/styles` - Variabili globali CSS, breakpoints, palette colori (i "verdi" di GNL).
+- `/gatsby-node.ts` - Logica di back-end di Gatsby per la creazione programmatica delle pagine recuperando i dati da Sanity.
+- `/.github/workflows` - File di configurazione delle pipeline CI/CD.
 
 ---
 

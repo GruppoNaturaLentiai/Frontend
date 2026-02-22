@@ -52,18 +52,26 @@ const Header: React.FC = () => {
           </S.NavBarList>
 
           <S.FaiWrapper>
-            <a href="https://fondoambiente.it" target="_blank" rel="noopener noreferrer" aria-label="Sito ufficiale del FAI Veneto">
+            <a
+              href="https://fondoambiente.it"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Sito ufficiale del FAI Veneto"
+            >
               <S.FaiLogoDesktop>
                 <FaiLogo />
               </S.FaiLogoDesktop>
             </a>
           </S.FaiWrapper>
-
         </S.RightWrapper>
       </S.Header>
       <S.HeaderMobile>
         <S.LeftWrapper>
-          <Link to="/" onClick={() => setMobileMenuOpen(false)} aria-label="Vai alla home">
+          <Link
+            to="/"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-label="Vai alla home"
+          >
             <Icon type="logo" />
           </Link>
         </S.LeftWrapper>
@@ -136,11 +144,15 @@ const Header: React.FC = () => {
           </S.MobileNavBarList>
 
           <S.FaiLogoMobile>
-            <a href="https://fondoambiente.it" target="_blank" rel="noopener noreferrer" aria-label="Sito ufficiale del FAI Veneto">
+            <a
+              href="https://fondoambiente.it"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Sito ufficiale del FAI Veneto"
+            >
               <FaiLogo />
             </a>
           </S.FaiLogoMobile>
-
         </S.RightSidebar>
       </S.HeaderMobile>
     </>

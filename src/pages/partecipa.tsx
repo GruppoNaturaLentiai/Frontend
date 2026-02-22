@@ -16,5 +16,8 @@ export default PartecipaPage
 import { SEO } from "../components/seo"
 
 export const Head: HeadFC = ({ location }) => (
-  <SEO title="Gruppo Natura Lentiai - Partecipa!" pathname={location.pathname} />
+  <SEO
+    title="Gruppo Natura Lentiai - Partecipa!"
+    pathname={location.pathname}
+  />
 )

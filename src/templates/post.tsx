@@ -34,12 +34,16 @@ type PostPageContext = {
 
 const PostTemplate: React.FC<PageProps<PostData, PostPageContext>> = ({
   data,
-  pageContext
+  pageContext,
 }) => {
   const post = data.sanityPost
 
   if (!post) {
-    return <DefaultLayout><p>Post non trovato</p></DefaultLayout>
+    return (
+      <DefaultLayout>
+        <p>Post non trovato</p>
+      </DefaultLayout>
+    )
   }
 
   const renderTitle = post.title || "Loading..."
@@ -61,8 +65,16 @@ const PostTemplate: React.FC<PageProps<PostData, PostPageContext>> = ({
         renderBody={renderBody}
         author={author ?? ""}
         coverImageAlt={mainImgAlt}
-        prevPost={pageContext.prevSlug ? { slug: pageContext.prevSlug, title: pageContext.prevTitle } : null}
-        nextPost={pageContext.nextSlug ? { slug: pageContext.nextSlug, title: pageContext.nextTitle } : null}
+        prevPost={
+          pageContext.prevSlug
+            ? { slug: pageContext.prevSlug, title: pageContext.prevTitle }
+            : null
+        }
+        nextPost={
+          pageContext.nextSlug
+            ? { slug: pageContext.nextSlug, title: pageContext.nextTitle }
+            : null
+        }
       />
     </DefaultLayout>
   )
@@ -76,7 +88,9 @@ export const Head: HeadFC<PostData, PostPageContext> = ({ location, data }) => {
   return (
     <SEO
       title={`Gruppo Natura Lentiai - ${post?.title}`}
-      description={post?.image?.asset?.description || post?.image?.asset?.altText}
+      description={
+        post?.image?.asset?.description || post?.image?.asset?.altText
+      }
       pathname={location.pathname}
       image={post?.image?.asset?.url}
     />

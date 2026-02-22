@@ -1,4 +1,10 @@
-import { graphql, useStaticQuery, type HeadFC, type PageProps, navigate } from "gatsby"
+import {
+  graphql,
+  useStaticQuery,
+  type HeadFC,
+  type PageProps,
+  navigate,
+} from "gatsby"
 import { getImage, GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import * as React from "react"
 import DefaultLayout from "../components/default-layout"
@@ -52,7 +58,11 @@ const IndexPage: React.FC<PageProps> = () => {
           image {
             asset {
               altText
-              gatsbyImageData(width: 600, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+              gatsbyImageData(
+                width: 600
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
             }
           }
         }
@@ -70,7 +80,9 @@ const IndexPage: React.FC<PageProps> = () => {
       image: image ? getImage(image.childImageSharp) : null,
     }
   }) as ImageData[]
-  const coverImage = filteredImages.find(img => img.fileName === "Fioritura02.jpg")
+  const coverImage = filteredImages.find(
+    img => img.fileName === "Fioritura02.jpg",
+  )
 
   const latestPosts = data.allSanityPost.nodes.map((post: any) => ({
     title: post.title,
@@ -78,34 +90,49 @@ const IndexPage: React.FC<PageProps> = () => {
     publishedAt: post.publishedAt,
     excerpt: fromBodyRawToExcerpt(post._rawBody),
     image: post.image?.asset?.gatsbyImageData as IGatsbyImageData,
-    alt: post.image?.asset?.altText || "Copertina articolo"
+    alt: post.image?.asset?.altText || "Copertina articolo",
   }))
 
   const latestPostNode = data.allSanityPost.nodes[0]
-  const latestPost = latestPostNode ? { title: latestPostNode.title, slug: latestPostNode.slug.current } : null
+  const latestPost = latestPostNode
+    ? { title: latestPostNode.title, slug: latestPostNode.slug.current }
+    : null
 
   return (
     <DefaultLayout>
       {/* 1. L'IMPATTO EMOTIVO (Intoccato) */}
-      {coverImage && <HeroMain content={content} img={coverImage} latestPost={latestPost} />}
+      {coverImage && (
+        <HeroMain content={content} img={coverImage} latestPost={latestPost} />
+      )}
 
       {/* 2. LA SEZIONE NOVITÀ (Sotto la Hero) */}
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '3rem 1.5rem' }}>
-        <T.H1 $font="Caveat" $textAlign="center" style={{ marginBottom: '3rem' }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "3rem 1.5rem" }}>
+        <T.H1
+          $font="Caveat"
+          $textAlign="center"
+          style={{ marginBottom: "3rem" }}
+        >
           Racconti e Novità
         </T.H1>
 
         <SBlog.Grid>
           {latestPosts.map((post: any) => (
-            <SBlog.Card key={post.slug} onClick={() => navigate(`/${post.slug}`)}>
+            <SBlog.Card
+              key={post.slug}
+              onClick={() => navigate(`/${post.slug}`)}
+            >
               <SBlog.CoverImgWrapper $isFeatured={false}>
-                {post.image && <GatsbyImage image={post.image} alt={post.alt} />}
+                {post.image && (
+                  <GatsbyImage image={post.image} alt={post.alt} />
+                )}
               </SBlog.CoverImgWrapper>
               <SBlog.CardContent>
                 <SBlog.CardTitle>{post.title}</SBlog.CardTitle>
                 <SBlog.MetaInfo>
                   {new Date(post.publishedAt).toLocaleDateString("it-IT", {
-                    year: "numeric", month: "long", day: "numeric"
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
                   })}
                 </SBlog.MetaInfo>
                 <SBlog.CardExcerpt>{post.excerpt}</SBlog.CardExcerpt>
@@ -114,7 +141,7 @@ const IndexPage: React.FC<PageProps> = () => {
           ))}
         </SBlog.Grid>
 
-        <div style={{ marginTop: '2rem' }}>
+        <div style={{ marginTop: "2rem" }}>
           <ButtonLink to="/blog" label="Vai al Blog →" />
         </div>
       </div>
