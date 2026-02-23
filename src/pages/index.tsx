@@ -119,7 +119,7 @@ const IndexPage: React.FC<PageProps> = () => {
           {latestPosts.map((post: any) => (
             <SBlog.Card
               key={post.slug}
-              onClick={() => navigate(`/${post.slug}`)}
+              onClick={() => navigate(`${post.slug}`)}
             >
               <SBlog.CoverImgWrapper $isFeatured={false}>
                 {post.image && (
