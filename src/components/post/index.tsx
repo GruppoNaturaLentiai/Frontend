@@ -54,12 +54,12 @@ const Post: React.FC<PostProps> = ({
         )}
       </S.AuthorDateWrapper>
       <S.CoverImageWrp>
-        {gatsbyImage && <GatsbyImage image={gatsbyImage} alt={coverImageAlt} />}
+        {gatsbyImage && <GatsbyImage image={gatsbyImage} alt={coverImageAlt} objectFit="contain" />}
         {!gatsbyImage && renderImageUrl && (
           <img
             src={renderImageUrl}
             alt={coverImageAlt}
-            style={{ maxWidth: "100%", height: "auto", objectFit: "cover" }}
+            style={{ maxWidth: "100%", height: "auto", objectFit: "contain" }}
           />
         )}
       </S.CoverImageWrp>

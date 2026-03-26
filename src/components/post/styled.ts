@@ -37,7 +37,7 @@ export const CoverImageWrp = styled.div`
     border-radius: 12px;
     max-height: 550px;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   @media (max-width: ${breakpoint.tablet}) {
@@ -83,9 +83,8 @@ export const PostNavigation = styled.div`
 `
 
 export const NavSide = styled.div`
-  /* LA CHIAVE DEL SUCCESSO: Max-width rigido su desktop */
   flex: 1;
-  max-width: 40%; /* Impedisce ai lati di occupare troppo spazio, lasciando respiro al bottone centrale */
+  max-width: 40%;
   display: flex;
   min-width: 0;
 
@@ -116,13 +115,13 @@ export const NavButton = styled.div<{ $align: "left" | "right" }>`
     display: flex;
     flex-direction: column;
     align-items: ${({ $align }) =>
-      $align === "left" ? "flex-start" : "flex-end"};
+    $align === "left" ? "flex-start" : "flex-end"};
     text-align: ${({ $align }) => $align};
     max-width: 100%;
 
     &:hover {
       transform: ${({ $align }) =>
-        $align === "left" ? "translateX(-5px)" : "translateX(5px)"};
+    $align === "left" ? "translateX(-5px)" : "translateX(5px)"};
       .nav-title {
         color: ${colors.green.green500};
       }
