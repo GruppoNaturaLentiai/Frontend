@@ -185,8 +185,34 @@ export const BackToBlogButton = styled(Link)`
 `
 
 export const PostContent = styled.div`
-  max-width: 760px; /* Larghezza aurea per la leggibilità su desktop */
-  margin: 0 auto;   /* Centra il blocco di testo nella pagina */
-  font-size: 1.1rem; /* (Opzionale) Aumentare leggermente il font aiuta molto su desktop */
-  line-height: 1.7;  /* Dà un po' di respiro tra le righe */
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+
+  /* --- IL TRUCCO PER AFFIANCARE E ALLINEARE LE IMMAGINI --- */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra il blocco di foto nella pagina */
+  align-items: center;    /* <-- ALLINEA I CENTRI VERTICALMENTE SULLA RIGA! */
+  gap: 0 4%; /* Spazio orizzontale tra le due foto */
+
+  /* 1. Di default, ogni testo, titolo o lista occupa il 100% della riga forzando l'a-capo */
+  > * {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* 2. Ma le immagini consecutive possono condividere la riga! */
+  > .portable-image {
+    flex: 1 1 48%; /* Partono dal 48% di larghezza. Se sono due, stanno affiancate (48% + 4% gap + 48%) */
+    max-width: 100%; /* Se un'immagine è sola, si allarga per riempire lo spazio */
+  }
+
+  /* Su smartphone lo schermo è piccolo, quindi forziamo di nuovo le foto a colonna singola */
+  @media (max-width: ${breakpoint.smalltablet}) {
+    > .portable-image {
+      flex: 0 0 100%; 
+    }
+  }
 `

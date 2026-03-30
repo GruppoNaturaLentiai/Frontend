@@ -1,4 +1,4 @@
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./gatsby-ssr.tsx
@@ -8,7 +8,7 @@ export const onRenderBody = ({ setHtmlAttributes }: any) => {
   // Set the HTML language attribute
   setHtmlAttributes({ lang: "it" })
 }
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./flake.nix
@@ -47,13 +47,13 @@ FILE: ./flake.nix
         '';
       };
     };
-}Generated at Thu Mar 26 11:14:08 AM UTC 2026
+}Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./static/CNAME
 ========================================
 
-grupponaturalentiai.itGenerated at Thu Mar 26 11:14:08 AM UTC 2026
+grupponaturalentiai.itGenerated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./tsconfig.json
@@ -169,7 +169,7 @@ FILE: ./tsconfig.json
     "./plugins/**/*"
   ]
 }
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./package.json
@@ -239,7 +239,7 @@ FILE: ./package.json
     "typescript": "^5.3.3"
   }
 }
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./gatsby-node.ts
@@ -299,7 +299,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
     }
   })
 }
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./gatsby-config.ts
@@ -412,7 +412,7 @@ const config: GatsbyConfig = {
 }
 
 export default config
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./.prettierrc
@@ -422,7 +422,7 @@ semi: false
 arrowParens: avoid
 singleQuote: false
 trailingComma: all
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./README.md
@@ -512,7 +512,7 @@ Il processo di build utilizza un sistema di **Cache** per le immagini processate
 
 Sviluppato e mantenuto per **Gruppo Natura Lentiai**.
 © Copyright Andrea Nicolai - Tutti i diritti riservati.
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./flake.lock
@@ -545,7 +545,7 @@ FILE: ./flake.lock
   "root": "root",
   "version": 7
 }
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./.gitignore
@@ -556,7 +556,72 @@ node_modules/
 public
 src/gatsby-types.d.ts
 docs/
-.direnv/Generated at Thu Mar 26 11:14:08 AM UTC 2026
+.direnv/Generated at Mon Mar 30 08:49:30 AM UTC 2026
+
+========================================
+FILE: ./CLAUDE.md
+========================================
+
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Commands
+
+```bash
+gatsby develop      # Start dev server at localhost:8000
+gatsby build        # Production build
+gatsby serve        # Serve built site locally
+gatsby clean        # Clear cache (run before builds if stale)
+tsc --noEmit        # Type-check without emitting files
+npm run deploy      # Build and deploy to GitHub Pages
+```
+
+There is no test suite. The primary quality checks are `tsc --noEmit` and visual inspection via `gatsby develop`.
+
+## Architecture
+
+This is a **Gatsby 5 static site** (React + TypeScript) for an Italian nature conservation group. It deploys to GitHub Pages and triggers automatic rebuilds via a Sanity webhook on content publish.
+
+### Data Sources
+
+- **Sanity CMS** (`gatsby-source-sanity`): Blog posts fetched at build time. The blog page also fetches fresh posts at runtime via Axios to the Sanity GraphQL endpoint (`src/constants.ts` has the URL).
+- **JSON files** in `src/data/`: Contacts, sponsors, image credits/metadata.
+- **TypeScript files** in `src/data/paths/`: Hardcoded GPS coordinate arrays for interactive map trails (laghetti, narcisi).
+
+### Routing
+
+- `src/pages/` → file-based routes (Gatsby convention)
+- `src/templates/post.tsx` → dynamic blog post pages generated in `gatsby-node.ts` from Sanity data
+- Navigation structure defined in `src/data/sections.ts`
+
+### Layout & Styling
+
+- All pages wrap with `<DefaultLayout>` which injects Header, Footer, and CookieBanner
+- Styling via **Styled Components** — each component typically has `index.tsx` + `styled.ts`
+- Global breakpoints and color palette in `src/styles/index.ts`
+- Prettier config: no semicolons, double quotes, trailing commas, no arrow function parens
+
+### Maps
+
+`map-laghetti` and `map-narcisi` components render **React Leaflet** maps with custom polylines. Trail coordinates live in `src/data/paths/`. Leaflet requires SSR-safe imports (already handled via `gatsby-plugin-react-leaflet`).
+
+### Images
+
+- Local images use `gatsby-plugin-image` with Sharp for optimization
+- Image credits/alt text stored in `src/data/imageMetadata.json`
+- Sanity images go through the same Gatsby image pipeline
+
+### TypeScript
+
+- Strict mode enabled
+- `src/gatsby-types.d.ts` is auto-generated from GraphQL schema — do not edit manually
+- Custom types in `src/types/index.ts`
+
+### Deployment
+
+GitHub Actions (`.github/workflows/deploy.yml`) builds on push to `main` and on Sanity webhook (`repository_dispatch` with type `sanity-publish`). Deploys to GitHub Pages with CNAME `grupponaturalentiai.it`. Node 22 required.
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./.prettierignore
@@ -565,7 +630,7 @@ FILE: ./.prettierignore
 docs/
 public/
 .cache/
-node_modules/Generated at Thu Mar 26 11:14:08 AM UTC 2026
+node_modules/Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./.github/workflows/deploy.yml
@@ -632,7 +697,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           cname: grupponaturalentiai.it
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./generate_context.sh
@@ -664,7 +729,7 @@ find . -type f \
   -exec cat {} \; > context_for_llm.txt
 
 echo "✅ Fatto! Il contesto è stato salvato in 'context_for_llm.txt'"
-echo "⚠️  Attenzione: Se il file è molto grande, incollalo in più parti."Generated at Thu Mar 26 11:14:08 AM UTC 2026
+echo "⚠️  Attenzione: Se il file è molto grande, incollalo in più parti."Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/data/contacts.json
@@ -677,7 +742,7 @@ FILE: ./src/data/contacts.json
   "facebook-laghetti": "https://www.facebook.com/profile.php?id=100064320537208",
   "facebook-narcisi": "https://www.facebook.com/profile.php?id=100069990139319"
 }
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/data/sustain-us.json
@@ -689,7 +754,7 @@ FILE: ./src/data/sustain-us.json
     "account": "IT07 U081 4005 8650 0003 1160 657"
   }
 }
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/data/imageMetadata.json
@@ -1265,7 +1330,7 @@ FILE: ./src/data/imageMetadata.json
     "copyright": "Mamma Gloria (account FB)"
   }
 ]
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/data/paths/laghetti.ts
@@ -1457,7 +1522,7 @@ const paths = [
 ]
 
 export default paths
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/data/paths/narcisi.ts
@@ -2182,7 +2247,7 @@ const paths = [
 ]
 
 export default paths
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/data/sections.ts
@@ -2382,7 +2447,7 @@ export const footerSections = [
     ],
   },
 ]
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/hooks/useResponsiveClickHandler.tsx
@@ -2424,7 +2489,7 @@ const useResponsiveClickHandler = (
 }
 
 export default useResponsiveClickHandler
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/hooks/useThrottledState.ts
@@ -2450,7 +2515,7 @@ const useThrottledState = <T>(
 }
 
 export default useThrottledState
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/hooks/useSwipe.ts
@@ -2500,7 +2565,7 @@ export default (input: SwipeInput): SwipeOutput => {
     onTouchEnd,
   }
 }
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/hooks/usePreventDragAndWheel.tsx
@@ -2549,7 +2614,7 @@ const usePreventScrollOnImageView = (condition: boolean) => {
 }
 
 export default usePreventScrollOnImageView
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/cookie-preferences/index.tsx
@@ -2694,7 +2759,7 @@ const CookiePreferences: React.FC<Props> = ({ onClose }) => {
 }
 
 export default CookiePreferences
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/cookie-preferences/styled.ts
@@ -2867,7 +2932,7 @@ export const ModalButton = styled.button<{ color: string }>`
     box-shadow: none;
   }
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/image-with-credits/index.tsx
@@ -2943,7 +3008,7 @@ const ImageWithCredits = ({
 )
 
 export default ImageWithCredits
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/image-with-credits/styled.ts
@@ -2974,7 +3039,7 @@ export const ImageDescription = styled(T.P3)`
   white-space: break-spaces;
   margin-top: 0.5em;
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/blog-list/index.tsx
@@ -3225,7 +3290,7 @@ export const FeaturedBlog: React.FC<BlogListProps> = ({
     </S.Container>
   )
 }
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/blog-list/styled.ts
@@ -3430,7 +3495,7 @@ export const MobilePageIndicator = styled(T.P3)`
     color: ${colors.green.green900};
   }
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/icons/index.tsx
@@ -3520,7 +3585,7 @@ const Icon: React.FC<IconsProps> = ({ type, ...props }) => {
 }
 
 export default Icon
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/map-narcisi/index.tsx
@@ -3781,7 +3846,7 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
 }
 
 export default MapComponent
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/map-narcisi/styled.ts
@@ -3874,7 +3939,7 @@ export const PathInfoIcon = styled.div`
   width: 24px;
   height: 24px;
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/sponsors/index.tsx
@@ -3991,7 +4056,7 @@ const Sponsors = () => {
 }
 
 export default Sponsors
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/sponsors/styled.ts
@@ -4022,7 +4087,7 @@ export const SponsorGrid = styled.div`
     display: ruby;
   }
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/sustain-us/index.tsx
@@ -4059,7 +4124,7 @@ const SustainUs = () => {
 }
 
 export default SustainUs
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/sustain-us/styled.ts
@@ -4115,7 +4180,7 @@ export const IBANWrapper = styled.div`
     align-self: start;
   }
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/work-in-progress/index.tsx
@@ -4136,7 +4201,7 @@ const WorkInProgress = () => (
 )
 
 export default WorkInProgress
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/work-in-progress/styled.ts
@@ -4155,7 +4220,7 @@ export const Wrapper = styled.div`
     fill: ${colors.green.green900};
   }
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/map-laghetti/helpers.ts
@@ -4196,7 +4261,7 @@ const decodePolyline = (encoded: string) => {
 
   return points
 }
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/map-laghetti/index.tsx
@@ -4408,7 +4473,7 @@ const MapComponent: React.FC<ComponentProps> = ({ markers, paths }) => {
 // }
 
 export default MapComponent
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/map-laghetti/styled.ts
@@ -4470,7 +4535,7 @@ export const Dot = styled.div<{ $color: string }>`
   ${({ $color }) => `background-color: ${$color};`}
   border-radius: 50%;
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/contact-us/index.tsx
@@ -4565,7 +4630,7 @@ const ContactUs = () => {
 }
 
 export default ContactUs
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/contact-us/styled.ts
@@ -4649,7 +4714,7 @@ export const Row = styled.div`
   gap: 20px;
   align-items: center;
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/portable-text-components/index.tsx
@@ -4680,15 +4745,10 @@ const Components: PortableTextReactComponents = {
       if (!imageUrl) return null
 
       return (
-        <S.ImageWrapper $position={value.position ?? "center"}>
+        <S.ImageWrapper className="portable-image" $position={value.position ?? "center"}>
           <S.ResponsiveImg
             src={imageUrl}
             alt={value.textAlt || "Content image"}
-            style={{
-              height: "auto",
-              display: "block",
-              margin: "1em 0",
-            }}
           />
           {value.undertext && (
             <S.ImgDescription>{value.undertext}</S.ImgDescription>
@@ -4767,7 +4827,7 @@ const Components: PortableTextReactComponents = {
 }
 
 export default Components
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/portable-text-components/styled.ts
@@ -4775,7 +4835,7 @@ FILE: ./src/components/portable-text-components/styled.ts
 
 import styled from "styled-components"
 import * as T from "../typography"
-import { breakpointNum } from "../../styles"
+import { breakpoint, breakpointNum } from "../../styles"
 
 export const ImageWrapper = styled.div<{
   $position?: "left" | "right" | "center"
@@ -4797,16 +4857,22 @@ export const ImageWrapper = styled.div<{
 `
 
 export const ResponsiveImg = styled.img`
-  height: auto;
+  /* Su desktop, forziamo un'altezza unica per allineare tutto! */
+  height: 400px;
+  width: 100%; /* L'immagine riempie la sua colonna (es. 48% su desktop) */
+  
+  /* --- IL SEGRETO VISUALE: Le immagini non si distorcono ma si tagliano --- */
+  object-fit: cover; 
+  
   display: block;
-  margin: 1em 0;
-  max-width: 50%;
-  object-fit: contain;
-  @media (max-width: ${breakpointNum.bigtablet}px) {
-    max-width: 80%;
-  }
-  @media (max-width: ${breakpointNum.smalltablet}px) {
-    max-width: 100%;
+  margin: 1.5em 0;
+  border-radius: 8px;
+  
+  /* (Rimosse tutte le PERCENTUALI DI MAX-WIDTH: ora ci pensa il layout Flexbox!) */
+  
+  @media (max-width: ${breakpoint.tablet}) {
+     height: auto; /* Su mobile torniamo all'altezza automatica */
+     max-height: 400px; /* Non facciamo impazzire le foto verticali */
   }
 `
 
@@ -4815,7 +4881,7 @@ export const ImgDescription = styled(T.P4)`
   text-align: center;
   margin-block-start: 0.5em;
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/carousel/index.tsx
@@ -4987,7 +5053,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
 }
 
 export default Carousel
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/carousel/styled.ts
@@ -5222,7 +5288,7 @@ export const StyledGatsbyImageLarge = styled(GatsbyImage)`
     }
   }
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/seo/index.tsx
@@ -5291,7 +5357,7 @@ export const SEO: React.FC<SEOProps> = ({
     </>
   )
 }
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/cookie-banner/index.tsx
@@ -5416,7 +5482,7 @@ const CookieBanner = () => {
 }
 
 export default CookieBanner
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/cookie-banner/styled.ts
@@ -5475,7 +5541,7 @@ export const BannerButton = styled.button<{ color: string; $border?: string }>`
     transition: all 0.3s ease;
   }
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/header/index.tsx
@@ -5643,7 +5709,7 @@ const Header: React.FC = () => {
 }
 
 export default Header
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/header/styled.ts
@@ -6051,7 +6117,7 @@ export const FaiLogoMobile = styled.div`
     width: auto;
   }
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/custom-polyline/index.tsx
@@ -6082,7 +6148,7 @@ const ExtendedPolyline: React.FC<ExtendedPolylineProps> = ({
 }
 
 export default ExtendedPolyline
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/default-layout/index.tsx
@@ -6106,7 +6172,7 @@ const DefaultLayout: React.FC<{ children: any }> = ({ children }) => {
 }
 
 export default DefaultLayout
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/default-layout/styled.ts
@@ -6137,7 +6203,7 @@ export const Wrapper = styled.main`
     min-height: 300px;
   }
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/mobile-pagedata-text-components/index.tsx
@@ -6197,7 +6263,7 @@ const MobileContentToComponent: React.FC<{
   return <S.MainWrapper>{pageData.map(renderComponents(images))}</S.MainWrapper>
 }
 export default MobileContentToComponent
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/mobile-pagedata-text-components/styled.ts
@@ -6306,7 +6372,7 @@ export const ReadMoreWrapper = styled.div<{
     top: 3.2em;
   }
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/mobile-pagedata-text-components/helpers.tsx
@@ -6443,7 +6509,7 @@ export const ExpandableText: React.FC<{
     </S.TextWrapper>
   )
 }
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/post/index.tsx
@@ -6505,16 +6571,20 @@ const Post: React.FC<PostProps> = ({
         )}
       </S.AuthorDateWrapper>
       <S.CoverImageWrp>
-        {gatsbyImage && <GatsbyImage image={gatsbyImage} alt={coverImageAlt} />}
+        {gatsbyImage && <GatsbyImage image={gatsbyImage} alt={coverImageAlt} objectFit="contain" />}
         {!gatsbyImage && renderImageUrl && (
           <img
             src={renderImageUrl}
             alt={coverImageAlt}
-            style={{ maxWidth: "100%", height: "auto", objectFit: "cover" }}
+            style={{ maxWidth: "100%", height: "auto", objectFit: "contain" }}
           />
         )}
       </S.CoverImageWrp>
-      <PortableText value={renderBody} components={Components} />
+
+      {/* Nuovo wrapper per ingabbiare il testo */}
+      <S.PostContent>
+        <PortableText value={renderBody} components={Components} />
+      </S.PostContent>
 
       <S.PostNavigation>
         <S.NavSide className="left">
@@ -6560,7 +6630,7 @@ const Post: React.FC<PostProps> = ({
 }
 
 export default Post
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/post/styled.ts
@@ -6603,9 +6673,9 @@ export const CoverImageWrp = styled.div`
   .gatsby-image-wrapper,
   img {
     border-radius: 12px;
-    max-height: 550px;
+    max-height: 400px;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   @media (max-width: ${breakpoint.tablet}) {
@@ -6651,9 +6721,8 @@ export const PostNavigation = styled.div`
 `
 
 export const NavSide = styled.div`
-  /* LA CHIAVE DEL SUCCESSO: Max-width rigido su desktop */
   flex: 1;
-  max-width: 40%; /* Impedisce ai lati di occupare troppo spazio, lasciando respiro al bottone centrale */
+  max-width: 40%;
   display: flex;
   min-width: 0;
 
@@ -6684,13 +6753,13 @@ export const NavButton = styled.div<{ $align: "left" | "right" }>`
     display: flex;
     flex-direction: column;
     align-items: ${({ $align }) =>
-      $align === "left" ? "flex-start" : "flex-end"};
+    $align === "left" ? "flex-start" : "flex-end"};
     text-align: ${({ $align }) => $align};
     max-width: 100%;
 
     &:hover {
       transform: ${({ $align }) =>
-        $align === "left" ? "translateX(-5px)" : "translateX(5px)"};
+    $align === "left" ? "translateX(-5px)" : "translateX(5px)"};
       .nav-title {
         color: ${colors.green.green500};
       }
@@ -6752,7 +6821,39 @@ export const BackToBlogButton = styled(Link)`
     transform: translateY(0);
   }
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+
+export const PostContent = styled.div`
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+
+  /* --- IL TRUCCO PER AFFIANCARE E ALLINEARE LE IMMAGINI --- */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra il blocco di foto nella pagina */
+  align-items: center;    /* <-- ALLINEA I CENTRI VERTICALMENTE SULLA RIGA! */
+  gap: 0 4%; /* Spazio orizzontale tra le due foto */
+
+  /* 1. Di default, ogni testo, titolo o lista occupa il 100% della riga forzando l'a-capo */
+  > * {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* 2. Ma le immagini consecutive possono condividere la riga! */
+  > .portable-image {
+    flex: 1 1 48%; /* Partono dal 48% di larghezza. Se sono due, stanno affiancate (48% + 4% gap + 48%) */
+    max-width: 100%; /* Se un'immagine è sola, si allarga per riempire lo spazio */
+  }
+
+  /* Su smartphone lo schermo è piccolo, quindi forziamo di nuovo le foto a colonna singola */
+  @media (max-width: ${breakpoint.smalltablet}) {
+    > .portable-image {
+      flex: 0 0 100%; 
+    }
+  }
+`Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/typography/index.tsx
@@ -6994,7 +7095,7 @@ export const Notes = styled.p<{
   ${({ $font }) => $font && `font-family: ${$font};`}
   ${({ $textAlign }) => $textAlign && `text-align: ${$textAlign};`}
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/404/index.tsx
@@ -7015,7 +7116,7 @@ const Component404 = () => (
 )
 
 export default Component404
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/404/styled.ts
@@ -7038,7 +7139,7 @@ export const Wrapper = styled.div`
     }
   }
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/button-link/index.tsx
@@ -7065,7 +7166,7 @@ const ButtonLink = ({ to, label }: ButtonLinkProps) => (
 )
 
 export default ButtonLink
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/button-link/styled.ts
@@ -7099,7 +7200,7 @@ export const ButtonWrapper = styled.div`
     margin-top: 0;
   }
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/hero-main/index.tsx
@@ -7167,7 +7268,7 @@ const HeroMain: React.FC<HeroMainProps> = ({
 }
 
 export default HeroMain
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/hero-main/styled.ts
@@ -7330,7 +7431,7 @@ export const NewsPill = styled.div`
 `
 
 export const StyledImg = styled(GatsbyImage)``
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/footer/index.tsx
@@ -7554,7 +7655,7 @@ const Footer: React.FC = () => {
 }
 
 export default Footer
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/footer/styled.ts
@@ -7772,7 +7873,7 @@ export const TextLink = styled(Link)`
     }
   }
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/access-warnings/index.tsx
@@ -7856,7 +7957,7 @@ const AccessWarnings = ({ type }: AccessWarningsProps) => {
 }
 
 export default AccessWarnings
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/access-warnings/styled.ts
@@ -7950,7 +8051,7 @@ export const IconWrapper = styled.div`
     min-height: 50px;
   }
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/pagedata-text-components/index.tsx
@@ -7969,7 +8070,7 @@ const ContentToComponent: React.FC<{
 )
 
 export default ContentToComponent
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/pagedata-text-components/styled.ts
@@ -8036,7 +8137,7 @@ export const RightTwoColsWrapper = styled.div`
   justify-content: center;
   align-items: center;
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/components/pagedata-text-components/helpers.tsx
@@ -8167,7 +8268,7 @@ export const renderComponents =
         return <T.H1 key={keyString}>Content type Not Found</T.H1>
     }
   }
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/types/index.ts
@@ -8240,7 +8341,7 @@ export type Location = {
   lon: number
   type: string
 }
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/svg.d.ts
@@ -8253,7 +8354,7 @@ declare module "*.svg" {
     React.SVGProps<SVGSVGElement> & { title?: string }
   >
 }
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/gatsby-types.d.ts
@@ -13107,7 +13208,7 @@ type SourcingAllPostsQuery = { readonly allSanityPost: { readonly nodes: Readonl
 
 
 }
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/helpers.ts
@@ -13138,7 +13239,7 @@ export const fromBodyRawToExcerpt = (bodyRaw: any) =>
     .join(" ")
     .slice(0, 200)
     .concat("...")
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/templates/post.tsx
@@ -13267,7 +13368,7 @@ export const query = graphql`
     }
   }
 `
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/sociale/ideali.tsx
@@ -13296,7 +13397,7 @@ export const Head: HeadFC = ({ location }) => (
     pathname={location.pathname}
   />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/sociale/index.tsx
@@ -13322,7 +13423,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Sociale" pathname={location.pathname} />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/sociale/mobilità-sostenibile.tsx
@@ -13442,7 +13543,7 @@ export const Head: HeadFC = ({ location }) => (
     pathname={location.pathname}
   />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/sociale/rifiuti.tsx
@@ -13468,7 +13569,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Rifiuti" pathname={location.pathname} />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/sociale/educazione-ambientale.tsx
@@ -13497,7 +13598,7 @@ export const Head: HeadFC = ({ location }) => (
     pathname={location.pathname}
   />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/chi-siamo.tsx
@@ -13580,7 +13681,7 @@ import { SEO } from "../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Chi siamo" pathname={location.pathname} />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/404.tsx
@@ -13606,7 +13707,7 @@ import { SEO } from "../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - 404" pathname={location.pathname} />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/cookies-policy.tsx
@@ -13648,7 +13749,7 @@ export const Head: HeadFC = ({ location }) => (
     pathname={location.pathname}
   />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/contatti.tsx
@@ -13677,7 +13778,7 @@ export const Head: HeadFC = ({ location }) => (
     pathname={location.pathname}
   />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/index.tsx
@@ -13840,7 +13941,7 @@ import { SEO } from "../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai" pathname={location.pathname} />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/laghetti/rimontarte.tsx
@@ -13936,7 +14037,7 @@ export const Head: HeadFC = ({ location }) => (
     pathname={location.pathname}
   />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/laghetti/galleria.tsx
@@ -14005,7 +14106,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Laghetti della Rimonta - Galleria" pathname={location.pathname} />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/laghetti/index.tsx
@@ -14120,7 +14221,7 @@ export const Head: HeadFC = ({ location }) => (
     pathname={location.pathname}
   />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/laghetti/natura.tsx
@@ -14200,7 +14301,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Laghetti della Rimonta - Natura" pathname={location.pathname} />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/laghetti/mappe.tsx
@@ -14301,7 +14402,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Laghetti della Rimonta - Mappe" pathname={location.pathname} />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/laghetti/storia.tsx
@@ -14381,7 +14482,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Laghetti della Rimonta - Storia" pathname={location.pathname} />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/progetto.tsx
@@ -14461,7 +14562,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Progetto Narcisi - Progetto" pathname={location.pathname} />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/valbelluna.tsx
@@ -14541,7 +14642,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Progetto Narcisi - Valbelluna" pathname={location.pathname} />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/galleria.tsx
@@ -14610,7 +14711,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Progetto Narcisi - Galleria" pathname={location.pathname} />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/index.tsx
@@ -14695,7 +14796,7 @@ export const Head: HeadFC = ({ location }) => (
     pathname={location.pathname}
   />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/natura.tsx
@@ -14721,7 +14822,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Progetto Narcisi - Natura" pathname={location.pathname} />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/mappe.tsx
@@ -14796,7 +14897,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Progetto Narcisi - Mappe" pathname={location.pathname} />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/narcisi/storia.tsx
@@ -14822,7 +14923,7 @@ import { SEO } from "../../components/seo"
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Progetto Narcisi - Storia" pathname={location.pathname} />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/partecipa.tsx
@@ -14851,7 +14952,7 @@ export const Head: HeadFC = ({ location }) => (
     pathname={location.pathname}
   />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/pages/blog.tsx
@@ -15027,7 +15128,7 @@ export default Blog
 export const Head: HeadFC = ({ location }) => (
   <SEO title="Gruppo Natura Lentiai - Blog" pathname={location.pathname} />
 )
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/constants.ts
@@ -15038,7 +15139,7 @@ export const remoteGraphqlURL =
 
 // export const pathPrefix = "/Frontend" as const // old when hosted in https://grupponaturalentiai.github.io/Frontend
 export const pathPrefix = "" // actual having bought the domain
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/styles/index.ts
@@ -15100,7 +15201,7 @@ export const colors = {
     yellow: "#FFD700",
   },
 }
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./src/images.d.ts
@@ -15126,7 +15227,7 @@ declare module "*.svg" {
   const value: string
   export default value
 }
-Generated at Thu Mar 26 11:14:08 AM UTC 2026
+Generated at Mon Mar 30 08:49:30 AM UTC 2026
 
 ========================================
 FILE: ./gatsby-browser.tsx

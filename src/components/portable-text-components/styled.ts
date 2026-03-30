@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import * as T from "../typography"
-import { breakpointNum } from "../../styles"
+import { breakpoint, breakpointNum } from "../../styles"
 
 export const ImageWrapper = styled.div<{
   $position?: "left" | "right" | "center"
@@ -22,25 +22,22 @@ export const ImageWrapper = styled.div<{
 `
 
 export const ResponsiveImg = styled.img`
-  /* 1. IL FIX: Limite massimo in altezza e larghezza automatica proporzionale */
-  max-height: 450px; 
-  width: auto; 
+  /* Su desktop, forziamo un'altezza unica per allineare tutto! */
+  height: 400px;
+  width: 100%; /* L'immagine riempie la sua colonna (es. 48% su desktop) */
   
-  /* 2. Le tue ottime regole di larghezza massima */
-  max-width: 50%;
+  /* --- IL SEGRETO VISUALE: Le immagini non si distorcono ma si tagliano --- */
+  object-fit: cover; 
   
   display: block;
-  margin: 1.5em 0; /* Leggermente aumentato (da 1 a 1.5) per staccare meglio le foto sequenziali */
-  object-fit: contain;
-  border-radius: 8px; /* Un tocco di eleganza coordinato col resto del sito */
+  margin: 1.5em 0;
+  border-radius: 8px;
   
-  @media (max-width: ${breakpointNum.bigtablet}px) {
-    max-width: 80%;
-  }
+  /* (Rimosse tutte le PERCENTUALI DI MAX-WIDTH: ora ci pensa il layout Flexbox!) */
   
-  @media (max-width: ${breakpointNum.smalltablet}px) {
-    max-width: 100%;
-    max-height: 350px; /* Su smartphone abbassiamo un po' il limite verticale per non riempire tutto lo schermino */
+  @media (max-width: ${breakpoint.tablet}) {
+     height: auto; /* Su mobile torniamo all'altezza automatica */
+     max-height: 400px; /* Non facciamo impazzire le foto verticali */
   }
 `
 
