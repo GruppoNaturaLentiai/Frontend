@@ -35,7 +35,7 @@ export const CoverImageWrp = styled.div`
   .gatsby-image-wrapper,
   img {
     border-radius: 12px;
-    max-height: 550px;
+    max-height: 400px;
     width: 100%;
     object-fit: contain;
   }
@@ -182,4 +182,11 @@ export const BackToBlogButton = styled(Link)`
   &:active {
     transform: translateY(0);
   }
+`
+
+export const PostContent = styled.div`
+  max-width: 760px; /* Larghezza aurea per la leggibilità su desktop */
+  margin: 0 auto;   /* Centra il blocco di testo nella pagina */
+  font-size: 1.1rem; /* (Opzionale) Aumentare leggermente il font aiuta molto su desktop */
+  line-height: 1.7;  /* Dà un po' di respiro tra le righe */
 `

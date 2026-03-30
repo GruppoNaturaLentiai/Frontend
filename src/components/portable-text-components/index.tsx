@@ -27,11 +27,6 @@ const Components: PortableTextReactComponents = {
           <S.ResponsiveImg
             src={imageUrl}
             alt={value.textAlt || "Content image"}
-            style={{
-              height: "auto",
-              display: "block",
-              margin: "1em 0",
-            }}
           />
           {value.undertext && (
             <S.ImgDescription>{value.undertext}</S.ImgDescription>

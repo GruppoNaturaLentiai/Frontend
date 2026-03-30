@@ -63,7 +63,11 @@ const Post: React.FC<PostProps> = ({
           />
         )}
       </S.CoverImageWrp>
-      <PortableText value={renderBody} components={Components} />
+
+      {/* Nuovo wrapper per ingabbiare il testo */}
+      <S.PostContent>
+        <PortableText value={renderBody} components={Components} />
+      </S.PostContent>
 
       <S.PostNavigation>
         <S.NavSide className="left">
