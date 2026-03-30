@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import * as T from "../typography"
-import { breakpointNum } from "../../styles"
+import { breakpoint, breakpointNum } from "../../styles"
 
 export const ImageWrapper = styled.div<{
   $position?: "left" | "right" | "center"
@@ -22,16 +22,22 @@ export const ImageWrapper = styled.div<{
 `
 
 export const ResponsiveImg = styled.img`
-  height: auto;
+  /* Su desktop, forziamo un'altezza unica per allineare tutto! */
+  height: 400px;
+  width: 100%; /* L'immagine riempie la sua colonna (es. 48% su desktop) */
+  
+  /* --- IL SEGRETO VISUALE: Le immagini non si distorcono ma si tagliano --- */
+  object-fit: cover; 
+  
   display: block;
-  margin: 1em 0;
-  max-width: 50%;
-  object-fit: contain;
-  @media (max-width: ${breakpointNum.bigtablet}px) {
-    max-width: 80%;
-  }
-  @media (max-width: ${breakpointNum.smalltablet}px) {
-    max-width: 100%;
+  margin: 1.5em 0;
+  border-radius: 8px;
+  
+  /* (Rimosse tutte le PERCENTUALI DI MAX-WIDTH: ora ci pensa il layout Flexbox!) */
+  
+  @media (max-width: ${breakpoint.tablet}) {
+     height: auto; /* Su mobile torniamo all'altezza automatica */
+     max-height: 400px; /* Non facciamo impazzire le foto verticali */
   }
 `
 

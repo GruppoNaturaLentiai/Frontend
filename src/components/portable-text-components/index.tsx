@@ -23,15 +23,10 @@ const Components: PortableTextReactComponents = {
       if (!imageUrl) return null
 
       return (
-        <S.ImageWrapper $position={value.position ?? "center"}>
+        <S.ImageWrapper className="portable-image" $position={value.position ?? "center"}>
           <S.ResponsiveImg
             src={imageUrl}
             alt={value.textAlt || "Content image"}
-            style={{
-              height: "auto",
-              display: "block",
-              margin: "1em 0",
-            }}
           />
           {value.undertext && (
             <S.ImgDescription>{value.undertext}</S.ImgDescription>
