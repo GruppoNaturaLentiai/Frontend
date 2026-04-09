@@ -27,7 +27,15 @@ const config: GatsbyConfig = {
       },
     },
     "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        defaults: {
+          quality: 85,
+          formats: ["auto", "webp", "avif"],
+        },
+      },
+    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-styled-components",
     {

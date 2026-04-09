@@ -15,7 +15,7 @@ const ImageWithCredits = ({
   maxWidth,
   noDescription,
   noCopyright,
-  objectFit = "cover", // Default a "cover" per mantenere belle le foto
+  objectFit = "contain",
 }: {
   title: string
   description: string
