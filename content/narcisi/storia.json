@@ -1,0 +1,131 @@
+{
+    "storia": [
+        {
+            "type": "text",
+            "size": "h1",
+            "position": "left",
+            "font": "Caveat",
+            "content": [
+                "La macchina del tempo..."
+            ]
+        },
+        {
+            "type": "text",
+            "size": "h2",
+            "position": "left",
+            "content": [
+                "La fioritura dei Narcisi in Col D'Artent"
+            ]
+        },
+        {
+            "type": "text",
+            "size": "p1",
+            "position": "left",
+            "collapsible": false,
+            "content": [
+                "Un tempo, il <i>Narcissus poeticus</i> dominava i prati di Lentiai con colonie vaste e profumatissime. Oggi, quella distesa candida è solo un ricordo: l'eccessiva raccolta e l'avanzata del bosco, dovuta all'abbandono dei pascoli, hanno reso questa specie estremamente vulnerabile."
+            ]
+        },
+        {
+            "type": "two-columns",
+            "content": [
+                [
+                    {
+                        "type": "image",
+                        "content": [
+                            "narcisi_storia_artent_00.jpeg"
+                        ]
+                    }
+                ],
+                [
+                    {
+                        "type": "image",
+                        "content": [
+                            "narcisi_storia_artent_01.jpeg"
+                        ]
+                    }
+                ]
+            ]
+        },
+        {
+            "type": "text",
+            "size": "p1",
+            "position": "left",
+            "collapsible": false,
+            "content": [
+                "Basti pensare che a Pian di Coltura resta ad oggi solo il 30% della fioritura registrata negli anni '30. La situazione è critica anche in Valbelluna: in località come Zelant e il monte Foral, il narciso è ormai quasi del tutto scomparso. Fortunatamente, per proteggere ciò che resta, vige oggi il divieto assoluto di raccolta in molte zone d'Italia."
+            ]
+        },
+        {
+            "type": "two-columns",
+            "content": [
+                [
+                    {
+                        "type": "image",
+                        "content": [
+                            "narcisi_storia_anni50.png"
+                        ]
+                    }
+                ],
+                [
+                    {
+                        "type": "image",
+                        "content": [
+                            "narcisi_storia_anni90.png"
+                        ]
+                    }
+                ]
+            ]
+        },
+        {
+            "type": "text",
+            "size": "h2",
+            "content": [
+                "La fioritura dei Narcisi a Milies di Segusino (TV)"
+            ]
+        },
+        {
+            "type": "two-columns",
+            "content": [
+                [
+                    {
+                        "type": "text",
+                        "size": "p1",
+                        "content": [
+                            "Verso la fine di maggio, i prati del Monte Doc a Milies di Segusino si trasformavano in una distesa candida, quasi una nevicata fuori stagione regalata dalla fioritura dei narcisi. Gli scatti degli anni '40 e '50 di Raimondo Stramare, conosciuto come <i>“Mondo”</i>, immortalano un’epoca in cui la raccolta di questi fiori era un rito collettivo: come al Col D'Artent, intere generazioni — dai fidanzati ai nonni con i nipoti — si ritrovavano in quota per celebrare questa tradizione della natura."
+                        ]
+                    }
+                ],
+                [
+                    {
+                        "type": "image",
+                        "content": [
+                            "narcisi_storia_milies_00.png"
+                        ]
+                    }
+                ]
+            ]
+        },
+        {
+            "type": "two-columns",
+            "content": [
+                [
+                    {
+                        "type": "image",
+                        "content": [
+                            "narcisi_storia_milies_01.jpeg"
+                        ]
+                    }
+                ],
+                [
+                    {
+                        "type": "image",
+                        "content": [
+                            "narcisi_storia_milies_02.jpeg"
+                        ]
+                    }
+                ]
+            ]
+        }
+    ]
+}
