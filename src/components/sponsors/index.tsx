@@ -49,6 +49,11 @@ const sponsorsBase = [
     fileName: "dolomiti-canapa.png",
     url: "https://www.dolomiticanapa.com/",
   },
+  {
+    name: "Al Cavallino Rosso",
+    fileName: "cavallino-rosso.png",
+    url: "https://hotelcavallinorosso.it/",
+  },
 ]
 
 const Sponsors = () => {

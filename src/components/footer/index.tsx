@@ -119,7 +119,7 @@ const Footer: React.FC = () => {
             <T.P2 className="text-link">Politica dei Cookies</T.P2>
           </S.TextLink>
           <T.P2>
-            © Copyright Andrea Nicolai - GNL Lentiai 2025 - Tutti i diritti
+            © Copyright Andrea Nicolai - GNL Lentiai 2026 - Tutti i diritti
             riservati.
           </T.P2>
         </S.LowerContent>
