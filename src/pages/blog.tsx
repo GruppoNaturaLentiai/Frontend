@@ -103,7 +103,7 @@ const Blog: React.FC<PageProps<BlogData>> = ({ data, location }) => {
             description: p.image?.asset?.description,
             altText: p.image?.asset?.altText,
             title: p.image?.asset?.title,
-            renderImageUrl: p.image?.asset?.url || null,
+            renderImageUrl: p.image?.asset?.url ? `${p.image.asset.url}?w=800&h=450&fit=crop` : null,
           },
         }))
 
@@ -153,6 +153,7 @@ export const query = graphql`
             title
             gatsbyImageData(
               width: 800
+              height: 450
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
             )

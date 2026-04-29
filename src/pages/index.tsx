@@ -60,6 +60,7 @@ const IndexPage: React.FC<PageProps> = () => {
               altText
               gatsbyImageData(
                 width: 600
+                height: 350
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
               )
