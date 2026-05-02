@@ -115,13 +115,13 @@ export const NavButton = styled.div<{ $align: "left" | "right" }>`
     display: flex;
     flex-direction: column;
     align-items: ${({ $align }) =>
-    $align === "left" ? "flex-start" : "flex-end"};
+      $align === "left" ? "flex-start" : "flex-end"};
     text-align: ${({ $align }) => $align};
     max-width: 100%;
 
     &:hover {
       transform: ${({ $align }) =>
-    $align === "left" ? "translateX(-5px)" : "translateX(5px)"};
+        $align === "left" ? "translateX(-5px)" : "translateX(5px)"};
       .nav-title {
         color: ${colors.green.green500};
       }
@@ -194,7 +194,7 @@ export const PostContent = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Centra il blocco di foto nella pagina */
-  align-items: center;    /* <-- ALLINEA I CENTRI VERTICALMENTE SULLA RIGA! */
+  align-items: center; /* <-- ALLINEA I CENTRI VERTICALMENTE SULLA RIGA! */
   gap: 0 4%; /* Spazio orizzontale tra le due foto */
 
   /* 1. Di default, ogni testo, titolo o lista occupa il 100% della riga forzando l'a-capo */
@@ -212,7 +212,7 @@ export const PostContent = styled.div`
   /* Su smartphone lo schermo è piccolo, quindi forziamo di nuovo le foto a colonna singola */
   @media (max-width: ${breakpoint.smalltablet}) {
     > .portable-image {
-      flex: 0 0 100%; 
+      flex: 0 0 100%;
     }
   }
 `

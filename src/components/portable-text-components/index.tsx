@@ -23,7 +23,10 @@ const Components: PortableTextReactComponents = {
       if (!imageUrl) return null
 
       return (
-        <S.ImageWrapper className="portable-image" $position={value.position ?? "center"}>
+        <S.ImageWrapper
+          className="portable-image"
+          $position={value.position ?? "center"}
+        >
           <S.ResponsiveImg
             src={imageUrl}
             alt={value.textAlt || "Content image"}

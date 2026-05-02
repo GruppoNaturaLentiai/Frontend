@@ -103,7 +103,9 @@ const Blog: React.FC<PageProps<BlogData>> = ({ data, location }) => {
             description: p.image?.asset?.description,
             altText: p.image?.asset?.altText,
             title: p.image?.asset?.title,
-            renderImageUrl: p.image?.asset?.url ? `${p.image.asset.url}?w=800&h=450&fit=crop` : null,
+            renderImageUrl: p.image?.asset?.url
+              ? `${p.image.asset.url}?w=800&h=450&fit=crop`
+              : null,
           },
         }))
 

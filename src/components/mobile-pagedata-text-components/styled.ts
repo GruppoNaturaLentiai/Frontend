@@ -42,28 +42,37 @@ export const TextContainer = styled.div`
   position: relative;
 `
 
-export const TextWrapper = styled.div<{ $isExpanded: boolean; $isShort: boolean }>`
+export const TextWrapper = styled.div<{
+  $isExpanded: boolean
+  $isShort: boolean
+}>`
   position: relative;
   overflow: hidden;
-  
+
   /* Se il testo è corto o espanso, non lo tagliamo. Altrimenti lo fermiamo a 7.5em */
-  max-height: ${({ $isExpanded, $isShort }) => ($isExpanded || $isShort ? "2000px" : "7.5em")};
+  max-height: ${({ $isExpanded, $isShort }) =>
+    $isExpanded || $isShort ? "2000px" : "7.5em"};
   transition: max-height 0.6s ease-in-out;
-  
+
   /* IL SEGRETO: Creiamo uno spazio vuoto in fondo al blocco SOLO per ospitare il bottone! */
   padding-bottom: ${({ $isShort }) => ($isShort ? "0" : "3rem")};
 `
 
 export const FadeOut = styled.div<{ $isExpanded: boolean; $isShort: boolean }>`
   /* Scompare se il testo è corto o se abbiamo già espanso la tendina */
-  display: ${({ $isShort, $isExpanded }) => ($isShort || $isExpanded ? "none" : "block")};
-  
+  display: ${({ $isShort, $isExpanded }) =>
+    $isShort || $isExpanded ? "none" : "block"};
+
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 5em;
-  background: linear-gradient(to bottom, transparent, ${colors.green.green50} 80%);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    ${colors.green.green50} 80%
+  );
   pointer-events: none;
 `
 
@@ -92,15 +101,15 @@ export const ReadMoreWrapper = styled.div<{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border: 1px solid ${colors.green.green300};
     transition: all 0.3s ease;
-    
+
     /* Nessuna animazione opacity: 0! Appare subito e in modo affidabile */
-    
+
     &:hover {
       background-color: ${colors.green.green300};
       transform: translateY(-2px);
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
     }
-    
+
     &:active {
       transform: translateY(0);
       background-color: ${colors.green.green400};
