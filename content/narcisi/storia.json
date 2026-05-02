@@ -1,131 +1,271 @@
 {
-    "storia": [
-        {
+  "storia": [
+    {
+      "type": "text",
+      "size": "h1",
+      "position": "left",
+      "font": "Caveat",
+      "content": ["La macchina del tempo..."]
+    },
+    {
+      "type": "text",
+      "size": "p1",
+      "position": "left",
+      "collapsible": false,
+      "content": [
+        "L’emozione che si prova davanti a un prato imbiancato dai narcisi ha radici profonde, capaci di unire la grande letteratura alla nostra storia locale."
+      ]
+    },
+    {
+      "type": "two-columns",
+      "content": [
+        [
+          {
+            "type": "image",
+            "content": ["narcisi_storia_artent_00.jpeg"]
+          }
+        ],
+        [
+          {
+            "type": "image",
+            "content": ["narcisi_storia_artent_01.jpeg"]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h3",
+      "position": "left",
+      "content": ["L'incanto del \"divoratore di sentieri\""]
+    },
+    {
+      "type": "text",
+      "size": "p1",
+      "position": "left",
+      "collapsible": false,
+      "content": [
+        "<b>William Wordsworth</b> (1770 – 1850), uno dei padri del Romanticismo, fu tra i primi a riconoscere la nobiltà del camminare come strumento di formazione culturale e interiore. Nella sua celebre composizione <i>The Daffodils</i> (1807), il poeta descrive perfettamente lo stupore di chi, vagabondando tra le valli, si imbatte in una folla di fiori danzanti:"
+      ]
+    },
+    {
+      "type": "two-columns",
+      "content": [
+        [
+          {
             "type": "text",
-            "size": "h1",
+            "size": "p1",
             "position": "left",
-            "font": "Caveat",
+            "collapsible": true,
             "content": [
-                "La macchina del tempo..."
+              "<i>I wandered lonely as a cloud,<br>That floats on high o’er vales and hills,<br>When all at once I saw a crowd,<br>A host, of golden daffodils;<br>Beside the lake, beneath the trees,<br>Fluttering and dancing in the breeze.</i>"
             ]
-        },
-        {
-            "type": "text",
-            "size": "h2",
-            "position": "left",
-            "content": [
-                "La fioritura dei Narcisi sulla montagna di Lentiai"
-            ]
-        },
-        {
+          }
+        ],
+        [
+          {
             "type": "text",
             "size": "p1",
             "position": "left",
             "collapsible": false,
             "content": [
-                "Un tempo, il <i>Narcissus poeticus</i> dominava i prati di Lentiai con colonie vaste e profumatissime. Oggi, quella distesa candida è solo un ricordo: l'eccessiva raccolta e l'avanzata del bosco, dovuta all'abbandono dei pascoli, hanno reso questa specie estremamente vulnerabile."
+              "<i>Vagavo solitario come una nuvola,<br>che fluttua in alto sopra valli e colline,<br>quando all’improvviso vidi una moltitudine,<br>una moltitudine, di narcisi dorati;<br>accanto al lago, sotto gli alberi,<br>tremolanti e danzanti nella brezza.</i>"
             ]
-        },
-        {
-            "type": "two-columns",
-            "content": [
-                [
-                    {
-                        "type": "image",
-                        "content": [
-                            "narcisi_storia_artent_00.jpeg"
-                        ]
-                    }
-                ],
-                [
-                    {
-                        "type": "image",
-                        "content": [
-                            "narcisi_storia_artent_01.jpeg"
-                        ]
-                    }
-                ]
-            ]
-        },
-        {
+          }
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "size": "p1",
+      "position": "left",
+      "collapsible": true,
+      "content": [
+        "Sebbene Wordsworth cantasse il narciso dorato, quel medesimo incanto è ciò che per generazioni ha spinto la nostra comunità verso le vette, per ammirare il candore del Narcissus poeticus.",
+        "Infatti, il nostro “divoratore di sentieri” non è solo protagonista di poesie inglesi. È la stessa immagine che, tra gli anni ’30 e gli anni ’60 del Novecento, ha attratto generazioni di valle, intenti a salire verso il Col D’Artent, le Casare, Milies e Pianezze."
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h2",
+      "position": "left",
+      "content": [
+        "La fioritura sulla montagna di Lentiai: un ricordo indelebile"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "p1",
+      "position": "left",
+      "collapsible": false,
+      "content": [
+        "Per noi di Lentiai, il narciso non è solo un fiore, ma un compagno di vita che segna il passaggio delle stagioni. Chi è cresciuto in queste terre porta con sé ricordi vividi, fatti di profumi e colori che oggi sembrano appartenere a un mondo lontano."
+      ]
+    },
+    {
+      "type": "two-columns",
+      "content": [
+        [
+          {
+            "type": "image",
+            "content": ["narcisi_storia_anni50.png"]
+          }
+        ],
+        [
+          {
+            "type": "image",
+            "content": ["narcisi_storia_anni90.png"]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h3",
+      "position": "left",
+      "content": ["La festa a Pian di Coltura"]
+    },
+    {
+      "type": "text",
+      "size": "p1",
+      "position": "left",
+      "collapsible": true,
+      "content": [
+        "Impossibile non ricordare la grande <b>Festa dei Narcisi</b> che si teneva in maggio a Pian di Coltura, presso il <b>Rifugio della famiglia Marcer</b>. Furono il nonno e il papà di Simon Paolo e Maurizio a dare vita a questa tradizione, portata avanti poi in collaborazione con lo <b>Sci Club Lentiai</b>.",
+        "Era un evento che attirava persone da ogni dove: Pian di Coltura diventava una distesa bianca così abbondante che i carri e i trattori che sfilavano venivano addobbati con mazzi fittissimi di fiori. All'epoca, la fioritura era rigogliosa a quote molto più basse rispetto a oggi."
+      ]
+    },
+    {
+      "type": "two-columns",
+      "content": [
+        [
+          {
+            "type": "image",
+            "content": ["narcisi_storia_anni30.png"]
+          }
+        ],
+        [
+          {
+            "type": "image",
+            "content": ["narcisi_storia_podistica.png"]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h3",
+      "position": "left",
+      "collapsible": true,
+      "content": ["Il profumo della comunità"]
+    },
+    {
+      "type": "text",
+      "size": "p1",
+      "position": "left",
+      "collapsible": false,
+      "content": [
+        "Il narciso entrava nelle case e nei cuori:<ul>",
+        "<li><b>In Chiesa</b>: nel mese Mariano, il profumo intenso del “Principe Bianco” riempiva l'Arcipretale, adornando l'altare maggiore e quello dell'Assunta.</li>",
+        "<li><b>A Scuola</b>: un semplice vasetto di vetro sulla cattedra delle maestre alle elementari era il segnale inconfondibile: era arrivata la primavera e la fine della scuola era ormai vicina.</li>",
+        "</ul>"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h2",
+      "position": "left",
+      "collapsible": false,
+      "content": ["Uno sguardo alla Valbelluna e oltre."]
+    },
+    {
+      "type": "text",
+      "size": "p1",
+      "position": "left",
+      "collapsible": false,
+      "content": [
+        "Il legame con il narciso abbracciava tutta la pedemontana, creando un paesaggio che sembrava incantato. Gli anziani ricordano che in maggio, guardando dai paesi della destra Piave (come Santa Giustina) verso le nostre montagne, il candore era tale da dare l’illusione di una nevicata appena avvenuta.<ul>",
+        "<li><b>Zelant</b> e <b>Al Boz</b>: anche in <i>Zelant</i> i prati erano completamente bianchi e si teneva una partecipata festa (proprio dove oggi sorge il ristorante pizzeria “Da Geppo”). Lo stesso accadeva in località <i>Al Boz</i>, a Villa di Villa.</li>",
+        "<li><b>Trichiana</b> e <b>Melere</b>: anche in queste zone si ricordano con affetto e nostalgia le celebrazioni dedicate al narciso, segno di una cultura popolare profondamente legata alla terra.</li>",
+        "</ul>"
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h3",
+      "position": "left",
+      "collapsible": false,
+      "content": ["La fioritura dei Narcisi a Milies di Segusino (TV)"]
+    },
+    {
+      "type": "text",
+      "size": "p1",
+      "position": "left",
+      "collapsible": true,
+      "content": [
+        "Anche fuori provincia nella zona pedemontana tuttora si celebra la fioritura dei narcisi con festival che hanno luogo a cadenza annuale in tarda primavera. ",
+        "Verso la fine di maggio, i prati del Monte Doc a <b>Milies di Segusino</b> (TV) si trasformavano in una distesa candida, quasi una nevicata fuori stagione regalata dalla fioritura dei narcisi. Gli scatti degli anni '40 e '50 di Raimondo Stramare, conosciuto come <i>“Mondo”</i>, immortalano un’epoca in cui la raccolta di questi fiori era un rito collettivo: come al Col D'Artent, intere generazioni — dai fidanzati ai nonni con i nipoti — si ritrovavano in quota per celebrare questa tradizione della natura."
+      ]
+    },
+    {
+      "type": "two-columns",
+      "content": [
+        [
+          {
             "type": "text",
             "size": "p1",
-            "position": "left",
-            "collapsible": false,
             "content": [
-                "Basti pensare che sulla montagna di Lentiai resta ad oggi solo il 30% della fioritura registrata negli anni '30. La situazione è critica anche in Valbelluna: in località come Zelant e il monte Foral, il narciso è ormai quasi del tutto scomparso. Fortunatamente, per proteggere ciò che resta, vige oggi il divieto assoluto di raccolta in molte zone d'Italia."
+              "Verso la fine di maggio, i prati del Monte Doc a Milies di Segusino si trasformavano in una distesa candida, quasi una nevicata fuori stagione regalata dalla fioritura dei narcisi. Gli scatti degli anni '40 e '50 di Raimondo Stramare, conosciuto come <i>“Mondo”</i>, immortalano un’epoca in cui la raccolta di questi fiori era un rito collettivo: come al Col D'Artent, intere generazioni — dai fidanzati ai nonni con i nipoti — si ritrovavano in quota per celebrare questa tradizione della natura."
             ]
-        },
-        {
-            "type": "two-columns",
-            "content": [
-                [
-                    {
-                        "type": "image",
-                        "content": [
-                            "narcisi_storia_anni50.png"
-                        ]
-                    }
-                ],
-                [
-                    {
-                        "type": "image",
-                        "content": [
-                            "narcisi_storia_anni90.png"
-                        ]
-                    }
-                ]
-            ]
-        },
-        {
-            "type": "text",
-            "size": "h2",
-            "content": [
-                "La fioritura dei Narcisi a Milies di Segusino (TV)"
-            ]
-        },
-        {
-            "type": "two-columns",
-            "content": [
-                [
-                    {
-                        "type": "text",
-                        "size": "p1",
-                        "content": [
-                            "Verso la fine di maggio, i prati del Monte Doc a Milies di Segusino si trasformavano in una distesa candida, quasi una nevicata fuori stagione regalata dalla fioritura dei narcisi. Gli scatti degli anni '40 e '50 di Raimondo Stramare, conosciuto come <i>“Mondo”</i>, immortalano un’epoca in cui la raccolta di questi fiori era un rito collettivo: come al Col D'Artent, intere generazioni — dai fidanzati ai nonni con i nipoti — si ritrovavano in quota per celebrare questa tradizione della natura."
-                        ]
-                    }
-                ],
-                [
-                    {
-                        "type": "image",
-                        "content": [
-                            "narcisi_storia_milies_00.png"
-                        ]
-                    }
-                ]
-            ]
-        },
-        {
-            "type": "two-columns",
-            "content": [
-                [
-                    {
-                        "type": "image",
-                        "content": [
-                            "narcisi_storia_milies_01.jpeg"
-                        ]
-                    }
-                ],
-                [
-                    {
-                        "type": "image",
-                        "content": [
-                            "narcisi_storia_milies_02.jpeg"
-                        ]
-                    }
-                ]
-            ]
-        }
-    ]
+          }
+        ],
+        [
+          {
+            "type": "image",
+            "content": ["narcisi_storia_milies_00.png"]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "two-columns",
+      "content": [
+        [
+          {
+            "type": "image",
+            "content": ["narcisi_storia_milies_01.jpeg"]
+          }
+        ],
+        [
+          {
+            "type": "image",
+            "content": ["narcisi_storia_milies_02.jpeg"]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h2",
+      "position": "left",
+      "collapsible": false,
+      "content": ["Una bellezza fragile: l'impegno per il futuro"]
+    },
+    {
+      "type": "text",
+      "size": "p1",
+      "position": "left",
+      "collapsible": true,
+      "content": [
+        "Oggi, quel “manto nevoso” descritto dai testimoni del tempo è diventato un <b>patrimonio vulnerabile</b>. Se un tempo il <b>Narcissus poeticus</b> dominava i prati con colonie vaste e odorose, oggi la situazione è critica.",
+        "Sulla montagna di Lentiai resta solo il 30% della fioritura registrata negli anni '30. In località come Zelant e il Monte Foral, il fiore è ormai rarissimo.",
+        "Le cause sono duplici:<ol>",
+        "<li><b>L'avanzata del bosco</b>: l'abbandono dei pascoli montani permette agli alberi di riprendersi i prati, togliendo spazio vitale ai fiori.</li>",
+        "<li><b>L'impatto dell'uomo</b>: l'abitudine passata di raccoglierne in quantità smisurate ha indebolito la specie.",
+        "</ol>",
+        "Il Gruppo Natura Lentiai ricorda che oggi il Narciso è protetto dal divieto assoluto di raccolta.",
+        "Il nostro obiettivo è far sì che questo fiore non resti solo un racconto nelle memorie dei nonni o un'immagine nelle foto di “Mondo” Stramare o contenute negli archivi storici di volenterosi cittadini (fra cui Walter Argenta, che nuovamente ringraziamo), ma torni a essere la “nuvola bianca” capace di ispirare i poeti e i camminatori di domani."
+      ]
+    }
+  ]
 }

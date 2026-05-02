@@ -35,7 +35,7 @@ jobs:
       - name: Install Dependencies
         # Esegue l'installazione SOLO se la cache non è stata trovata
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
-        run: npm ci 
+        run: npm ci
 
       # --- Caching strategy for pictures ---
       - name: Ripristina la Cache di Gatsby

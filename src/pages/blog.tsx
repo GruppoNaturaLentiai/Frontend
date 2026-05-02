@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useState } from "react"
 import DefaultLayout from "../components/default-layout"
 import { remoteGraphqlURL } from "../constants"
 import { FeaturedBlog, PostInfo } from "../components/blog-list"
-import { fromBodyRawToExcerpt } from "../helpers"
+import { fromBodyRawToExcerpt, buildSanityImageUrl } from "../helpers"
 import { SEO } from "../components/seo"
 
 // Definiamo il tipo per i dati che arrivano dalla query GraphQL di Gatsby
@@ -21,8 +21,25 @@ type BlogData = {
           description: string
           altText: string
           title: string
+          url: string
+          metadata: {
+            dimensions: {
+              width: number
+              height: number
+            }
+          }
           gatsbyImageData: any
         }
+        crop?: {
+          top: number
+          bottom: number
+          left: number
+          right: number
+        } | null
+        hotspot?: {
+          x: number
+          y: number
+        } | null
       }
     }>
   }
@@ -51,6 +68,11 @@ const Blog: React.FC<PageProps<BlogData>> = ({ data, location }) => {
         altText: node.image?.asset?.altText,
         title: node.image?.asset?.title,
         gatsbyImage: node.image?.asset?.gatsbyImageData || null,
+        hotspot: node.image?.hotspot,
+        renderImageUrl:
+          node.image?.crop || node.image?.hotspot
+            ? buildSanityImageUrl(node.image)
+            : null,
       },
     }))
   }, [data])
@@ -71,11 +93,16 @@ const Blog: React.FC<PageProps<BlogData>> = ({ data, location }) => {
             bodyRaw
             author
             image {
+              crop { top bottom left right }
+              hotspot { x y }
               asset {
                 description
                 title
                 altText
                 url
+                metadata {
+                  dimensions { width height }
+                }
               }
             }
           }
@@ -103,7 +130,8 @@ const Blog: React.FC<PageProps<BlogData>> = ({ data, location }) => {
             description: p.image?.asset?.description,
             altText: p.image?.asset?.altText,
             title: p.image?.asset?.title,
-            renderImageUrl: p.image?.asset?.url || null,
+            hotspot: p.image?.hotspot,
+            renderImageUrl: buildSanityImageUrl(p.image),
           },
         }))
 
@@ -147,10 +175,27 @@ export const query = graphql`
           current
         }
         image {
+          crop {
+            top
+            bottom
+            left
+            right
+          }
+          hotspot {
+            x
+            y
+          }
           asset {
             description
             altText
             title
+            url
+            metadata {
+              dimensions {
+                width
+                height
+              }
+            }
             gatsbyImageData(
               width: 800
               placeholder: BLURRED

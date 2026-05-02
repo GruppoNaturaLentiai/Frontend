@@ -42,6 +42,7 @@ This is a **Gatsby 5 static site** (React + TypeScript) for an Italian nature co
 ### Page Content Components
 
 Most static pages use two parallel components for responsive layout:
+
 - `pagedata-text-components` (desktop, hidden on `≤bigtablet`)
 - `mobile-pagedata-text-components` (mobile, hidden on `>bigtablet`)
 
@@ -53,7 +54,9 @@ Any browser-only API must be guarded. The standard pattern is:
 
 ```tsx
 const [isClient, setIsClient] = useState(false)
-useEffect(() => { setIsClient(true) }, [])
+useEffect(() => {
+  setIsClient(true)
+}, [])
 if (!isClient) return null
 ```
 

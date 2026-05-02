@@ -46,43 +46,43 @@ const renderTextInner =
     font: T.FontFamilies | undefined,
     position: "center" | "left" | "right" | undefined,
   ) =>
-    (text: string) => {
-      const addProps = {
-        $textAlign: position,
-        $font: font,
-        dangerouslySetInnerHTML: { __html: text },
-      }
-      switch (size) {
-        case "h1":
-          return <T.H1 {...addProps} />
-        case "h2":
-          return <T.H2 {...addProps} />
-        case "h3":
-          return <T.H3 {...addProps} />
-        case "h4":
-          return <T.H4 {...addProps} />
-        case "h5":
-          return <T.H5 {...addProps} />
-        case "h6":
-          return <T.H6 {...addProps} />
-        case "h7":
-          return <T.H7 {...addProps} />
-        case "p1":
-          return <T.P1 {...addProps} />
-        case "p2":
-          return <T.P2 {...addProps} />
-        case "p3":
-          return <T.P3 {...addProps} />
-        case "p4":
-          return <T.P1 {...addProps} />
-        case "p5":
-          return <T.P1 {...addProps} />
-        case "note":
-          return <T.Notes {...addProps} />
-        default:
-          return <T.H2>Text size not found</T.H2>
-      }
+  (text: string) => {
+    const addProps = {
+      $textAlign: position,
+      $font: font,
+      dangerouslySetInnerHTML: { __html: text },
     }
+    switch (size) {
+      case "h1":
+        return <T.H1 {...addProps} />
+      case "h2":
+        return <T.H2 {...addProps} />
+      case "h3":
+        return <T.H3 {...addProps} />
+      case "h4":
+        return <T.H4 {...addProps} />
+      case "h5":
+        return <T.H5 {...addProps} />
+      case "h6":
+        return <T.H6 {...addProps} />
+      case "h7":
+        return <T.H7 {...addProps} />
+      case "p1":
+        return <T.P1 {...addProps} />
+      case "p2":
+        return <T.P2 {...addProps} />
+      case "p3":
+        return <T.P3 {...addProps} />
+      case "p4":
+        return <T.P1 {...addProps} />
+      case "p5":
+        return <T.P1 {...addProps} />
+      case "note":
+        return <T.Notes {...addProps} />
+      default:
+        return <T.H2>Text size not found</T.H2>
+    }
+  }
 
 export const ExpandableText: React.FC<{
   content: TextContentData
@@ -108,7 +108,12 @@ export const ExpandableText: React.FC<{
 
   return (
     // Passiamo $isShort al wrapper per gestire il padding
-    <S.TextWrapper $isExpanded={isExpanded} $isShort={isShortText} key={innerKey} ref={textRef}>
+    <S.TextWrapper
+      $isExpanded={isExpanded}
+      $isShort={isShortText}
+      key={innerKey}
+      ref={textRef}
+    >
       <S.TextContainer
         onClick={() => {
           // IL FIX DEL CLICK: si espande solo se il testo NON è corto!
