@@ -13,7 +13,7 @@ import { ImageData } from "../types"
 import * as T from "../components/typography"
 import * as SBlog from "../components/blog-list/styled"
 import ButtonLink from "../components/button-link"
-import { fromBodyRawToExcerpt } from "../helpers"
+import { fromBodyRawToExcerpt, buildSanityImageUrl } from "../helpers"
 
 const content = {
   quote:
@@ -56,11 +56,27 @@ const IndexPage: React.FC<PageProps> = () => {
             current
           }
           image {
+            crop {
+              top
+              bottom
+              left
+              right
+            }
+            hotspot {
+              x
+              y
+            }
             asset {
+              url
               altText
+              metadata {
+                dimensions {
+                  width
+                  height
+                }
+              }
               gatsbyImageData(
-                width: 600
-                height: 350
+                width: 800
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
               )
@@ -92,6 +108,10 @@ const IndexPage: React.FC<PageProps> = () => {
     excerpt: fromBodyRawToExcerpt(post._rawBody),
     image: post.image?.asset?.gatsbyImageData as IGatsbyImageData,
     alt: post.image?.asset?.altText || "Copertina articolo",
+    renderImageUrl:
+      post.image?.crop || post.image?.hotspot
+        ? buildSanityImageUrl(post.image)
+        : null,
   }))
 
   const latestPostNode = data.allSanityPost.nodes[0]
@@ -123,9 +143,16 @@ const IndexPage: React.FC<PageProps> = () => {
               onClick={() => navigate(`${post.slug}`)}
             >
               <SBlog.CoverImgWrapper $isFeatured={false}>
-                {post.image && (
+                {post.renderImageUrl ? (
+                  <img
+                    src={post.renderImageUrl}
+                    alt={post.alt}
+                    className="cover-image"
+                    loading="lazy"
+                  />
+                ) : post.image ? (
                   <GatsbyImage image={post.image} alt={post.alt} />
-                )}
+                ) : null}
               </SBlog.CoverImgWrapper>
               <SBlog.CardContent>
                 <SBlog.CardTitle>{post.title}</SBlog.CardTitle>

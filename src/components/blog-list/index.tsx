@@ -17,6 +17,7 @@ export type PostInfo = {
     title?: string
     gatsbyImage?: IGatsbyImageData | null
     renderImageUrl?: string
+    hotspot?: { x: number; y: number } | null
   }
 }
 
@@ -26,18 +27,20 @@ interface BlogListProps {
 }
 
 const getImage = (post: PostInfo) => {
-  if (post.coverImage.gatsbyImage) {
-    return (
-      <GatsbyImage
-        image={post.coverImage.gatsbyImage as IGatsbyImageData}
-        alt={post.coverImage.altText ?? "Cover image"}
-      />
-    )
-  } else if (post.coverImage.renderImageUrl) {
+  if (post.coverImage.renderImageUrl) {
     return (
       <img
         className="cover-image"
         src={post.coverImage.renderImageUrl}
+        alt={post.coverImage.altText ?? "Cover image"}
+        loading="lazy"
+      />
+    )
+  }
+  if (post.coverImage.gatsbyImage) {
+    return (
+      <GatsbyImage
+        image={post.coverImage.gatsbyImage as IGatsbyImageData}
         alt={post.coverImage.altText ?? "Cover image"}
       />
     )
