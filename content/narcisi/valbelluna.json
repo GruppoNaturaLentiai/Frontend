@@ -4,7 +4,9 @@
       "type": "text",
       "size": "h1",
       "position": "left",
-      "content": ["Zone di fioritura dei narcisi in Valbelluna"]
+      "content": [
+        "Zone di fioritura dei narcisi in Valbelluna"
+      ]
     },
     {
       "type": "text",
@@ -18,7 +20,9 @@
     {
       "type": "text",
       "size": "h2",
-      "content": ["Monte Avena – Località Le Buse"]
+      "content": [
+        "Monte Avena – Località Le Buse"
+      ]
     },
     {
       "type": "text",
@@ -34,13 +38,17 @@
         [
           {
             "type": "image",
-            "content": ["narcisi_valbelluna_avena_map.jpeg"]
+            "content": [
+              "narcisi_valbelluna_avena_map.jpeg"
+            ]
           }
         ],
         [
           {
             "type": "image",
-            "content": ["narcisi_valbelluna_avena_pic.jpeg"]
+            "content": [
+              "narcisi_valbelluna_avena_pic.jpeg"
+            ]
           }
         ]
       ]
@@ -48,7 +56,9 @@
     {
       "type": "text",
       "size": "h2",
-      "content": ["Castron – Passo di Praderadego"]
+      "content": [
+        "Castron – Passo di Praderadego"
+      ]
     },
     {
       "type": "two-columns",
@@ -66,7 +76,9 @@
         [
           {
             "type": "image",
-            "content": ["narcisi_valbelluna_castron_map.jpeg"]
+            "content": [
+              "narcisi_valbelluna_castron_map.jpeg"
+            ]
           }
         ]
       ]
@@ -74,7 +86,9 @@
     {
       "type": "text",
       "size": "h2",
-      "content": ["Le Lei – Comune di Lamon"]
+      "content": [
+        "Le Lei – Comune di Lamon"
+      ]
     },
     {
       "type": "text",
@@ -90,13 +104,17 @@
         [
           {
             "type": "image",
-            "content": ["narcisi_valbelluna_le_lei_map.jpeg"]
+            "content": [
+              "narcisi_valbelluna_le_lei_map.jpeg"
+            ]
           }
         ],
         [
           {
             "type": "image",
-            "content": ["narcisi_valbelluna_le_lei_pic.jpeg"]
+            "content": [
+              "narcisi_valbelluna_le_lei_pic.jpeg"
+            ]
           }
         ]
       ]
