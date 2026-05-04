@@ -35,9 +35,7 @@ export const CoverImageWrp = styled.div`
   .gatsby-image-wrapper,
   img {
     border-radius: 12px;
-    max-height: 400px;
     width: 100%;
-    object-fit: contain;
   }
 
   @media (max-width: ${breakpoint.tablet}) {
