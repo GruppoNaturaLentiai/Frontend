@@ -10,6 +10,11 @@ const config: GatsbyConfig = {
     title: `site-gruppo-natura-lentiai`,
     description: `Sito ufficiale del Gruppo Natura Lentiai. Associazione di volontariato per la tutela e la valorizzazione dei Laghetti della Rimonta, dei narcisi e del territorio.`,
     siteUrl: `https://grupponaturalentiai.it`,
+    author: {
+      name: `Andrea Nicolai`,
+      linkedin: `https://www.linkedin.com/in/andrea-nicolai-732641210/`,
+      github: `https://github.com/andrybicio`,
+    },
   },
   trailingSlash: "always",
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.

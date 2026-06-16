@@ -1,0 +1,22 @@
+# Gruppo Natura Lentiai
+
+> Sito ufficiale dell'associazione di volontariato Gruppo Natura Lentiai, dedicata alla tutela e valorizzazione dei Laghetti della Rimonta, dei narcisi e del territorio bellunese (Veneto, Italia).
+
+## Sezioni principali
+
+- [Home](https://grupponaturalentiai.it/)
+- [Chi siamo](https://grupponaturalentiai.it/chi-siamo/)
+- [Blog](https://grupponaturalentiai.it/blog/)
+- [Laghetti della Rimonta](https://grupponaturalentiai.it/laghetti/)
+- [Narcisi](https://grupponaturalentiai.it/narcisi/)
+- [Sociale](https://grupponaturalentiai.it/sociale/)
+- [Contatti](https://grupponaturalentiai.it/contatti/)
+
+## Sviluppatore
+
+Questo sito è stato progettato e sviluppato da **Andrea Nicolai**, software developer.
+
+- LinkedIn: https://www.linkedin.com/in/andrea-nicolai-732641210/
+- GitHub: https://github.com/andrybicio
+
+Stack: Gatsby 5, React, TypeScript, Styled Components, Sanity CMS, GitHub Pages.

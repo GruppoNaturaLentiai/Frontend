@@ -5,7 +5,7 @@ interface SEOProps {
   title?: string
   description?: string
   pathname?: string
-  image?: string // Aggiungiamo l'immagine
+  image?: string
   children?: React.ReactNode
 }
 
@@ -23,24 +23,46 @@ export const SEO: React.FC<SEOProps> = ({
           title
           description
           siteUrl
+          author {
+            name
+            linkedin
+            github
+          }
         }
       }
     }
   `)
 
+  const meta = site.siteMetadata
+  const author = meta.author
+
   const seo = {
-    title: title || site.siteMetadata.title,
-    description: description || site.siteMetadata.description,
+    title: title || meta.title,
+    description: description || meta.description,
     image: image
-      ? `${site.siteMetadata.siteUrl}${image}`
-      : `${site.siteMetadata.siteUrl}/default-share-image.jpg`, // Inserisci un'immagine generica di fallback in static/
-    url: `${site.siteMetadata.siteUrl}${pathname || ""}`.replace(/\/?$/, "/"),
+      ? `${meta.siteUrl}${image}`
+      : `${meta.siteUrl}/default-share-image.jpg`,
+    url: `${meta.siteUrl}${pathname || ""}`.replace(/\/?$/, "/"),
+  }
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Gruppo Natura Lentiai",
+    url: meta.siteUrl,
+    description: meta.description,
+    creator: {
+      "@type": "Person",
+      name: author.name,
+      sameAs: [author.linkedin, author.github],
+    },
   }
 
   return (
     <>
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
+      <meta name="author" content={author.name} />
       <link rel="canonical" href={seo.url} />
 
       {/* Open Graph / Facebook / WhatsApp */}
@@ -56,6 +78,15 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       {seo.image && <meta name="twitter:image" content={seo.image} />}
+
+      {/* Identity links */}
+      <link rel="me" href={author.linkedin} />
+      <link rel="me" href={author.github} />
+      <link rel="author" href={author.linkedin} />
+
+      <script type="application/ld+json">
+        {JSON.stringify(websiteSchema)}
+      </script>
 
       {children}
     </>

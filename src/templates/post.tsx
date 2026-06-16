@@ -85,6 +85,26 @@ export default PostTemplate
 // La Head query riceve i dati dalla query principale
 export const Head: HeadFC<PostData, PostPageContext> = ({ location, data }) => {
   const post = data.sanityPost
+
+  const articleSchema = post
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: post.title,
+        datePublished: post.publishedAt,
+        image: post.image?.asset?.url,
+        author: {
+          "@type": "Person",
+          name: post.author || "Gruppo Natura Lentiai",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Gruppo Natura Lentiai",
+          url: "https://grupponaturalentiai.it",
+        },
+      }
+    : null
+
   return (
     <SEO
       title={`Gruppo Natura Lentiai - ${post?.title}`}
@@ -93,7 +113,13 @@ export const Head: HeadFC<PostData, PostPageContext> = ({ location, data }) => {
       }
       pathname={location.pathname}
       image={post?.image?.asset?.url}
-    />
+    >
+      {articleSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </script>
+      )}
+    </SEO>
   )
 }
 
