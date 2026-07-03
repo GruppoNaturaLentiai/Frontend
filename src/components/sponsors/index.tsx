@@ -54,6 +54,16 @@ const sponsorsBase = [
     fileName: "cavallino-rosso.png",
     url: "https://hotelcavallinorosso.it/",
   },
+  {
+    name: "Relais del borgo",
+    fileName: "relais-del-borgo.png",
+    url: "https://relaisborgovalbelluna.com/",
+  },
+  {
+    name: "Locanda Monte Garda",
+    fileName: "locanda-monte-garda.png",
+    url: "https://www.facebook.com/locandamontegarda?locale=it_IT",
+  },
 ]
 
 const Sponsors = () => {
