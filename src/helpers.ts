@@ -48,3 +48,8 @@ export const fromBodyRawToExcerpt = (bodyRaw: any) =>
     .join(" ")
     .slice(0, 200)
     .concat("...")
+
+export const getYouTubeId = (url: string) =>
+  url?.match(
+    /(?:youtube(?:-nocookie)?\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/|live\/)|youtu\.be\/)([\w-]{11})/,
+  )?.[1] ?? null

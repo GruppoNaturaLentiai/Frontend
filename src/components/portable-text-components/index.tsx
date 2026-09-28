@@ -3,8 +3,8 @@ import {
   PortableTextMarkComponentProps,
   PortableTextReactComponents,
 } from "@portabletext/react"
-import React from "react"
-import { getSanityImageUrl } from "../../helpers"
+import React, { useState } from "react"
+import { getSanityImageUrl, getYouTubeId } from "../../helpers"
 import * as S from "./styled"
 import * as T from "../typography"
 
@@ -14,8 +14,54 @@ const InlineText = ({ children }: { children: React.ReactNode }) => (
   </T.P1>
 )
 
+// Carica l'iframe di YouTube solo al click: prima solo la miniatura statica (i.ytimg.com, senza cookie)
+const YouTubeEmbed = ({ id, title }: { id: string; title: string }) => {
+  const [playing, setPlaying] = useState(false)
+
+  return (
+    <S.VideoFrame>
+      {playing ? (
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1`}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      ) : (
+        <S.VideoPoster
+          type="button"
+          onClick={() => setPlaying(true)}
+          aria-label={`Riproduci il video: ${title}`}
+        >
+          <img
+            src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
+            alt=""
+            loading="lazy"
+          />
+          <S.PlayIcon />
+        </S.VideoPoster>
+      )}
+    </S.VideoFrame>
+  )
+}
+
 const Components: PortableTextReactComponents = {
   types: {
+    youtube: ({ value }: { value: any }) => {
+      const id = getYouTubeId(value.url)
+      if (!id) return null
+
+      return (
+        <S.VideoWrapper>
+          <YouTubeEmbed id={id} title={value.undertext || "Video YouTube"} />
+          {value.undertext && (
+            <S.ImgDescription as="figcaption">
+              {value.undertext}
+            </S.ImgDescription>
+          )}
+        </S.VideoWrapper>
+      )
+    },
     image: ({ value }: { value: any }) => {
       if (!value.asset || !value.asset._ref) return null
 
