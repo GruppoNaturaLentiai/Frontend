@@ -8,7 +8,7 @@
     {
       "type": "text",
       "size": "p2",
-      "content": ["<b>Data di ultima modifica:</b> 30 maggio 2025"]
+      "content": ["<b>Data di ultima modifica:</b> 28 settembre 2026"]
     },
     {
       "type": "text",
@@ -47,7 +47,8 @@
       "collapsible": false,
       "content": [
         "<ul><li><b>Tecnici necessari:</b> Garantisco il corretto funzionamento del sito (es. gestione sessione, bilanciamento del carico).</li>",
-        "<li><b>Analitici:</b> Raccolgono informazioni aggregate sul traffico per migliorare i contenuti (es. Google Analytics).</li></ul>"
+        "<li><b>Analitici:</b> Raccolgono informazioni aggregate sul traffico per migliorare i contenuti (es. Google Analytics).</li>",
+        "<li><b>Di terze parti (YouTube):</b> Possono essere impostati da YouTube solo se scegli di riprodurre un video incorporato in un articolo.</li></ul>"
       ]
     },
     {
@@ -75,6 +76,20 @@
       "content": [
         "I cookie analitici ci aiutano a capire come i visitatori utilizzano il sito, raccogliendo informazioni in forma aggregata e anonima.",
         "<b>Si attivano solo se dai il tuo consenso esplicito</b> tramite il banner."
+      ]
+    },
+    {
+      "type": "text",
+      "size": "h2",
+      "content": ["Contenuti video di terze parti (YouTube)"]
+    },
+    {
+      "type": "text",
+      "size": "p2",
+      "collapsible": false,
+      "content": [
+        "Alcuni articoli contengono video ospitati su YouTube (servizio di Google), incorporati in modalità di privacy avanzata (youtube-nocookie.com).",
+        "<b>Il lettore video di YouTube viene caricato solo quando clicchi sul video</b>: fino a quel momento viene mostrata solo l'immagine di anteprima, scaricata dal server di immagini di YouTube (i.ytimg.com) senza cookie. Avviando la riproduzione, YouTube potrà impostare cookie o tecnologie simili e trattare dati come l'indirizzo IP, secondo la <a href=\"https://policies.google.com/privacy?hl=it\">privacy policy di Google</a>."
       ]
     },
     {
